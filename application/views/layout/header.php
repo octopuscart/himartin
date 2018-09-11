@@ -472,7 +472,7 @@
                                 <!--logo-->
                                 <div class="col-lg-3 col-md-3 col-sm-3 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
                                     <a href="index.html" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
-                                        <img src="<?php echo base_url(); ?>assets/images/logo2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/images/logo4.png" alt="">
                                     </a>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-9 d_table_cell d_xs_block f_none t_xs_align_c">

@@ -1,66 +1,98 @@
 <!---footer--->
-<div class="footer-w3l">
-    <div class="container">
-        <div class="footer-grids">
-            <div class="col-md-3 footer-grid">
-                <h4>About </h4>
-                <p>
-                    Hong Kong has a worldwide reputation as being a centre of world-class tailoring. Perfect Fashion is one of the leading tailoring companies in Hong Kong, and our fashion consultants will assist you in choosing your style.
-                </p>
-                <div class="social-icon">
-                    <a href="https://www.facebook.com/Johns-Perfect-Fashion-1886520941596824/"><i class="icon"></i></a>
-                    <a href="#"><i class="icon1"></i></a>
-                    <a href="#"><i class="icon2"></i></a>
-                    <!--<a href="#"><i class="icon3"></i></a>-->
+<footer role="contentinfo" class="bg_light_3" id="#footer_1">
+    <!--top part-->
+    <section class="footer_top_part">
+        
+        <div class="container">
+            <div class="row">
+                <!--about us-->
+                <div class="col-lg-4 col-md-4 col-sm-4 fw_light m_bottom_30">
+                    <h5 class="color_dark m_bottom_20">Shortly About Us</h5>
+                    <p>Richard is the owner of Shaniel Fashions. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 6 weeks.” </p>
+                </div>
+                <!--contact info--> 
+                <div class="col-lg-5 col-md-5 col-sm-5 m_bottom_30">
+                    <h5 class="color_dark m_bottom_20 fw_light">Contact Us</h5>
+                    <div class="row">
+                        <ul class="col-lg-6 col-md-6 col-sm-6 fw_light w_break m_xs_bottom_8">
+                            <li class="m_bottom_8">
+                                <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                    <i class="icon-phone-1"></i>
+                                </div>
+                                +(852) 2730 1251
+                            </li>
+                            <li class="m_bottom_8">
+                                <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                    <i class="icon-mail-alt"></i>
+                                </div>
+                                <a href="mailto:#" class="color_black color_dark _hover">sales@shanielfashions.com</a>
+                            </li>
+                           
+                        </ul>
+                        <ul class="col-lg-6 col-md-6 col-sm-6 vr_list_type_5">
+                            <li class="m_bottom_15 fw_light relative">
+                                <div class="icon_wrap_size_1 color_dark  circle f_left">
+                                    <i class="icon-location"></i>
+                                </div>
+                                86-88A Nathan Rd, Tsim Sha Tsui, Hong Kong
+                            </li>
+                            <li>
+                                <a href="https://www.google.co.in/maps/place/Shaniel+Custom+Tailors/@22.2990774,114.1726538,15z/data=!4m5!3m4!1s0x0:0x86434735e1a12048!8m2!3d22.2990774!4d114.1726538" target="_blank" class="button_type_2 color_dark r_corners tr_all color_dark _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--social buttons-->
+                <div class="col-lg-3 col-md-3 col-sm-3 m_bottom_30 m_xs_bottom_20">
+                    <h5 class="color_dark m_bottom_20 fw_light">Stay Connected</h5>
+                    <ul class="hr_list social_icons">
+                        <!--tooltip_container class is required-->
+                        <li class="m_right_15 m_bottom_15 tooltip_container">
+                            <!--tooltip-->
+                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Facebook</span>
+                            <a href="#" class="d_block facebook icon_wrap_size_2 circle color_grey_light_2">
+                                <i class="icon-facebook fs_small"></i>
+                            </a>
+                        </li>
+                        <li class="m_right_15 m_bottom_15 tooltip_container">
+                            <!--tooltip-->
+                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Twitter</span>
+                            <a href="#" class="d_block twitter icon_wrap_size_2 circle color_grey_light_2">
+                                <i class="icon-twitter fs_small"></i>
+                            </a>
+                        </li>
+                        <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
+                            <!--tooltip-->
+                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Google Plus</span>
+                            <a href="#" class="d_block googleplus icon_wrap_size_2 circle color_grey_light_2">
+                                <i class="icon-gplus-1 fs_small"></i>
+                            </a>
+                        </li>
+                      
+                      
+                       
+                        
+                        <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
+                            <!--tooltip-->
+                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
+                            <a href="#" class="d_block instagram icon_wrap_size_2 circle color_grey_light_2">
+                                <i class="icon-instagramm fs_small"></i>
+                            </a>
+                        </li>
+                       
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-3 footer-grid">
-                <h4>Shop Now</h4>
-                <ul>
-                    <li><a href="#">Suit</a></li>
-                    <li><a href="#">Shirt</a></li>
-                    <li><a href="#"> Jacket </a></li>
-                    <li><a href="#"> Pant </a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 footer-grid">
-                <h4>Information</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Catalogue</a></li>
-                    <li><a href="#">Our Clients</a></li>
-                    <li><a href="#">Contact Us</a></li>
-
-                </ul>
-            </div>
-            <div class="col-md-3 footer-grid foot">
-                <h4>Contacts</h4>
-                <ul>
-                    <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="https://goo.gl/maps/cPnGNhfK69m">Shop# 13, G/F, Wing Lee Building, 27-33 Kimberley Rd, Tsim Sha Tsui, Hong Kong</a></li>
-                    <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="#">+852 6626 4429</a></li>
-                    <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com"> john@perfectfashion.com.hk</a></li>
-
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
         </div>
-
-    </div>
-</div>
+    </section>
+    <!--bottom part-->
+    <section class="footer_bottom_part t_align_c color_grey bg_light_4 fw_light">
+        <p>©  <?php echo date('Y') ?> Shaniel Fashions
+. All Rights Reserved.</p>
+    </section>
+</footer>
 <!---footer--->
-<!--copy-->
-<div class="copy-section">
-    <div class="container">
-        <div class="copy-left">
-            <p>&copy; <?php echo date('Y') ?> <a href="http://www.johnsperfectfashion.com/">John's Perfect Fashion</a>. All rights reserved </p>
-        </div>
-        <div class="copy-right">
-            <img src="images/card.png" alt=""/>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<!--copy-->
+
 
 </div>
 </body>
