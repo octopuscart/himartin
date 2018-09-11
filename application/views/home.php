@@ -15,28 +15,27 @@ $this->load->view('layout/header');
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption lfb ltb" data-x="left" data-y="bottom" data-hoffset="-118" data-speed="600"><img src="images/slide_caption_01.png" alt=""></div>
-                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light">The best<br>priced product!</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700">Vestibulum ante ipsum primis in faucibus orci luctus<br>et ultrices posuere cubilia Curae; Suspendisse<br>sollicitudin velit sed leo. Ut pharetra augue nec.</div>
+                <!--<div class="caption lfb ltb" data-x="left" data-y="bottom" data-hoffset="-118" data-speed="600"><img src="<?php echo base_url(); ?>assets/theme/images/slide_caption_01.png" alt=""></div>-->
+                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+<br>SETTING THE STANDARD.</h1></div>
+                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
                 <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Buy Now!</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_dark r_corners fs_medium d_block tr_all" style="background: white">Customize Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/3a.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="243" data-speed="700" data-start="1200">Ut pharetra augue nec augue. Nam elit agna,endrerit<br>sit amet, tincidunt ac, viverra sed, nulla. Donec porta<br>diam eu massa. Quisque diam lorem, interdum. </div>
+                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light" style="font-size: 34px;">PREMIER <br/>MADE-TO-MEASURE CLOTHING</h1></div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_purple r_corners fs_medium d_block tr_all">Learn More</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" style="background: white">Create Your Design</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/4a.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str color_light" data-x="left" data-y="243" data-speed="700" data-start="1200">Ut pharetra augue nec augue. Nam elit agna,endrerit<br>sit amet, tincidunt ac, viverra sed, nulla. Donec porta<br>diam eu massa. Quisque diam lorem, interdum. </div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_purple r_corners fs_medium d_block tr_all">Learn More</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" style="background: white">Learn More</a>
                 </div>
             </li>
 
