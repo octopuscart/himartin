@@ -354,3 +354,11 @@ box-shadow: 0px 0px 15px -3px #000;
 .section_offset {
     padding: 20px 0 20px;
 }
+
+.gradient_line {
+     height: 0px; 
+}
+
+.half_column {
+    width: 100%;
+}
