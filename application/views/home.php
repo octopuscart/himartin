@@ -77,7 +77,7 @@ $this->load->view('layout/header');
         <h3 class="color_light fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">What We Do</h3>
         <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_light" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">Four Simple Steps To A 
 
-Custom dress </p>
+Custom Dress </p>
         <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_light fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
             <!--first four services-->
             <div class="row m_bottom_30">
@@ -90,7 +90,7 @@ Custom dress </p>
                                 <i class="icon-tools tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Choose any shirt fabric and create own style.</p>
+                        <p class="fs_medium m_bottom_10">Choose any fabric and create own style.</p>
                        
                     </figure>
                 </div>
@@ -103,7 +103,7 @@ Custom dress </p>
                                 <i class="icon-tape tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Let Size:me calculate your measurements.</p>
+                        <p class="fs_medium m_bottom_10">Let Size and calculate your measurement.</p>
                        
                     </figure>
                 </div>
@@ -116,7 +116,7 @@ Custom dress </p>
                                 <i class="icon-crop tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Our experienced tailors cut and make your new shirt.</p>
+                        <p class="fs_medium m_bottom_10">Our experienced shanghainese tailor cut and make your new dress.</p>
                        
                     </figure>
                 </div>
@@ -129,7 +129,7 @@ Custom dress </p>
                                 <i class="icon-truck tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Delivery With Guaranteed Best Fit.</p>
+                        <p class="fs_medium m_bottom_10">Delivery with guaranteed best fit.</p>
                         
                     </figure>
                 </div>

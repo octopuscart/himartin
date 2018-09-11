@@ -8,7 +8,7 @@
                 <!--about us-->
                 <div class="col-lg-4 col-md-4 col-sm-4 fw_light m_bottom_30">
                     <h5 class="color_dark m_bottom_20">Shortly About Us</h5>
-                    <p>Richard is the owner of Shaniel Fashions. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 6 weeks.” </p>
+                    <p>Mr.Shaniel is the owner of Shaniel Fashions Ltd. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 3 weeks.” </p>
                 </div>
                 <!--contact info--> 
                 <div class="col-lg-5 col-md-5 col-sm-5 m_bottom_30">
@@ -34,7 +34,7 @@
                                 <div class="icon_wrap_size_1 color_dark  circle f_left">
                                     <i class="icon-location"></i>
                                 </div>
-                                86-88A Nathan Rd, Tsim Sha Tsui, Hong Kong
+                                86-88A Nathan Road,<br/> Tsim Sha Tsui, Hong Kong
                             </li>
                             <li>
                                 <a href="https://www.google.co.in/maps/place/Shaniel+Custom+Tailors/@22.2990774,114.1726538,15z/data=!4m5!3m4!1s0x0:0x86434735e1a12048!8m2!3d22.2990774!4d114.1726538" target="_blank" class="button_type_2 color_dark r_corners tr_all color_dark _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
