@@ -490,7 +490,7 @@
                                                 <div class="sc_header bg_light_2 fs_small color_grey">
                                                     Recently added item(s)
                                                 </div>
-                                                <ul class="added_items_list">
+<!--                                                <ul class="added_items_list">
                                                     <li class="clearfix lh_large m_bottom_20 relative">
                                                         <a href="#" class="d_block f_left m_right_10"><img src="images/sc_img_1.jpg" alt=""></a>
                                                         <div class="f_left item_description lh_ex_small">
@@ -502,28 +502,7 @@
                                                         </div>
                                                         <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all"></i>
                                                     </li>
-                                                    <li class="clearfix lh_large m_bottom_20 relative">
-                                                        <a href="#" class="d_block f_left m_right_10"><img src="images/sc_img_2.jpg" alt=""></a>
-                                                        <div class="f_left item_description lh_ex_small">
-                                                            <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">Integer rutrum ante eu lacus</a>
-                                                            <p class="color_dark  fs_small">Product Code PS34</p>
-                                                        </div>
-                                                        <div class="f_right fs_small lh_medium d_xs_none">
-                                                            <span class="color_grey">1 x </span><span class="color_dark">$76.00</span>
-                                                        </div>
-                                                        <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all"></i>
-                                                    </li>
-                                                    <li class="clearfix lh_large m_bottom_20 relative">
-                                                        <a href="#" class="d_block f_left m_right_10"><img src="images/sc_img_3.jpg" alt=""></a>
-                                                        <div class="f_left item_description lh_ex_small">
-                                                            <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">Vestibulum libero nisl</a>
-                                                            <p class="color_dark  fs_small">Product Code PS34</p>
-                                                        </div>
-                                                        <div class="f_right fs_small lh_medium d_xs_none">
-                                                            <span class="color_grey">1 x </span><span class="color_dark">$189.00</span>
-                                                        </div>
-                                                        <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all"></i>
-                                                    </li>
+                                                   
                                                 </ul>
                                                 <div class="total_price bg_light_2 t_align_r fs_medium m_bottom_15">
                                                     <ul>
@@ -535,7 +514,7 @@
                                                 <div class="clearfix border_none p_top_0 sc_footer">
                                                     <a href="#" class="button_type_5 d_block color_pink transparent f_right r_corners tr_all fs_medium m_left_5">Checkout</a>
                                                     <a href="#" class="button_type_5 d_block color_dark f_right r_corners color_pink_hover tr_all fs_medium">View Cart</a>
-                                                </div>
+                                                </div>-->
                                             </div>
                                         </div>
                                         <!--login-->
@@ -555,17 +534,13 @@
                                                             <i class="icon-lock login_icon fs_medium color_dark _2"></i>
                                                             <input type="password" placeholder="Password" class="r_corners color_grey w_full fw_light">
                                                         </li>
-                                                        <li class="m_bottom_23">
-                                                            <input type="checkbox" checked id="checkbox_1" name="" class="d_none">
-                                                            <label for="checkbox_1" class="d_inline_m fs_medium fw_light">Remember me</label>
-                                                        </li>
+                                                        
                                                         <li class="row">
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
                                                                 <button class="button_type_5 tr_all color_blue transparent fs_medium r_corners">Login</button>
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
                                                                 <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
-                                                                <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your username?</a>
                                                             </div>
                                                         </li>
                                                     </ul>
