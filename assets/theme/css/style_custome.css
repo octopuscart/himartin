@@ -666,3 +666,9 @@ p.selected-element-title_text_price{
     color: #000 !important; 
 }
 
+
+[role="search"].type_3 {
+    width: 350px;
+    float: right;
+    margin-right: 14px;
+}

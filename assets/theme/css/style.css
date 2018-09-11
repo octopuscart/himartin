@@ -1053,7 +1053,7 @@ blockquote > p:last-of-type:after{
 }
 .main_menu > li > a{
 	display:block;
-        padding: 5px 19px 10px;
+            padding: 36px 19px 37px;
 }
 
 .main_menu.type_2 > li > a{
@@ -2560,7 +2560,7 @@ hr{
 }
 .image_bg_1{background:rgba(236,240,241,.4) url("../images/image_bg_1.png") 0 -150px;}
 .image_bg_2{background:url("../images/image_bg_2.jpg") no-repeat;}
-.image_bg_3{background:url("../images/image_bg_3.jpg") no-repeat;}
+.image_bg_3{background:url("../images/image_bg_31.jpg") no-repeat;}
 .image_bg_4{background:url("../images/image_bg_5.jpg") no-repeat;}
 .image_bg_5{background:url("../images/image_bg_8.jpg") no-repeat;}
 .image_bg_6{background:url("../images/home_img_13.jpg") no-repeat;}
