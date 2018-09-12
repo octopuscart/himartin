@@ -1,5 +1,4 @@
 <?php
-
 $this->load->view('layout/header');
 ?>
 
@@ -88,8 +87,21 @@ $this->load->view('layout/header');
                 <p class="m_bottom_35 heading_2 t_align_c">For any further queries
                 </p>	
                 <?php
-                if($checksent==1){
-                    
+                if ($checksent == 1) {
+                    ?>
+                    <div class="alert_box success r_corners relative fs_medium m_bottom_10">
+                        <b>Well done!</b> Mail Sent!!!
+                        <i class="icon-cancel close_alert_box tr_all translucent circle t_align_c"></i>
+                    </div><?php
+                }
+                ?>
+                <?php
+                if ($checksent == 2) {
+                    ?>
+                    <div class="alert_box error r_corners relative fs_medium">
+                        <b>Connection Error!</b> Unable to sent mail.
+                        <i class="icon-cancel close_alert_box tr_all translucent circle t_align_c"></i>
+                    </div><?php
                 }
                 ?>
                 <form method="post" action="#">
@@ -125,6 +137,5 @@ $this->load->view('layout/header');
 
 
 <?php
-
 $this->load->view('layout/footer');
 ?>
