@@ -900,7 +900,7 @@
 						var self = $(this),text;
 
 						var request = $.ajax({
-							url:"php/mail.php",
+							url:sitebaseurlcontact,
 							type : "post",
 							data : self.hasClass('no_captcha') ? self.serialize() + '&captcha=false' : self.serialize() + '&captcha=true'
 						});

@@ -123,9 +123,9 @@
                             <a href="#" class="d_block relative fs_large color_light_2 color_blue_hover">Home</a>
                             <!--sub menu(second level)-->
                             <ul class="d_none m_top_10">
-                                <li class="m_bottom_10"><a href="shop.html" class="d_block relative color_light_2 color_blue_hover">About Us</a></li>
-                                <li class="m_bottom_10"><a href="shop_category_v1.html" class="d_block relative color_light_2 color_blue_hover">FAQ's </a></li>
-                                <li class="m_bottom_10"><a href="shop_category_v2.html" class="d_block relative color_light_2 color_blue_hover">Terms of Service</a></li>
+                                <li class="m_bottom_10"><a href="#" class="d_block relative color_light_2 color_blue_hover">About Us</a></li>
+                                <li class="m_bottom_10"><a href="#" class="d_block relative color_light_2 color_blue_hover">FAQ's </a></li>
+                                <li class="m_bottom_10"><a href="#" class="d_block relative color_light_2 color_blue_hover">Terms of Service</a></li>
                              </ul>
 
                         </li>
@@ -163,7 +163,7 @@
                                 <div class="col-lg-5 col-md-4 col-sm-5 t_xs_align_c">
                                     <ul class="hr_list fs_small color_dark  contact_info_list">
                                         <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
-                                            <span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mobile"></i></span>+(852) 2730 1251
+                                            <span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-phone-1"></i></span>+(852) 2730 1251
                                         </li>
                                         <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
                                             <a href="mailto:#" class="color_dark  d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>sales@shanielfashions.com</a>
@@ -176,7 +176,7 @@
                                     <nav class="d_inline_m m_right_10 m_xs_right_0">
                                         <ul class="hr_list stripe_list fs_small">
                                             <li><a href="#" class="color_dark ">About</a></li>
-                                            <li><a href="#" class="color_dark ">Contact</a></li>
+                                            <li><a href="<?php echo site_url('Pages/contactus');?>" class="color_dark ">Contact</a></li>
                                             <li><a href="#" class="color_dark ">FAQ</a></li>
                                             <li><a href="#" class="color_dark ">My Account</a></li>
                                             <li><a href="#" class="color_dark ">My Wishlist</a></li>
@@ -379,7 +379,7 @@
 
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="s#">Contact Us
+                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo site_url('Pages/contactus');?>">Contact Us
                                         </a>
 
                                     </li>

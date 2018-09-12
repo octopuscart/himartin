@@ -97,6 +97,10 @@
 </div>
 </body>
 
+<script>
+    var sitebaseurlcontact = "<?php echo "http://192.168.1.2/shanielfashions/index.php/Pages/contactustest";?>";
+</script>
+
 <!--Libs-->
 <script src="<?php echo base_url(); ?>assets/theme/plugins/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>

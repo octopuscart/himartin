@@ -361,6 +361,32 @@ class Api extends REST_Controller {
         $this->response("hell");
     }
 
+    public function contactMail_post() {
+        $cf_name = $this->post('cf_name');
+        $cf_email = $this->post('cf_email');
+        $cf_subject = $this->post('cf_subject');
+        $cf_message = $this->post('cf_message');
+        $cf_anti_spam = $this->post('cf_anti_spam');
+
+
+//        $this->email->from($cf_name, $cf_email);
+//        $this->email->to('octopuscartltd@gmail.com');
+//        $this->email->subject('New Enquiry From Website:- ' . $cf_subject);
+//        $this->email->message($cf_message);
+
+        $this->email->from('sales@shanielfashions.com', 'sales@shanielfashions.com');
+        $this->email->to('octopuscartltd@gmail.com');
+        $this->email->subject('Test email from sales@shanielfashions.com');
+        $this->email->message('This is a test.');
+
+        try {
+            $this->email->send();
+            $this->response(1);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
 }
 
 ?>

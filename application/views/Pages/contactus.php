@@ -1,68 +1,130 @@
 <?php
+
 $this->load->view('layout/header');
 ?>
 
-<!--banner-->
-<div class="banner1" style='background: url("<?php echo base_url(); ?>assets/theme/images/bcontact.jpg");background-size: cover;'>
-    <div class="container">
-        <h3><a href="/">Home</a> / <span>Contact Us</span></h3>
-    </div>
-</div>
-<!--banner-->
-<!--content-->
-<div class="content">
-    <!--contact-->
-    <div class="mail-w3ls">
-        <div class="container">
-          
-            <div class="mail-grids">
-                <div class="mail-top">
-                    <div class="col-md-4 mail-grid">
-                        <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
-                        <h5>Address</h5>
-                        <p>Shop# 13, G/F, Wing Lee Building, 27-33 Kimberley Rd, Tsim Sha Tsui, Hong Kong</p>
-                    </div>
-                    <div class="col-md-4 mail-grid">
-                        <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
-                        <h5>Phone</h5>
-                        <p>Telephone:  +852 6626 4429</p>
-                    </div>
-                    <div class="col-md-4 mail-grid">
-                        <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-                        <h5>E-mail</h5>
-                        <p>E-mail:<a href="mailto:john@perfectfashion.com.hk"> john@perfectfashion.com.hk</a></p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="map-w3">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14765.600811344413!2d114.1734977883891!3d22.30069943003076!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x20801908428b9252!2sJohn&#39;s+Perfect+Fashion!5e0!3m2!1sen!2sin!4v1536114908053" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>                </div>
-                <div class="mail-bottom">
-                    <h4>Get In Touch With Us</h4>
-                    <form action="#" method="post">
-                        <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                    this.value = 'Name';
-                                }" required="">
-                        <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                    this.value = 'Email';
-                                }" required="">
-                        <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                    this.value = 'Telephone';
-                                }" required="">
-                        <textarea  onfocus="this.value = '';" onblur="if (this.value == '') {
-                                    this.value = 'Message...';
-                                }" required="">Message...</textarea>
-                        <input type="submit" value="Submit" >
-                        <input type="reset" value="Clear" >
+<iframe class="w_full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14765.77225006395!2d114.1726538!3d22.2990774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x86434735e1a12048!2sShaniel+Custom+Tailors!5e0!3m2!1sen!2sin!4v1536712236300" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe><hr class="divider_type_1">
 
-                    </form>
+
+<!--content-->
+<section class="section_offset">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30">
+                <h3 class="color_dark fw_light m_bottom_15 heading_1 t_align_c">Contact Information</h3>
+                <p class="m_bottom_35 heading_2 t_align_c">You can get in touch with our team
+                </p>		
+                <p class="fw_light m_bottom_23">Mr.Shaniel is the owner of Shaniel Fashions Ltd. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 3 weeks.”</p>
+                <div class="row">
+                    <ul class="col-lg-6 col-md-6 col-sm-6 fw_light w_break m_bottom_45 m_xs_bottom_30">
+                        <li class="m_bottom_8">
+                            <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                <i class="icon-phone-1"></i>
+                            </div>
+                            +(852) 2730 1251 <br/> <span style="    margin-left: 36px;"> +(852) 2730 1287</span>
+
+                        </li>
+                        <li class="m_bottom_8">
+                            <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                <i class="icon-mail-alt"></i>
+                            </div>
+                            <a href="mailto:sales@shanielfashions.com" class="color_black color_dark _hover">sales@shanielfashions.com</a>
+                        </li>
+
+                    </ul>
+                    <ul class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30 vr_list_type_5">
+                        <li class="m_bottom_8 fw_light">
+                            <div class="f_left icon_wrap_size_1 color_dark  circle">
+                                <i class="icon-location"></i>
+                            </div>
+                            86-88A Nathan Road, <br/>Tsim Sha Tsui, Hong Kong
+                        </li>
+                        <li>
+                            <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                <i class="icon icon-print"></i>
+                            </div>
+                            +(852) 2730 1292
+                        </li>
+                    </ul>
                 </div>
+                <h5 class="color_dark m_bottom_20 fw_light">Stay Connected</h5>
+                <ul class="hr_list social_icons">
+                    <!--tooltip_container class is required-->
+                    <li class="m_right_15 m_bottom_15 tooltip_container">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Facebook</span>
+                        <a href="#" class="d_block facebook icon_wrap_size_2 circle color_dark ">
+                            <i class="icon-facebook fs_small"></i>
+                        </a>
+                    </li>
+                    <li class="m_right_15 m_bottom_15 tooltip_container">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Twitter</span>
+                        <a href="#" class="d_block twitter icon_wrap_size_2 circle color_dark ">
+                            <i class="icon-twitter fs_small"></i>
+                        </a>
+                    </li>
+                    <li class="m_right_15 m_bottom_15 tooltip_container m_xs_right_15">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Google Plus</span>
+                        <a href="#" class="d_block googleplus icon_wrap_size_2 circle color_dark ">
+                            <i class="icon-gplus-1 fs_small"></i>
+                        </a>
+                    </li>
+
+
+                    <li class="m_right_15 m_bottom_15 tooltip_container">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
+                        <a href="#" class="d_block instagram icon_wrap_size_2 circle color_dark ">
+                            <i class="icon-instagramm fs_small"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30">
+                <h3 class="color_dark fw_light m_bottom_15 heading_1 t_align_c">Contact Form</h3>
+                <p class="m_bottom_35 heading_2 t_align_c">For any further queries
+                </p>	
+                <?php
+                if($checksent==1){
+                    
+                }
+                ?>
+                <form method="post" action="#">
+                    <ul>
+                        <li class="row m_bottom_10">
+                            <div class="col-lg-6 col-md-6 col-sm-6 w_xs_full m_xs_bottom_10">
+                                <input type="text" name="cf_name" placeholder="Name*" class="w_full r_corners fw_light">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 w_xs_full">
+                                <input type="email" name="cf_email" placeholder="Email*" class="w_full r_corners fw_light">
+                            </div>
+                        </li>
+                        <li class="m_bottom_10">
+                            <input type="text" name="cf_subject" placeholder="Subject" class="w_full r_corners fw_light">
+                        </li>
+                        <li class="m_bottom_5">
+                            <textarea class="w_full r_corners fw_light height_3" name="cf_message" placeholder="Message"></textarea>
+                        </li>
+                        <li class="m_bottom_20">
+                            <label for="capcha" class="d_inline_m fw_light m_right_5 w_auto">Anti-spam test: 4+4=</label>
+                            <input id="capcha" type="text" name="cf_anti_spam" class="r_corners fw_light d_inline_m w_auto">
+                        </li>
+                        <li class="m_bottom_10">
+                            <button class="button_type_5 color_blue transparent r_corners fs_medium tr_all m_right_10 m_sm_bottom_10">Submit</button>
+                        </li>
+                    </ul>
+                </form>
             </div>
         </div>
     </div>
-    <!--contact-->
-</div>
-<!--content-->
+</section>
+
+
 
 <?php
+
 $this->load->view('layout/footer');
 ?>
