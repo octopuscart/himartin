@@ -17,7 +17,7 @@ hr {
      margin-top: 5px;
     margin-bottom: 5px;
     border: 0;
-    border-top: 1px solid #c0c0c0;
+    /*border-top: 1px solid #c0c0c0;*/
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -319,7 +319,7 @@ thead td.cart-form-heading {
 }
 
 .header_bottom_part.type_2 {
-    padding: 0px 0;
+    padding: 20px 0;
 }
 
 .
@@ -361,4 +361,25 @@ box-shadow: 0px 0px 15px -3px #000;
 
 #side_menu .half_column {
     width: 100%;
+}
+
+.bg_gradiant{
+    background: -webkit-linear-gradient(left,#70269f,#397af0);
+    background: #70269f;
+    background: -webkit-gradient(linear,left top,right top,from(#70269f),to(#397af0));
+    background: -webkit-linear-gradient(left,#70269f,#397af0);
+    background: -moz-linear-gradient(left,#70269f,#397af0);
+    background: -o-linear-gradient(left,#70269f,#397af0);
+    background: -ms-linear-gradient(left,#70269f,#397af0);
+    background: linear-gradient(left,#70269f,#397af0);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70269f', endColorstr='#397af0',GradientType=1 );
+}
+
+
+.color_purple2{
+    color: #70269f;
+}
+
+.color_blue2{
+    color:#397af0
 }

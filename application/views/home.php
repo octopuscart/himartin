@@ -5,12 +5,21 @@ $this->load->view('layout/header');
 <section class="relative w_full m_bottom_15">
     <div class="r_slider">
         <ul>
+<!--            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/images/slide_02.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption lfb ltb" data-x="left" data-y="bottom" data-hoffset="-118" data-speed="600"><img src="<?php echo base_url(); ?>assets/theme/images/sliderjacket2.png" alt="" style="height: 400px;"></div>
+                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light">The best<br>priced product!</h1></div>
+                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700">Vestibulum ante ipsum primis in faucibus orci luctus<br>et ultrices posuere cubilia Curae; Suspendisse<br>sollicitudin velit sed leo. Ut pharetra augue nec.</div>
+                <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Buy Now!</a>
+                </div>
+            </li>-->
             <li data-transition="fade" data-slotamount="10">
-                <img src="<?php echo base_url(); ?>assets/theme/slider/5a.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/s1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light" style="font-size: 40px;">Welcome to Shaniel Fashions <br/>custom clothing.</h1></div>
                 <div class="caption sfl str color_dark" data-x="left" data-y="243" data-speed="700" data-start="1200">Specializing in bespoke and made-to-measure <br/>apparel and alterations for men</div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" style="background: white">Learn More</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" >Learn More</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
@@ -20,14 +29,14 @@ $this->load->view('layout/header');
                         <br>SETTING THE STANDARD.</h1></div>
                 <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
                 <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 color_dark r_corners fs_medium d_block tr_all" style="background: white">Customize Now!</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_dark r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/3a.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light" style="font-size: 34px;">PREMIER <br/>MADE-TO-MEASURE CLOTHING</h1></div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" style="background: white">Create Your Design</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" >Create Your Design</a>
                 </div>
             </li>
 
@@ -35,7 +44,7 @@ $this->load->view('layout/header');
                 <img src="<?php echo base_url(); ?>assets/theme/slider/4a.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light">The New Direction<br> for Your Success</h1></div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
-                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" style="background: white">Learn More</a>
+                    <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" >Learn More</a>
                 </div>
             </li>
 
@@ -239,7 +248,7 @@ $this->load->view('layout/header');
                                 <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php echo "SF00" . $i; ?></i></a>
                                 <div class="im_half_container m_bottom_10">
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">US$ 1700.00</p>	
-                                                                        <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie"></p>	
+                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie"></p>	
 
                                 </div>
                                 <div class="clearfix">

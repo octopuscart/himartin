@@ -107,7 +107,7 @@
                         </button>
                     </div>
                 </header>
-                <hr class="divider_type_4 m_bottom_20">
+                <hr class="divider_type_2 m_bottom_20">
                 <!--searchform-->
                 <form role="search" class="m_bottom_20 relative type_2">
                     <input type="text" placeholder="Search" class="r_corners fw_light bg_light w_full">
@@ -115,7 +115,7 @@
                         <i class="icon-search"></i>
                     </button>
                 </form>
-                <hr class="divider_type_4 m_bottom_25">
+                <hr class="divider_type_2 m_bottom_25">
                 <!--main menu-->
                 <nav>
                     <ul class="side_main_menu fw_light">
@@ -153,7 +153,7 @@
 
 
                 <!--header markup-->
-                <header role="banner" class="relative type_2">
+                <header role="banner" class="relative type_2 bg_gradiant">
                     <span class="gradient_line"></span>
                     <!--top part-->
                     <section class="header_top_part p_top_0 p_bottom_0">
@@ -161,33 +161,33 @@
                             <div class="row">
                                 <!--contact info-->
                                 <div class="col-lg-5 col-md-4 col-sm-5 t_xs_align_c">
-                                    <ul class="hr_list fs_small color_dark  contact_info_list">
+                                    <ul class="hr_list fs_small color_light  contact_info_list">
                                         <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
                                             <span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-phone-1"></i></span>+(852) 2730 1251
                                         </li>
-                                        <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
-                                            <a href="mailto:#" class="color_dark  d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>sales@shanielfashions.com</a>
+                                        <li class="m_right_20 color_light f_xs_none m_xs_right_0 m_xs_bottom_5">
+                                            <a href="mailto:#" class=" color_light d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>sales@shanielfashions.com</a>
                                         </li>
 
                                     </ul>
                                 </div>
-                                <div class="col-lg-7 col-md-8 col-sm-7 t_align_r t_xs_align_c">
+                                <div class="col-lg-7 col-md-8 col-sm-7 t_align_r t_xs_align_c m_top_5">
                                     <!--mini nav-->
                                     <nav class="d_inline_m m_right_10 m_xs_right_0">
                                         <ul class="hr_list stripe_list fs_small">
-                                            <li><a href="#" class="color_dark ">About</a></li>
-                                            <li><a href="<?php echo site_url('Pages/contactus');?>" class="color_dark ">Contact</a></li>
-                                            <li><a href="#" class="color_dark ">FAQ</a></li>
-                                            <li><a href="#" class="color_dark ">My Account</a></li>
-                                            <li><a href="#" class="color_dark ">My Wishlist</a></li>
+                                            <li><a href="#" class="color_light ">About</a></li>
+                                            <li><a href="<?php echo site_url('Pages/contactus');?>" class="color_light ">Contact</a></li>
+                                            <li><a href="#" class="color_light ">FAQ</a></li>
+                                            <li><a href="#" class="color_light ">My Account</a></li>
+                                            <li><a href="#" class="color_light ">My Wishlist</a></li>
                                         </ul>
                                     </nav>
                                     <br class="d_none d_xs_block">
                                     <ul class="hr_list d_inline_b social_icons">
-                                        <li class="m_right_8"><a href="#" class="color_dark  facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
-                                        <li class="m_right_8"><a href="#" class="color_dark  twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
-                                        <li class="m_right_8"><a href="#" class="color_dark  googleplus circle icon_wrap_size_1 d_block"><i class="icon-gplus-1"></i></a></li>
-                                        <li class="m_right_8"><a href="#" class="color_dark  instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class="color_light  facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class="color_light  twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class="color_light  googleplus circle icon_wrap_size_1 d_block"><i class="icon-gplus-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class="color_light  instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
                                     </ul>
 
 
@@ -195,9 +195,10 @@
                             </div>
                         </div>
                     </section>
-                    <hr>
+                                    <hr class="divider_type_2 bg_gradiant ">
+
                     <!--header bottom part-->
-                    <section class="header_bottom_part type_2 bg_light">
+                    <section class="header_bottom_part type_2 bg_light  ">
                         <div class="container">
                             <div class="d_table w_full d_xs_block">
                                 <!--logo-->
@@ -214,8 +215,8 @@
                                     <div class="f_right clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
                                         <!--shopping cart-->
                                         <div class="relative f_right dropdown_2_container shoppingcart">
-                                            <button class="icon_wrap_size_2 color_dark  circle tr_all">
-                                                <i class="icon-basket color_dark _2 tr_inherit"></i>
+                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                <i class="icon-basket color_blue2 _2 tr_inherit"></i>
                                             </button>
                                             <div class="dropdown_2 bg_light shadow_1 tr_all p_top_0">
                                                 <div class="sc_header bg_light_2 fs_small color_grey">
@@ -250,8 +251,8 @@
                                         </div>
                                         <!--login-->
                                         <div class="relative f_right m_right_10 dropdown_2_container login">
-                                            <button class="icon_wrap_size_2 color_dark  circle tr_all">
-                                                <i class="icon-lock color_dark _2 tr_inherit"></i>
+                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                <i class="icon-lock color_blue2 _2 tr_inherit"></i>
                                             </button>
                                             <div class="dropdown_2 bg_light shadow_1 tr_all">
                                                 <h5 class="fw_light color_dark m_bottom_23">Login</h5>
@@ -297,15 +298,16 @@
                             </div>
                         </div>
                     </section>
-                    <hr class="d_xs_none">
-                    <section class="sticky_part bg_light">
+                                  <hr class="divider_type_2 bg_gradiant">
+
+                    <section class="sticky_part bg_light bg_gradiant">
                         <div class="container">
 
                             <!--main navigation-->
                             <nav role="navigation" class="d_inline_m d_xs_none m_xs_right_0 m_right_15 m_sm_right_5 t_align_l m_xs_bottom_15">
                                 <ul class="hr_list main_menu type_2 fw_light">
-                                    <li class="current container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Home
+                                    <li class=" container3d relative f_xs_none m_xs_bottom_5">
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Home
                                             <i class="icon-angle-down d_inline_m"></i>
                                         </a>
                                         <!--sub menu-->
@@ -323,7 +325,7 @@
                                         </ul>
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Customize Now
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Customize Now
                                             <i class="icon-angle-down d_inline_m"></i>
                                         </a>
                                         <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
@@ -343,12 +345,12 @@
                                         </ul>
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Offers
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Offers
                                         </a>
 
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Support & Guide
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Support & Guide
                                             <i class="icon-angle-down d_inline_m"></i>
                                         </a>
                                         <ul class="sub_menu r_xs_corners bg_light vr_list tr_all tr_xs_none trf_xs_none bs_xs_none d_xs_none">
@@ -369,17 +371,17 @@
 
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Fashion Tips
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Fashion Tips
                                         </a>
 
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="#">Schedule
+                                        <a class="color_light fs_large relative r_xs_corners" href="#">Schedule
                                         </a>
 
                                     </li>
                                     <li class="container3d relative f_xs_none m_xs_bottom_5">
-                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo site_url('Pages/contactus');?>">Contact Us
+                                        <a class="color_light fs_large relative r_xs_corners" href="<?php echo site_url('Pages/contactus');?>">Contact Us
                                         </a>
 
                                     </li>
