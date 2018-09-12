@@ -92,7 +92,13 @@ $this->load->view('layout/header');
                     <div class="alert_box success r_corners relative fs_medium m_bottom_10">
                         <b>Well done!</b> Mail Sent!!!
                         <i class="icon-cancel close_alert_box tr_all translucent circle t_align_c"></i>
-                    </div><?php
+                    </div>
+                <script>
+                setTimeout(function(){
+                    window.location = "<?php echo site_url('Pages/contactus')?>";
+                }, 2000)
+                </script>
+                        <?php
                 }
                 ?>
                 <?php

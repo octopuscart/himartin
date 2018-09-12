@@ -31,22 +31,24 @@ class Pages extends CI_Controller {
         $cf_message = $this->input->post('cf_message');
         $cf_anti_spam = $this->input->post('cf_anti_spam');
 
-        $data['checksent'] = 0; 
+        $data['checksent'] = 0;
         $this->email->from($cf_email, $cf_name);
         $this->email->to('octopuscartltd@gmail.com');
         $this->email->subject('New Enquiry From Website:- ' . $cf_subject);
         $this->email->message($cf_message);
-        if ($cf_anti_spam == 8) {
-            try {
-                $this->email->send();
-                $data['checksent'] = 1;
-                $data['status'] = "Mail Sent!!!";
-            } catch (Exception $e) {
-                 $e->getMessage();
+        if ($cf_email) {
+            if ($cf_anti_spam == 8) {
+                try {
+                    $this->email->send();
+                    $data['checksent'] = 1;
+                    $data['status'] = "Mail Sent!!!";
+                } catch (Exception $e) {
+                    $e->getMessage();
+                }
+            } else {
+                $data['checksent'] = 2;
+                $data['status'] = "Unable to Send Mail.";
             }
-        } else {
-            $data['checksent'] = 2;
-            $data['status'] = "Unable to Send Mail.";
         }
         $this->load->view('Pages/contactus', $data);
     }
