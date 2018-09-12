@@ -96,7 +96,7 @@
                 <header class="m_bottom_30 d_table w_full">
                     <!--logo-->
                     <div class="d_table_cell half_column v_align_m">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="<?php echo base_url(); ?>assets/images/logo4.png" alt="">
                         </a>
                     </div>
@@ -133,7 +133,7 @@
 
 
                         <li class="has_sub_menu m_bottom_10">
-                            <a href="shop.html" class="d_block relative fs_large color_light_2 color_blue_hover">Customize Now</a>
+                            <a href="/" class="d_block relative fs_large color_light_2 color_blue_hover">Customize Now</a>
                             <!--sub menu(second level)-->
                             <ul class="d_none m_top_10">
                                 <li class="m_bottom_10"><a href="#" class="d_block relative color_light_2 color_blue_hover">Shits</a></li>
@@ -202,7 +202,7 @@
                             <div class="d_table w_full d_xs_block">
                                 <!--logo-->
                                 <div class="col-lg-3 col-md-3 col-sm-3 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
-                                    <a href="index.html" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
+                                    <a href="/" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
                                         <img src="<?php echo base_url(); ?>assets/images/logo4.png" alt="">
                                     </a>
                                 </div>
