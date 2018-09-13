@@ -9,12 +9,12 @@ and open the template in the editor.
 */
 
 .singlemenu li a{
- font-size: 1.15em!important;
+    font-size: 1.15em!important;
     color: #0d59af!important;
 }
 
 hr {
-     margin-top: 5px;
+    margin-top: 5px;
     margin-bottom: 5px;
     border: 0;
     /*border-top: 1px solid #c0c0c0;*/
@@ -48,7 +48,7 @@ hr {
 }
 
 .bannerproduct h3{text-shadow: 0px 1px 1px #000;
-    color: white;
+                  color: white;
 }
 
 
@@ -278,7 +278,7 @@ td.cart-form-heading {
 
 thead td.cart-form-heading {
     background: #0d59af;
-        color: white!important;
+    color: white!important;
 }
 .cart-items h2 {
     font-size: 1.5em;
@@ -286,19 +286,19 @@ thead td.cart-form-heading {
 }
 
 .custome_summary_popup tr{
-        border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .custome_summary_popup td{
     text-align: left;
-     width: 50%;
-     padding: 5px;
-    
+    width: 50%;
+    padding: 5px;
+
 }
 
 .custome_summary_popup th{
     text-align: right;
-        text-align: right;
+    text-align: right;
     padding-right: 12px;
     width: 50%;
     padding: 5px;
@@ -319,7 +319,7 @@ thead td.cart-form-heading {
 }
 
 .header_bottom_part.type_2 {
-    padding: 20px 0;
+    padding: 50px 0;
 }
 
 .
@@ -334,7 +334,7 @@ element.style {
 .dropdown_2 {
     border: 0px solid #000;
     border-top-color: #000;
-box-shadow: 0px 0px 15px -3px #000;
+    box-shadow: 0px 0px 15px -3px #000;
 }
 
 .dropdown_2_container.login .dropdown_2 {
@@ -356,7 +356,7 @@ box-shadow: 0px 0px 15px -3px #000;
 }
 
 .gradient_line {
-     height: 0px; 
+    height: 0px; 
 }
 
 #side_menu .half_column {
@@ -382,4 +382,58 @@ box-shadow: 0px 0px 15px -3px #000;
 
 .color_blue2{
     color:#397af0
+}
+
+.logotext{
+    font-size: 40px;
+    margin-top: 10px;
+    line-height: 51px;
+    color: #5849c1;
+}
+
+.hktradmark{
+        height: 58px;
+    float: right;
+}
+
+.hktradmark2{
+    height: 91px;
+    /* float: right; */
+    margin-top: -17px;
+    margin-bottom: -50px;
+}
+
+.text_padding_10{
+    padding: 10px;
+}
+
+.bg_color_blue2{
+    background: #397af0;
+}
+
+.bg_color_purple2{
+    background: #70269f;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+    .logotext{
+        opacity: 0;    }
+    .header_bottom_part.type_2 {
+        padding: 30px 0 1px;
+    }
+    .header_mobile_left{
+            margin-top: -33px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .logotext{
+        opacity: 0;  
+    }
+    .header_bottom_part.type_2 {
+        padding: 25px 0 5px;
+    }
+    .header_mobile_left{
+            margin-top: -33px;
+    }
 }

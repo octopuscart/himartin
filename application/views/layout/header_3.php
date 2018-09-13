@@ -203,15 +203,17 @@
                         <div class="container">
                             <div class="d_table w_full d_xs_block">
                                 <!--logo-->
-                                <div class="col-lg-3 col-md-3 col-sm-3 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c" style="margin: -50px auto;
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 d_table_cell d_xs_block f_none t_xs_align_c">
+                                    <!--searchform-->
+                                    
+                                    <div class="d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c" style="margin: -50px auto;
                                      position: absolute;">
                                     <a href="/" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
                                         <img src="<?php echo base_url(); ?>assets/images/logo21.png" alt="" style="height: 135px;">
                                     </a>
                                 </div>
-                                <div class="col-lg-9 col-md-9 col-sm-9 d_table_cell d_xs_block f_none t_xs_align_c">
-                                    <!--searchform-->
-                                    <span class="logotext">SHANIEL FASHIONS</span>
+                                    <span class="logotext" style="    margin-left: 171px;">SHANIEL FASHIONS</span>
                                                                 <!--<img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark2">-->
 
 

@@ -212,7 +212,8 @@
                                 <div class="col-lg-9 col-md-9 col-sm-9 d_table_cell d_xs_block f_none t_xs_align_c">
                                     <!--searchform-->
                                     <span class="logotext">SHANIEL FASHIONS</span>
-                                                                <!--<img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark2">-->
+                                                                                                    <img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark2">
+
 
 
 
@@ -385,7 +386,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark">
+                            <!--<img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark">-->
                         </div>
                     </section>
                 </header>
