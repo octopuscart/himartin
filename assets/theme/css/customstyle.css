@@ -392,7 +392,7 @@ element.style {
 }
 
 .hktradmark{
-        height: 58px;
+    height: 58px;
     float: right;
 }
 
@@ -423,17 +423,20 @@ element.style {
         padding: 30px 0 1px;
     }
     .header_mobile_left{
-            margin-top: -33px;
+        margin-top: -33px;
     }
     .hktradmark {
-    height: 58px;
-    float: right;
-    /* margin-top: -94px; */
-    /* margin-right: -8px; */
-    position: absolute;
-    right: 0;
-    top: 167px;
-}
+        height: 58px;
+        float: right;
+        /* margin-top: -94px; */
+        /* margin-right: -8px; */
+        position: absolute;
+        right: 0;
+        top: 167px;
+    }
+    .hide_from_mobile{
+        display: none;
+    }
 }
 @media only screen and (max-width: 479px) {
     .logotext{
@@ -443,15 +446,18 @@ element.style {
         padding: 25px 0 5px;
     }
     .header_mobile_left{
-            margin-top: -33px;
+        margin-top: -33px;
     }
     .hktradmark {
-    height: 58px;
-    float: right;
-    /* margin-top: -94px; */
-    /* margin-right: -8px; */
-    position: absolute;
-    right: 0;
-    top: 167px;
-}
+        height: 58px;
+        float: right;
+        /* margin-top: -94px; */
+        /* margin-right: -8px; */
+        position: absolute;
+        right: 0;
+        top: 167px;
+    }
+    .hide_from_mobile{
+        display: none;
+    }
 }

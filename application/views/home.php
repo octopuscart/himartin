@@ -21,103 +21,103 @@ switch ($header) {
             <!--            <li data-transition="fade" data-slotamount="10">
                             <img src="<?php echo base_url(); ?>assets/theme/images/slide_02.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                             <div class="caption lfb ltb" data-x="left" data-y="bottom" data-hoffset="-118" data-speed="600"><img src="<?php echo base_url(); ?>assets/theme/images/sliderjacket2.png" alt="" style="height: 400px;"></div>
-                            <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light">The best<br>priced product!</h1></div>
-                            <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700">Vestibulum ante ipsum primis in faucibus orci luctus<br>et ultrices posuere cubilia Curae; Suspendisse<br>sollicitudin velit sed leo. Ut pharetra augue nec.</div>
-                            <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
+                            <div class="caption sfl hide_from_mobile str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light">The best<br>priced product!</h1></div>
+                            <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700">Vestibulum ante ipsum primis in faucibus orci luctus<br>et ultrices posuere cubilia Curae; Suspendisse<br>sollicitudin velit sed leo. Ut pharetra augue nec.</div>
+                            <div class="caption sfl hide_from_mobile str" data-x="755" data-y="339" data-speed="700" data-start="1900">
                                 <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Buy Now!</a>
                             </div>
                         </li>-->
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/7.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str bg_color_blue2" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light text_padding_10 " style="font-size: 40px;">Welcome to Shaniel Fashions <br/>custom clothing.</h1></div>
-                <div class="caption sfl str color_light" data-x="left" data-y="243" data-speed="700" data-start="1200">Specializing in bespoke and made-to-measure <br/>apparel and alterations for men</div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str bg_color_blue2" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light text_padding_10 " style="font-size: 40px;">Welcome to Shaniel Fashions <br/>custom clothing.</h1></div>
+                <div class="caption sfl hide_from_mobile str color_light" data-x="left" data-y="243" data-speed="700" data-start="1200">Specializing in bespoke and made-to-measure <br/>apparel and alterations for men</div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/9.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption lfb ltb" data-x="left" data-y="bottom" data-hoffset="-118" data-speed="600"><img src="<?php echo base_url(); ?>assets/theme/slider/suit_trans.png" alt=""></div>
-                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light bg_color_purple2 text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                <div class="caption sfl hide_from_mobile str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light bg_color_purple2 text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
                         <br>SETTING THE STANDARD.</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
-                <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
+                <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl hide_from_mobile str" data-x="755" data-y="339" data-speed="700" data-start="1900">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_dark r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/71.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-y="98" data-speed="700"><h1 class="color_light fw_light" style="font-size: 34px;">PREMIER <br/>MADE-TO-MEASURE CLOTHING</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="98" data-speed="700"><h1 class="color_light fw_light" style="font-size: 34px;">PREMIER <br/>MADE-TO-MEASURE CLOTHING</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_light r_corners fs_medium d_block tr_all" >Create Your Design</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/10.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" >Learn More</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/12.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light bg_color_purple2 text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                <div class="caption sfl hide_from_mobile str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light bg_color_purple2 text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
                         <br>SETTING THE STANDARD.</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
-                <div class="caption sfl str" data-x="755" data-y="339" data-speed="700" data-start="1900">
+                <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl hide_from_mobile str" data-x="755" data-y="339" data-speed="700" data-start="1900">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/11.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/13.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str " data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                <div class="caption sfl hide_from_mobile str " data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
                         <br>SETTING THE STANDARD.</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/14.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/16.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_dark fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                <div class="caption sfl hide_from_mobile str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_dark fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
                         <br>SETTING THE STANDARD.</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
-                <div class="caption sfl str" data-x="800" data-y="339" data-speed="700" data-start="1900">
+                <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl hide_from_mobile str" data-x="800" data-y="339" data-speed="700" data-start="1900">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/15.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/17.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="700" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                <div class="caption sfl hide_from_mobile str" data-x="700" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
                         <br>SETTING THE STANDARD.</h1></div>
-                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
-                <div class="caption sfl str" data-x="700" data-y="339" data-speed="700" data-start="1900">
+                <div class="caption sfl hide_from_mobile str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl hide_from_mobile str" data-x="700" data-y="339" data-speed="700" data-start="1900">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
@@ -125,8 +125,8 @@ switch ($header) {
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/15.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
@@ -134,8 +134,8 @@ switch ($header) {
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/18.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
-                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl hide_from_mobile str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
