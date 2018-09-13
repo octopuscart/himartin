@@ -7,11 +7,11 @@
         meta_tags();
         ?>
         <!-- Favicon -->
-        <link rel="shortcut icon" href="<?php echo base_url() . 'assets/images/logof.png'; ?>" type="image/x-icon">
-        <link rel="icon" href="<?php echo base_url() . 'assets/images/logof.png'; ?>" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php echo base_url() . 'assets/images/logo21.png'; ?>" type="image/x-icon">
+        <link rel="icon" href="<?php echo base_url() . 'assets/images/logo21.png'; ?>" type="image/x-icon">
 
-        <link rel="shortcut icon" href="<?php echo base_url() . 'assets/images/logof.png'; ?>"/>
-        <link rel="apple-touch-icon image_src" href="<?php echo base_url() . 'assets/images/logof.png'; ?>"/>
+        <link rel="shortcut icon" href="<?php echo base_url() . 'assets/images/logo21.png'; ?>"/>
+        <link rel="apple-touch-icon image_src" href="<?php echo base_url() . 'assets/images/logo21.png'; ?>"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
