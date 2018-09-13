@@ -55,7 +55,7 @@ switch ($header) {
 
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/10.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
-                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_blue2 fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
                 <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
                     <a href="#" role="button" class="tt_uppercase button_type_3 transparent color_dark r_corners fs_medium d_block tr_all" >Learn More</a>
                 </div>
@@ -70,7 +70,7 @@ switch ($header) {
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
                 </div>
             </li>
-            
+
             <li data-transition="fade" data-slotamount="10">
                 <img src="<?php echo base_url(); ?>assets/theme/slider/11.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
                 <div class="caption sfl str" data-x="left" data-y="108" data-speed="700"><h1 class="color_light fw_light">The New Direction<br> for Your Success</h1></div>
@@ -87,7 +87,59 @@ switch ($header) {
                     <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
                 </div>
             </li>
-            
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/14.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
+                </div>
+            </li>
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/16.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="755" data-y="109" data-speed="700" data-start="1500"><h1 class="color_dark fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                        <br>SETTING THE STANDARD.</h1></div>
+                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl str" data-x="800" data-y="339" data-speed="700" data-start="1900">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
+                </div>
+            </li>
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/15.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
+                </div>
+            </li>
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/17.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="700" data-y="109" data-speed="700" data-start="1500"><h1 class="color_light fw_light  text_padding_10" style="font-size: 34px;">CUSTOM MADE SUITS & SHIRTS.
+                        <br>SETTING THE STANDARD.</h1></div>
+                <div class="caption sfl str color_light" data-x="755" data-y="244" data-speed="700" data-start="1700"></div>
+                <div class="caption sfl str" data-x="700" data-y="339" data-speed="700" data-start="1900">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all" >Customize Now!</a>
+                </div>
+            </li>
+
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/15.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
+                </div>
+            </li>
+
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider/18.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <div class="caption sfl str" data-x="left" data-x="-10" data-y="108" data-speed="700"><h1 class="color_dark fw_light">The New Direction<br> for Your Success</h1></div>
+                <div class="caption sfl str" data-x="left" data-y="339" data-speed="700" data-start="1400">
+                    <a href="#" role="button" class="tt_uppercase button_type_3 color_purple r_corners fs_medium d_block tr_all">Try Now!</a>
+                </div>
+            </li>
+
         </ul>
     </div>
 </section>
@@ -204,33 +256,33 @@ $customarray = [
 ];
 foreach ($customarray as $key => $value) {
     ?>
-                    <div class="col-md-3">
-                        <figure class="portfolio_item1 t_xs_align_c type_2 ">
-                            image
-                            <div class="popup_wrap d_xs_inline_b d_mxs_block relative r_corners wrapper appear-animation fadeInDown appear-animation-visible" data-appear-animation="fadeInDown" style="width: auto;">
-                                <img src="<?php echo base_url(); ?>assets/theme/images/<?php echo $value['image']; ?>" alt="" class="tr_all" style="height: 250px">
-                                <div class="project_description vc_child t_align_c tr_all"><div class="d_inline_m">
-                                        <div class="d_inline_b clearfix">
-                                            <a href="images/home_img_5.jpg" data-group="portfolio" data-title="Title 1" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left m_right_10">
-                                                <i class="icon-basket "></i>
-                                            </a>
-                                        </div>
-                                    </div></div>
-                                <div class="project_description_up1 bg_light_3 tr_all" style="padding:10px">
-                                    <div class="d_table w_full">
-                                        <div class="col-md-12 d_table_cell v_align_m f_none t_align_c">
-                                            <h4 class="m_bottom_5"><a href="#" class="color_dark d_block wrapper tr_all d_inline_b"><?php echo $value['title']; ?></a></h4>
-                                            <div class="color_grey">
-                                                <a href="#" class="color_grey d_inline_b fs_medium"><i>Start From </i></a>
-                                                <a href="#" class="color_dark d_inline_b fs_medium"><i>US$  <?php echo $value['price']; ?></i></a>
+                            <div class="col-md-3">
+                                <figure class="portfolio_item1 t_xs_align_c type_2 ">
+                                    image
+                                    <div class="popup_wrap d_xs_inline_b d_mxs_block relative r_corners wrapper appear-animation fadeInDown appear-animation-visible" data-appear-animation="fadeInDown" style="width: auto;">
+                                        <img src="<?php echo base_url(); ?>assets/theme/images/<?php echo $value['image']; ?>" alt="" class="tr_all" style="height: 250px">
+                                        <div class="project_description vc_child t_align_c tr_all"><div class="d_inline_m">
+                                                <div class="d_inline_b clearfix">
+                                                    <a href="images/home_img_5.jpg" data-group="portfolio" data-title="Title 1" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left m_right_10">
+                                                        <i class="icon-basket "></i>
+                                                    </a>
+                                                </div>
+                                            </div></div>
+                                        <div class="project_description_up1 bg_light_3 tr_all" style="padding:10px">
+                                            <div class="d_table w_full">
+                                                <div class="col-md-12 d_table_cell v_align_m f_none t_align_c">
+                                                    <h4 class="m_bottom_5"><a href="#" class="color_dark d_block wrapper tr_all d_inline_b"><?php echo $value['title']; ?></a></h4>
+                                                    <div class="color_grey">
+                                                        <a href="#" class="color_grey d_inline_b fs_medium"><i>Start From </i></a>
+                                                        <a href="#" class="color_dark d_inline_b fs_medium"><i>US$  <?php echo $value['price']; ?></i></a>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
-
                                     </div>
-                                </div>
+                                </figure>
                             </div>
-                        </figure>
-                    </div>
     <?php
 }
 ?>
@@ -249,7 +301,7 @@ foreach ($customarray as $key => $value) {
         <div class="relative ">
             <div class="row">
                 <div class="owl-carousel t_xs_align_c featured_products" data-nav="fproducts_nav_" data-plugin-options='{"singleItem":false,"itemsCustom":[[992,4],[768,3],[600,2],[10,1]]}'>
-<?php for ($i = 1; $i < 5; $i++) { ?>
+                    <?php for ($i = 1; $i < 5; $i++) { ?>
 
 
                         <!--product-->
@@ -286,7 +338,7 @@ foreach ($customarray as $key => $value) {
                         <!--product-->
 
 
-<?php } ?>
+                    <?php } ?>
                 </div>
             </div>
             <!--carousel nav-->
@@ -327,7 +379,40 @@ foreach ($customarray as $key => $value) {
 </section>
 
 
+<section class="section_offset image_bg_7" id="how_it_works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 m_sm_bottom_30" data-appear-animation="fadeInUp" data-appear-animation-delay="400">
+                <div class="iframe_video_wrap">
+                    <iframe width="642" height="361" src="https://www.youtube.com/embed/qbh6AHh12Oo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-5 col-lg-offset-1 col-md-6" data-appear-animation="fadeInUp" data-appear-animation-delay="600">
+                <h3 class="color_light fw_light m_bottom_40 m_xs_top_0">How It Works</h3>
+                <p class="fs_large fw_light color_light m_bottom_25">
+                    Before the measurements begin we will want to start with a few guidelines in order to obtain the most accurate measurements.  It is ideal for the subject to be in a pair of trousers and shirt that fits well.                </p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
+                        <ul class="color_light">
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Chest</li>
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Stomach</li>
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Hips</li>
 
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 m_bottom_15">
+                        <ul class="color_light">
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Shoulder </li>
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Sleeve Length</li>
+                            <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Back Length </li>
+ </ul>
+                    </div>
+                </div>
+                <a href="#" class="color_green fs_medium button_type_3 tr_all r_corners tt_uppercase d_inline_b">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -343,9 +428,9 @@ foreach ($customarray as $key => $value) {
                         <div class="owl-wrapper" style="width: 7020px; left: 0px; display: block;">
                             <div class="owl-item" style="width: 1170px;"><div>
                                     <div class="row">
-<?php
-for ($i = 1; $i < 7; $i++) {
-    ?>
+                                        <?php
+                                        for ($i = 1; $i < 7; $i++) {
+                                            ?>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20 f_mxs_none w_mxs_full m_mxs_bottom_10">
                                                 <div class="clients_item db_xs_centered wrapper relative r_corners d_xs_block d_mxs_inline_b">
                                                     <a href="#" class="d_block  tr_all wrapper r_corners">
@@ -353,9 +438,9 @@ for ($i = 1; $i < 7; $i++) {
                                                     </a>
                                                 </div>
                                             </div>
-    <?php
-}
-?>
+                                            <?php
+                                        }
+                                        ?>
 
                                     </div>
                                 </div>
@@ -379,6 +464,6 @@ for ($i = 1; $i < 7; $i++) {
 
 
 
-<?php
-$this->load->view('layout/footer');
-?>
+            <?php
+            $this->load->view('layout/footer');
+            ?>
