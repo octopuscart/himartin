@@ -425,6 +425,15 @@ element.style {
     .header_mobile_left{
             margin-top: -33px;
     }
+    .hktradmark {
+    height: 58px;
+    float: right;
+    /* margin-top: -94px; */
+    /* margin-right: -8px; */
+    position: absolute;
+    right: 0;
+    top: 167px;
+}
 }
 @media only screen and (max-width: 479px) {
     .logotext{
@@ -436,4 +445,13 @@ element.style {
     .header_mobile_left{
             margin-top: -33px;
     }
+    .hktradmark {
+    height: 58px;
+    float: right;
+    /* margin-top: -94px; */
+    /* margin-right: -8px; */
+    position: absolute;
+    right: 0;
+    top: 167px;
+}
 }
