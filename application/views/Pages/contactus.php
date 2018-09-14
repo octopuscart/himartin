@@ -23,6 +23,15 @@ $this->load->view('layout/header');
                             +(852) 2730 1251 <br/> <span style="    margin-left: 36px;"> +(852) 2730 1287</span>
 
                         </li>
+                        
+                        <li class="m_bottom_8 ">
+                                <div class="d_inline_m  color_dark   m_right_10" style='font-size: 24px;    margin-right: 11px;'>
+                                    <i class="fa fa-whatsapp"></i>
+                                </div>
+                                +(852) 9342 1970<br/>
+                                <span style='margin-left: 35px'>  +(852) 9762 5792 </span>
+                            </li>
+                        
                         <li class="m_bottom_8">
                             <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                 <i class="icon-mail-alt"></i>
@@ -36,7 +45,8 @@ $this->load->view('layout/header');
                             <div class="f_left icon_wrap_size_1 color_dark  circle">
                                 <i class="icon-location"></i>
                             </div>
-                            86-88A Nathan Road, <br/>Tsim Sha Tsui, Hong Kong
+                            B&C, G/F., Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, Hong Kong
+
                         </li>
                         <li>
                             <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
@@ -93,12 +103,12 @@ $this->load->view('layout/header');
                         <b>Well done!</b> Mail Sent!!!
                         <i class="icon-cancel close_alert_box tr_all translucent circle t_align_c"></i>
                     </div>
-                <script>
-                setTimeout(function(){
-                    window.location = "<?php echo site_url('Pages/contactus')?>";
-                }, 2000)
-                </script>
-                        <?php
+                    <script>
+                        setTimeout(function () {
+                            window.location = "<?php echo site_url('Pages/contactus') ?>";
+                        }, 2000)
+                    </script>
+                    <?php
                 }
                 ?>
                 <?php
