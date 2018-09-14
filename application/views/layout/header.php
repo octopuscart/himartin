@@ -96,7 +96,7 @@
             "link" => '#',
             "submenuitems" => [
                 array(
-                    "title" => "Lessure",
+                    "title" => "Leisure",
                     "link" => '#',),
                 array(
                     "title" => "Smart Casual",
