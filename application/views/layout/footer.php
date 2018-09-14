@@ -71,7 +71,7 @@
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-clock"></i>
                                 </div> <span class='font_size_12'>Sunday</span><br/> 
-                                <span style='margin-left: 35px'>09:00AM to 06:00 PM</span>
+                                <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
                             </div>
 
                         </li>
