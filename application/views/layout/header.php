@@ -73,106 +73,106 @@
         array(
             "title" => "Home",
             "submenu" => "yes",
-            "link" => "/",
+            "link" => '#',
             "submenuitems" => [
                 array(
                     "title" => "About Us",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "FAQ's",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Terms of Service",
-                    "link" => "/"),
+                    "link" => '#',),
             ]),
         array(
             "title" => "Our History",
             "submenu" => "no",
-            "link" => "/",
+            "link" => '#',
         ),
         array(
             "title" => "Products",
             "submenu" => "yes",
-            "link" => "/",
+            "link" => '#',
             "submenuitems" => [
                 array(
                     "title" => "Lessure",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Smart Casual",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Smart Formal",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Urban",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Classic",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Sophisticated",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Expensive",
-                    "link" => "/"),
+                    "link" => '#',),
             ]
         ),
         array(
             "title" => "Men",
             "submenu" => "yes",
-            "link" => "/",
+            "link" => '#',
             "submenuitems" => [
                 array(
                     "title" => "Suits",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Jackets",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Shirts",
-                    "link" => "/"),
+                    "link" => '#',),
                  array(
                     "title" => "Pants",
-                    "link" => "/"),
+                    "link" => '#',),
             ]
         ),
         array(
             "title" => "Women",
             "submenu" => "yes",
-            "link" => "/",
+            "link" => '#',
             "submenuitems" => [
                 array(
                     "title" => "Suits",
-                    "link" => "/"),
+                    "link" => '#',),
                 array(
                     "title" => "Jackets",
-                    "link" => "/"),
+                    "link" => '#',),
                 
                  array(
                     "title" => "Pants",
-                    "link" => "/"),
+                    "link" => '#',),
             ]
         ),
         array(
             "title" => "Our Clients",
             "submenu" => "no",
-            "link" => "/",
+            "link" => '#',
         ),
         array(
             "title" => "Support",
             "submenu" => "no",
-            "link" => "/",
+            "link" => '#',
         ),
         array(
             "title" => "Style Tips",
             "submenu" => "no",
-            "link" => "/",
+            "link" => '#',
         ),
         array(
             "title" => "Contact Us",
             "submenu" => "no",
-            "link" => "/",
+            "link" => '#',
         ),
     ];
     ?>
@@ -232,7 +232,7 @@
                                     echo ' <ul class="d_none m_top_10">';
                                     foreach ($value['submenuitems'] as $key => $value2) {
                                         ?>       
-                                    <li class="m_bottom_10"><a href="<?php echo $value2['title']; ?>" class="d_block relative color_light_2 color_blue_hover"><?php echo $value2['title']; ?></a></li>
+                                    <li class="m_bottom_10"><a href="<?php echo $value2['link']; ?>" class="d_block relative color_light_2 color_blue_hover"><?php echo $value2['title']; ?></a></li>
 
                                     <?php
                                 }
