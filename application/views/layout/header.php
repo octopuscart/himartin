@@ -172,7 +172,7 @@
         array(
             "title" => "Contact Us",
             "submenu" => "no",
-            "link" => '#',
+            "link" => site_url('Pages/contactus'),
         ),
     ];
     ?>
