@@ -11,7 +11,7 @@ switch ($header) {
         break;
     default:
 
-        $this->load->view('layout/header_1');
+        $this->load->view('layout/header');
 }
 ?>
 
@@ -322,7 +322,7 @@ foreach ($customarray as $key => $value) {
                                 <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php echo "SF00" . $i; ?></i></a>
                                 <div class="im_half_container m_bottom_10">
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">US$ 1700.00</p>	
-                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie"></p>	
+                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie hide_from_mobile"></p>	
 
                                 </div>
                                 <div class="clearfix">
@@ -350,7 +350,7 @@ foreach ($customarray as $key => $value) {
             </button>
         </div>
         <!--banners-->
-        <section class="row t_xs_align_c">
+<!--        <section class="row t_xs_align_c">
             <div class="col-lg-4 col-md-4 col-sm-4 m_bottom_12 m_xs_bottom_30" data-appear-animation="fadeInUp">
                 <a href="#" class="d_block d_xs_inline_b d_mxs_block"><img src="images/banner_1.jpg" alt=""></a>
             </div>
@@ -360,7 +360,7 @@ foreach ($customarray as $key => $value) {
             <div class="col-lg-4 col-md-4 col-sm-4 m_bottom_12 m_xs_bottom_0" data-appear-animation="fadeInUp" data-appear-animation-delay="400">
                 <a href="#" class="d_block d_xs_inline_b d_mxs_block"><img src="images/banner_3.jpg" alt=""></a>
             </div>
-        </section>
+        </section>-->
     </div>
 </section>
 
