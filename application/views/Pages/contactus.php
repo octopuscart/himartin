@@ -23,15 +23,15 @@ $this->load->view('layout/header');
                             +(852) 2730 1251 <br/> <span style="    margin-left: 36px;"> +(852) 2730 1287</span>
 
                         </li>
-                        
+
                         <li class="m_bottom_8 ">
-                                <div class="d_inline_m  color_dark   m_right_10" style='font-size: 24px;    margin-right: 11px;'>
-                                    <i class="fa fa-whatsapp"></i>
-                                </div>
-                                +(852) 9342 1970<br/>
-                                <span style='margin-left: 35px'>  +(852) 9762 5792 </span>
-                            </li>
-                        
+                            <div class="d_inline_m  color_dark   m_right_10" style='font-size: 24px;    margin-right: 11px;'>
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            +(852) 9342 1970<br/>
+                            <span style='margin-left: 35px'>  +(852) 9762 5792 </span>
+                        </li>
+
                         <li class="m_bottom_8">
                             <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                 <i class="icon-mail-alt"></i>
@@ -41,11 +41,12 @@ $this->load->view('layout/header');
 
                     </ul>
                     <ul class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30 vr_list_type_5">
+
                         <li class="m_bottom_8 fw_light">
                             <div class="f_left icon_wrap_size_1 color_dark  circle">
                                 <i class="icon-location"></i>
                             </div>
-                            B & C, G/F, Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, <br/>Kowloon, Hong Kong
+                            B & C, G/F, <br/>Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, <br/>Kowloon, Hong Kong
 
                         </li>
                         <li>
@@ -54,8 +55,40 @@ $this->load->view('layout/header');
                             </div>
                             +(852) 2730 1292
                         </li>
+
+
                     </ul>
+
                 </div>
+                <h5 class="color_dark m_bottom_10 fw_light ">Opening Hours</h5>
+                <ul class="hr_list social_icons">
+                    <!--tooltip_container class is required-->
+                    <li class="m_right_ fw_light m_bottom_10 tooltip_container">
+                    <li class="m_bottom_8 color_dark fw_light font_size_14">
+                        <ul class='row'>
+                            <div class='m_bottom_8 col-md-6'>
+                                <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                    <i class="icon-clock"></i>
+                                </div>
+                                <span class='font_size_12'>Monday to Saturday</span><br/>
+                                <span style='margin-left: 35px'>09:00 AM to 09:00 PM</span>
+                            </div>
+                            <div class='m_bottom_8 col-md-6'>
+                                <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                    <i class="icon-clock"></i>
+                                </div> <span class='font_size_12'>Sunday</span><br/> 
+                                <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
+                            </div>
+                        </ul>
+
+                    </li>
+
+                    </li>
+
+
+
+
+                </ul>
                 <h5 class="color_dark m_bottom_20 fw_light">Stay Connected</h5>
                 <ul class="hr_list social_icons">
                     <!--tooltip_container class is required-->

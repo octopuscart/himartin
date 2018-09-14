@@ -33,7 +33,7 @@ class Pages extends CI_Controller {
 
         $data['checksent'] = 0;
         $this->email->from($cf_email, $cf_name);
-        $this->email->to('octopuscartltd@gmail.com');
+        $this->email->to('sales@shanielfashions.com');
         $this->email->subject('New Enquiry From Website:- ' . $cf_subject);
         $this->email->message($cf_message);
         if ($cf_email) {
