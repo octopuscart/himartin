@@ -20,7 +20,7 @@
                                     <i class="icon-phone-1"></i>
                                 </div>
                                 +(852) 2730 1251
-                                 <br/> <span style="    margin-left: 36px;"> +(852) 2730 1287</span>
+                                <br/> <span style="    margin-left: 36px;"> +(852) 2730 1287</span>
                             </li>
 
                             <li class="m_bottom_8 font_size_14">
@@ -35,7 +35,9 @@
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-mail-alt"></i>
                                 </div>
-                                <a href="mailto:#" class="color_black color_light _hover">sales@shanielfashions.com</a>
+                                
+                                <a href="mailto:shaniel@netvigator.com" class="color_black color_light _hover">shaniel@netvigator.com</a><br/>
+                                <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left: 35px'>sales@shanielfashions.com</a>
                             </li>
 
                         </ul>

@@ -24,7 +24,7 @@ $this->load->view('layout/header');
 
                         </li>
 
-                        <li class="m_bottom_8 ">
+                        <li class="m_bottom_8 fw_light">
                             <div class="d_inline_m  color_dark   m_right_10" style='font-size: 24px;    margin-right: 11px;'>
                                 <i class="fa fa-whatsapp"></i>
                             </div>
@@ -36,7 +36,8 @@ $this->load->view('layout/header');
                             <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                 <i class="icon-mail-alt"></i>
                             </div>
-                            <a href="mailto:sales@shanielfashions.com" class="color_black color_dark _hover">sales@shanielfashions.com</a>
+                            <a href="mailto:shaniel@netvigator.com" class=" color_dark ">shaniel@netvigator.com</a><br/>
+                            <a href="mailto:sales@shanielfashions.com" class=" color_dark " style='margin-left: 35px'>sales@shanielfashions.com</a>
                         </li>
 
                     </ul>
@@ -49,8 +50,8 @@ $this->load->view('layout/header');
                             B & C, G/F, <br/>Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, <br/>Kowloon, Hong Kong
 
                         </li>
-                        <li>
-                            <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                        <li class='fw_light'>
+                            <div class="d_inline_m icon_wrap_size_1 color_dark  fw_light circle m_right_10">
                                 <i class="icon icon-print"></i>
                             </div>
                             +(852) 2730 1292
