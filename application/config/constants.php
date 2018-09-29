@@ -6,13 +6,13 @@ $baselink = 'http://'.$_SERVER['SERVER_NAME'];
 $baselink = 'http://' . $_SERVER['SERVER_NAME'];
 switch ($baselink) {
     case "http://localhost":
-        $baselinkmain = $baselink . '/shanielfashionsadmin';
+        $baselinkmain = $baselink . '/shanielfashionsadmin/';
         break;
     case "http://192.168.1.2":
-        $baselinkmain = $baselink . '/shanielfashionsadmin';
+        $baselinkmain = $baselink . '/shanielfashionsadmin/';
         break;
     default:
-        $baselinkmain = 'http://www.bespoketailorshk.com/';
+        $baselinkmain = 'http://admin.shanielfashions.com/';
 }
 
 define('imageserver', $baselinkmain."assets_main/productimages/");

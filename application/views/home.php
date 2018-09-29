@@ -241,7 +241,7 @@ $customarray = [
     array("title" => "Jackets", "id" => "3", "image" => "suita.jpg", "price" => "1200.00"),
     array("title" => "Pants", "id" => "4", "image" => "pant.jpg", "price" => "500.00")
 ];
-foreach ($customarray as $key => $value) {
+foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
     ?>
                             <div class="col-md-3">
                                 <figure class="portfolio_item1 t_xs_align_c type_2 ">
@@ -288,7 +288,10 @@ foreach ($customarray as $key => $value) {
         <div class="relative ">
             <div class="row">
                 <div class="owl-carousel t_xs_align_c featured_products" data-nav="fproducts_nav_" data-plugin-options='{"singleItem":false,"itemsCustom":[[992,4],[768,3],[600,2],[10,1]]}'>
-                    <?php for ($i = 1; $i < 5; $i++) { ?>
+                    <?php 
+                    
+                    foreach ($product_home_slider_bottom['home_bottom'] as $key => $value) {
+                    ?>
 
 
                         <!--product-->
@@ -296,17 +299,15 @@ foreach ($customarray as $key => $value) {
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img src="<?php echo base_url(); ?>assets/theme/dummyfab/suit/<?php echo $i; ?>.png" alt="" class="tr_all">
-                                    <img src="<?php echo base_url(); ?>assets/theme/dummyfab/suit/<?php echo $i; ?>.png" alt="" class="tr_all">
+                                    <img src="<?php echo imageserver . $value['file_name1']; ?>" alt="" class="tr_all" style="background: white;">
+                                    <img src="<?php echo imageserver . $value['file_name']; ?>" alt="" class="tr_all" >
                                 </div>
                                 <!--labels-->
-                                <div class="labels_container">
-                                    <a href="#" class="d_block label color_pink color_pink_hover tt_uppercase fs_ex_small circle m_bottom_5 vc_child t_align_c"><span class="d_inline_m">Sale</span></a>
-                                </div>
+                               
                             </div>
                             <figcaption>
-                                <h6 class="m_bottom_5"><a href="#" class="color_dark">Super 110s Wool </a></h6>
-                                <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php echo "SF00" . $i; ?></i></a>
+                                <h6 class="m_bottom_5"><a href="#" class="color_dark"><?php $value['title']; ?></a></h6>
+                                <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php $value['short_description']; ?></i></a>
                                 <div class="im_half_container m_bottom_10">
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">US$ 1700.00</p>	
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie hide_from_mobile"></p>	
