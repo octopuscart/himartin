@@ -5,6 +5,17 @@ $paymentstatus = "";
 
 
 <style>
+    .measurement_right_text{
+        float: right;
+    }
+    .measurement_text{
+        float: left;
+    }
+    .fr_value{
+        font-size: 12px;
+        margin-top: -7px;
+        float: left;
+    }
     .productStatusBlock{
         padding:10px;
         border: 1px solid #000;
@@ -18,7 +29,7 @@ $paymentstatus = "";
         margin: 0px;
         margin-top: 30px;
         background: #ddd;
-    border: 6px solid #ff3b3b;
+        border: 6px solid #ff3b3b;
     }
 </style>
 
@@ -59,8 +70,8 @@ $paymentstatus = "";
                     <div class="col-md-4">
                         <article class="order_box">
                             <li><i class="fa fa-map"></i> Shipping Adddress </li>
-                            <li>  <?php echo $order_data->address; ?><br/>
-                                <?php echo $order_data->state; ?>  <?php echo $order_data->city; ?> <?php echo $order_data->pincode; ?></li>
+                            <li>  <?php echo $order_data->address1; ?><br/><?php echo $order_data->address2; ?><br/>
+                                <?php echo $order_data->state; ?>  <?php echo $order_data->city; ?> <?php echo $order_data->country; ?>, <?php echo $order_data->zipcode; ?></li>
                         </article>
                     </div>
 
@@ -92,18 +103,18 @@ $paymentstatus = "";
                             <div class="row payment_block " >
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <div class="col-md-12">
-                                        <div class="col-md-3">
-                                            <div class="thumbnail">
-                                                <img src="<?php
-                                                echo imageservermain . 'barcodes/' . $paymentbarcode->file_name;
-                                                ?>" alt="..." style="height:170px;">
-                                                <div class="caption">
-                                                    <h3 style="text-align: center"><?php echo $paymentbarcode->mobile_no; ?></h3>
-                                                </div>
-                                            </div>    
-                                        </div>
+                                        <!--                                        <div class="col-md-3">
+                                                                                    <div class="thumbnail">
+                                                                                        <img src="<?php
+                                        echo imageservermain . 'barcodes/' . $paymentbarcode->file_name;
+                                        ?>" alt="..." style="height:170px;">
+                                                                                        <div class="caption">
+                                                                                            <h3 style="text-align: center"><?php echo $paymentbarcode->mobile_no; ?></h3>
+                                                                                        </div>
+                                                                                    </div>    
+                                                                                </div>-->
 
-                                        <div class="col-md-9">
+                                        <div class="col-md-12">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="image1">Upload Payment Screen</label>
@@ -152,19 +163,19 @@ $paymentstatus = "";
                         <article class="" style="padding: 10px;">
                             <table class="table table-bordered"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="600" style="background: #fff;padding:20px">
                                 <tr style="font-weight: bold">
-                                    <td style="width: 20px;text-align: center">S.No.</td>
+                                    <td style="width: 20px;text-align: right">S.No.</td>
                                     <td colspan="2"  style="text-align: center">Product</td>
 
-                                    <td style="text-align: center;width: 100px"">Price<br/><span style="font-size: 10px">(In INR)</span></td>
-                                    <td style="text-align: center;width: 60px"">Qnty.</td>
-                                    <td style="text-align: center;width: 100px">Total<br/><span style="font-size: 10px">(In INR)</span></td>
+                                    <td style="text-align: right;width: 100px"">Price<br/><span style="font-size: 10px">(In <?php echo globle_currency; ?>)</span></td>
+                                    <td style="text-align: right;width: 20px"">Qnty.</td>
+                                    <td style="text-align: right;width: 100px">Total<br/><span style="font-size: 10px">(In <?php echo globle_currency; ?>)</span></td>
                                 </tr>
                                 <!--cart details-->
                                 <?php
                                 foreach ($cart_data as $key => $product) {
                                     ?>
                                     <tr>
-                                        <td>
+                                        <td style="text-align: right">
                                             <?php echo $key + 1; ?>
                                         </td>
 
@@ -175,9 +186,29 @@ $paymentstatus = "";
                                     </td>
 
                                     <td style="width: 200px;">
-                                        <?php echo $product->title; ?>
+
+                                        <?php echo $product->title; ?> - <?php echo $product->item_name; ?>
                                         <br/>
                                         <small style="font-size: 12px;">(<?php echo $product->sku; ?>)</small>
+
+                                        <h4 class="panel-title">
+                                            <a role="button" class="btn btn-xs btn-default" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $product->id; ?>" aria-expanded="true" aria-controls="collapseOne">
+                                                View Summary
+                                            </a>
+                                        </h4>
+                                        </div>
+                                        <div id="collapse<?php echo $product->id; ?>" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body" style="padding:10px 0px;">
+                                                <?php
+                                                echo "<ul class='list-group'>";
+                                                foreach ($product->custom_dict as $key => $value) {
+                                                    echo "<li class='list-group-item'>$key <span class='badge'>$value</span></li>";
+                                                }
+                                                echo "</ul>";
+                                                ?>                                            </div>
+                                        </div>
+
+
                                     </td>
 
                                     <td style="text-align: right">
@@ -192,68 +223,101 @@ $paymentstatus = "";
                                         <?php echo $product->total_price; ?>
                                     </td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="7">
-                                            <?php
-                                            $laststatus = "";
-                                            $laststatus_cdate = "";
-                                            $laststatus_ctime = "";
-                                            $laststatusremark = ""; 
-                                            foreach ($product->product_status as $key => $value) {
-                                                $laststatus = $value->status;
-                                                $laststatus_cdate = $value->c_date;
-                                                $laststatus_ctime = $value->c_time;
-                                                $laststatusremark = $value->remark;
-                                            }
-                                            ?>
 
-
-
-                                            <button class="btn btn-button pull-right" type="button" data-toggle="collapse" data-target="#collapseProduct<?php echo $product->id; ?>" aria-expanded="false" aria-controls="collapseProduct<?php echo $product->id; ?>">
-                                                Show More  <i class="fa fa-arrow-down"></i>
-                                            </button>
-
-                                            <div class="statusdiv">
-                                               Current Status: <?php echo $laststatus; ?>
-                                                <p style="font-size: 10px;    margin: 0;">
-                                                    <i class="fa fa-calendar"></i> 
-                                                    <?php echo $laststatus_cdate; ?>
-                                                    <?php echo $laststatus_ctime; ?>
-                                                </p>
-                                                
-                                                <p style="font-size: 12px;    margin: 0;">
-                                                    <?php echo $laststatusremark; ?>
-                                                </p>
-                                            </div>
-
-
-
-
-
-
-                                            <div class="collapse" id="collapseProduct<?php echo $product->id; ?>">
-                                                <div class="">
-                                                    <?php
-                                                    foreach ($product->product_status as $key => $value) {
-                                                        ?>
-                                                        <div class="productStatusBlock">
-                                                            <p style="font-size: 10px;margin: 0;"><i class="fa fa-calendar"></i> <?php echo $value->c_date ?> <?php echo $value->c_time ?></p>
-                                                            <h3><?php echo $value->status; ?></h3>
-                                                        </div>
-                                                        <?php
-                                                    }
-                                                    ?>
-                                                </div>
-                                            </div>
-
-
-
-                                        </td>
-                                    </tr>
                                     <?php
                                 }
                                 ?>
+                                <td colspan="7">
+                                    Measurement Type :
+                                    <?php
+                                    echo $order_data->measurement_style;
+                                    if (count($measurements_items)) {
+                                        ?>
+                                        <a role="button" class="btn btn-xs btn-default" data-toggle="collapse" data-parent="#accordion" href="#collapsemeasurements" aria-expanded="true" aria-controls="collapseOne">
+                                            View Measurement
+                                        </a>
+                                        <div id="collapsemeasurements" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="panel-body" style="padding:10px 0px;">
+                                                        <?php
+                                                        echo "<ul class='list-group'>";
+                                                        foreach ($measurements_items as $keym => $valuem) {
+                                                            $mvalues = explode(" ", $valuem['measurement_value']);
+                                                            echo "<li class='list-group-item'>" . $valuem['measurement_key'] . " <span class='measurement_right_text'><span class='measurement_text'>" . $mvalues[0] . "</span><span class='fr_value'>" . $mvalues[1] . '"' . "</span></span></li>";
+                                                        }
+                                                        echo "</ul>";
+                                                        ?>                             
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                </td>
+
+
                                 <!--end of cart details-->
+                                <tr>
+                                    <td colspan="7">
+                                        <?php
+                                        $laststatus = "";
+                                        $laststatus_cdate = "";
+                                        $laststatus_ctime = "";
+                                        $laststatusremark = "";
+                                        foreach ($order_status as $key => $value) {
+                                            $laststatus = $value->status;
+                                            $laststatus_cdate = $value->c_date;
+                                            $laststatus_ctime = $value->c_time;
+                                            $laststatusremark = $value->remark;
+                                        }
+                                        ?>
+
+
+
+<!--                                        <button class="btn btn-button pull-right" type="button" data-toggle="collapse" data-target="#collapseProduct<?php echo $product->id; ?>" aria-expanded="false" aria-controls="collapseProduct<?php echo $product->id; ?>">
+                                            Show More  <i class="fa fa-arrow-down"></i>
+                                        </button>-->
+
+                                        <div class="statusdiv">
+                                            Current Status: <?php echo $laststatus; ?>
+                                            <p style="font-size: 10px;    margin: 0;">
+                                                <i class="fa fa-calendar"></i> 
+                                                <?php echo $laststatus_cdate; ?>
+                                                <?php echo $laststatus_ctime; ?>
+                                            </p>
+
+                                            <p style="font-size: 12px;    margin: 0;">
+                                                <?php echo $laststatusremark; ?>
+                                            </p>
+                                        </div>
+
+
+
+
+
+
+                                        <div class="collapse" id="collapseProduct<?php echo $product->id; ?>">
+                                            <div class="">
+                                                <?php
+                                                foreach ($product->product_status as $key => $value) {
+                                                    ?>
+                                                    <div class="productStatusBlock">
+                                                        <p style="font-size: 10px;margin: 0;"><i class="fa fa-calendar"></i> <?php echo $value->c_date ?> <?php echo $value->c_time ?></p>
+                                                        <h3><?php echo $value->status; ?></h3>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </div>
+                                        </div>
+
+
+
+                                    </td>
+                                </tr>
 
                                 <tr>
                                     <td colspan="3"  rowspan="4" style="font-size: 12px">
@@ -263,16 +327,16 @@ $paymentstatus = "";
 
                                 </tr>
                                 <tr>
-                                    <td colspan="2" style="text-align: right">Total</td>
-                                    <td style="text-align: right;width: 60px"><?php echo $order_data->sub_total_price; ?> </td>
+                                    <td colspan="2" style="text-align: right">Sub Total</td>
+                                    <td style="text-align: right;width: 60px">{{"<?php echo $order_data->sub_total_price; ?>"|currency:"<?php echo globle_currency; ?> "}} </td>
                                 </tr>
-                                <tr>
+<!--                                <tr>
                                     <td colspan="2" style="text-align: right">Credit Used</td>
                                     <td style="text-align: right;width: 60px"><?php echo $order_data->credit_price; ?> </td>
-                                </tr>
+                                </tr>-->
                                 <tr>
-                                    <td colspan="2" style="text-align: right">Toal Amount</td>
-                                    <td style="text-align: right;width: 60px"><?php echo $order_data->total_price; ?> </td>
+                                    <td colspan="2" style="text-align: right">Total Amount</td>
+                                    <td style="text-align: right;width: 60px">{{"<?php echo $order_data->total_price; ?>"|currency:"<?php echo globle_currency; ?> "}} </td>
                                 </tr>
 
 
@@ -297,9 +361,9 @@ $paymentstatus = "";
 
 <script>
 
-    ClassApartStore.controller('OrderDetailsController', function ($scope, $http, $timeout, $interval) {
+    App.controller('OrderDetailsController', function ($scope, $http, $timeout, $interval) {
         var url = baseurl + "Api/order_mail/" + <?php echo $order_data->id; ?> + "/" + '<?php echo $order_data->order_no; ?>';
-        console.log(url);
+
         $scope.sendOrderMail = function (order_no) {
             swal({
                 title: 'Sending Mail...',

@@ -3,7 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $baselink = 'http://'.$_SERVER['SERVER_NAME'];
 
-$baselinkmain = strpos($baselink, '192.168') ? $baselink.'/master_admin_panel/' : 'http://manage.shanielfashions.com/';
+$baselink = 'http://' . $_SERVER['SERVER_NAME'];
+switch ($baselink) {
+    case "http://localhost":
+        $baselinkmain = $baselink . '/shanielfashionsadmin';
+        break;
+    case "http://192.168.1.2":
+        $baselinkmain = $baselink . '/shanielfashionsadmin';
+        break;
+    default:
+        $baselinkmain = 'http://www.bespoketailorshk.com/';
+}
 
 define('imageserver', $baselinkmain."assets_main/productimages/");
 
@@ -11,11 +21,24 @@ define('imageserverslider', $baselinkmain."assets_main/sliderimages/");
 
 define('imageservermain', $baselinkmain."assets_main/");
 
-define('globle_currency', 'HKD ');
+define('globle_currency_type', 'US$ ');
+ 
+define('globle_currency', 'US$ ');
 
-define('globle_currency_type', 'HKD ');
+define('site_mail_logo', $baselinkmain.'/assets/images/logo73.png');
+
+
 
 define('custome_image_server', "http://costcointernational.com/bespoketailorshk_files");
+
+
+//Email Settings//
+define('email_sender', 'info@bespoketailorshk.com');
+define('email_sender_name', 'Bespoke Tailors');
+define('email_bcc', 'octopuscartltd@gmail.com');
+
+
+
 
 
 /*

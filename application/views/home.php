@@ -1,18 +1,5 @@
 <?php
-switch ($header) {
-    case 1:
         $this->load->view('layout/header');
-        break;
-    case 2:
-        $this->load->view('layout/header_2');
-        break;
-    case 3:
-        $this->load->view('layout/header_3');
-        break;
-    default:
-
-        $this->load->view('layout/header');
-}
 ?>
 
 <section class="relative w_full m_bottom_15">

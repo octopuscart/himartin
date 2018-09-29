@@ -74,9 +74,7 @@ hr {
     }
 }
 .cart-page-area .cart-page-top {
-    margin-bottom: 45px;
-    border: 1px solid #b6b6b6;
-    padding: 0 0 0px;
+   
 }
 .cart-page-area .cart-page-top table {
     margin-bottom: 0px;
@@ -329,7 +327,7 @@ element.style {
     /* border-top-color: #9fa3a4; */
 }
 .dropdown_2_container .dropdown_2 {
-    padding: 27px 15px 0;
+    padding: 15px 15px 0;
 }
 .dropdown_2 {
     border: 0px solid #000;
@@ -376,8 +374,8 @@ element.style {
 }
 
 #close_side_menu {
-     opacity: 1; 
-         margin-right: -25px;
+    opacity: 1; 
+    margin-right: -25px;
     margin-left: 6px;
 }
 
@@ -446,10 +444,10 @@ element.style {
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
-.half_column.w_md_full {
-    float: left;
-    width: 50%;
-}
+    .half_column.w_md_full {
+        float: left;
+        width: 50%;
+    }
     .logotext{
         opacity: 0;    }
     .header_bottom_part.type_2 {
@@ -489,12 +487,12 @@ element.style {
 }
 @media only screen and (max-width: 479px) {
     .half_column.w_md_full {
-    float: left;
-    width: 50%;
-}
-.add_to_cart_button{
+        float: left;
+        width: 50%;
+    }
+    .add_to_cart_button{
         float: right;
-}
+    }
     .logotext{
         opacity: 0;  
     }
@@ -563,4 +561,64 @@ element.style {
 li a .relative:hover{
     color: #c4c4c4;
     font-weight: 500;
+}
+.color_light{
+    color:white;
+}
+
+.process_block{
+    float: right;
+    line-height: 42px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.bg_blue3{
+    background: #6f269f;
+}
+
+.tab_measurement li a{
+    color:white;
+}
+
+.btn-apply-coupon, .checkout_button_next {
+    background: #3b78ee;
+    padding: 12px 10px 12px;
+    color: white;
+    line-height: 15px;
+  
+}
+
+.btn-apply-coupon:hover, .checkout_button_next:hover  {
+    background: #70269f;
+
+    color: white!important;
+    text-decoration: none;
+    
+   
+}
+
+.checkout_button_next i {
+    margin-right: 10px;
+}
+
+.cart_top_upper{
+   background: #cd322c;
+    color: white;
+    width: 25px;
+    height: 25px;
+    /* float: right; */
+    right: -11px;
+    margin-top: -13px;
+    text-align: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 767px)
+.dropdown_2 {
+    width: 335px;
+    right: auto;
+    left: -87%;
+    margin-left: -134px;
 }

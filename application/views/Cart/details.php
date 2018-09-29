@@ -2,112 +2,112 @@
 $this->load->view('layout/header');
 ?>
 
-<!-- Inner Page Banner Area Start Here -->
-<div class="bannerproduct" style='background: url("<?php echo base_url(); ?>assets/theme/images/b3.jpg") ;background-size: cover;'>
-			<div class="container">
-				<h3> My Cart</h3>
-			</div>
-		</div>
-<!-- Inner Page Banner Area End Here -->
-<!-- Cart Page Area Start Here -->
-
-<div class="cart-page-area cart-items">.
-
-    <div class="container" ng-if="globleCartData.total_quantity">
-        <div class="row">
-            <h2 style="padding: 0px 15px; ">My Shopping Bag <b style="font-family: sans-serif">({{globleCartData.total_quantity}})</b></h2>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="cart-page-top table-responsive">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <td class="cart-form-heading"></td>
-                                <td class="cart-form-heading">Product</td>
-                                <td class="cart-form-heading">Price</td>
-                                <td class="cart-form-heading">Quantity</td>
-                                <td class="cart-form-heading">Total</td>
-                                <td class="cart-form-heading"></td>
-                            </tr>
-                        </thead>
-                        <tbody id="quantity-holder">
-                            <tr ng-repeat="product in globleCartData.products">
-                                <td class="cart-img-holder">
-                                    <a href="#">
-                                        <img  src="{{product.file_name}}" alt=""  alt="cart" class="img-responsive cart_image_block">
-                                    </a>
-                                </td>
-                                <td>
-                                    <h3>
-                                        <a href="#">{{product.title}}</a>
-                                        <br/>
-                                        <span style="font-size: 15px">Item:{{product.item_name}}</span>
-                                    </h3>
-                                    <button type="button" ng-click="viewStyle(product)" class="btn btn-primary"  style="margin-top: 10px;">View Design</a>
-                                </td>
-                                <td class="amount">{{product.price|currency:" "}}</td>
-                                <td class="quantity">
-                                    <div class="input-group quantity-holder">
-                                        <input type="text" name='quantity' class="form-control quantity-input" value="{{product.quantity}}"  placeholder="1">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default quantity-plus" type="button" ng-click="updateCart(product, 'add')"><i class="fa fa-plus" aria-hidden="true" ></i></button>
-                                            <button class="btn btn-default quantity-minus" type="button" ng-click="updateCart(product, 'sub')"><i class="fa fa-minus" aria-hidden="true" ></i></button>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="amount">{{product.total_price|currency:" "}}</td>
-                                <td class="dismiss"><a href="#"  ng-click="removeCart(product.product_id)"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <!--                        <div class="cart-page-bottom-left">
-                                            <h2>Coupon</h2>
-                                            <form method="post">
-                                                <input type="text" id="coupon" name="coupon" placeholder="Enter your coupon code if you have one">
-                                                <button value="Coupon" type="submit" class="btn-apply-coupon disabled">Apply Coupon</button>
-                                            </form>
-                                        </div>-->
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <div class="cart-page-bottom-right">
-                    
-                    <h3>Total<span>{{globleCartData.total_price|currency:" "}}</span></h3>
-
-                    <div class="proceed-button">
-
-                        <a href=" <?php echo site_url("Cart/checkout"); ?>" class="btn-apply-coupon disabled" >Proceed</a>
-                        <p>..and we'll get back to you</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="page_title_1 bg_light_2 t_align_c relative wrapper">
+    <div class="container">
+        <h2 class="color_dark fw_light m_bottom_5">Shopping Cart</h2>
+        <!--breadcrumbs-->
+        <ul class="hr_list d_inline_m breadcrumbs">
+            <li class="m_right_8 f_xs_none"><a href="index.html" class="color_default d_inline_m m_right_10">Home</a><i class="icon-angle-right d_inline_m color_default fs_small"></i></li>
+            <li><a class="color_default d_inline_m">Shopping Cart</a></li>
+        </ul>
     </div>
-  
-    <!-- Content -->
-<div id="content"  ng-if="!globleCartData.total_quantity"> 
-    <!-- Tesm Text -->
-    <section class="error-page text-center pad-t-b-130">
-        <div class="container "> 
-
-            <!-- Heading -->
-            <h1 style="font-size: 40px">No Product Found</h1>
-            <p>Please add product to cart<br>
-                You can go back to</p>
-            <hr class="dotted">
-            <a href="<?php echo site_url(); ?>" class="btn-send-message ">BACK TO HOME</a>
+</section>
+<!--content-->
+<div class="section_offset counter" ng-if="globleCartData.total_quantity">
+    <div class="container">
+        <div class="im_half_container m_bottom_10">
+            <div class="half_column d_inline_m w_xs_full m_xs_bottom_10">
+                <p class="fw_light">Your shopping cart contains {{product.total_quantity}} product(s)</p>
+            </div>
+            <div class="half_column d_inline_m w_xs_full t_xs_align_l t_align_r m_xs_bottom_5">
+                <a href="#" class="d_inline_b tr_all r_corners button_type_1 color_pink transparent fs_medium mini_side_offset"><i class="icon-basket d_inline_b m_right_5"></i> Continue Shopping</a>
+            </div>
         </div>
-    </section>
+        <div class="r_corners wrapper border_grey m_bottom_10 m_xs_bottom_10">
+            <table class="table_type_2 responsive_table w_full t_align_l">
+                <thead>
+                    <tr class="bg_light_2 color_dark">
+
+                        <th colspan="2">Product Description</th>
+
+                        <th style='    width: 100px;'>Price</th>
+                        <th style='    width: 140px;'>Quantity</th>
+                        <th style='    width: 100px;'>Total</th>
+                        <th style='    width: 100px;'></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tr_delay" ng-repeat="product in globleCartData.products">
+                        <td data-title="Product Image" style='    width: 100px;'>
+                            <a href="#" class="r_corners d_inline_b wrapper">
+                                <img src="{{product.file_name}}" alt="" style='height: 80px'>
+                            </a>
+                        </td>
+                        <td data-title="Description">
+                            <h6 class="m_bottom_5"><a href="#" class="color_dark tr_all">{{product.title}} - {{product.item_name}}</a></h6>
+                            <p class="fw_light">{{product.attrs}}</p>
+                        </td>
+                        <td data-title="Price">{{product.price|currency:" "}}</td>
+                        <td data-title="Quantity" >
+                            <div class="wrapper fs_medium r_corners d_inline_b quantity clearfix">
+                                <button class="f_left bg_light_3" data-count="minus" ng-click="updateCart(product, 'sub')">
+                                    <i class="icon-minus "></i>
+                                </button>
+                                <input type="text" readonly value="{{product.quantity}}" class="f_left color_grey bg_light">
+                                <button class="f_left bg_light_3" data-count="plus" ng-click="updateCart(product, 'add')">
+                                    <i class="icon-plus"></i>
+                                </button>
+                            </div>
+                        </td>
+
+                        <td data-title="Total" class="fw_ex_bold color_dark ">
+                            {{product.total_price|currency:" "}}
+                        </td>
+                        <td>
+                            <button class="color_grey_light_2 color_dark_hover tr_all" ng-click="removeCart(product.product_id)">
+                                <i class="icon-cancel-circled-1 fs_large"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+
+                    <tr class="bg_light_2">
+                        <td colspan="4" class="v_align_m">
+                            <div class="d_table w_full">
+                                <!--                                <div class="col-lg-9 col-md-9 col-sm-11 d_table_cell f_none d_xs_block">
+                                                                    <p class="fw_light d_inline_m m_right_5 d_xs_block">Coupon Code:</p>
+                                                                    <form class="d_inline_m">
+                                                                        <input type="text" placeholder="Enter yout coupon code here" class="color_grey r_corners bg_light fw_light coupon m_xs_bottom_15">
+                                                                        <button class="tr_all m_xs_bottom_10 r_corners color_purple transparent tt_uppercase button_type_5 fs_medium">Submit</button>
+                                                                    </form>
+                                                                </div>-->
+                                <div class="v_align_m d_table_cell d_xs_block f_none t_align_r fw_ex_bold color_pink t_xs_align_c">
+                                    Total:		
+                                </div>
+                            </div>
+                        </td>
+                        <td colspan="2" class="fw_ex_bold color_pink v_align_m">{{globleCartData.total_price|currency:" "}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <a href="<?php echo site_url("Cart/checkoutInit"); ?>" class="button_type_3 tr_all color_pink r_corners tt_uppercase d_inline_b fs_medium mini_side_offset f_right">
+            <i class="icon-check fs_large d_inline_b m_right_10"></i>
+            Checkout Now
+        </a>
+
+
+    </div>
 </div>
-<!-- End Content --> 
-    
-    
-</div>
+
+
+<?php
+$this->load->view('Cart/noproduct');
+?>
+
+
 <!-- Cart Page Area End Here -->
 <!--angular controllers-->
 <script src="<?php echo base_url(); ?>assets/theme/angular/productController.js"></script>

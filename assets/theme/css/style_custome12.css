@@ -40,7 +40,7 @@ code {
 .fixpos{
     position: absolute;
     left: 0;
-    height: 485px;
+    height: 430px;
 }
 
 
@@ -86,12 +86,12 @@ code {
 
 
 .customization_title{
-    height: 45px;
-    background: #000;
+  height: auto;
+    background: #0d59af;
     color: #fff;
     text-align: center;
     font-size: 12px;
-    padding: 0px 5px;
+    padding: 5px 5px;
 }
 .customization_box{
     margin-bottom: 50px;
@@ -118,7 +118,8 @@ code {
 }
 
 .shirtcontainer{
-    height: 485px;
+    height: 430px;
+    clear: both;
 }
 
 
@@ -135,7 +136,7 @@ code {
 
 
 .item.elementItem .activestyle {
-    border: 3px solid #000;
+    border: 3px solid #0d59af;
 }
 
 .item.elementItem.noselected {
@@ -155,16 +156,11 @@ code {
 
 .customization_block{
     height: 485px;
-    width: 485px;
+    width: 380px;
     /*background: #c9c9c9;*/
     /*border: 1px solid #dfdfdf;*/
-    height: 485px;
-    width: 485px;
-    /* background: #c9c9c9; */
-    /* border: 1px solid #dfdfdf; */
     margin: 0px auto;
     position: relative;
-    margin-top: 20px;
 }
 
 .custom_rotate_button{
@@ -256,32 +252,32 @@ code {
 }
 
 .monogramtext_posistion_collar {
-    left: 222px;
+    left: 180px;
     display: block;
-    top: 28px;
+    top: 11px;
     line-height: 10px;
     font-size: 8px;
     height: 9px;
 }
 
 .monogramtext_posistion_cuff_left{
-     left: 329px;
+        left: 324px;
     display: block;
-    top: 308px;
-    transform: rotate(59deg);
+    top: 368px;
+    transform: rotate(19deg);
     line-height: 7px;
     font-size: 7px;
     height: 8px;
 }
 
 .monogramtext_posistion_left_pocket{
-        left: 273px;
+        left: 240px;
     display: block;
-    top: 135px;
+    top: 126px;
     line-height: 10px;
     font-size: 7px;
     height: 10px;
-    transform: rotate(4deg);
+    transform: rotate(0deg);
 }
 
 
@@ -337,6 +333,7 @@ p.fabric_title {
     text-align: center;
     background: #000;
     font-size: 12px;
+
     /* border-bottom-left-radius: 50%; */
     /* border-bottom-right-radius: 50%; */
     border-radius: 43%;
@@ -353,6 +350,7 @@ p.fabric_title {
 .selected-fabric-block-image{
     height: 47px;
     width: 47px;
+    float: left;
     background-size: 179px !important;
     background-position: 0px 58px!important;
 }
@@ -386,14 +384,12 @@ p.selected-element-title_text_price{
 
 
 .customization_order_block{
-   height: 60px;
-        /*background: #000;*/
-       
-  
-        width: 100%;
-        /* padding: 37px; */
-        margin: 0px;
-        left: 0;
+    height: 60px;
+    background: #1565c0;
+    width: 100%;
+    /* padding: 37px; */
+    margin: 0px;
+    left: 0;
 }
 
 
@@ -404,35 +400,34 @@ p.selected-element-title_text_price{
 
 
 .insert_button {
-       padding: 3px 5px;
+    padding: 3px 5px;
     margin-top: 2px;
     margin-top: 2px;
 }
 .total_price_block h5 {
     font-size: 19px;
     color: white;
-        line-height: 60px;
-    margin: 0;
+        margin-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
 
     .insert_button {
-    padding: 3px 3px;
-    margin-top: 2px;
-    margin-top: 2px;
-}
-    
+        padding: 3px 3px;
+        margin-top: 2px;
+        margin-top: 2px;
+    }
+
     .customization_order_block {
-        height: 54px;
-        background: #000;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        /* padding: 37px; */
-        margin: 0px;
-        left: 0;
-            z-index: 100;
+        height: 60px;
+    background: #0d59af;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0px 0px;
+    margin: 0px;
+    left: 0;
+    z-index: 100;
     }
 
     .cuff_collar_area_elements{
@@ -456,7 +451,9 @@ p.selected-element-title_text_price{
     }
 
     .mobile_view_element_tab{
-        height: 70px
+        height: 70px;
+        float: left;
+    margin-right: 15px;
     }
 
     .monogramtext_posistion_collar {
@@ -467,9 +464,9 @@ p.selected-element-title_text_price{
 
     .monogramtext_posistion_cuff_left {
         left: 80%;
-    display: block;
-    top: 239px;
-    transform: rotate(8deg);
+        display: block;
+        top: 239px;
+        transform: rotate(8deg);
     }
 
     .monogramtext_posistion_left_pocket {
@@ -508,18 +505,17 @@ p.selected-element-title_text_price{
     }
 
     .customization_items {
-        height: 600px;
+        height: 650px;
         overflow: auto;
     }
 
     .customization_block{
-        /*height: 380px;*/
-        height: auto;
-    width: auto;
+        height: 380px;
+            width: auto;
     }
 
     .customization_items_title{
-        /*height: 590px;overflow: auto;*/
+        height: 590px;overflow: auto;
     }
 
     .customization_items_elements{
@@ -551,12 +547,7 @@ p.selected-element-title_text_price{
         background-position: -209% -45%!important;
     }
     .shirtcontainer{
-        /*height: 380px;*/
-            /*margin-top: 80px;*/
-    }
-    
-    .mobile_bottom_20{
-            margin-bottom: 20px;
+        height: 380px;
     }
 
     header .logo img {
@@ -564,11 +555,6 @@ p.selected-element-title_text_price{
         height: 47px;
         position: relative;
     }
-    
-    .customization_items::-webkit-scrollbar {
-    width: 4px!important;
-    background-color: #cbc9c9;
-}
 
 }
 
@@ -630,7 +616,7 @@ p.selected-element-title_text_price{
 .customization_items::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #cbc9c9;
+    background-color: #cbc9c9;
 }
 
 .customization_items::-webkit-scrollbar
@@ -641,7 +627,7 @@ p.selected-element-title_text_price{
 
 .customization_items::-webkit-scrollbar-thumb
 {
-    background-color: #000;
+    background-color: #053e80;
     border: 0px solid #cbc9c9;
 }
 
@@ -675,11 +661,15 @@ p.selected-element-title_text_price{
     margin-top: -14px;
 }
 
-.customization_margin_top_2 {
-        margin-top: 80px;
+.nav > li > a:hover, .nav > li > a:focus {
+    background: #cfcccc;
+    color: #000 !important; 
 }
 
-.color_light{
-    color:white;
+
+[role="search"].type_3 {
+    width: 350px;
+    float: right;
+    margin-right: 14px;
 }
 

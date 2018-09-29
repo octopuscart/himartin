@@ -618,7 +618,7 @@ blockquote.type_3 > p:last-of-type:after,
 .p_table.bg_color_purple_hover.active,
 [class*="button_type_"].transparent.color_purple:hover,
 [class*="button_type_"].color_purple:not(.transparent){
-	background:#4e4ca0;
+	background: #7027a0;
 }
 .translucent_bg_purple,
 .translucent_bg_purple.image_fixed:before{
@@ -655,7 +655,7 @@ blockquote.type_3 > p:last-of-type:after,
 .animation_fill.color_pink:before,
 [class*="button_type_"].transparent.color_pink:hover,
 [class*="button_type_"].color_pink:not(.transparent){
-	background:#a255c4;
+	background: #70269f;
 }
 .color_green,
 .color_green_hover:hover,
@@ -3762,7 +3762,7 @@ input[class*="_limit"]{
 	padding:44px 0 0;
 }
 .footer_bottom_part{
-	padding:24px 0;
+	padding:5px 0;
 	border-top:1px solid #cbd0d4;
 }
 

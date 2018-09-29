@@ -25,8 +25,12 @@
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url(); ?>assets/theme/plugins/jackbox/css/jackbox.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="<?php echo base_url(); ?>assets/theme/plugins/rs-plugin/css/settings.css">
 
-        <!--theme css-->
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url(); ?>assets/theme/css/bootstrap.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+        <!--theme css-->
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url(); ?>assets/theme/css/theme-animate.css">
         <link rel="stylesheet" type="text/css" media="all" href="<?php echo base_url(); ?>assets/theme/css/style.css">
         <!--head libs-->
@@ -45,6 +49,12 @@
         <!--sweet alert-->
         <script src="<?php echo base_url(); ?>assets/theme/sweetalert2/sweetalert2.min.js"></script>
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/sweetalert2/sweetalert2.min.css">
+
+
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/theme/noslider/nouislider.min.css">
+        <script src="<?php echo base_url(); ?>assets/theme/noslider/nouislider.min.js" type="text/javascript"></script>
+
+
 
         <!--angular js-->
         <script src="<?php echo base_url(); ?>assets/theme/angular/angular.min.js"></script>
@@ -125,16 +135,16 @@
             "submenuitems" => [
                 array(
                     "title" => "Suits",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/2/0')),
                 array(
                     "title" => "Jackets",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/4/0'),),
                 array(
                     "title" => "Shirts",
-                    "link" => '#',),
-                 array(
+                    "link" => site_url('Product/ProductList/1/0'),),
+                array(
                     "title" => "Pants",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/3/0'),),
             ]
         ),
         array(
@@ -148,8 +158,7 @@
                 array(
                     "title" => "Jackets",
                     "link" => '#',),
-                
-                 array(
+                array(
                     "title" => "Pants",
                     "link" => '#',),
             ]
@@ -325,38 +334,37 @@
                                     <div class="f_right header_mobile_left clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
                                         <!--shopping cart-->
                                         <div class="relative f_right dropdown_2_container shoppingcart">
+                                            <span class="cart_top_upper animated bounceIn">{{globleCartData.total_quantity}}</span>
                                             <button class="icon_wrap_size_2 color_blue2  circle tr_all">
                                                 <i class="icon-basket color_blue2 _2 tr_inherit"></i>
                                             </button>
-                                            <div class="dropdown_2 bg_light shadow_1 tr_all p_top_0">
+                                            <div class="dropdown_2 bg_light shadow_1 tr_all p_top_0" ng-if="globleCartData.total_quantity">
                                                 <div class="sc_header bg_light_2 fs_small color_grey">
                                                     Recently added item(s)
                                                 </div>
-                                                <!--                                                <ul class="added_items_list">
-                                                                                                    <li class="clearfix lh_large m_bottom_20 relative">
-                                                                                                        <a href="#" class="d_block f_left m_right_10"><img src="images/sc_img_1.jpg" alt=""></a>
-                                                                                                        <div class="f_left item_description lh_ex_small">
-                                                                                                            <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">Duis ac turpis</a>
-                                                                                                            <p class="color_dark  fs_small">Product Code PS34</p>
-                                                                                                        </div>
-                                                                                                        <div class="f_right fs_small lh_medium d_xs_none">
-                                                                                                            <span class="color_grey">1 x </span><span class="color_dark">$79.00</span>
-                                                                                                        </div>
-                                                                                                        <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all"></i>
-                                                                                                    </li>
-                                                                                                   
-                                                                                                </ul>
-                                                                                                <div class="total_price bg_light_2 t_align_r fs_medium m_bottom_15">
-                                                                                                    <ul>
-                                                                                                        <li class="color_dark">Tax: <span class="d_inline_b m_left_15 price t_align_l">$0.00</span></li>
-                                                                                                        <li class="color_dark">Discount: <span class="d_inline_b m_left_15 price t_align_l">$37.00</span></li>
-                                                                                                        <li class="color_dark"><span class="fw_ex_bold">Total:</span> <span class="fw_ex_bold d_inline_b m_left_15 price t_align_l color_pink">$999.00</span></li>
-                                                                                                    </ul>
-                                                                                                </div>
-                                                                                                <div class="clearfix border_none p_top_0 sc_footer">
-                                                                                                    <a href="#" class="button_type_5 d_block color_pink transparent f_right r_corners tr_all fs_medium m_left_5">Checkout</a>
-                                                                                                    <a href="#" class="button_type_5 d_block color_dark f_right r_corners color_pink_hover tr_all fs_medium">View Cart</a>
-                                                                                                </div>-->
+                                                <ul class="added_items_list" >
+                                                    <li class="clearfix lh_large m_bottom_20 relative"  ng-repeat="product in globleCartData.products">
+                                                        <a href="#" class="d_block f_left m_right_10"><img src="{{product.file_name}}" alt="" style="height: 60px;width: 60px;"></a>
+                                                        <div class="f_left item_description lh_ex_small">
+                                                            <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">{{product.title}} - {{product.item_name}}</a>
+                                                            <p class="color_dark  fs_small">{{product.price|currency:" "}} X {{product.quantity}} </p>
+                                                        </div>
+                                                        <div class="f_right fs_small lh_medium d_xs_none">
+                                                            <span class="color_dark">{{product.total_price|currency:" "}}</span>
+                                                        </div>
+                                                        <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all" ng-click="removeCart(product.product_id)"></i>
+                                                    </li>
+
+                                                </ul>
+                                                <div class="total_price bg_light_2 t_align_r fs_medium m_bottom_15">
+                                                    <ul>
+                                                        <li class="color_dark"><span class="fw_ex_bold">Total:</span> <span class="fw_ex_bold d_inline_b m_left_15 price t_align_l color_pink">{{globleCartData.total_price|currency:"<?php echo globle_currency; ?> "}}</span></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clearfix border_none p_top_0 sc_footer">
+                                                    <a href="<?php echo site_url("Cart/checkoutInit"); ?>" class="button_type_1 d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-check-1 d_inline_b m_right_5"></i> Checkout</a>
+                                                    <a href="<?php echo site_url("Cart/details"); ?>" class="button_type_1 d_block color_pink f_left r_corners color_pink_hover tr_all fs_medium"><i class="icon-basket d_inline_b m_right_5"></i> View Cart</a>
+                                                </div>
                                             </div>
                                         </div>
                                         <!--login-->
@@ -365,34 +373,68 @@
                                                 <i class="icon-lock color_blue2 _2 tr_inherit"></i>
                                             </button>
                                             <div class="dropdown_2 bg_light shadow_1 tr_all">
-                                                <h5 class="fw_light color_dark m_bottom_23">Login</h5>
-                                                <form class="login_form m_bottom_20">
-                                                    <ul>
-                                                        <li class="m_bottom_10 relative">
-                                                            <i class="icon-user login_icon fs_medium color_dark _2"></i>
-                                                            <input type="text" placeholder="Username" class="r_corners color_grey w_full fw_light">
-                                                        </li>
-                                                        <li class="m_bottom_10 relative">
-                                                            <i class="icon-lock login_icon fs_medium color_dark _2"></i>
-                                                            <input type="password" placeholder="Password" class="r_corners color_grey w_full fw_light">
-                                                        </li>
 
-                                                        <li class="row">
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                                                <button class="button_type_5 tr_all color_blue transparent fs_medium r_corners">Login</button>
-                                                            </div>
-                                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
-                                                                <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </form>
-                                                <div class="bg_light_2 im_half_container sc_footer">
-                                                    <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
-                                                    <div class="half_column t_align_r d_inline_m">
-                                                        <a href="#" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_purple transparent fs_medium">Create an Account</a>
+                                                <?php
+                                                $session_data = $this->session->userdata('logged_in');
+                                                if (isset($session_data['login_id'])) {
+                                                    ?>
+                                                    <h5 class="fw_light color_dark m_bottom_23">
+                                                        <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                            <i class="icon-user color_blue2 _2 tr_inherit"></i>
+                                                        </button>
+                                                        <?php
+                                                        echo $session_data['first_name'];
+                                                        ?><br/>
+                                                        <small style="margin-left: 45px">( <?php
+                                                            echo $session_data['username'];
+                                                            ?>)</small>
+
+                                                    </h5>
+                                                    <div class="clearfix border_none p_top_0 sc_footer">
+                                                        <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
+                                                        <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
                                                     </div>
-                                                </div>
+
+
+
+                                                    <?php
+                                                } else {
+                                                    ?>
+                                                    <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
+                                                    <form class="login_form m_bottom_20" action="#" method="post">
+                                                        <ul>
+                                                            <li class="m_bottom_10 relative">
+                                                                <i class="icon-user login_icon fs_medium color_dark _2"></i>
+                                                                <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
+                                                            </li>
+                                                            <li class="m_bottom_10 relative">
+                                                                <i class="icon-lock login_icon fs_medium color_dark _2"></i>
+                                                                <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
+                                                            </li>
+
+                                                            <li class="row">
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                                                                    <button class="button_type_5 tr_all color_blue transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
+                                                                    <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </form>
+                                                    <div class="bg_light_2 im_half_container sc_footer">
+                                                        <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
+                                                        <div class="half_column t_align_r d_inline_m">
+                                                            <a href="#" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_purple transparent fs_medium">Create an Account</a>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                                ?>
+
+
+
+
                                             </div>
                                         </div>
                                         <img src="<?php echo base_url(); ?>assets/theme/images/tradmark.png" class="hktradmark2">

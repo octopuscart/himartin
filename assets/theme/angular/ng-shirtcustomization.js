@@ -3,7 +3,7 @@
 
 App.controller('customizationShirt', function ($scope, $http, $location, $filter) {
 
-    var globlecart = baseurl + "customApi/cartOperationSingle/" + product_id;
+    var globlecart = baseurl + "customApi/cartOperationSingle/" + product_id + "/" + gcustome_id;
     $scope.product_quantity = 1;
 
     var currencyfilter = $filter('currency');
@@ -63,6 +63,7 @@ App.controller('customizationShirt', function ($scope, $http, $location, $filter
 
                 //zoom plugin
 
+                $(".accordion").accordion()
                 $(document).on('mousemove', '.frame', function () {
 
                     var element = {
@@ -266,6 +267,13 @@ App.controller('customizationShirt', function ($scope, $http, $location, $filter
         }
     }
 
+
+    $scope.changeViews = function (viewtype) {
+
+        $scope.screencustom.view_type = viewtype;
+
+    }
+
     //add to cart
     $scope.addToCartCustome = function () {
         var summerydata = $scope.selecteElements[product_id].summary;
@@ -288,8 +296,8 @@ App.controller('customizationShirt', function ($scope, $http, $location, $filter
             title: 'Confirm Desing',
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
+            confirmButtonColor: 'rgb(67, 22, 95)',
+            cancelButtonColor: 'red',
             confirmButtonText: 'Yes, Add To Cart',
             cancelButtonText: 'No, Cancel!',
             confirmButtonClass: 'btn btn-success',
@@ -322,12 +330,10 @@ App.controller('customizationShirt', function ($scope, $http, $location, $filter
                         imageUrl: rdata.data.file_name,
                         imageWidth: 100,
                         timer: 1500,
-//                 background: '#fff url(//bit.ly/1Nqn9HU)', 
                         imageAlt: 'Custom image',
                         showConfirmButton: false,
                         animation: true,
                         onClose: function () {
-                            console.log("asdfsadf");
                             window.location = baseurl + "Cart/details";
                         }
                     })

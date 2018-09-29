@@ -70,6 +70,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
+
+$active_group = 'default';
+$query_builder = TRUE;
+$baselink = 'http://'.$_SERVER['SERVER_NAME'];
+$checkdebug = strpos($baselink, '192.168') ? TRUE  : FALSE;
+
 $active_group = 'default';
 $query_builder = TRUE;
 
@@ -78,11 +84,11 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'j2k5e6r5_octopus',
 	'password' => 'India$2017',
-	'database' => 'j2k5e6r5_johnsperfectfashions',
+	'database' => 'j2k5e6r5_shanielfashions',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'db_debug' => $checkdebug,
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',

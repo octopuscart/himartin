@@ -37,7 +37,7 @@
                                 </div>
                                 
                                 <a href="mailto:shaniel@netvigator.com" class="color_black color_light _hover">shaniel@netvigator.com</a><br/>
-                                <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left: 35px'>sales@shanielfashions.com</a>
+                                <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left:27px'>sales@shanielfashions.com</a>
                             </li>
 
                         </ul>
@@ -152,12 +152,13 @@
 </script>
 
 <!--Libs-->
+
 <script src="<?php echo base_url(); ?>assets/theme/plugins/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/jquery.appear.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/afterresize.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/theme/plugins/jquery.easing.1.3.js"></script>
-<script src="<?php echo base_url(); ?>assets/theme/plugins/jquery.easytabs.min.js"></script>
+<!--<script src="<?php echo base_url(); ?>assets/theme/plugins/jquery.easing.1.3.js"></script>-->
+<!--<script src="<?php echo base_url(); ?>assets/theme/plugins/jquery.easytabs.min.js"></script>-->
 <script src="<?php echo base_url(); ?>assets/theme/plugins/jackbox/js/jackbox-packed.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/twitter/jquery.tweet.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/plugins/owl-carousel/owl.carousel.min.js"></script>
@@ -168,6 +169,9 @@
 <!--Theme Initializer-->
 <script src="<?php echo base_url(); ?>assets/theme/js/theme.plugins.js"></script>
 <script src="<?php echo base_url(); ?>assets/theme/js/theme.js"></script>
+
+<script src="<?php echo base_url(); ?>assets/theme/js/bootstrap.min.js"></script>
+
 
 <!-- type ahead-->
 <script src="<?php echo base_url(); ?>assets/search/handlebars.js" type="text/javascript"></script>

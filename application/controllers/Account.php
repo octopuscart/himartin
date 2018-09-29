@@ -73,10 +73,12 @@ class Account extends CI_Controller {
     }
 
     //login page
+    //login page
     function login() {
         $data1['msg'] = "";
 
         $link = isset($_GET['page']) ? $_GET['page'] : '';
+        $data1['next_link'] = $link;
 
         if (isset($_POST['signIn'])) {
             $username = $this->input->post('email');
@@ -99,32 +101,31 @@ class Account extends CI_Controller {
                         'last_name' => $userdata['last_name'],
                         'login_id' => $userdata['id'],
                     );
-
+                    $user_id = $userdata['id'];
                     $session_cart = $this->session->userdata('session_cart');
                     $productlist = $session_cart['products'];
 
-                    foreach ($productlist as $key => $value) {
-                        $quantity = $value['quantity'];
-                        $product_id = $value['product_id'];
-                        $this->Product_model->cartOperation($product_id, $quantity, $userdata['id'], 1);
-                    }
+                     $this->Product_model->cartOperationCustomCopy($user_id);
+
                     $this->session->set_userdata('logged_in', $sess_data);
 
-                    if ($link == 'checkout') {
-                        redirect('Cart/checkout');
+                    if ($link == 'checkoutInit') {
+                      redirect('Cart/checkoutInit');
                     }
 
                     redirect('Account/profile');
+                    
                 } else {
                     $data1['msg'] = 'Invalid Email Or Password, Please Try Again';
                 }
             } else {
                 $data1['msg'] = 'Invalid Email Or Password, Please Try Again';
-                //redirect('Account/login', $data1);
+                redirect('Account/login', $data1);
             }
         }
 
         if (isset($_POST['registration'])) {
+
             $email = $this->input->post('email');
             $password = $this->input->post('password');
             $first_name = $this->input->post('first_name');
@@ -152,18 +153,13 @@ class Account extends CI_Controller {
                         'login_id' => $user_id,
                     );
 
-                    $session_cart = $this->session->userdata('session_cart');
-                    $productlist = $session_cart['products'];
 
-                    foreach ($productlist as $key => $value) {
-                        $quantity = $value['quantity'];
-                        $product_id = $value['product_id'];
-                        $this->Product_model->cartOperation($product_id, $quantity, $user_id, 1);
-                    }
+                    $this->Product_model->cartOperationCustomCopy($user_id);
+
                     $this->session->set_userdata('logged_in', $sess_data);
 
-                    if ($link == 'checkout') {
-                        redirect('Cart/checkout');
+                    if ($link == 'checkoutInit') {
+                       redirect('Cart/checkoutInit');
                     }
 
                     redirect('Account/profile');
