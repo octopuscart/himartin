@@ -243,33 +243,7 @@ $customarray = [
 ];
 foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
     ?>
-                            <div class="col-md-3">
-                                <figure class="portfolio_item1 t_xs_align_c type_2 ">
-                                    image
-                                    <div class="popup_wrap d_xs_inline_b d_mxs_block relative r_corners wrapper appear-animation fadeInDown appear-animation-visible" data-appear-animation="fadeInDown" style="width: auto;">
-                                        <img src="<?php echo base_url(); ?>assets/theme/images/<?php echo $value['image']; ?>" alt="" class="tr_all" style="height: 250px">
-                                        <div class="project_description vc_child t_align_c tr_all"><div class="d_inline_m">
-                                                <div class="d_inline_b clearfix">
-                                                    <a href="images/home_img_5.jpg" data-group="portfolio" data-title="Title 1" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left m_right_10">
-                                                        <i class="icon-basket "></i>
-                                                    </a>
-                                                </div>
-                                            </div></div>
-                                        <div class="project_description_up1 bg_light_3 tr_all" style="padding:10px">
-                                            <div class="d_table w_full">
-                                                <div class="col-md-12 d_table_cell v_align_m f_none t_align_c">
-                                                    <h4 class="m_bottom_5"><a href="#" class="color_dark d_block wrapper tr_all d_inline_b"><?php echo $value['title']; ?></a></h4>
-                                                    <div class="color_grey">
-                                                        <a href="#" class="color_grey d_inline_b fs_medium"><i>Start From </i></a>
-                                                        <a href="#" class="color_dark d_inline_b fs_medium"><i>US$  <?php echo $value['price']; ?></i></a>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </figure>
-                            </div>
+ 
     <?php
 }
 ?>
@@ -309,13 +283,13 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                                 <h6 class="m_bottom_5"><a href="#" class="color_dark"><?php $value['title']; ?></a></h6>
                                 <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php $value['short_description']; ?></i></a>
                                 <div class="im_half_container m_bottom_10">
-                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">US$ 1700.00</p>	
+                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">{{<?php echo $suitcustome->price; ?>|currency:"<?php echo globle_currency; ?> "}}</p>	
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie hide_from_mobile"></p>	
 
                                 </div>
                                 <div class="clearfix">
                                     <div class="half_column w_md_full m_md_bottom_10 animate_fctl tr_all f_left with_ie f_md_none">
-                                        <a href="#" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-basket f_left m_right_10 fs_large"></i><span class="fs_medium">Add to Cart</span></span></a>
+                                        <a href="<?php echo site_url("Product/customizationRedirect/" . $suitcustome->id) ?>/<?php echo $value['id']; ?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-basket f_left m_right_10 fs_small"></i><span class="fs_small">Customize</span></span></a>
                                     </div>
                                     <div class="half_column w_md_full animate_fctr tr_all f_left f_md_none clearfix with_ie">
                                         <a href="#" class="button_type_6 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover tr_all t_align_c m_right_5 m_md_right_0"><i class="icon-heart d_inline_m fs_large"></i><span class="d_block r_corners color_default tooltip fs_small fw_normal tr_all">Add to Wishlist</span></a>
