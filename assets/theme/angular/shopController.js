@@ -2,7 +2,11 @@
  Shop Cart product controllers
  */
 App.controller('ShopController', function ($scope, $http, $timeout, $interval, $filter) {
-
+    
+    $timeout(function(){
+        lazyload();
+    }, 500)
+    
 
     var searchProducts = new Bloodhound({
         datumTokenizer: Bloodhound.tokenizers.obj.whitespace('title'),
@@ -227,7 +231,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
     }, function (e) {
     })
 
-    $scope.projectDetailsModel = {'productobj': {}, 'quantity': 1, "link":""};
+    $scope.projectDetailsModel = {'productobj': {}, 'quantity': 1, "link": ""};
     //get product detail model
     $scope.viewShortDetails = function (detailobj, link) {
         $scope.projectDetailsModel.productobj = detailobj;
@@ -256,7 +260,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
         customhtmlarray = customhtmlarray.join("");
         var customdiv = "<div class='custome_summary_popup'><table>" + customhtmlarray + "</table></div>";
         swal({
-            title: product.title+" - "+product.item_name,
+            title: product.title + " - " + product.item_name,
             html: customdiv,
         })
     }

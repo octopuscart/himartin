@@ -273,8 +273,8 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img src="<?php echo imageserver . $value['file_name1']; ?>" alt="" class="tr_all" style="background: white;">
-                                    <img src="<?php echo imageserver . $value['file_name']; ?>" alt="" class="tr_all" >
+                                    <img class="lazyload tr_all" data-src="<?php echo imageserver . $value['file_name1']; ?>" alt=""  style="background: white;">
+                                    <img class="lazyload tr_all" data-src="<?php echo imageserver . $value['file_name']; ?>" alt="" >
                                 </div>
                                 <!--labels-->
                                

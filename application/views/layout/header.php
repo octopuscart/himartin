@@ -43,6 +43,7 @@
 
         <link href="<?php echo base_url(); ?>assets/theme/css/customstyle.css" rel="stylesheet" type="text/css" media="all" />
 
+        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 
 
 
@@ -401,7 +402,7 @@
                                                 } else {
                                                     ?>
                                                     <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
-                                                    <form class="login_form m_bottom_20" action="#" method="post">
+                                                    <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
                                                         <ul>
                                                             <li class="m_bottom_10 relative">
                                                                 <i class="icon-user login_icon fs_medium color_dark _2"></i>

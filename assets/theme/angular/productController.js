@@ -55,29 +55,29 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
                     $scope.checkproduct = 1;
                 }
             }
-            
-
-                $timeout(function () {
-
-                   
-                        $("#slider-range").slider({
-                            range: true,
-                            min: Number($scope.productResults.price.minprice),
-                            max: Number($scope.productResults.price.maxprice),
-                            values: [Number($scope.productResults.price.minprice), Number($scope.productResults.price.maxprice)],
-                            slide: function (event, ui) {
-                                $("#amount").val("$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ]);
-                            }
-                        });
-                        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-                 
 
 
-                  
+            $timeout(function () {
 
-                }, 1000)
-            
+                if ($("#slider-range").length) {
+                    $("#slider-range").slider({
+                        range: true,
+                        min: Number($scope.productResults.price.minprice),
+                        max: Number($scope.productResults.price.maxprice),
+                        values: [Number($scope.productResults.price.minprice), Number($scope.productResults.price.maxprice)],
+                        slide: function (event, ui) {
+                            $("#amount").val("$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ]);
+                        }
+                    });
+                    $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+
+                }
+
+
+
+            }, 1000)
+
             $scope.init = 1;
         }, function () {
         });
