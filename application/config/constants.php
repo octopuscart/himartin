@@ -33,8 +33,8 @@ define('custome_image_server', "http://costcointernational.com/bespoketailorshk_
 
 
 //Email Settings//
-define('email_sender', 'info@bespoketailorshk.com');
-define('email_sender_name', 'Bespoke Tailors');
+define('email_sender', 'info@shanielfashions.com');
+define('email_sender_name', 'Shaniel Fashions');
 define('email_bcc', 'octopuscartltd@gmail.com');
 
 
