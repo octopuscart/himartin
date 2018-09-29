@@ -48,6 +48,7 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
         $http.get(url).then(function (result) {
             if ($scope.productResults.products) {
                 $scope.productResults.products = result.data.products;
+                  lazyload();
             }
             else {
                 $scope.productResults = result.data;
