@@ -120,8 +120,8 @@ $image2 = "";
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img class="lazyload tr_all" data-src="<?php echo imageserver; ?>{{product.file_name1}}" alt="" style="background: white" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=">
-                                    <img class="lazyload tr_all" data-src="<?php echo imageserver; ?>{{product.file_name}}" alt="" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=">
+                                    <img class="lazyload tr_all" data-src="<?php echo imageserver; ?>{{product.file_name1}}" alt="" style="background: white" src="<?php echo imageserver; ?>{{product.file_name1}}">
+                                    <img class="lazyload tr_all" data-src="<?php echo imageserver; ?>{{product.file_name}}" alt="" src="<?php echo imageserver; ?>{{product.file_name1}}">
                                 </div>
 
                             </div>
