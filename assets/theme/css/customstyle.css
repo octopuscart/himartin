@@ -74,7 +74,7 @@ hr {
     }
 }
 .cart-page-area .cart-page-top {
-   
+
 }
 .cart-page-area .cart-page-top table {
     margin-bottom: 0px;
@@ -575,6 +575,8 @@ li a .relative:hover{
 
 .bg_blue3{
     background: #6f269f;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .tab_measurement li a{
@@ -586,7 +588,7 @@ li a .relative:hover{
     padding: 12px 10px 12px;
     color: white;
     line-height: 15px;
-  
+
 }
 
 .btn-apply-coupon:hover, .checkout_button_next:hover  {
@@ -594,8 +596,8 @@ li a .relative:hover{
 
     color: white!important;
     text-decoration: none;
-    
-   
+
+
 }
 
 .checkout_button_next i {
@@ -603,7 +605,7 @@ li a .relative:hover{
 }
 
 .cart_top_upper{
-   background: #cd322c;
+    background: #cd322c;
     color: white;
     width: 25px;
     height: 25px;
@@ -621,4 +623,49 @@ li a .relative:hover{
     right: auto;
     left: -87%;
     margin-left: -134px;
+}
+form li label {
+    width: 100%;
+}
+
+.registration_corner {
+    background: #fff;
+    padding: 20px;
+    margin: 14px;
+    border-radius: 10px;
+}
+
+.registration_corner .button_type_3{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.registration_corner .button_type_3:hover{
+    color:black;
+}
+
+.guestlogintext{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 41px;
+    width: 90px;
+    float: left; 
+    text-align: center;
+    color: red;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .guestlogintext{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .guestlogintext{
+        display: none;
+    }
+}
+
+
+.list-group-item-default.active{
+    background: #70269f;
 }

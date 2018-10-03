@@ -105,7 +105,7 @@ $this->load->view('layout/header');
                             <span class="fa-stack">
                                 <i class="fa fa-shopping-cart fa-stack-1x"></i>
                             </span> My Shopping Bag
-                            <span class="process_block">Total: {{globleCartData.total_price|currency:"<?php echo globle_currency; ?>"}} (<small >{{globleCartData.total_quantity}}</small>)</span> 
+                            <span class="process_block">Total: {{globleCartData.total_price|currency:"<?php echo globle_currency; ?>"}} ({{globleCartData.total_quantity}})</span> 
                         </h4>
                     </div>
                     <div class="panel-body1">

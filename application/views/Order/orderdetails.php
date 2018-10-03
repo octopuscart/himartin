@@ -33,21 +33,17 @@ $paymentstatus = "";
     }
 </style>
 
-<div class="inner-page-banner-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb-area">
-                    <h1>Order Details</h1>
-                    <ul>
 
-                        <li>Order No. #<?php echo $order_data->order_no; ?></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<section class="page_title_1 bg_light_2 t_align_c relative wrapper">
+    <div class="container">
+        <h3 class="color_dark fw_light m_bottom_20 m_top_15 ">Order No. #<?php echo $order_data->order_no; ?></h3>
+        <!--breadcrumbs-->
+<!--        <ul class="hr_list d_inline_m breadcrumbs m_bottom_5">
+            <li>Order No. #<?php echo $order_data->order_no; ?></li>
+        </ul>-->
     </div>
-</div>
+</section>
+
 
 
 
@@ -60,31 +56,42 @@ $paymentstatus = "";
             <div class="row  "> 
                 <div class="pricing">
                     <div class="col-md-4">
-                        <article class="order_box">
-                            <li><i class="fa fa-user"></i> <?php echo $order_data->name; ?> </li>
-                            <li><i class="fa fa-phone"></i> <?php echo $order_data->contact_no; ?></li> 
-                            <li><i class="fa fa-envelope"></i> <?php echo $order_data->email; ?> </li>
+                        <article class="order_box color_dark">
+                            <div class="list-group">
+                                <li class="list-group-item list-group-item-default active"><i class="icon-user"></i> Customer Information</li>
+                                <li class="list-group-item list-group-item-default" style="height: 120px;">
+                                    <i class="icon-user"></i><?php echo $order_data->name; ?> <br/>
+                                    <i class="icon-phone"></i> <?php echo $order_data->contact_no; ?><br/>
+                                    <i class="icon-mail"></i> <?php echo $order_data->email; ?> 
+                                </li>
+                            </div>
                         </article>
                     </div>
 
                     <div class="col-md-4">
-                        <article class="order_box">
-                            <li><i class="fa fa-map"></i> Shipping Adddress </li>
-                            <li>  <?php echo $order_data->address1; ?><br/><?php echo $order_data->address2; ?><br/>
-                                <?php echo $order_data->state; ?>  <?php echo $order_data->city; ?> <?php echo $order_data->country; ?>, <?php echo $order_data->zipcode; ?></li>
+                        <article class="order_box color_dark">
+                            <div class="list-group">
+                                <li class="list-group-item list-group-item-default active"><i class="icon-map"></i> Shipping Adddress </li>
+                                <li class="list-group-item list-group-item-default" style="height: 120px;">  <?php echo $order_data->address1; ?><br/><?php echo $order_data->address2; ?><br/>
+                                    <?php echo $order_data->state; ?>  <?php echo $order_data->city; ?> <?php echo $order_data->country; ?>, <?php echo $order_data->zipcode; ?></li>
+                            </div>
                         </article>
                     </div>
 
                     <div class="col-md-4">
-                        <article class="order_box">
-                            <li> <i class=" fa fa-chevron-circle-right"></i> <?php echo $order_data->order_no; ?></li>
-                            <li> <i class="fa fa-calendar"></i> <?php echo $order_data->order_date; ?> </li>
-                            <li> <i class="fa fa-clock-o"></i>  <?php echo $order_data->order_time; ?> </li>
-                            <li> 
-                                <button class="btn btn-inverse btn-small" ng-click="sendOrderMail('<?php echo $order_data->order_no; ?>')">
-                                    Request Order Copy On Mail
-                                </button>
-                            </li>
+                        <article class="order_box color_dark">
+                            <div class="list-group">
+                                <li class="list-group-item list-group-item-default active"><i class="icon-clipboard"></i>  Order Information </li>
+
+                                <li class="list-group-item list-group-item-default" style="height: 120px;"> <i class=" fa fa-chevron-circle-right"></i> <?php echo $order_data->order_no; ?><br/>
+                               <i class="fa fa-calendar"></i> <?php echo $order_data->order_date; ?> <br/>
+                                <i class="fa fa-clock-o"></i>  <?php echo $order_data->order_time; ?> <br/>
+                                
+                                    <button class="btn btn-default btn-xs" ng-click="sendOrderMail('<?php echo $order_data->order_no; ?>')">
+                                        Request Order Copy On Mail
+                                    </button>
+                                </li>
+                            </div>
                         </article>
                     </div>
 
@@ -100,7 +107,7 @@ $paymentstatus = "";
                         }
                         if ($paymentstatus == 'yes') {
                             ?>
-                            <div class="row payment_block " >
+                            <div class="row payment_block color_dark" >
                                 <form action="#" method="post" enctype="multipart/form-data">
                                     <div class="col-md-12">
                                         <!--                                        <div class="col-md-3">
@@ -159,9 +166,9 @@ $paymentstatus = "";
                         ?>
                     </div>
 
-                    <div class="col-md-12" style=" margin-top: 10px;">
+                    <div class="col-md-12 color_dark" style=" margin-top: 10px;">
                         <article class="" style="padding: 10px;">
-                            <table class="table table-bordered"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="600" style="background: #fff;padding:20px">
+                            <table class="table "  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="600" style="background: #fff;padding:20px">
                                 <tr style="font-weight: bold">
                                     <td style="width: 20px;text-align: right">S.No.</td>
                                     <td colspan="2"  style="text-align: center">Product</td>
@@ -202,7 +209,7 @@ $paymentstatus = "";
                                                 <?php
                                                 echo "<ul class='list-group'>";
                                                 foreach ($product->custom_dict as $key => $value) {
-                                                    echo "<li class='list-group-item'>$key <span class='badge'>$value</span></li>";
+                                                    echo "<li class='list-group-item list-group-item-default'>$key <span class='badge'>$value</span></li>";
                                                 }
                                                 echo "</ul>";
                                                 ?>                                            </div>
@@ -244,7 +251,7 @@ $paymentstatus = "";
                                                         echo "<ul class='list-group'>";
                                                         foreach ($measurements_items as $keym => $valuem) {
                                                             $mvalues = explode(" ", $valuem['measurement_value']);
-                                                            echo "<li class='list-group-item'>" . $valuem['measurement_key'] . " <span class='measurement_right_text'><span class='measurement_text'>" . $mvalues[0] . "</span><span class='fr_value'>" . $mvalues[1] . '"' . "</span></span></li>";
+                                                            echo "<li class='list-group-item list-group-item-default'>" . $valuem['measurement_key'] . " <span class='measurement_right_text'><span class='measurement_text'>" . $mvalues[0] . "</span><span class='fr_value'>" . $mvalues[1] . '"' . "</span></span></li>";
                                                         }
                                                         echo "</ul>";
                                                         ?>                             

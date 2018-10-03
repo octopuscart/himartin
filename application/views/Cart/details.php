@@ -2,9 +2,9 @@
 $this->load->view('layout/header');
 ?>
 
-<section class="page_title_1 bg_light_2 t_align_c relative wrapper">
+<section class="page_title_1 bg_light_2 t_align_c relative wrapper m_top_5 m_bottom_5">
     <div class="container">
-        <h2 class="color_dark fw_light m_bottom_5">Shopping Cart</h2>
+        <h2 class="color_dark fw_light m_bottom_5"><i class="icon-basket"></i> Shopping Cart</h2>
         <!--breadcrumbs-->
         <ul class="hr_list d_inline_m breadcrumbs">
             <li class="m_right_8 f_xs_none"><a href="/" class="color_default d_inline_m m_right_10">Home</a><i class="icon-angle-right d_inline_m color_default fs_small"></i></li>
@@ -17,10 +17,10 @@ $this->load->view('layout/header');
     <div class="container">
         <div class="im_half_container m_bottom_10">
             <div class="half_column d_inline_m w_xs_full m_xs_bottom_10">
-                <p class="fw_light">Your shopping cart contains {{product.total_quantity}} product(s)</p>
+                <p class="fw_light">Your shopping cart contains {{globleCartData.total_quantity}} product(s)</p>
             </div>
             <div class="half_column d_inline_m w_xs_full t_xs_align_l t_align_r m_xs_bottom_5">
-                <a href="<?php echo site_url('Product/ProductList/2/0');?>" class="d_inline_b tr_all r_corners button_type_1 color_pink transparent fs_medium mini_side_offset"><i class="icon-basket d_inline_b m_right_5"></i> Continue Shopping</a>
+                <a href="<?php echo site_url('Product/ProductList/2/0'); ?>" class="d_inline_b tr_all r_corners button_type_1 color_pink transparent fs_medium mini_side_offset"><i class="icon-basket d_inline_b m_right_5"></i> Continue Shopping</a>
             </div>
         </div>
         <div class="r_corners wrapper border_grey m_bottom_10 m_xs_bottom_10">

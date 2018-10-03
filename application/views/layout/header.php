@@ -182,7 +182,7 @@
         array(
             "title" => "Contact Us",
             "submenu" => "no",
-            "link" => site_url('Pages/contactus'),
+            "link" => site_url('Shop/contactus'),
         ),
     ];
     ?>

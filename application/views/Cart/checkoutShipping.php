@@ -71,28 +71,10 @@ $this->load->view('layout/header');
 
 </style>
 
+<?php
+$this->load->view('Cart/checkoutheader');
+?>
 
-
-
-
-
-<!-- Inner Page Banner Area Start Here -->
-<div class="inner-page-banner-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb-area">
-                    <h1>Checkout</h1>
-                    <ul>
-                        <li><a href="#">Home</a> /</li>
-                        <li>Checkout</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Inner Page Banner Area End Here -->
 
 <!-- Content -->
 
@@ -121,7 +103,8 @@ $this->load->view('layout/header');
                             </span> My Shopping Bag
                             <span style="float: right;     margin-top: 7px;" class="ng-binding">
                                 <button class="button_type_1 color_dark r_corners fs_medium color_purple tr_all f_left m_right_10 " data-toggle="modal" data-target="#changeAddress" style="margin-left: 20px;color:white;">Add New</button>
-                            </span>                         </h4>
+                            </span>                        
+                        </h4>
 
 
                     </div>
@@ -219,8 +202,8 @@ $this->load->view('Cart/noproduct');
                 <div class="modal-body checkout-form">
 
                     <table class="table">
-                        <tbody><tr>
-
+                        <tbody>
+                            <tr>
                                 <td colspan="2">
                                     <span for="name" class=""><b>Address (Line 1)</b></span>
                                     <input type="text" required="" name="address1" class="form-control woocommerce-Input woocommerce-Input--email input-text" value="" style="height: 10%;">
@@ -289,7 +272,7 @@ $this->load->view('Cart/noproduct');
 <!--angular controllers-->
 <script src="<?php echo base_url(); ?>assets/theme/angular/productController.js"></script>
 <script>
-    var avaiblecredits =<?php echo $user_credits; ?>;
+        var avaiblecredits =<?php echo $user_credits; ?>;
 </script>
 
 <?php

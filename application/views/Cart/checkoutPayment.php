@@ -68,31 +68,19 @@ $this->load->view('layout/header');
         float: left;
         width: 203px;
     }
+    
+    .tab-pane p{
+        padding:15px;
+    }
 
 </style>
 
 
 
+<?php
+$this->load->view('Cart/checkoutheader');
+?>
 
-
-
-<!-- Inner Page Banner Area Start Here -->
-<div class="inner-page-banner-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="breadcrumb-area">
-                    <h1>Checkout</h1>
-                    <ul>
-                        <li><a href="#">Home</a> /</li>
-                        <li>Checkout</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Inner Page Banner Area End Here -->
 
 <!-- Content -->
 
@@ -101,13 +89,13 @@ $this->load->view('layout/header');
     <div class="container" ng-if="globleCartData.total_quantity">
         <div class="row">
             <?php
-            $this->load->view('Cart/itemblock', array('vtype' => 'items'));
+            $this->load->view('CartGuest/itemblock', array('vtype' => 'items'));
             ?>
             <?php
             $this->load->view('Cart/itemblock', array('vtype' => 'size'));
             ?>
             <?php
-            $this->load->view('Cart/itemblock', array('vtype' => 'shipping'));
+            $this->load->view('CartGuest/itemblock', array('vtype' => 'shipping'));
             ?>
 
 
@@ -256,9 +244,108 @@ $this->load->view('layout/header');
 </div>
 
 
-<?php
-$this->load->view('Cart/noproduct');
-?>
+
+<!-- Content -->
+<div id="content" class="cart-page-area"  ng-if="globleCartData.total_quantity == 0"> 
+    <!-- Tesm Text -->
+    <section class="error-page text-center pad-t-b-130">
+        <div class="container "> 
+
+            <!-- Heading -->
+            <h1 style="font-size: 40px">No Product Found</h1>
+            <p>Please add product to cart<br>
+                You can go back to</p>
+            <hr class="dotted">
+            <a href="<?php echo site_url(); ?>" class="btn-send-message ">BACK TO HOME</a>
+        </div>
+    </section>
+</div>
+<!-- End Content --> 
+
+
+
+<!-- Modal -->
+<div class="modal  fade" id="changeAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="    z-index: 20000000;">
+    <div class="modal-dialog modal-sm" role="document">
+        <form action="#" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel" style="font-size: 15px">Add New Address</h4>
+                </div>
+                <div class="modal-body checkout-form">
+
+                    <table class="table">
+                        <tbody><tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name" class=""><b>Address (Line 1)</b></span>
+                                </td>
+                                <td>
+                                    <input type="text" required="" name="address1" class="form-control woocommerce-Input woocommerce-Input--email input-text" value="" style="height: 10%;">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name" class=""><b>Address (Line 2)</b></span>
+                                </td>
+                                <td>
+                                    <input type="text" required="" name="address2" class="form-control woocommerce-Input woocommerce-Input--email input-text" value="" style="height: 10%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name" class=""><b>Town/City</b></span>
+
+                                </td>
+                                <td>
+                                    <input type="text" required="" name="city" class="form-control woocommerce-Input woocommerce-Input--email input-text" value="" style="height: 10%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name"><b>State</b></span>
+                                </td>
+                                <td>
+                                    <input type="text" required="" name="state" class="form-control woocommerce-Input woocommerce-Input--email input-text" value="" style="height: 10%;">
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name"><b>Zip/Postal</b></span>
+                                </td>
+                                <td>
+                                    <input type="text"  name="zipcode" class="form-control " value="" style="height: 10%;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="line-height: 25px;">
+                                    <span for="name"><b>Country</b></span>
+                                </td>
+                                <td>
+                                    <input type="text" required="" name="country" class="form-control" value="" style="height: 10%;">
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" name="add_address" class="btn btn-primary btn-small" style="color: white">Add Address</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
 
 
 
