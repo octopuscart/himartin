@@ -1,10 +1,20 @@
 <!---footer--->
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="largeimage">
-  <div class="modal-dialog " role="document">
-    <div class="modal-content">
-      {{projectDetailsModel.productobj}}
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{projectDetailsModel.productobj.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <img src="<?php echo custome_image_server . "/output/"; ?>{{projectDetailsModel.productobj.folder}}/fabric20001.png">
+
+            </div>
+
+
+        </div>
     </div>
-  </div>
 </div>
 
 
@@ -44,7 +54,7 @@
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-mail-alt"></i>
                                 </div>
-                                
+
                                 <a href="mailto:shaniel@netvigator.com" class="color_black color_light _hover">shaniel@netvigator.com</a><br/>
                                 <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left:27px'>sales@shanielfashions.com</a>
                             </li>
