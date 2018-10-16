@@ -227,6 +227,18 @@
     </div>
 </section>
 
+<!--canvas constraustion-->
+<section class="section_offset">
+    <div class="container t_align_c">
+        <h3 class="color_dark fw_light m_bottom_15 heading_1" data-appear-animation="bounceInLeft">CUSTOMIZE NOW</h3>
+        <div class="col-md-3" ng-repeat="img in ['suitsc.jpg', 'jacketc.jpg', 'shirtsc.jpg', 'pantsc1.jpg']">
+            <img src="<?php echo base_url(); ?>assets/frontimages/{{img}}">
+        </div>
+        </div>
+    </div>
+</section>
+
+
 <!--<section class="section_offset bg_light_2">
     <div class="container t_align_c">
         <h3 class="color_dark fw_light m_bottom_15 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">CUSTOM TAILORED</h3>
