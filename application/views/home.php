@@ -285,8 +285,8 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."output/". $value['folder']."/fabric20001.png"; ?>" alt=""  style="background: white;">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."output/". $value['folder']."/fabric20001.png"; ?>" alt="" >
+                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."/output/". $value['folder']."/fabric20001.png"; ?>" alt=""  style="background: white;">
+                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."/output/". $value['folder']."/fabric20001.png"; ?>" alt="" >
                                 </div>
                                 <!--labels-->
                                
