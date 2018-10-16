@@ -82,7 +82,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
     $scope.getCartData();
     //remove cart data
     $scope.removeCart = function (product_id) {
-        $http.delete(globlecart + "/" + product_id).then(function (rdata) {
+        $http.get(globlecart+"Delete" + "/" + product_id).then(function (rdata) {
             console.log("asdfsadf");
             $scope.getCartData();
         }, function (r) {

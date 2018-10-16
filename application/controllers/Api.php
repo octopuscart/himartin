@@ -42,7 +42,7 @@ class Api extends REST_Controller {
         $this->response($session_cart);
     }
 
-    function cartOperation_delete($product_id) {
+    function cartOperationDelete_get($product_id) {
         if ($this->checklogin) {
             $cartdata = $this->Product_model->cartData($this->user_id);
             $cid = $cartdata['products'][$product_id]['id'];
