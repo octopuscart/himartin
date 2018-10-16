@@ -198,7 +198,7 @@ $this->load->view('layout/header');
 
                                                             <div class="thumbnail" style="margin-bottom: 0px;">
                                                                 <img src="<?php echo $vimg; ?>" class="measurement_img">
-                                                                <h4 class="measurement_lable" style="font-size: 15px;">
+                                                                <h4 class="measurement_lable" style="font-size: 15px;    text-align: center;">
                                                                     <?php
                                                                     echo $vlname;
                                                                     echo "<input class='input_display_none' name='measurement_title[]' value='$vlname'>"
