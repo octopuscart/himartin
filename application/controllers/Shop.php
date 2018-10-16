@@ -31,11 +31,11 @@ class Shop extends CI_Controller {
     }
     public function contactus() {
         $data['checksent'] = '';
-        $this->load->view('pages/contactus', $data);
+        $this->load->view('Pages/contactus', $data);
     }
     
      public function aboutus() {
-        $this->load->view('pages/aboutus');
+        $this->load->view('Pages/aboutus');
     }
 
 }
