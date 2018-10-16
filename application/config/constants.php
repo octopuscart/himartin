@@ -21,9 +21,9 @@ define('imageserverslider', $baselinkmain."assets_main/sliderimages/");
 
 define('imageservermain', $baselinkmain."assets_main/");
 
-define('globle_currency_type', 'US$ ');
+define('globle_currency_type', 'HK$ ');
  
-define('globle_currency', 'US$ ');
+define('globle_currency', 'HK$ ');
 
 define('site_mail_logo', $baselinkmain.'/assets/images/logo73.png');
 
