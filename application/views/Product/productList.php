@@ -120,8 +120,8 @@ $image2 = "";
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img src="<?php echo custome_image_server ."/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all" style="background: white">
-                                    <img src="<?php echo custome_image_server ."/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all">
+                                    <img src="<?php echo custome_image_server . "/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all" style="background: white">
+                                    <img src="<?php echo custome_image_server . "/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all">
                                 </div>
 
                             </div>
@@ -166,8 +166,10 @@ $image2 = "";
 
                                     </div>
                                     <div class="half_column w_md_full animate_fctr tr_all f_left clearfix with_ie f_md_none">
-                                        <a href="#" class="button_type_6 m_left_5 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover t_align_c m_right_5 m_md_right_0"><i class="icon-heart d_inline_m fs_large"></i><span class="d_block r_corners color_default tooltip fs_small fw_normal tr_all">Add to Wishlist</span></a>
-                                    </div>
+                                        <button ng-click="viewShortDetails(product, '')"  data-toggle="modal" data-target="#largeimage"  type="button" class="button_type_6 m_left_5 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover t_align_c m_right_5 m_md_right_0">
+                                            <i class="icon-zoom-in d_inline_m fs_large"></i>
+                                            <span class="d_block r_corners color_default tooltip fs_small fw_normal tr_all">View Large</span>
+                                        </button>                                    </div>
                                 </div>
                             </figcaption>
                         </figure>

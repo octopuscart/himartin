@@ -1,4 +1,13 @@
 <!---footer--->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="largeimage">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      {{projectDetailsModel.productobj}}
+    </div>
+  </div>
+</div>
+
+
 <footer role="contentinfo" class="bg_light_3 bg_gradiant" id="#footer_1">
     <!--top part-->
     <section class="footer_top_part">
