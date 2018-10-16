@@ -55,7 +55,7 @@ class Api extends REST_Controller {
         }
     }
 
-    function cartOperation_put($product_id, $quantity) {
+    function cartOperationPut_get($product_id, $quantity) {
         if ($this->checklogin) {
             $cartdata = $this->Product_model->cartData($this->user_id);
             $total_price = $cartdata['products'][$product_id]['price'] * $quantity;

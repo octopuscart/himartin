@@ -106,7 +106,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
             }
         }
         console.log(productobj.quantity)
-        $http.put(globlecart + "/" + productobj.product_id + "/" + productobj.quantity).then(function (rdata) {
+        $http.get(globlecart+"Put" + "/" + productobj.product_id + "/" + productobj.quantity).then(function (rdata) {
             $scope.getCartData();
         }, function (r) {
         })
