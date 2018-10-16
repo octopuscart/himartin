@@ -56,7 +56,7 @@ class CartGuest extends CI_Controller {
         }
 
         $custome_items = $session_cart['custome_items'];
-        $data['custome_items'] =  $custome_items;
+        $data['custome_items'] = $custome_items;
 
         $this->db->select("group_concat(measurements) as measurement");
         $this->db->where_in('id', $custome_items);
@@ -237,7 +237,7 @@ class CartGuest extends CI_Controller {
                 'order_id' => $last_id,
                 'status' => "Order Confirmed",
                 'user_id' => 'guest',
-                'remark' => "Order Confirmed By Customer Using " . $paymentmathod . ", Now Waiting for payment",
+                'remark' => "Order Confirmed By Using " . $paymentmathod . ",  Waiting For Payment",
             );
             $this->db->insert('user_order_status', $order_status_data);
 //                    $this->Product_model->order_to_vendor($last_id);
