@@ -36,7 +36,7 @@ switch ($baselink) {
         $baselinkmain = $baselink . '/shanielfashions';
         break;
     default:
-        $baselinkmain = 'http://www.shanielfashions.com/';
+        $baselinkmain = 'https://www.shanielfashions.com/';
 }
 
 $config['base_url'] = $baselinkmain;
