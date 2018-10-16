@@ -120,8 +120,8 @@ $image2 = "";
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img src="<?php echo imageserver; ?>{{product.file_name1}}" alt="" class="tr_all" style="background: white">
-                                    <img src="<?php echo imageserver; ?>{{product.file_name}}" alt="" class="tr_all">
+                                    <img src="<?php echo custome_image_server ."/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all" style="background: white">
+                                    <img src="<?php echo custome_image_server ."/output/"; ?>{{product.folder}}/fabric20001.png" alt="" class="tr_all">
                                 </div>
 
                             </div>
