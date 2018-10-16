@@ -56,6 +56,7 @@ class CartGuest extends CI_Controller {
         }
 
         $custome_items = $session_cart['custome_items'];
+        $data['custome_items'] =  $custome_items;
 
         $this->db->select("group_concat(measurements) as measurement");
         $this->db->where_in('id', $custome_items);
@@ -90,7 +91,7 @@ class CartGuest extends CI_Controller {
             $this->session->set_userdata('measurement_style', $measurement_style);
             redirect('CartGuest/checkoutShipping');
         }
-        $this->load->view('Cart/checkoutSize', $data);
+        $this->load->view('Cart/checkoutSize1', $data);
     }
 
     function checkoutShipping() {
