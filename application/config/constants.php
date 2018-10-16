@@ -29,7 +29,7 @@ define('site_mail_logo', $baselinkmain.'/assets/images/logo73.png');
 
 
 
-define('custome_image_server', "http://costcointernational.com/bespoketailorshk_files");
+define('custome_image_server', "https://costcointernational.com/shanielfashions");
 
 
 //Email Settings//
