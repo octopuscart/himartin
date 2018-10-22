@@ -88,6 +88,23 @@ $this->load->view('layout/header');
         display: none;
     }
 
+
+    .measurement_lable{
+        float: left;
+        font-size: 13px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    .measurement_img{
+        height: 100px!important;
+    }
+
+
+
+
 </style>
 
 
@@ -95,9 +112,28 @@ $this->load->view('layout/header');
 
 
 
+
+
+<!-- Inner Page Banner Area Start Here -->
+<div class="inner-page-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="breadcrumb-area">
+                    <h1>Checkout</h1>
+                    <ul>
+                        <li><a href="#">Home</a> /</li>
+                        <li>Checkout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Inner Page Banner Area End Here -->
 
 <!-- Content -->
+
 
 
 <div class="cart-page-area"  ng-controller="measurementController">
@@ -111,24 +147,27 @@ $this->load->view('layout/header');
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                <div class="panel1 panel-default">
-                    <div class="panel-heading1" role="tab" id="headingOne">
-                        <h4 class=" r_corners wrapper m_bottom_10 bg_light_2  color_dark bg_gradient color_light">
-                            <span class="fa-stack">
-                                <i class="fa fa-list-ol fa-stack-1x"></i>
-                                <i class="ion-bag fa-stack-1x "></i>
-                            </span>  Your Size
-                            <span  class="process_block"> {{measurementstyle.title}}</span> 
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <span class="fa-stack">
+                                    <i class="fa fa-list-ol fa-stack-1x"></i>
+                                    <i class="ion-bag fa-stack-1x "></i>
+                                </span>   Your Size
 
+                                <span style="float: right; line-height: 29px;" class="ng-binding">{{measurementstyle.title}} </span> 
+                            </a>
                         </h4>
                     </div>
-                    <div class="panel-body1">
+                    <div class="panel-body">
+
                         <div class="clearfix"></div>
                         <div class="cart-page-top table-responsive  product-details2-area">
                             <div class="product-details-tab-area" style="margin: 0;">
                                 <div class="row">
                                     <div class="col-lg-12 col-md-12 col-sm-12">
-                                        <ul class="nav nav-tabs bg_blue3 tab_measurement" >
+                                        <ul>
                                             <li class="active"><a href="#size_standard" data-toggle="tab" aria-expanded="false" ng-click="slidedemostandard()">Standard Size</a></li>
                                             <li><a href="#bank" data-toggle="tab" aria-expanded="true" ng-click="slidedemo('Custom Measurement')">Measure Your Body</a></li>
                                             <li><a href="#cash" data-toggle="tab" aria-expanded="false" ng-click="slidedemo('Mail-in Garments')">Mail-in Garments</a></li>
@@ -140,7 +179,10 @@ $this->load->view('layout/header');
                                             <div class="tab-pane fade active in"  id="size_standard">
 
 
-                                                
+
+
+
+
                                                 <div class="row">
                                                     <?php
                                                     $this->load->view('Cart/sizes', array('vtype' => 'items'));
@@ -151,18 +193,17 @@ $this->load->view('layout/header');
 
 
                                                 <div class="cart-page-top table-responsive">
-
                                                     <table class="table table-hover">
                                                         <tbody id="quantity-holder">
                                                             <tr>
                                                                 <td colspan="4" class="text_right">
                                                                     <div class="proceed-button pull-left " >
-                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_pre " ><i class="fa fa-arrow-left"></i> View Cart</a>
+                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon checkout_button_pre disabled" ><i class="fa fa-arrow-left"></i> View Cart</a>
                                                                     </div>
                                                                     <div class="proceed-button pull-right ">
                                                                         <form action="#" method="post">
                                                                             <input class="input_display_none" type ="hidden1" name="measurement_type" ng-model="measurementstyle.title"  >
-                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next "  value="measurement">
+                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon checkout_button_next disabled"  value="measurement">
                                                                                 Choose Shipping Address <i class="fa fa-arrow-right"></i>
                                                                             </button>
                                                                         </form>
@@ -198,7 +239,7 @@ $this->load->view('layout/header');
 
                                                             <div class="thumbnail" style="margin-bottom: 0px;">
                                                                 <img src="<?php echo $vimg; ?>" class="measurement_img">
-                                                                <h4 class="measurement_lable" style="font-size: 15px;    text-align: center;">
+                                                                <h4 class="measurement_lable">
                                                                     <?php
                                                                     echo $vlname;
                                                                     echo "<input class='input_display_none' name='measurement_title[]' value='$vlname'>"
@@ -258,12 +299,12 @@ $this->load->view('layout/header');
                                                                 <tr>
                                                                     <td colspan="4" class="text_right">
                                                                         <div class="proceed-button pull-left " >
-                                                                            <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_pre " ><i class="fa fa-arrow-left"></i> View Cart</a>
+                                                                            <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon checkout_button_pre disabled" ><i class="fa fa-arrow-left"></i> View Cart</a>
                                                                         </div>
                                                                         <div class="proceed-button pull-right ">
 
                                                                             <input class="input_display_none" type ="hidden1" name="measurement_type" ng-model="measurementstyle.title"  >
-                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next "  value="measurement">
+                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon checkout_button_next disabled"  value="measurement">
                                                                                 Choose Shipping Address <i class="fa fa-arrow-right"></i>
                                                                             </button>
 
@@ -288,7 +329,7 @@ $this->load->view('layout/header');
 
 
                                                 <div class="contact-us-right">
-                                                       <b>Send to:</b><br/>
+                                                    <b>Send to:</b>
                                                     B & C, G/F, 
                                                     Comfort Building, 
                                                     86-88A Nathan Road,<br/>
@@ -305,12 +346,12 @@ $this->load->view('layout/header');
                                                             <tr>
                                                                 <td colspan="4" class="text_right">
                                                                     <div class="proceed-button pull-left " >
-                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_pre " ><i class="fa fa-arrow-left"></i> View Cart</a>
+                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon checkout_button_pre disabled" ><i class="fa fa-arrow-left"></i> View Cart</a>
                                                                     </div>
                                                                     <div class="proceed-button pull-right ">
                                                                         <form action="#" method="post">
                                                                             <input class="input_display_none" type ="hidden1" name="measurement_type" ng-model="measurementstyle.title"  >
-                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next "  value="measurement">
+                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon checkout_button_next disabled"  value="measurement">
                                                                                 Choose Shipping Address <i class="fa fa-arrow-right"></i>
                                                                             </button>
                                                                         </form>
@@ -334,12 +375,12 @@ $this->load->view('layout/header');
                                                             <tr>
                                                                 <td colspan="4" class="text_right">
                                                                     <div class="proceed-button pull-left " >
-                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_pre " ><i class="fa fa-arrow-left"></i> View Cart</a>
+                                                                        <a href=" <?php echo site_url("Cart/checkoutInit"); ?>" class="btn-apply-coupon checkout_button_pre disabled" ><i class="fa fa-arrow-left"></i> View Cart</a>
                                                                     </div>
                                                                     <div class="proceed-button pull-right ">
                                                                         <form action="#" method="post">
                                                                             <input class="input_display_none" type ="hidden1" name="measurement_type" ng-model="measurementstyle.title"  >
-                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next "  value="measurement">
+                                                                            <button type="submit" name="submit_measurement" class="btn-apply-coupon checkout_button_next disabled"  value="measurement">
                                                                                 Choose Shipping Address <i class="fa fa-arrow-right"></i>
                                                                             </button>
                                                                         </form>
@@ -377,9 +418,22 @@ $this->load->view('layout/header');
 
     </div>
 
-    <?php
-    $this->load->view('Cart/noproduct');
-    ?>
+    <!-- Content -->
+    <div id="content"  ng-if="!globleCartData.total_quantity"> 
+        <!-- Tesm Text -->
+        <section class="error-page text-center pad-t-b-130">
+            <div class="container "> 
+
+                <!-- Heading -->
+                <h1 style="font-size: 40px">No Product Found</h1>
+                <p>Please add product to cart<br>
+                    You can go back to</p>
+                <hr class="dotted">
+                <a href="<?php echo site_url(); ?>" class="btn-send-message ">BACK TO HOME</a>
+            </div>
+        </section>
+    </div>
+    <!-- End Content --> 
 
 
 </div>

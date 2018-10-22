@@ -25,25 +25,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   |
  */
 
-
+require("configdbconnect.php");
+$configuration = $globleConnectDB;
 
 $baselink = 'http://' . $_SERVER['SERVER_NAME'];
 switch ($baselink) {
     case "http://localhost":
-        $baselinkmain = $baselink . '/shanielfashions';
+        $baselinkmain = $baselink . $configuration['localpath'];
         break;
     case "http://192.168.1.2":
-        $baselinkmain = $baselink . '/shanielfashions';
+        $baselinkmain = $baselink .  $configuration['localpath'];
         break;
     default:
-        $baselinkmain = 'https://www.shanielfashions.com/';
+        $baselinkmain =  $configuration['site_url'];
 }
 
 $config['base_url'] = $baselinkmain;
 //$config['base_url'] = $baselinkmain; 
-
-
-
+//Important
+$config['rest_enable_keys'] = FALSE;
 
 
 /*
@@ -56,7 +56,7 @@ $config['base_url'] = $baselinkmain;
   | variable so that it is blank.
   |
  */
-$config['index_page'] =  strpos($baselink, '192.168') ?  'index.php/' : '';
+$config['index_page'] = strpos($baselink, '192.168') ? 'index.php/' : '';
 
 /*
   |--------------------------------------------------------------------------
@@ -398,6 +398,7 @@ $config['encryption_key'] = '';
   | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
   |
  */
+
 $baselink = 'http://' . $_SERVER['SERVER_NAME'];
 switch ($baselink) {
     case "http://localhost":
@@ -427,6 +428,8 @@ $config['sess_regenerate_destroy'] = FALSE;
         $config['sess_time_to_update'] = 300;
         $config['sess_regenerate_destroy'] = FALSE;
 }
+
+
 
 
 

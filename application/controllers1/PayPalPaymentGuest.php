@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class PayPalPaymentTestGuest extends CI_Controller {
+class PayPalPaymentGuest extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -11,22 +11,25 @@ class PayPalPaymentTestGuest extends CI_Controller {
         $this->load->model('User_model');
         $this->checklogin = $this->session->userdata('logged_in');
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
+        $query = $this->db->get('site_configuration');
+        $siteconfiguration = $query->row();
+        
     }
 
     public function process() {
         $PayPalMode = ''; // sandbox or live
-        $PayPalApiUsername = 'bespoke_api1.biznetvigator.com'; //PayPal API Username
-        $PayPalApiPassword = 'BWJW5YLKQN48TLKJ'; //Paypal API password
-        $PayPalApiSignature = 'A4B5rTBa2Wszba-8qwTnM0eJZcbYA9Av3m2kXRN3E9ICkpspkoU6Z..Y'; //Paypal API Signature
-        $PayPalCurrencyCode = 'USD'; //Paypal Currency Code
+        $PayPalApiUsername = paypal_api_username; //PayPal API Username
+        $PayPalApiPassword = paypal_api_password; //Paypal API password
+        $PayPalApiSignature = paypal_api_signature; //Paypal API Signature
+        $PayPalCurrencyCode = paypal_api_currency_code; //Paypal Currency Code
         $data = [];
         if ($this->checklogin) {
             $session_cart = $this->Product_model->cartData($this->user_id);
         } else {
             $session_cart = $this->Product_model->cartData();
         }
-        $PayPalReturnURL = site_url("PayPalPaymentTestGuest/success");
-        $PayPalCancelURL = site_url("PayPalPaymentTestGuest/cancel");
+        $PayPalReturnURL = site_url("PayPalPaymentGuest/success");
+        $PayPalCancelURL = site_url("PayPalPaymentGuest/cancel");
 
         $paypaldata = "";
         $products = $session_cart['products'];
@@ -45,15 +48,15 @@ class PayPalPaymentTestGuest extends CI_Controller {
             $countitem++;
         }
 
-        $discountcalculate = $total_amt - 0.01;
-
-        $total_amt = $total_amt - $discountcalculate;
-        $total_amt = number_format($total_amt, 2, '.', '');
-
-        $paypaldata .= '&L_PAYMENTREQUEST_0_NAME' . $countitem . '=' . urlencode("GIFT DISCOUNT") .
-                '&L_PAYMENTREQUEST_0_NUMBER' . $countitem . '=' . urlencode("GFT0001") .
-                '&L_PAYMENTREQUEST_0_AMT' . $countitem . '=-' . urlencode($discountcalculate) .
-                '&L_PAYMENTREQUEST_0_QTY' . $countitem . '=' . urlencode(1);
+//        $discountcalculate = $total_amt - 0.01;
+//
+//        $total_amt = $total_amt - $discountcalculate;
+//        $total_amt = number_format($total_amt, 2, '.', '');
+//
+//        $paypaldata .= '&L_PAYMENTREQUEST_0_NAME' . $countitem . '=' . urlencode("GIFT DISCOUNT") .
+//                '&L_PAYMENTREQUEST_0_NUMBER' . $countitem . '=' . urlencode("GFT0001") .
+//                '&L_PAYMENTREQUEST_0_AMT' . $countitem . '=-' . urlencode($discountcalculate) .
+//                '&L_PAYMENTREQUEST_0_QTY' . $countitem . '=' . urlencode(1);
 
         $setexpresscheckout = '&METHOD=SetExpressCheckout' .
                 '&PAYMENTREQUEST_0_PAYMENTACTION=' . urlencode("SALE") .
@@ -79,29 +82,70 @@ class PayPalPaymentTestGuest extends CI_Controller {
         $this->session->set_userdata('session_paypal', $paypaldata);
         $session_paypal = $this->session->userdata('session_paypal');
 
-//        $httpParsedResponseAr = $this->paypalclass->PPHttpPost('SetExpressCheckout', $setexpresscheckout . $paypaldata, $PayPalApiUsername, $PayPalApiPassword, $PayPalApiSignature, $PayPalMode);
+        $httpParsedResponseAr = $this->paypalclass->PPHttpPost('SetExpressCheckout', $setexpresscheckout . $paypaldata, $PayPalApiUsername, $PayPalApiPassword, $PayPalApiSignature, $PayPalMode);
 
-        header('Location: ' . $PayPalReturnURL);
+        if ("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"])) {
+//Redirect user to PayPal store with Token received.
+            $paypalurl = 'https://www' . $PayPalMode . '.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $httpParsedResponseAr["TOKEN"] . '';
+            header('Location: ' . $paypalurl);
+        } else {
+//Show error message
+//            print_r($httpParsedResponseAr);
+
+            $data["error"] = '<div style="color:red"><b>Error : </b>' . urldecode($httpParsedResponseAr["L_LONGMESSAGE0"]) . '</div>';
+            $this->load->view('paypal/error', $data);
+        }
+        $this->load->view('paypal/process', $data);
     }
 
     public function success() {
         $PayPalMode = ''; // sandbox or live
-        $PayPalApiUsername = 'bespoke_api1.biznetvigator.com'; //PayPal API Username
-        $PayPalApiPassword = 'BWJW5YLKQN48TLKJ'; //Paypal API password
-        $PayPalApiSignature = 'A4B5rTBa2Wszba-8qwTnM0eJZcbYA9Av3m2kXRN3E9ICkpspkoU6Z..Y'; //Paypal API Signature
-        $PayPalCurrencyCode = 'USD'; //Paypal Currency Code
+        $PayPalApiUsername = paypal_api_username; //PayPal API Username
+        $PayPalApiPassword = paypal_api_password; //Paypal API password
+        $PayPalApiSignature = paypal_api_signature; //Paypal API Signature
+        $PayPalCurrencyCode = paypal_api_currency_code; //Paypal Currency Code
         $data = [];
         //Paypal redirects back to this page using ReturnURL, We should receive TOKEN and Payer ID
-        if (1) {
-            if (1) {
-               
+        if ($this->input->get("token") && $this->input->get("PayerID")) {
+//we will be using these two variables to execute the "DoExpressCheckoutPayment"
+//Note: we haven't received any payment yet.
+            $token = $this->input->get("token");
+            $payer_id = $this->input->get("PayerID");
+            $paypaldata = $this->session->userdata('session_paypal');
+
+            $doexpresscheckout = '&TOKEN=' . urlencode($token) .
+                    '&PAYERID=' . urlencode($payer_id) .
+                    '&PAYMENTREQUEST_0_PAYMENTACTION=' . urlencode("SALE");
+//We need to execute the "DoExpressCheckoutPayment" at this point to Receive payment from user.
+            $this->load->library('paypalclass');
+            $httpParsedResponseAr = $this->paypalclass->PPHttpPost('DoExpressCheckoutPayment', $doexpresscheckout . $paypaldata, $PayPalApiUsername, $PayPalApiPassword, $PayPalApiSignature, $PayPalMode);
+//Check if everything went ok..
+            if ("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"])) {
+                if (isset($httpParsedResponseAr["L_LONGMESSAGE0"])) {
+                    $long_message = urldecode($httpParsedResponseAr["L_LONGMESSAGE0"]);
+                    $message = urldecode($httpParsedResponseAr["L_SHORTMESSAGE0"]);
+                    $error_code = urldecode($httpParsedResponseAr["L_ERRORCODE0"]);
+                } else {
+                    $long_message = 'Your Transaction ID : ' . urldecode($httpParsedResponseAr["PAYMENTINFO_0_TRANSACTIONID"]);
+                    $message = "Payment Success";
+                    $error_code = "0";
+                }
+                $payment_error_code = urldecode($httpParsedResponseAr["PAYMENTINFO_0_ERRORCODE"]);
+                $payment_status = urldecode($httpParsedResponseAr["PAYMENTINFO_0_PAYMENTSTATUS"]);
+                if ('Completed' == $httpParsedResponseAr["PAYMENTINFO_0_PAYMENTSTATUS"]) {
+                    // echo '<div style="color:green">Payment Received! Your product will be sent to you very soon!</div>';
+                } elseif ('Pending' == $httpParsedResponseAr["PAYMENTINFO_0_PAYMENTSTATUS"]) {
+                    echo '<div style="color:red">Transaction Complete, but payment is still pending! ' .
+                    'You need to manually authorize this payment in your <a target="_new" href="http://www.paypal.com">Paypal Account</a></div>';
+                }
 
 // we can retrive transection details using either GetTransactionDetails or GetExpressCheckoutDetails
 // GetTransactionDetails requires a Transaction ID, and GetExpressCheckoutDetails requires Token returned by SetExpressCheckOut
-                $padata = 1;
+                $padata = '&TOKEN=' . urlencode($token);
 
+                $httpParsedResponseAr = $this->paypalclass->PPHttpPost('GetExpressCheckoutDetails', $padata, $PayPalApiUsername, $PayPalApiPassword, $PayPalApiSignature, $PayPalMode);
 
-                if (1) {
+                if ("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"])) {
 
 
                     $measurement_style = $this->session->userdata('measurement_style');
@@ -134,7 +178,7 @@ class PayPalPaymentTestGuest extends CI_Controller {
                         'name' => $user_details['name'],
                         'email' => $user_details['email'],
                         'user_id' => 'guest',
-                        'contact_no' =>$user_details['contact_no'],
+                        'contact_no' => $user_details['contact_no'],
                         'zipcode' => $address['zipcode'],
                         'address1' => $address['address1'],
                         'address2' => $address['address2'],
@@ -143,9 +187,9 @@ class PayPalPaymentTestGuest extends CI_Controller {
                         'country' => $address['country'],
                         'order_date' => date('Y-m-d'),
                         'order_time' => date('H:i:s'),
-                        'amount_in_word' => $this->Product_model->convert_num_word(urldecode(100)),
-                        'sub_total_price' => urldecode(100), //;$this->input->post('sub_total_price'),
-                        'total_price' => urldecode(100),
+                        'amount_in_word' => $this->Product_model->convert_num_word(urldecode($httpParsedResponseAr["AMT"])),
+                        'sub_total_price' => urldecode($httpParsedResponseAr["AMT"]), //;$this->input->post('sub_total_price'),
+                        'total_price' => urldecode($httpParsedResponseAr["AMT"]),
                         'total_quantity' => $session_cart['total_quantity'],
                         'status' => 'Payment Completed',
                         'payment_mode' => 'PayPal',
@@ -226,16 +270,13 @@ class PayPalPaymentTestGuest extends CI_Controller {
                     );
                     $this->db->insert('paypal_status', $array_payment);
 
-
-
                     $order_status_data = array(
                         'c_date' => date('Y-m-d'),
                         'c_time' => date('H:i:s'),
                         'order_id' => $last_id,
                         'status' => "Order Confirmed",
-                        'user_id' => "guest",
-                        'remark' => "Order Confirmed, Payment Made Using PayPay.",
-                    );
+                        'user_id' => 'guest',
+                        'remark' => "Order Confirmed, Payment Made Using PayPay.",);
                     $this->db->insert('user_order_status', $order_status_data);
 
                     $newdata = array(
@@ -244,13 +285,10 @@ class PayPalPaymentTestGuest extends CI_Controller {
                         'logged_in' => FALSE,
                     );
 
-                    //$this->session->unset_userdata($newdata);
-                    //$this->session->sess_destroy();
+                    $this->session->unset_userdata($newdata);
+                    $this->session->sess_destroy();
 
-
-                  //  redirect('Order/orderdetails/' . $orderkey);
-
-
+                    redirect('Order/orderdetailsguest/' . $orderkey);
 
                     $this->load->view('Cart/checkoutPayment', $data);
 
