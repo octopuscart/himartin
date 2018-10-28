@@ -147,7 +147,7 @@
                     "title" => "Pants",
                     "link" => site_url('Product/ProductList/3/0'),),
                 array(
-                    "title" => "Waistcoat",
+                    "title" => "Waistcoats",
                     "link" => site_url('Product/ProductList/9/0'),),
             ]
         ),
@@ -166,7 +166,7 @@
                     "title" => "Pants",
                     "link" => site_url('Product/ProductList/6/0')),
                 array(
-                    "title" => "Skirt",
+                    "title" => "Skirts",
                     "link" => site_url('Product/ProductList/8/0')),
             ]
         ),
