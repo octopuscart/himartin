@@ -121,9 +121,9 @@ $this->load->view('Cart/checkoutheader');
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <ul class="nav nav-tabs bg_blue3 tab_measurement" >
                                                 <li class="active"><a href="#paypal" data-toggle="tab" aria-expanded="false">PayPal</a></li>
-                                                <li><a href="#bank" data-toggle="tab" aria-expanded="true">Bank Transfer</a></li>
+                                                <!--<li><a href="#bank" data-toggle="tab" aria-expanded="true">Bank Transfer</a></li>-->
                                                 <li><a href="#cash" data-toggle="tab" aria-expanded="false">Cash On Delivery</a></li>
-                                                <li><a href="#cheque" data-toggle="tab" aria-expanded="false">Cheque On Delivery</a></li>
+                                                <!--<li><a href="#cheque" data-toggle="tab" aria-expanded="false">Cheque On Delivery</a></li>-->
                                             </ul>
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -152,7 +152,7 @@ $this->load->view('Cart/checkoutheader');
 
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade " id="bank">
+<!--                                                <div class="tab-pane fade " id="bank">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/bank.png" style="height: 100px;">                
 
@@ -176,7 +176,7 @@ $this->load->view('Cart/checkoutheader');
                                                         </table>
 
                                                     </div>
-                                                </div>
+                                                </div>-->
                                                 <div class="tab-pane fade" id="cash">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/cod.png" style="height: 100px;">                
@@ -202,7 +202,7 @@ $this->load->view('Cart/checkoutheader');
                                                     </div>
                                                 </div>
 
-                                                <div class="tab-pane fade" id="cheque">
+<!--                                                <div class="tab-pane fade" id="cheque">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/chod.png" style="height: 100px;">                
 
@@ -226,7 +226,7 @@ $this->load->view('Cart/checkoutheader');
                                                         </table>
 
                                                     </div>
-                                                </div>
+                                                </div>-->
                                             </div>
                                         </div>
                                     </div>
