@@ -8,6 +8,11 @@ and open the template in the editor.
     Author     : p
 */
 
+
+body{
+    background: white;
+}
+
 .singlemenu li a{
     font-size: 1.15em!important;
     color: #0d59af!important;
@@ -669,3 +674,5 @@ form li label {
 .list-group-item-default.active{
     background: #70269f;
 }
+
+.image_bg_2{background:url("../images/slide_02.jpg") no-repeat;}

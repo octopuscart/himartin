@@ -348,22 +348,24 @@ $this->load->view('layout/header');
                                                             </tr>
                                                         </tbody>
                                                     </table>
-
+<div style="clear: both"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div style="clear: both"></div>
                                 </div>
                             </div>
 
                         </div>
-
+<div style="clear: both"></div>
                     </div>
 
                 </div>
 
-
+                <div style="clear: both"></div> 
             </div>
+            
 
 
             <?php
@@ -411,9 +413,10 @@ $this->load->view('layout/footer');
             '4': ['Jacket'],
         };
 
-        $scope.standard_measurement1 = {'Shirt': '16L(Shirt)', 'Jacket': '34(Jacket)', 'Suit': '34(Jacket)', 'Pant': '32S(Pant)'};
+        $scope.standard_measurement1 = {'Shirt': '16L(Shirt)', 'Jacket': '34(Jacket)',
+             'Waistcoat': '34(Waistcoat)', 'Suit': '34(Jacket)', 'Pant': '32S(Pant)'};
 
-        $scope.standard_measurement = {'Shirt': '', 'Jacket': '', 'Pant': ''};
+        $scope.standard_measurement = {'Shirt': '', 'Jacket': '', 'Pant': '', 'Waistcoat':''};
         var cussta = custom_items.split(", ")
         $timeout(function () {
             for (i in cussta) {

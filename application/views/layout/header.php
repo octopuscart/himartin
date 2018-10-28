@@ -101,34 +101,34 @@
             "submenu" => "no",
             "link" => '#',
         ),
-        array(
-            "title" => "Products",
-            "submenu" => "yes",
-            "link" => '#',
-            "submenuitems" => [
-                array(
-                    "title" => "Leisure",
-                    "link" => '#',),
-                array(
-                    "title" => "Smart Casual",
-                    "link" => '#',),
-                array(
-                    "title" => "Smart Formal",
-                    "link" => '#',),
-                array(
-                    "title" => "Urban",
-                    "link" => '#',),
-                array(
-                    "title" => "Classic",
-                    "link" => '#',),
-                array(
-                    "title" => "Sophisticated",
-                    "link" => '#',),
-                array(
-                    "title" => "Expensive",
-                    "link" => '#',),
-            ]
-        ),
+//        array(
+//            "title" => "Products",
+//            "submenu" => "yes",
+//            "link" => '#',
+//            "submenuitems" => [
+//                array(
+//                    "title" => "Leisure",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Smart Casual",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Smart Formal",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Urban",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Classic",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Sophisticated",
+//                    "link" => '#',),
+//                array(
+//                    "title" => "Expensive",
+//                    "link" => '#',),
+//            ]
+//        ),
         array(
             "title" => "Men",
             "submenu" => "yes",
@@ -146,6 +146,9 @@
                 array(
                     "title" => "Pants",
                     "link" => site_url('Product/ProductList/3/0'),),
+                array(
+                    "title" => "Waistcoat",
+                    "link" => site_url('Product/ProductList/9/0'),),
             ]
         ),
         array(
@@ -155,13 +158,16 @@
             "submenuitems" => [
                 array(
                     "title" => "Suits",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/5/0')),
                 array(
                     "title" => "Jackets",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/7/0')),
                 array(
                     "title" => "Pants",
-                    "link" => '#',),
+                    "link" => site_url('Product/ProductList/6/0')),
+                array(
+                    "title" => "Skirt",
+                    "link" => site_url('Product/ProductList/8/0')),
             ]
         ),
         array(
@@ -169,11 +175,11 @@
             "submenu" => "no",
             "link" => '#',
         ),
-        array(
-            "title" => "Support",
-            "submenu" => "no",
-            "link" => '#',
-        ),
+//        array(
+//            "title" => "Support",
+//            "submenu" => "no",
+//            "link" => '#',
+//        ),
         array(
             "title" => "Style Tips",
             "submenu" => "no",
@@ -291,7 +297,7 @@
                                     <nav class="d_inline_m m_right_10 m_xs_right_0">
                                         <ul class="hr_list stripe_list fs_small">
                                             <li><a href="#" class="color_light ">About</a></li>
-                                            <li><a href="<?php echo site_url('Pages/contactus'); ?>" class="color_light ">Contact</a></li>
+                                            <li><a href="<?php echo site_url('Shop/contactus'); ?>" class="color_light ">Contact</a></li>
                                             <li><a href="#" class="color_light ">FAQ</a></li>
                                             <li><a href="#" class="color_light ">My Account</a></li>
                                             <li><a href="#" class="color_light ">My Wishlist</a></li>

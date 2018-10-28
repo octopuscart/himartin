@@ -128,7 +128,7 @@ function sizeTable($ctype, $lable) {
                         }
                         ?>
 
-                        <label for="measurement_profile_<?php echo $msid; ?>" class="d_inline_m m_right_10" style="width: 100%" ng-click="slidedemostandard()">
+                        <label for="measurement_profile_<?php echo $msid; ?>" class="d_inline_m m_right_10 btn btn-default" style="width: 100%" ng-click="slidedemostandard()">
                             <input  type="radio" id="measurement_profile_<?php echo $msid; ?>" name="order_measurement_type_<?php echo $lable?>" class="d_none standard_measurement <?php echo $isstandard;?>" value="<?php echo $mestitle; ?>" ng-model="standard_measurement.<?php echo $lable?>">
                             <b><?php  echo $svalue; ?></b>
                         </label> 
@@ -153,6 +153,10 @@ sizeTable($shirtsize, 'Shirt');
 
 sizeTable($jacketsize, 'Jacket');
 
+sizeTable($panttsize, 'Pant');
 
-sizeTable($panttsize, 'Pant')
+sizeTable($panttsize, 'Waistcoat');
+
+
+        
 ?>

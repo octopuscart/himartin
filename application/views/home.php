@@ -1,5 +1,5 @@
 <?php
-        $this->load->view('layout/header');
+$this->load->view('layout/header');
 ?>
 
 <section class="relative w_full m_bottom_15">
@@ -234,8 +234,8 @@
         <div class="col-md-3" ng-repeat="img in ['suitsc.jpg', 'jacketc.jpg', 'shirtsc.jpg', 'pantsc1.jpg']">
             <img src="<?php echo base_url(); ?>assets/frontimages/{{img}}">
         </div>
-        </div>
     </div>
+</div>
 </section>
 
 
@@ -255,7 +255,7 @@ $customarray = [
 ];
 foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
     ?>
- 
+             
     <?php
 }
 ?>
@@ -274,10 +274,9 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
         <div class="relative ">
             <div class="row">
                 <div class="owl-carousel t_xs_align_c featured_products" data-nav="fproducts_nav_" data-plugin-options='{"singleItem":false,"itemsCustom":[[992,4],[768,3],[600,2],[10,1]]}'>
-                    <?php 
-                    
+                    <?php
                     foreach ($product_home_slider_bottom['home_bottom'] as $key => $value) {
-                    ?>
+                        ?>
 
 
                         <!--product-->
@@ -285,11 +284,11 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."/output/". $value['folder']."/fabricx0001.png"; ?>" alt=""  style="background: white;">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server ."/output/". $value['folder']."/fabricx0001.png"; ?>" alt="" >
+                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server . "/output/" . $value['folder'] . "/fabricx0001.png"; ?>" alt=""  style="background: white;">
+                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server . "/output/" . $value['folder'] . "/fabricx0001.png"; ?>" alt="" >
                                 </div>
                                 <!--labels-->
-                               
+
                             </div>
                             <figcaption>
                                 <h6 class="m_bottom_5"><a href="#" class="color_dark"><?php $value['title']; ?></a></h6>
@@ -304,7 +303,7 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                                         <a href="<?php echo site_url("Product/customizationRedirect/" . $suitcustome->id) ?>/<?php echo $value['id']; ?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-basket f_left m_right_10 fs_small"></i><span class="fs_small">Customize</span></span></a>
                                     </div>
                                     <div class="half_column w_md_full animate_fctr tr_all f_left f_md_none clearfix with_ie">
-                                        <button ng-click="viewShortDetails({'folder':'<?php echo $value['folder']?>', 'title':'<?php echo $value['title']?>'}, '')"  data-toggle="modal" data-target="#largeimage"  type="button" class="button_type_6 m_left_5 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover t_align_c m_right_5 m_md_right_0">
+                                        <button ng-click="viewShortDetails({'folder': '<?php echo $value['folder'] ?>', 'title': '<?php echo $value['title'] ?>'}, '')"  data-toggle="modal" data-target="#largeimage"  type="button" class="button_type_6 m_left_5 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover t_align_c m_right_5 m_md_right_0">
                                             <i class="icon-zoom-in d_inline_m fs_large"></i>
                                             <span class="d_block r_corners color_default tooltip fs_small fw_normal tr_all">View Large</span>
                                         </button>
@@ -382,7 +381,7 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                             <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Shoulder </li>
                             <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Sleeve Length</li>
                             <li class="m_bottom_8"><i class="icon-right m_right_15 fs_large"></i>Measure the Back Length </li>
- </ul>
+                        </ul>
                     </div>
                 </div>
                 <a href="#" class="color_green fs_medium button_type_3 tr_all r_corners tt_uppercase d_inline_b">Learn More</a>
@@ -393,42 +392,133 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
 
 
 
+<?php
+$clients = array(
+    '1' => array('name' => 'Simone Schiaffino', 'position' => 'Google Review', 'review' => "Great experience and competence. A morning coat ready in two days without any issues. Recommended."),
+    '2' => array('name' => 'Alexander Yuan', 'position' => 'Google Review', 'review' => "These guys are very good, give them a try! I was in Hong Kong for 5 days and they were able to produce a product for me within that limited amount of time. Great job, great materials, great people, just do your research on what you want ahead of time! Make sure to tell them Alex sent you for a better deal ;)."),
+);
+?>
+
+
+<section class="section_offset image_bg_2">
+    <div class="container">
+        <div class="row">
+            <!--testimonials-->
+            <div class="col-md-2"></div>
+
+            <section class="col-lg-8 col-md-8 m_bottom_20" data-appear-animation="fadeInUp">
+                <h3 class="color_light t_align_c m_bottom_15 fw_light">Testimonials</h3>
+                <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
+                    <!--item-->
+<?php
+foreach ($clients as $key => $value) {
+    ?>
+                        <div>
+                            <!--quote-->
+                            <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
+                                <p class="m_bottom_15"><i style="word-break: initial;"><?php echo $value['review']; ?></i></p>
+                            </blockquote>
+                            <div class="d_table w_full">
+                                <div class="d_table_cell">
+
+                                    <!--author name-->
+                                    <div class="d_inline_m">
+                                        <b class="fs_large d_block color_light"><?php echo $value['name']; ?></b>
+                                        <p class="fs_medium color_grey_light_2"><?php echo $value['position']; ?></p>
+                                    </div>
+                                </div>
+                                <div class="d_table_cell t_align_r v_align_m d_mxs_none">
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
+                                        <i class="icon-left-open-big"></i>
+                                    </button>
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
+                                        <i class="icon-right-open-big"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--item-->
+    <?php
+}
+?>
+                </div>
+            </section>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
 <section class="section_offset">
+    <div class="container">
+        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">Our Brands</h3>
+        <div class="relative" data-appear-animation="bounceInLeft" data-appear-animation-delay="400">
+            <div class="t_xs_align_c">
+                <div class="owl-carousel clients brands t_align_c" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                    <!--item-->
+                    <div>
+                        <div class="row">
+<?php
+for ($i = 1; $i < 7; $i++) {
+    ?>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20 f_mxs_none w_mxs_full m_mxs_bottom_10">
+                                    <div class="clients_item db_xs_centered wrapper relative r_corners d_xs_block d_mxs_inline_b">
+                                        <a href="#" class="d_block  tr_all wrapper r_corners">
+                                            <img src="<?php echo base_url(); ?>assets/brand/<?php echo $i; ?>.jpg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+    <?php
+}
+?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--<section class="section_offset">
     <div class="container">
         <h3 class="color_dark fw_light m_bottom_15 t_align_c appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">Our Brands</h3>
         <p class="m_bottom_35 t_align_c appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft" data-appear-animation-delay="200" style="animation-delay: 200ms;"></p>
         <div class="relative appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft" data-appear-animation-delay="400" style="animation-delay: 400ms;">
             <div class="t_xs_align_c">
                 <div class="owl-carousel clients brands t_align_c owl-theme owl-carousel-init" data-plugin-options="{&quot;pagination&quot;:true,&quot;transitionStyle&quot; : &quot;backSlide&quot;}" data-nav="c_nav_" style="display: block; opacity: 1;">
-                    <!--item-->
+                    item
                     <div class="owl-wrapper-outer">
                         <div class="owl-wrapper" style="width: 7020px; left: 0px; display: block;">
                             <div class="owl-item" style="width: 1170px;"><div>
                                     <div class="row">
-                                        <?php
-                                        for ($i = 1; $i < 7; $i++) {
-                                            ?>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20 f_mxs_none w_mxs_full m_mxs_bottom_10">
-                                                <div class="clients_item db_xs_centered wrapper relative r_corners d_xs_block d_mxs_inline_b">
-                                                    <a href="#" class="d_block  tr_all wrapper r_corners">
-                                                        <img src="<?php echo base_url(); ?>assets/brand/<?php echo $i; ?>.jpg" alt="">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <?php
-                                        }
-                                        ?>
+<?php
+for ($i = 1; $i < 7; $i++) {
+    ?>
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20 f_mxs_none w_mxs_full m_mxs_bottom_10">
+                                                            <div class="clients_item db_xs_centered wrapper relative r_corners d_xs_block d_mxs_inline_b">
+                                                                <a href="#" class="d_block  tr_all wrapper r_corners">
+                                                                    <img src="<?php echo base_url(); ?>assets/brand/<?php echo $i; ?>.jpg" alt="">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+    <?php
+}
+?>
 
                                     </div>
                                 </div>
                             </div>
-                            <!--item-->
+                            item
 
-                            <!--item-->
+                            item
 
                             <div class="owl-controls clickable d_inline_b"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div><div class="owl-page"><span class=""></span></div><div class="owl-page"><span class=""></span></div></div></div></div>
                     </div>
-                    <!--carousel nav-->
+                    carousel nav
                     <button class="icon_wrap_size_5 circle color_grey_light tr_all color_blue_hover c_nav_prev nav_type_2 d_md_none">
                         <i class="icon-left-open-big"></i>
                     </button>
@@ -437,10 +527,10 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                     </button>
                 </div>
             </div>
-            </section>
+            </section>-->
 
 
 
-            <?php
-            $this->load->view('layout/footer');
-            ?>
+<?php
+$this->load->view('layout/footer');
+?>

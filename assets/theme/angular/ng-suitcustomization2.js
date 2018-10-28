@@ -51,6 +51,9 @@ App.controller('customizationShirt', function ($scope, $http, $location, $filter
             case "Pant":
                 viewtype = "pant";
                 break;
+            case "Skirt":
+                viewtype = "skirt";
+                break;    
             default:
                 viewtype = "front";
         }

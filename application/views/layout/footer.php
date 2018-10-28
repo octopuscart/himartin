@@ -25,15 +25,15 @@
         <div class="container">
             <div class="row">
                 <!--about us-->
-                <div class="col-lg-4 col-md-4 col-sm-4 fw_light m_bottom_30 color_light">
+                <div class="col-lg-3 col-md-3 col-sm-3 fw_light m_bottom_30 color_light">
                     <h5 class="color_light m_bottom_20 ">Shortly About Us</h5>
                     <p class='font_size_14'>Mr.Shaniel is the owner of Shaniel Fashions Ltd. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 3 weeks.” </p>
                 </div>
                 <!--contact info--> 
-                <div class="col-lg-5 col-md-5 col-sm-5 m_bottom_30">
+                <div class="col-lg-3 col-md-3 col-sm-3 m_bottom_30">
                     <h5 class="color_light m_bottom_20 fw_light ">Contact Us</h5>
-                    <div class="row">
-                        <ul class="col-lg-6 col-md-6 col-sm-6 fw_light w_break m_xs_bottom_8 color_light">
+                    <div class="row1">
+                        <ul class="fw_light w_break m_xs_bottom_8 color_light">
                             <li class="m_bottom_8 font_size_14">
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-phone-1"></i>
@@ -55,17 +55,27 @@
                                     <i class="icon-mail-alt"></i>
                                 </div>
 
-                                <a href="mailto:shaniel@netvigator.com" class="color_black color_light _hover">shaniel@netvigator.com</a><br/>
-                                <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left:27px'>sales@shanielfashions.com</a>
+                                <a href="mailto:shanieltailor@gmail.com" class="color_black color_light _hover">shanieltailor@gmail.com</a><br/>
+                                <a href="mailto:sales@shanielfashions.com" class="color_black color_light _hover" style='margin-left:35px'>sales@shanielfashions.com</a>
                             </li>
 
                         </ul>
-                        <ul class="col-lg-6 col-md-6 col-sm-6 vr_list_type_5">
+
+                       
+                    </div>
+                </div>
+
+
+                <!--contact info--> 
+                <div class="col-lg-3 col-md-3 col-sm-3 m_bottom_30">
+                    <h5 class="color_light m_bottom_20 fw_light ">Address</h5>
+                    <div class="row1">
+                        <ul class=" vr_list_type_5">
                             <li class="m_bottom_15 fw_light relative color_light font_size_14" >
                                 <div class="icon_wrap_size_1 color_light  circle f_left">
                                     <i class="icon-location"></i>
                                 </div>
-                                B & C, G/F, <br/>Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, <br/>Kowloon, Hong Kong
+                                B & C, G/F, Comfort Building, <br/> 86-88A Nathan Road,<br/> Tsim Sha Tsui, Kowloon,<br/> Hong Kong
                             </li>
                             <li>
                                 <a href="https://www.google.co.in/maps/place/Shaniel+Custom+Tailors/@22.2990774,114.1726538,15z/data=!4m5!3m4!1s0x0:0x86434735e1a12048!8m2!3d22.2990774!4d114.1726538" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
@@ -73,6 +83,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <!--social buttons-->
                 <div class="col-lg-3 col-md-3 col-sm-3 m_bottom_20 m_xs_bottom_20">
                     <h5 class="color_light m_bottom_10 fw_light ">Opening Hours</h5>
@@ -85,13 +96,13 @@
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-clock"></i>
                                 </div>
-                                <span class='font_size_12'>Monday to Saturday</span><br/>
+                                <span class='font_size_14'>Monday to Saturday</span><br/>
                                 <span style='margin-left: 35px'>09:00 AM to 09:00 PM</span>
                             </div>
                             <div class='m_bottom_8'>
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-clock"></i>
-                                </div> <span class='font_size_12'>Sunday</span><br/> 
+                                </div> <span class='font_size_14'>Sunday</span><br/> 
                                 <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
                             </div>
 

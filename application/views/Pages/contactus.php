@@ -71,13 +71,13 @@ $this->load->view('layout/header');
                                 <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                     <i class="icon-clock"></i>
                                 </div>
-                                <span class='font_size_12'>Monday to Saturday</span><br/>
+                                <span class='font_size_14'>Monday to Saturday</span><br/>
                                 <span style='margin-left: 35px'>09:00 AM to 09:00 PM</span>
                             </div>
                             <div class='m_bottom_8 col-md-6'>
                                 <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                     <i class="icon-clock"></i>
-                                </div> <span class='font_size_12'>Sunday</span><br/> 
+                                </div> <span class='font_size_14'>Sunday</span><br/> 
                                 <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
                             </div>
                         </ul>
