@@ -629,7 +629,7 @@ blockquote.type_3 > p:last-of-type:after,
 .color_pink_hover:hover [class*="color_"],
 [class*="button_type_"].color_pink:not(.transparent):hover,
 .dropdown_2_container.shoppingcart:hover > [class*="icon_wrap_"] > [class|="icon"]{
-	color:#a255c4;
+	color:#424240;
 }
 .border_color_pink,
 [class*="icon_wrap_"].color_pink,
@@ -640,13 +640,13 @@ blockquote.type_3 > p:last-of-type:after,
 [class*="button_type_"].color_pink_hover:not(.color_light):hover,
 [class*="icon_wrap_"].color_pink_hover:hover,
 .dropdown_2_container.shoppingcart:hover > [class*="icon_wrap_"]{
-	border-color:#a255c4;
+	border-color:#424240;
 }
 .dropdown_2_container.shoppingcart .dropdown_2:before{
-	border-bottom-color:#a255c4;
+	border-bottom-color:#424240;
 }
 .dropdown_2_container.shoppingcart .dropdown_2{
-	border-top-color:#a255c4;
+	border-top-color:#424240;
 }
 .bg_color_pink,
 .ui-slider-range,

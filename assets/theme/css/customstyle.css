@@ -367,16 +367,9 @@ element.style {
 }
 
 #side_menu, .bg_gradiant{
-    background: -webkit-linear-gradient(left,#70269f,#397af0);
-    background: #70269f;
-    background: -webkit-gradient(linear,left top,right top,from(#70269f),to(#397af0));
-    background: -webkit-linear-gradient(left,#70269f,#397af0);
-    background: -moz-linear-gradient(left,#70269f,#397af0);
-    background: -o-linear-gradient(left,#70269f,#397af0);
-    background: -ms-linear-gradient(left,#70269f,#397af0);
-    background: linear-gradient(left,#70269f,#397af0);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#70269f', endColorstr='#397af0',GradientType=1 );
-}
+    
+    background: #424240;
+   }
 
 #close_side_menu {
     opacity: 1; 
@@ -389,7 +382,7 @@ element.style {
 }
 
 .color_blue2{
-    color:#397af0
+    color:#000000
 }
 
 .logotext{
@@ -416,7 +409,7 @@ element.style {
 }
 
 .bg_color_blue2{
-    background: #397af0;
+    background: #000000;
 }
 
 .bg_color_purple2{
@@ -676,3 +669,9 @@ form li label {
 }
 
 .image_bg_2{background:url("../images/slide_02.jpg") no-repeat;}
+
+
+.dropdown_2_container {
+    z-index: 12;
+    margin-top: 10px;
+}
