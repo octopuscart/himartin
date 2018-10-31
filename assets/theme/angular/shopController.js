@@ -65,8 +65,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
     });
     //searchdata 
 
-        $scope.gcheckcart = {'status': 1};
-
+    $scope.gcheckcart = {'status': 1};
     var globlecart = baseurl + "Api/cartOperation";
     $scope.product_quantity = 1;
     var currencyfilter = $filter('currency');

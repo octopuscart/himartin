@@ -353,7 +353,7 @@ $this->load->view('Cart/checkoutheader');
 <!--angular controllers-->
 <script src="<?php echo base_url(); ?>assets/theme/angular/productController.js"></script>
 <script>
-    var avaiblecredits =<?php echo $user_credits; ?>;
+    var avaiblecredits =0;
 </script>
 
 <?php
