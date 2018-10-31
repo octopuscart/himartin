@@ -39,9 +39,9 @@ $image2 = "";
         <div class="row"  ng-if="productResults.products.length">
 
 
-            <aside class="col-lg-2 col-md-2 col-sm-2 m_bottom_70 m_xs_bottom_30" style="    padding: 0;">
+<!--            <aside class="col-lg-2 col-md-2 col-sm-2 m_bottom_70 m_xs_bottom_30" style="    padding: 0;">
 
-                <!--categories-->
+                categories
                 <?php
                 if (count($categories)) {
                     ?>
@@ -93,7 +93,7 @@ $image2 = "";
 
                 <div class="product_attr" ng-repeat="(attrk, attrv) in productResults.attributes" ng-if="attrv.length > 1">
                     <div class="m_bottom_45 m_xs_bottom_30">
-                        <!--manufacturers-->
+                        manufacturers
                         <div class="m_bottom_25">
                             <h5 class="color_dark fw_light m_bottom_10 m_bottom_10">{{attrk}}</h5>
                             <ul>
@@ -107,11 +107,11 @@ $image2 = "";
                 </div>
 
 
-            </aside>
+            </aside>-->
 
 
 
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 m_top_10">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_top_10">
                 <div class="shop_isotope_container t_xs_align_c three_columns m_bottom_15" data-isotope-options='{"itemSelector" : ".shop_isotope_item","layoutMode" : "fitRows","transitionDuration":"0.7s"}'>
                     <!--product-->
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"  ng-repeat="(k, product) in productResults.products" style="padding:10px; ">
@@ -120,8 +120,8 @@ $image2 = "";
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img src="<?php echo custome_image_server . "/output/"; ?>{{product.folder}}/fabricx0001.png" alt="" class="tr_all" style="background: white">
-                                    <img src="<?php echo custome_image_server . "/output/"; ?>{{product.folder}}/fabricx0001.png" alt="" class="tr_all">
+                                    <div style="height: 300px;width: auto;background:url(<?php echo custome_image_server;?>{{product.folder}}.jpg) "></div>
+                                    <!--<img style="height: 200px;" src="<?php echo custome_image_server;?>{{product.folder}}.webp" alt="" class="tr_all" style="background: white">-->
                                 </div>
 
                             </div>

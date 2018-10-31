@@ -4,11 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Order No#</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-         
-            
+        <style>
+
+
             .carttable{
-                 
+
             }
 
             .carttable td{
@@ -65,15 +65,15 @@
           background: white;;
           font-family: sans-serif;">
         <div class="" style="padding:50px 0px;border: 5px solid;
-    border-color: #9347df;">
+             border-color: #000;">
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding: 0 20px">
-               <tr>
+                <tr>
                     <td >
                         <center><img src="<?php echo site_mail_logo; ?> " style="margin: 10px;
                                      height: 100px;
                                      width: auto;"/><br/>
 
-                            <h4 style="color: rgb(147, 71, 223)"> Order No.: <?php echo $order_data->order_no; ?></h4>
+                            <h4 style="color: #000"> Order No.: <?php echo $order_data->order_no; ?></h4>
 
                         </center>
 
@@ -83,7 +83,7 @@
                 </tr>
 
             </table>
-             <table class="detailstable" align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="background: #fff">
+            <table class="detailstable" align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="background: #fff">
                 <tr>
                     <td style="font-size: 12px;width: 50%" >
                         <b>Shipping Address</b><br/><hr/>
@@ -117,7 +117,7 @@
                         <table class="gn_table">
                             <tr>
                                 <td colspan="2">
-                                     <b>Order Information</b><br/><hr/>
+                                    <b>Order Information</b><br/><hr/>
                                 </td>
                             </tr>
                             <tr>
@@ -152,7 +152,7 @@
                     </td>
                 </tr>
             </table>
-                        <table class="carttable"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
+            <table class="carttable"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
                 <tr style="font-weight: bold">
                     <td style="width: 20px;text-align: center">S.No.</td>
                     <td colspan="2"  style="text-align: center">Product</td>
@@ -213,9 +213,9 @@
                         <b>Sizes: <?php echo $order_data->measurement_style; ?></b>
                         <br/><?php
                         if (count($measurements_items)) {
-                             foreach ($measurements_items as $keym => $valuem) {
-                                 $mvalues = explode(" ", $valuem['measurement_value']);
-                                echo "<p class='style_block'><b>".$valuem['measurement_key']." </b><span> " . $mvalues[0] . " <span class='fr_value'>" . $mvalues[1] . '"' . "</span></span></p>";
+                            foreach ($measurements_items as $keym => $valuem) {
+                                $mvalues = explode(" ", $valuem['measurement_value']);
+                                echo "<p class='style_block'><b>" . $valuem['measurement_key'] . " </b><span> " . $mvalues[0] . " <span class='fr_value'>" . $mvalues[1] . '"' . "</span></span></p>";
                             }
                         }
                         ?>  
@@ -266,14 +266,13 @@
                                     <address>
 
                                         <b>Address</b><br/>
-                                        B & C, G/F, 
-                                        Comfort Building,     <br/>
-                                        86-88A Nathan Road,    <br/>
-                                        Tsim Sha Tsui, 
-                                        Kowloon, Hong Kong                                      <br/>
-                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 2730 1251, +(852) 2730 1287<br/>
-                                        <b style="    float: left;width: 34px;">Email</b>: shaniel@netvigator.com, sales@shanielfashions.com <br/>
-                                        <b style="    float: left;width: 34px;">Web</b>: www.shanielfashions.com
+
+                                        Shop K4 G/F, Haleson Building,  <br/>
+                                        1 Jubilee street, Central, <br/>
+                                        Hong Kong <br/>
+                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 9380 4625<br/>
+                                        <b style="    float: left;width: 34px;">Email</b>:  sales@haristailor.com <br/>
+                                        <b style="    float: left;width: 34px;">Web</b>: www.haristailor.com
 
 
                                     </address>

@@ -33,7 +33,7 @@ $this->load->view('layout/header');
     }
 </style>
 <!-- Login Registration Page Area Start Here -->
-<div class="login-registration-page-area" style="background: url(<?php echo base_url(); ?>assets/theme/slider/s1r.jpg);background-size: cover;" >
+<div class="login-registration-page-area" style="background: url(<?php echo base_url(); ?>assets/theme/slider2/slide3.jpg);background-size: cover;" >
     <div class="container">
         <div class="row">
             <?php

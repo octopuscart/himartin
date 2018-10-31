@@ -107,7 +107,7 @@ $this->load->view('Cart/checkoutheader');
                                 <i class="fa fa-shopping-cart fa-stack-1x"></i>
                             </span> My Shopping Bag
                             <span style="float: right;     margin-top: 7px;" class="ng-binding">
-                                <button class="button_type_1 color_dark r_corners fs_medium color_purple tr_all f_left m_right_10 " data-toggle="modal" data-target="#changeAddress" style="margin-left: 20px;color:white;">Add New</button>
+                                <button class="button_type_1 color_dark r_corners fs_medium color_black tr_all f_left m_right_10 " data-toggle="modal" data-target="#changeAddress" style="margin-left: 20px;color:white;">Add New</button>
                             </span>                        
                         </h4>
 

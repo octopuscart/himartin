@@ -85,26 +85,23 @@ class Shop extends CI_Controller {
     }
 
     public function testinsertsuit() {
-        $foldercheck = ['12501.jpg', '12502.jpg', '12503.jpg', '12504.jpg', '12508.jpg', '12509.jpg', '12510.jpg', '12511.jpg', '12512.jpg', '12514.jpg', '12601.jpg', '12602.jpg', '9775.jpg', '9776.jpg', '9777.jpg', '9778.jpg', '9779.jpg', '9780.jpg'];
-        $folderchek2 = ['12512.jpg', '12514.jpg', '12601.jpg', '12602.jpg', '12603.jpg', '12604.jpg', '12605.jpg', '12606.jpg', '12611.jpg', '12612.jpg', '12613.jpg', '12615.jpg', '12616.jpg', '12617.jpg', '12618.jpg', '12619.jpg', '12649.jpg', '12650.jpg', '12651.jpg', '12652.jpg', '12653.jpg', '12654.jpg', '12655.jpg', '12656.jpg'];
-       
-        $folderstrip = ['12546.jpg', '12548.jpg', '12549.jpg', '12550.jpg', '12551.jpg', '12552.jpg', '12553.jpg', '12554.jpg', '12562.jpg', '9733.jpg', '9734.jpg', '9735.jpg', '9736.jpg', '9737.jpg', '9744.jpg', '9749.jpg', '9750.jpg', '9751.jpg'];
-        foreach ($folderstrip as $key => $value) {
+        $foldercheck = ['1.webp', '10.webp', '11.webp', '12s.webp', '13s.webp', '14s.webp', '15s.webp', '16s.webp', '17s.webp', '18s.webp', '2.webp', '20s.webp', '21s.webp', '22s.webp', '23s.webp', '24s.webp', '25s.webp', '3.webp', '4.webp', '5.webp', '6.webp', '7.webp', '8.webp', '9.webp',];
+        foreach ($foldercheck as $key => $value) {
             $folder = $value;
-            $foldermain = str_replace(".jpg", "", $folder);
+            $foldermain = str_replace(".webp", "", $folder);
 
             if (strpos($folder, '_')) {
                 $titles = explode("_", $foldermain);
-                $title = "BT" . $titles[1];
+                $title = "HT" . $titles[1];
             } else {
-                $title = "BT" . $foldermain;
+                $title = "HT" . $foldermain;
             }
 
 
 
 
             $products = array(
-                "category_id" => 50,
+                "category_id" => 49,
                 "sku" => $title,
                 "title" => $title,
                 "short_description" => "100% Cotton",
@@ -121,8 +118,8 @@ class Shop extends CI_Controller {
                 "user_id" => "10",
                 "op_date_time" => "",
                 "status" => "1",
-                "home_slider" => "",
-                "home_bottom" => "",
+                "home_slider" => "1",
+                "home_bottom" => "1",
                 "keywords" => "",
                 "stock_status" => "In Stock",
                 "variant_product_of" => "",

@@ -212,7 +212,7 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
             <div class="row">
                 <div class="owl-carousel t_xs_align_c featured_products" data-nav="fproducts_nav_" data-plugin-options='{"singleItem":false,"itemsCustom":[[992,4],[768,3],[600,2],[10,1]]}'>
                     <?php
-                    foreach ($product_home_slider_bottom['home_bottom'] as $key => $value) {
+                    foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                         ?>
 
 
@@ -221,23 +221,25 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server . "/output/" . $value['folder'] . "/fabricx0001.png"; ?>" alt=""  style="background: white;">
-                                    <img class="lazyload tr_all" data-src="<?php echo custome_image_server . "/output/" . $value['folder'] . "/fabricx0001.png"; ?>" alt="" >
+                                                                        <div style="height: 300px;width: auto;background:url(<?php echo custome_image_server."/".$value['folder'];?>.jpg) "></div>
+
+                                    <img class="lazyload tr_all" src="<?php echo custome_image_server . "/output/" . $value['folder'] . ".jpg"; ?>" alt=""  style="background: white;">
+                                    <!--<img class="lazyload tr_all" data-src="<?php echo custome_image_server . "/output/" . $value['folder'] . "/fabricx0001.png"; ?>" alt="" >-->
                                 </div>
                                 <!--labels-->
 
                             </div>
                             <figcaption>
-                                <h6 class="m_bottom_5"><a href="#" class="color_dark"><?php $value['title']; ?></a></h6>
-                                <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php $value['short_description']; ?></i></a>
+                                <h6 class="m_bottom_5"><a href="#" class="color_dark"><?php echo $value['title']; ?></a></h6>
+                                <a href="#" class="fs_medium color_grey d_inline_b m_bottom_3"><i><?php echo $value['short_description']; ?></i></a>
                                 <div class="im_half_container m_bottom_10">
-                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">{{<?php echo $suitcustome->price; ?>|currency:"<?php echo globle_currency; ?> "}}</p>	
+                                    <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie">{{<?php echo $shirtcustome->price; ?>|currency:"<?php echo globle_currency; ?> "}}</p>	
                                     <p class="color_dark fw_ex_bold half_column d_inline_m t_align_c tr_all animate_fctl fp_price with_ie hide_from_mobile"></p>	
 
                                 </div>
                                 <div class="clearfix">
                                     <div class="half_column w_md_full m_md_bottom_10 animate_fctl tr_all f_left with_ie f_md_none">
-                                        <a href="<?php echo site_url("Product/customizationRedirect/" . $suitcustome->id) ?>/<?php echo $value['id']; ?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-basket f_left m_right_10 fs_small"></i><span class="fs_small">Customize</span></span></a>
+                                        <a href="<?php echo site_url("Product/customizationRedirect/" . $shirtcustome->id) ?>/<?php echo $value['id']; ?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-basket f_left m_right_10 fs_small"></i><span class="fs_small">Customize</span></span></a>
                                     </div>
                                     <div class="half_column w_md_full animate_fctr tr_all f_left f_md_none clearfix with_ie">
                                         <button ng-click="viewShortDetails({'folder': '<?php echo $value['folder'] ?>', 'title': '<?php echo $value['title'] ?>'}, '')"  data-toggle="modal" data-target="#largeimage"  type="button" class="button_type_6 m_left_5 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_purple_hover t_align_c m_right_5 m_md_right_0">
@@ -323,64 +325,6 @@ foreach ($product_home_slider_bottom['home_slider'] as $key => $value) {
                 </div>
                 <a href="#" class="color_green fs_medium button_type_3 tr_all r_corners tt_uppercase d_inline_b">Learn More</a>
             </div>
-        </div>
-    </div>
-</section>
-
-
-
-<?php
-$clients = array(
-    '1' => array('name' => 'Simone Schiaffino', 'position' => 'Google Review', 'review' => "Great experience and competence. A morning coat ready in two days without any issues. Recommended."),
-    '2' => array('name' => 'Alexander Yuan', 'position' => 'Google Review', 'review' => "These guys are very good, give them a try! I was in Hong Kong for 5 days and they were able to produce a product for me within that limited amount of time. Great job, great materials, great people, just do your research on what you want ahead of time! Make sure to tell them Alex sent you for a better deal ;)."),
-);
-?>
-
-
-<section class="section_offset image_bg_2">
-    <div class="container">
-        <div class="row">
-            <!--testimonials-->
-            <div class="col-md-2"></div>
-
-            <section class="col-lg-8 col-md-8 m_bottom_20" data-appear-animation="fadeInUp">
-                <h3 class="color_light t_align_c m_bottom_15 fw_light">Testimonials</h3>
-                <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
-                    <!--item-->
-                    <?php
-                    foreach ($clients as $key => $value) {
-                        ?>
-                        <div>
-                            <!--quote-->
-                            <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                                <p class="m_bottom_15"><i style="word-break: initial;"><?php echo $value['review']; ?></i></p>
-                            </blockquote>
-                            <div class="d_table w_full">
-                                <div class="d_table_cell">
-
-                                    <!--author name-->
-                                    <div class="d_inline_m">
-                                        <b class="fs_large d_block color_light"><?php echo $value['name']; ?></b>
-                                        <p class="fs_medium color_grey_light_2"><?php echo $value['position']; ?></p>
-                                    </div>
-                                </div>
-                                <div class="d_table_cell t_align_r v_align_m d_mxs_none">
-                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
-                                        <i class="icon-left-open-big"></i>
-                                    </button>
-                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
-                                        <i class="icon-right-open-big"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!--item-->
-                        <?php
-                    }
-                    ?>
-                </div>
-            </section>
-            <div class="col-md-2"></div>
         </div>
     </div>
 </section>

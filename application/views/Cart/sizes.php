@@ -155,8 +155,5 @@ sizeTable($jacketsize, 'Jacket');
 
 sizeTable($panttsize, 'Pant');
 
-sizeTable($panttsize, 'Waistcoat');
-
-
         
 ?>

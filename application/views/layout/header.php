@@ -361,7 +361,7 @@
 
                                                                 <li class="row">
                                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                                                        <button class="button_type_5 tr_all color_blue transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                        <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
                                                                     </div>
                                                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
                                                                         <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
@@ -372,7 +372,7 @@
                                                         <div class="bg_light_2 im_half_container sc_footer">
                                                             <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
                                                             <div class="half_column t_align_r d_inline_m">
-                                                                <a href="#" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_purple transparent fs_medium">Create an Account</a>
+                                                                <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
                                                             </div>
                                                         </div>
                                                         <?php

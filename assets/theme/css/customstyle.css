@@ -334,11 +334,6 @@ element.style {
 .dropdown_2_container .dropdown_2 {
     padding: 15px 15px 0;
 }
-.dropdown_2 {
-    border: 0px solid #000;
-    border-top-color: #000;
-    box-shadow: 0px 0px 15px -3px #000;
-}
 
 .dropdown_2_container.login .dropdown_2 {
     border-top-color: #000;
@@ -368,7 +363,14 @@ element.style {
 
 #side_menu, .bg_gradiant{
     
-    background: #424240;
+    background: #000!important;
+    color:white!important;
+   }
+   
+   .bg_gradiant:hover{
+    
+    background: #000;
+    color:white;
    }
 
 #close_side_menu {
@@ -572,7 +574,7 @@ li a .relative:hover{
 }
 
 .bg_blue3{
-    background: #6f269f;
+    background: #404040;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -582,7 +584,7 @@ li a .relative:hover{
 }
 
 .btn-apply-coupon, .checkout_button_next {
-    background: #3b78ee;
+    background: #000;
     padding: 12px 10px 12px;
     color: white;
     line-height: 15px;
@@ -590,7 +592,7 @@ li a .relative:hover{
 }
 
 .btn-apply-coupon:hover, .checkout_button_next:hover  {
-    background: #70269f;
+    background: #000;
 
     color: white!important;
     text-decoration: none;
@@ -674,4 +676,13 @@ form li label {
 .dropdown_2_container {
     z-index: 12;
     margin-top: 10px;
+}
+.bg_color_pink, .ui-slider-range, .bg_color_pink_hover:hover, .p_table.bg_color_pink_hover.active, .animation_fill.color_pink:before, [class*="button_type_"].transparent.color_pink:hover, [class*="button_type_"].color_pink:not(.transparent) {
+    background: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: -webkit-gradient(linear,left top,right bottom,from(#000000),to(#000000));
+    background: linear-gradient(top,#70269f,#35eef6);
 }

@@ -91,7 +91,7 @@
 
                         <p>Dear <?php echo $customer->first_name; ?> <?php echo $customer->last_name; ?>,</p><br/>
 
-                        <p> Thank you for registering your online Shaniel Fashions account from <?php echo $customer->country; ?>. </p>
+                        <p> Thank you for registering your online www.haristailor.com account from <?php echo $customer->country; ?>. </p>
                         <p>You will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more. </p> 
                         <p>Your Login Credentials: </p>
                         <table style="        margin-top: 12px;
@@ -118,26 +118,27 @@
                             </tr>
                         </table>
                         <p>
-                            Mr.Shaniel is the owner of Shaniel Fashions Ltd. “We provide the modern gentleman with high quality menswear that fits your body perfectly. All of our products are hand tailored and delivered to any part of the world within 3 weeks.
+                           Located in the heart of Hong Kong’s Central District, Haris Custom Tailor has been tailoring to bankers and other well-dressed city professionals since 1991.
+
+
                         </p>
 
 
                         <br/>
-                        <div style="height: 200px;margin-top: 30px;">Kindest Regards,<br />
+                            <div style="height: 200px;margin-top: 30px;">Kindest Regards,<br />
                             <img src="<?php echo site_mail_logo; ?>" style="height: 30px;  background: #000 ;margin: 5px 0px 10px ;"><br/>
                                 <span style="float: left; font-size: 12px;">
 
                                     <address>
 
                                         <b>Address</b><br/>
-                                        B & C, G/F, 
-                                        Comfort Building,     <br/>
-                                        86-88A Nathan Road,    <br/>
-                                        Tsim Sha Tsui, 
-                                        Kowloon, Hong Kong                                      <br/>
-                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 2730 1251, +(852) 2730 1287<br/>
-                                        <b style="    float: left;width: 34px;">Email</b>: shaniel@netvigator.com, sales@shanielfashions.com <br/>
-                                        <b style="    float: left;width: 34px;">Web</b>: www.shanielfashions.com
+
+                                        Shop K4 G/F, Haleson Building,  <br/>
+                                        1 Jubilee street, Central, <br/>
+                                        Hong Kong <br/>
+                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 9380 4625<br/>
+                                        <b style="    float: left;width: 34px;">Email</b>:  sales@haristailor.com <br/>
+                                        <b style="    float: left;width: 34px;">Web</b>: www.haristailor.com
 
 
                                     </address>
