@@ -67,7 +67,7 @@
           background: white;;
           font-family: sans-serif;">
         <div class="" style="padding:50px 0px;border: 5px solid;
-    border-color: #9347df;">
+    border-color: #000;">
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding: 0 20px">
                 <tr>
                     <td >
@@ -82,7 +82,7 @@
 
             </table>
 
-            <table class="carttable"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
+            <table class="carttable"  border-color= "#000" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
 
 
@@ -95,17 +95,17 @@
                         <p>You will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more. </p> 
                         <p>Your Login Credentials: </p>
                         <table style="        margin-top: 12px;
-    border: 3px solid #9347df;
+    border: 3px solid #000;
     width: 100%;
     text-align: center;
-    background: #3b71ed;
+    background: #fff;
     color: white;
     border-radius: 61px;">
                             <tr>
                                 <td style="    font-size: 20px;">
                                     <span style="color: #779df6">Username/Email</span>
                                     <br/>
-                                    <b style="color: #fff"><?php echo $customer->email; ?></b>
+                                    <b style="color: #000"><?php echo $customer->email; ?></b>
                                 </td>
                             </tr>
                             <tr>
@@ -113,7 +113,7 @@
                                     <span style="color: #779df6">Password</span>
 
                                     <br/>
-                                    <b style="color: #fff"><?php echo $customer->password2; ?></b>
+                                    <b style="color: #000"><?php echo $customer->password2; ?></b>
                                 </td>
                             </tr>
                         </table>
@@ -126,7 +126,7 @@
 
                         <br/>
                             <div style="height: 200px;margin-top: 30px;">Kindest Regards,<br />
-                            <img src="<?php echo site_mail_logo; ?>" style="height: 30px;  background: #000 ;margin: 5px 0px 10px ;"><br/>
+                            <img src="<?php echo site_mail_logo; ?>" style="height: 30px;  margin: 5px 0px 10px ;"><br/>
                                 <span style="float: left; font-size: 12px;">
 
                                     <address>
