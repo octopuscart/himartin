@@ -260,7 +260,7 @@
                         <p>We assure you of best services at all times.</p>
 
                         <div style="height: 200px;margin-top: 30px;">Kindest Regards,<br />
-                            <img src="<?php echo site_mail_logo; ?>" style="height: 30px;  background: #000 ;margin: 5px 0px 10px ;"><br/>
+                            <img src="<?php echo site_mail_logo; ?>" style="height: 30px; margin: 5px 0px 10px ;"><br/>
                                 <span style="float: left; font-size: 12px;">
 
                                     <address>

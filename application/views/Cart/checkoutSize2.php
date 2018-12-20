@@ -334,7 +334,7 @@ $this->load->view('layout/header');
                                                     1 Jubilee street, Central,<br/>
                                                     Hong Kong<br/>
                                                     <i class="fa fa-envelope"></i>  haris.tailors@gmail.com<br/>
-                                                    <i class="fa fa-phone"></i> +(852) 2815 6298
+                                                    <i class="fa fa-phone"></i> +(852) 9380 4625 
 
                                                 </div>
                                                 </p>
