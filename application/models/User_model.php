@@ -119,7 +119,7 @@ class User_model extends CI_Model {
             );
             $this->db->insert('system_log', $orderlog);
 
-            $subject = "Welcome to Shaniel Fashions - Your account with www.shanielfashions.com has been successfully created!";
+            $subject = "Welcome to ".site_name ." - Your account has been successfully created!";
             $this->email->subject($subject);
 
             $customerdetails['customer'] = $customer;
