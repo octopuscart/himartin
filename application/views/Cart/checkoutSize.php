@@ -289,13 +289,11 @@ $this->load->view('layout/header');
 
                                                 <div class="contact-us-right">
                                                        <b>Send to:</b><br/>
-                                                    B & C, G/F, 
-                                                    Comfort Building, 
-                                                    86-88A Nathan Road,<br/>
-                                                    Tsim Sha Tsui, 
-                                                    Kowloon, Hong Kong<br/>
-                                                    <i class="fa fa-envelope"></i>  shaniel@netvigator.com<br/>
-                                                    <i class="fa fa-phone"></i> +(852) 2730 1251 
+                                                    Shop K4 G/F, Haleson Building,<br/>
+                                                    1 Jubilee street, Central,<br/>
+                                                    Hong Kong<br/>
+                                                    <i class="fa fa-envelope"></i>  haris.tailors@gmail.com<br/>
+                                                    <i class="fa fa-phone"></i> +(852) 2815 6298
 
                                                 </div>
                                                 </p>
