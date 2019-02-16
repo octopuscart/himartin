@@ -120,7 +120,7 @@ $image2 = "";
                             <div class="relative r_corners d_xs_inline_b d_mxs_block wrapper m_bottom_23">
                                 <!--images container-->
                                 <div class="fp_images relative">
-                                    <div style="height: 300px;width: auto;background:url(<?php echo custome_image_server;?>{{product.folder}}.jpg) "></div>
+                                    <div style="height: 300px;width: auto;background:url(<?php echo custome_image_server;?>{{product.folder}}.jpg) ;background-size: cover;"></div>
                                     <!--<img style="height: 200px;" src="<?php echo custome_image_server;?>{{product.folder}}.webp" alt="" class="tr_all" style="background: white">-->
                                 </div>
 
