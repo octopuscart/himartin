@@ -141,7 +141,6 @@ $this->load->view('Cart/checkoutheader');
                                                                             <a href=" <?php echo site_url("CartGuest/checkoutShipping"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_pre " ><i class="fa fa-arrow-left"></i> View Shipping Address</a>
                                                                         </div>
                                                                         <div class="proceed-button pull-right ">
-                                                                            <a href="#" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next " >Place Order <i class="fa fa-arrow-right"></i></a>
 
                                                                             <a href=" <?php echo site_url("PayPalPaymentGuest/process"); ?>" class="btn-apply-coupon btn btn-info btn-lg checkout_button_next " >Place Order <i class="fa fa-arrow-right"></i></a>
                                                                         </div>
