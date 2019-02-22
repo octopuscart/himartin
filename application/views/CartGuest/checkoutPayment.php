@@ -120,7 +120,7 @@ $this->load->view('Cart/checkoutheader');
                                     <div class="row">
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <ul class="nav nav-tabs bg_blue3 tab_measurement" >
-                                                <!--<li class="active"><a href="#paypal" data-toggle="tab" aria-expanded="false">PayPal</a></li>-->
+                                                <li class="active"><a href="#paypal" data-toggle="tab" aria-expanded="false">PayPal</a></li>
                                                 <li><a href="#bank" data-toggle="tab" aria-expanded="true">Bank Transfer</a></li>
                                                 <li><a href="#cash" data-toggle="tab" aria-expanded="false">Cash On Delivery</a></li>
                                                 <li><a href="#cheque" data-toggle="tab" aria-expanded="false">Cheque On Delivery</a></li>
@@ -128,7 +128,7 @@ $this->load->view('Cart/checkoutheader');
                                         </div>
                                         <div class="col-lg-12 col-md-12 col-sm-12">
                                             <div class="tab-content">
-<!--                                                <div class="tab-pane fade active in"  id="paypal">
+                                                <div class="tab-pane fade active in"  id="paypal">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/paypal.png" style="height: 100px;">                
                                                     </p>
@@ -151,7 +151,7 @@ $this->load->view('Cart/checkoutheader');
                                                         </table>
 
                                                     </div>
-                                                </div>-->
+                                                </div>
                                                 <div class="tab-pane fade fade active in" id="bank">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/bank.png" style="height: 100px;">                
