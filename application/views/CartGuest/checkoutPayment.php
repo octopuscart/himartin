@@ -152,7 +152,7 @@ $this->load->view('Cart/checkoutheader');
 
                                                     </div>
                                                 </div>
-                                                <div class="tab-pane fade fade active in" id="bank">
+                                                <div class="tab-pane fade " id="bank">
                                                     <p>
                                                         <img src="<?php echo base_url(); ?>assets/paymentstatus/bank.png" style="height: 100px;">                
 
