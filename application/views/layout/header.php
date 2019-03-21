@@ -83,6 +83,38 @@
     $menuitems = [
         array(
             "title" => "Home",
+            "submenu" => "No",
+            "link" => '/'),
+        array(
+            "title" => "Men's",
+            "submenu" => "No",
+            "link" => '/'),
+        array(
+            "title" => "Women's",
+            "submenu" => "No",
+            "link" => '/'),
+        
+        array(
+            "title" => "Make A Booking",
+            "submenu" => "no",
+            "link" => '#',
+            "style"=>"background: #dd280f;
+    color: white;"
+            
+        ),
+        array(
+            "title" => "Blog",
+            "submenu" => "no",
+            "link" => '#',
+        ),
+       
+        array(
+            "title" => "Contact Us",
+            "submenu" => "no",
+            "link" => site_url('/'),
+        ),
+        array(
+            "title" => "Support",
             "submenu" => "yes",
             "link" => '#',
             "submenuitems" => [
@@ -93,50 +125,6 @@
                     "title" => "Terms of Service",
                     "link" => '#',),
             ]),
-
-        array(
-            "title" => "Shop Now",
-            "submenu" => "yes",
-            "link" => '#',
-            "submenuitems" => [
-                array(
-                    "title" => "Suits",
-                    "link" => site_url('Product/ProductList/2/0')),
-                array(
-                    "title" => "Jackets",
-                    "link" => site_url('Product/ProductList/4/0'),),
-                array(
-                    "title" => "Shirts",
-                    "link" => site_url('Product/ProductList/1/0'),),
-                array(
-                    "title" => "Pants",
-                    "link" => site_url('Product/ProductList/3/0'),),
-            ]
-        ),
-      array(
-            "title" => "About Us",
-            "submenu" => "no",
-            "link" => '#',
-        ),
-        
-        array(
-            "title" => "Design",
-            "submenu" => "no",
-            "link" => '#',
-        ),
-        
-        
-        array(
-            "title" => "World Tour",
-            "submenu" => "no",
-            "link" => '#',
-        ),
-        
-        array(
-            "title" => "Contact Us",
-            "submenu" => "no",
-            "link" => site_url('Shop/contactus'),
-        ),
     ];
     ?>
     <body ng-app="App">
@@ -186,9 +174,10 @@
                         <?php
                         foreach ($menuitems as $key => $value) {
                             $submenu = $value['submenu'] == 'yes' ? 'has_sub_menu' : '';
+                      
                             ?>
                             <li class="<?php echo $submenu; ?>  m_bottom_10">
-                                <a href="<?php echo $value['link']; ?>" class="d_block relative fs_large color_light_2 color_blue_hover"><?php echo $value['title']; ?></a>
+                                <a href="<?php echo $value['link']; ?>" class="d_block relative fs_large color_light_2 color_blue_hover" ><?php echo $value['title']; ?></a>
                                 <!--sub menu(second level)-->
                                 <?php
                                 if ($submenu) {
@@ -219,7 +208,37 @@
             <!--layout-->
             <div class="wide_layout bg_light">
 
+                <span class="gradient_line"></span>
+                <!--top part-->
+                <section class="header_top_part color_dark">
+                    <div class="container">
+                        <div class="row">
+                            <!--contact info-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 t_xs_align_c">
+                                <ul class="hr_list fs_small color_grey_light">
+                                    <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
+                                        <span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-phone-1"></i></span>+(852) 2367 2676
+                                    </li>
+                                    <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
+                                        <a href="mailto:#" class="color_grey_light d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>sales@hongkongbespoketailors.com</a>
+                                    </li>
 
+                                </ul>
+                            </div>
+                            <!--social icons-->
+                            <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c">
+                                <ul class="hr_list d_inline_b social_icons">
+                                    <li class="m_right_8"><a href="#" class="color_grey_light facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
+                                    <li class="m_right_8"><a href="#" class="color_grey_light twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
+                                    <li class="m_right_8"><a href="#" class="color_grey_light instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
+
+                                    <li class="m_right_8"><a href="#" class="color_grey_light youtube circle icon_wrap_size_1 d_block"><i class="icon-youtube-play"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <hr>
 
 
 
@@ -232,13 +251,13 @@
                             <div class="d_table w_full d_xs_block">
                                 <!--logo-->
                                 <div class="col-lg-2 col-md-2 col-sm-2 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
-                                    <a href="<?php echo site_url();?>" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
+                                    <a href="<?php echo site_url(); ?>" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
                                         <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" >
                                     </a>
                                 </div>
-                                
-                                
-                               
+
+
+
                                 <div class="col-lg-10 col-md-10 col-sm-10 t_align_r d_table_cell d_xs_block f_none">
                                     <div class="relative clearfix t_align_r">
                                         <button id="menu_button" class="r_corners tr_all color_blue db_centered m_bottom_20 d_none d_xs_block">
@@ -250,9 +269,10 @@
                                                 <?php
                                                 foreach ($menuitems as $key => $value) {
                                                     $submenu = $value['submenu'] == 'yes' ? 'has_sub_menu' : '';
+                                                    $style = isset($value['style'])?$value['style']:'';
                                                     ?>
                                                     <li class=" container2d relative f_xs_none m_xs_bottom_5">
-                                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo $value['link']; ?>"><?php echo $value['title']; ?>
+                                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo $value['link']; ?>" style="<?php echo $style;?>"><?php echo $value['title']; ?>
                                                             <?php if ($submenu) { ?>
                                                                 <i class="icon-angle-down d_inline_m"></i>
                                                             <?php } ?>
@@ -278,8 +298,8 @@
                                             </ul>
                                         </nav>
                                         <!--searchform button-->
-                                        <div class="f_right header_mobile_left clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
-                                            <!--shopping cart-->
+<!--                                        <div class="f_right header_mobile_left clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
+                                            shopping cart
                                             <div class="relative f_right dropdown_2_container shoppingcart">
                                                 <span class="cart_top_upper animated bounceIn">{{globleCartData.total_quantity}}</span>
                                                 <button class="icon_wrap_size_2 color_blue2  circle tr_all">
@@ -314,7 +334,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!--login-->
+                                            login
                                             <div class="relative f_right m_right_10 dropdown_2_container login">
                                                 <button class="icon_wrap_size_2 color_blue2  circle tr_all">
                                                     <i class="icon-lock color_blue2 _2 tr_inherit"></i>
@@ -385,7 +405,7 @@
                                                 </div>
                                             </div>
 
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>

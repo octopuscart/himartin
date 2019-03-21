@@ -22,14 +22,10 @@
     <!--top part-->
     <section class="footer_top_part">
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <!--about us-->
-                <div class="col-lg-3 col-md-3 col-sm-3 fw_light m_bottom_30 color_light">
-                    <h5 class="color_light m_bottom_20 ">Shortly About Us</h5>
-                    <p class='font_size_14'>Located in the heart of Hong Kong’s Central District, Haris Custom Tailor has been tailoring to bankers and other well-dressed city professionals since 1991. </p>
-                </div>
-                <!--contact info--> 
+                <div class="col-md-12">
+               
                 <div class="col-lg-3 col-md-3 col-sm-3 m_bottom_30">
                     <h5 class="color_light m_bottom_20 fw_light ">Contact Us</h5>
                     <div class="row1">
@@ -38,28 +34,22 @@
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-phone-1"></i>
                                 </div>
-                                +(852) 9380 4625
+                                +(852) 2367 2676
                             </li>
 
-                            <li class="m_bottom_8 font_size_14">
-                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
-                                    <i class="icon-print-1"></i>
-                                </div>
-                                +(852) 2815 6298<br/>
-                            </li>
+
 
                             <li class="m_bottom_8">
                                 <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                     <i class="icon-mail-alt"></i>
                                 </div>
 
-                                <a href="mailto:sales@haristailor.com" class="color_black color_light _hover">sales@haristailor.com</a><br/>
-                                <a href="mailto:haris.tailors@gmail.com" class="color_black color_light _hover" style='margin-left:35px'>haris.tailors@gmail.com</a>
+                                <a href="mailto:sales@hongkongbespoketailors.com" class="color_black color_light _hover">sales@hongkongbespoketailors.com</a><br/>
                             </li>
 
                         </ul>
 
-                       
+
                     </div>
                 </div>
 
@@ -73,10 +63,10 @@
                                 <div class="icon_wrap_size_1 color_light  circle f_left">
                                     <i class="icon-location"></i>
                                 </div>
-                                Shop K4 G/F, Haleson Building, <br/> 1 Jubilee street, Central,<br/> Hong Kong
+                                Room No. 603, 6/F, Tower A, New Mandarin Plaza, <br/>14 Science Museum Road, T.S.T, Hong Kong
                             </li>
                             <li>
-                                <a href="https://goo.gl/maps/DsAW7vAL6w42" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
+                                <a href="https://goo.gl/maps" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
                             </li>
                         </ul>
                     </div>
@@ -95,14 +85,14 @@
                                     <i class="icon-clock"></i>
                                 </div>
                                 <span class='font_size_14'>Monday to Saturday</span><br/>
-                                <span style='margin-left: 35px'>10:00 AM to 08:00 PM</span>
+                                <span style='margin-left: 35px'>09:00 AM to 09:00 PM</span>
                             </div>
-<!--                            <div class='m_bottom_8'>
-                                <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
-                                    <i class="icon-clock"></i>
-                                </div> <span class='font_size_14'>Sunday</span><br/> 
-                                <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
-                            </div>-->
+                            <!--                            <div class='m_bottom_8'>
+                                                            <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
+                                                                <i class="icon-clock"></i>
+                                                            </div> <span class='font_size_14'>Sunday</span><br/> 
+                                                            <span style='margin-left: 35px'>09:00 AM to 06:00 PM</span>
+                                                        </div>-->
 
                         </li>
 
@@ -130,22 +120,23 @@
                                 <i class="icon-twitter fs_small"></i>
                             </a>
                         </li>
-                        <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
-                            <!--tooltip-->
-                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Google Plus</span>
-                            <a href="#" class="d_block googleplus googleplus_static_color icon_wrap_size_2 circle color_grey_light_2">
-                                <i class="icon-gplus-1 fs_small"></i>
-                            </a>
-                        </li>
-                        <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
+                          <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
                             <!--tooltip-->
                             <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
                             <a href="#" class="d_block instagram instagram_static_color icon_wrap_size_2 circle color_grey_light_2">
                                 <i class="icon-instagramm fs_small"></i>
                             </a>
                         </li>
+                        <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
+                            <!--tooltip-->
+                            <span class="d_block r_corners color_default tooltip fs_small tr_all">Youtube</span>
+                            <a href="#" class="d_block youtube youtube_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                <i class="icon-youtube fs_small"></i>
+                            </a>
+                        </li>
+                      
 
-                     
+
 
 
 
@@ -154,12 +145,14 @@
 
                     </ul>
                 </div>
+                
+                </div>
             </div>
         </div>
     </section>
     <!--bottom part-->
     <section class="footer_bottom_part t_align_c color_light bg_dark fw_light">
-        <p>©  <?php echo date('Y') ?> <?php echo site_name;?>
+        <p>©  <?php echo date('Y') ?> <?php echo site_name; ?>
             . All Rights Reserved.</p>
     </section>
 </footer>

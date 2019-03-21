@@ -683,3 +683,9 @@ p.selected-element-title_text_price{
     color:white;
 }
 
+
+.main_menu.type_2 > li > a {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
