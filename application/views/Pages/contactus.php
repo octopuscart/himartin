@@ -1,8 +1,7 @@
 <?php
 $this->load->view('layout/header');
 ?>
-
-<iframe class="w_full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14767.350095377933!2d114.1548504!3d22.2841437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcc63f585004fe2d2!2sHaris+Custom+Tailor!5e0!3m2!1sen!2sin!4v1540875937251" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe class="w_full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14765.645968110992!2d114.1782486!3d22.3002722!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75457dacc3420b3d!2sHimark+Martin+Tailors+-+Hong+Kong!5e0!3m2!1sen!2sin!4v1553258430396" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 
 
