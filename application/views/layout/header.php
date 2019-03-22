@@ -84,20 +84,20 @@
         array(
             "title" => "Home",
             "submenu" => "No",
-            "link" => '/'),
+            "link" => site_url("/")),
         array(
             "title" => "Men's",
             "submenu" => "No",
-            "link" => '/'),
+            "link" => site_url("/")),
         array(
             "title" => "Women's",
             "submenu" => "No",
-            "link" => '/'),
+            "link" => site_url("/")),
         
         array(
             "title" => "Make A Booking",
             "submenu" => "no",
-            "link" => '#',
+            "link" => site_url("booking"),
             "style"=>"background: #dd280f;
     color: white;"
             
@@ -111,7 +111,7 @@
         array(
             "title" => "Contact Us",
             "submenu" => "no",
-            "link" => site_url('/'),
+            "link" => site_url('contact-us'),
         ),
         array(
             "title" => "Support",
@@ -342,6 +342,7 @@
                                                 <div class="dropdown_2 bg_light shadow_1 tr_all">
 
                                                     <?php
+                                                    
                                                     $session_data = $this->session->userdata('logged_in');
                                                     if (isset($session_data['login_id'])) {
                                                         ?>

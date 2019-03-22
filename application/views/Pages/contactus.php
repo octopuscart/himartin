@@ -16,12 +16,12 @@ $this->load->view('layout/header');
                 </p>		
                 <p class="fw_light m_bottom_23">Using only Hong Kong based artisans, beautifully crafted shirts and perfectly tailored suits can be delivered within 3 days. </p>
                 <div class="row">
-                    <ul class="col-lg-6 col-md-6 col-sm-6 fw_light w_break m_bottom_45 m_xs_bottom_30">
+                    <ul class="col-lg-7 col-md-7 col-sm-7 fw_light w_break m_bottom_45 m_xs_bottom_30">
                         <li class="m_bottom_8">
                             <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                 <i class="icon-phone-1"></i>
                             </div>
-                            +(852)  9380 4625 <br/> 
+                             +(852) 2367 2676<br/> 
 
                         </li>
 
@@ -32,28 +32,23 @@ $this->load->view('layout/header');
                                 <i class="icon-mail-alt"></i>
                             </div>
                             
-                                 <a href="mailto:sales@haristailor.com" class="color_dark  _hover">sales@haristailor.com</a><br/>
-                                <a href="mailto:haris.tailors@gmail.com" class="color_dark  _hover" style='margin-left:35px'>haris.tailors@gmail.com</a>
+                                 <a href="mailto: sales@hongkongbespoketailors.com" class="color_dark  _hover"> sales@hongkongbespoketailors.com</a><br/>
                            
                             
                         </li>
 
                     </ul>
-                    <ul class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30 vr_list_type_5">
+                    <ul class="col-lg-5 col-md-5 col-sm-5 m_xs_bottom_30 vr_list_type_5">
 
                         <li class="m_bottom_8 fw_light">
                             <div class="f_left icon_wrap_size_1 color_dark  circle">
                                 <i class="icon-location"></i>
                             </div>
-                                Shop K4 G/F, Haleson Building, <br/> 1 Jubilee street, Central,<br/> Hong Kong
+                               Room No. 603, 6/F, Tower A, New Mandarin Plaza, </br>
+14 Science Museum Road, T.S.T, Hong Kong
 
                         </li>
-                        <li class='fw_light'>
-                            <div class="d_inline_m icon_wrap_size_1 color_dark  fw_light circle m_right_10">
-                                <i class="icon icon-print"></i>
-                            </div>
-                            +(852) 2815 6298
-                        </li>
+                      
 
 
                     </ul>
@@ -70,7 +65,7 @@ $this->load->view('layout/header');
                                     <i class="icon-clock"></i>
                                 </div>
                                 <span class='font_size_14'>Monday to Saturday</span><br/>
-                                <span style='margin-left: 35px'>10:00 AM to 08:00 PM</span>
+                                <span style='margin-left: 35px'>09:00 AM to 09:00 PM</span>
                             </div>
                             
                         </ul>
@@ -100,13 +95,7 @@ $this->load->view('layout/header');
                             <i class="icon-twitter fs_small"></i>
                         </a>
                     </li>
-                    <li class="m_right_15 m_bottom_15 tooltip_container m_xs_right_15">
-                        <!--tooltip-->
-                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Google Plus</span>
-                        <a href="#" class="d_block googleplus icon_wrap_size_2 circle color_dark ">
-                            <i class="icon-gplus-1 fs_small"></i>
-                        </a>
-                    </li>
+                    
 
 
                     <li class="m_right_15 m_bottom_15 tooltip_container">
@@ -114,6 +103,14 @@ $this->load->view('layout/header');
                         <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
                         <a href="#" class="d_block instagram icon_wrap_size_2 circle color_dark ">
                             <i class="icon-instagramm fs_small"></i>
+                        </a>
+                    </li>
+                    
+                    <li class="m_right_15 m_bottom_15 tooltip_container m_xs_right_15">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Google Plus</span>
+                        <a href="#" class="d_block youtube icon_wrap_size_2 circle color_dark ">
+                            <i class="icon-youtube fs_small"></i>
                         </a>
                     </li>
 

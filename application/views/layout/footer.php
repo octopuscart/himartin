@@ -63,7 +63,7 @@
                                 <div class="icon_wrap_size_1 color_light  circle f_left">
                                     <i class="icon-location"></i>
                                 </div>
-                                Room No. 603, 6/F, Tower A, New Mandarin Plaza, <br/>14 Science Museum Road, T.S.T, Hong Kong
+                                Room No. 603, 6/F, Tower A, New Mandarin Plaza, <br/>14 Science Museum Road,<br> T.S.T, Hong Kong
                             </li>
                             <li>
                                 <a href="https://goo.gl/maps" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
