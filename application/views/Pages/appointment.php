@@ -48,19 +48,26 @@ if (isset($prefixshopappointment[$cdateshort])) {
                             <p class="m_bottom_15">Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
                             <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
                         </div>
-
                     </div>
-                    <div class="col-lg-6 col-md-6 t_align_l fw_light">
+                    <div class="col-lg-6 col-md-6 t_align_l fw_light appointment">
                         <ul class="fw_light">
                             <li class="m_bottom_10 m_xs_bottom_15">
                                 <div class="custom_select">
-                                    <div class="select_title r_corners fw_light color_grey">Select Country</div>
-                                    <ul class="select_list r_corners wrapper shadow_1 bg_light tr_all"></ul>
-                                    <select class="d_none" form="form_1">
-                                        <option value="Option 1">Option 1</option>                                        
+                                    <select class="r_corners d_inline_m w_sm_full" form="form_1" ng-model="appointmentSelected.country" ng-change="selectCityByCountry(appointmentSelected.country)">
+                                        <option value="{{country.country}}" ng-repeat="country in appointmentData.country">{{country.country}}</option>                                        
                                     </select>
                                 </div>
                             </li>
+                            
+                            <li class="m_bottom_10 m_xs_bottom_15">
+                                <div class="custom_select">
+                                    <select class="r_corners d_inline_m w_sm_full" form="form_1" ng-model="appointmentSelected.city_state">
+                                        <option value="{{city_state.city_state}}" ng-repeat="city_state in appointmentSelected.city_state_list">{{city_state.city_state}}</option>                                        
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            
                             <li class="m_bottom_10 m_xs_bottom_15">
                                 <div class="custom_select">
                                     <div class="select_title r_corners fw_light color_grey">Select City</div>
@@ -101,7 +108,6 @@ if (isset($prefixshopappointment[$cdateshort])) {
 </div>
 
 <!--angular controllers-->
-<script src="<?php echo base_url(); ?>assets/theme/angular/productController.js"></script>
 <script>
     $(document).ready(function () {
         $("#appintmentDate").datepicker({
@@ -115,6 +121,39 @@ if (isset($prefixshopappointment[$cdateshort])) {
             $optionSelected.tab('show')
         });
     });
+
+</script>
+
+<script>
+
+    App.controller('bookingController', function ($scope, $http, $timeout, $interval) {
+        
+        $scope.selectCityByCountry = function(country){
+            $scope.appointmentSelected.city_state_list =  $scope.appointmentData.city_state[country];
+        }
+        
+        var url = baseurl + "Api/getAppointment";
+        $scope.appointmentData = {'country': 'Australia', 'city_state_list': [], 'city_state': [],  'hotel': '', 'addresss': ''};
+        $scope.appointmentSelected = {'country': '', 'city_state': '', 'hotel': '', 'addresss': ''};
+        $http.get(url).then(function (rdata) {
+            var appointmentdata = rdata.data;
+            $scope.appointmentData.country = appointmentdata.country_data;
+            $scope.appointmentData.city_state = appointmentdata.country_city;
+            console.log($scope.appointmentData.city_state);
+            $timeout(function () {
+                $scope.appointmentSelected.country = appointmentdata.country_data[0].country;
+                $scope.selectCityByCountry($scope.appointmentSelected.country);
+            }, 500)
+
+
+
+        }, function (error) {
+
+        })
+
+
+    })
+
 
 </script>
 

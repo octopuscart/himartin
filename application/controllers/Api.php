@@ -403,7 +403,7 @@ class Api extends REST_Controller {
         $this->response($session_cart['products'][$product_id]);
     }
 
-    //get appinment class
+     //get appinment class
     function getAppointment_get() {
         $query = $this->db->get('appointment_entry');
         $appointment_entry = $query->result_array();
@@ -414,18 +414,31 @@ class Api extends REST_Controller {
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
         $appointment_final_data = array();
+        $country_city_array = array();
 
 
 
 
         //array of cities
         $appointment_city_data = array();
-        $this->db->select("city_state, days, hotel, address");
+        $this->db->select("city_state, days, hotel, address,country");
 //            $this->db->where('status', 'active');
         $this->db->group_by("city_state");
         $query = $this->db->get('appointment_entry');
         $appointment_city_dates = $query->result_array();
         foreach ($appointment_city_dates as $key => $value) {
+
+            $country = $value["country"];
+            if (isset($country_city_array[$country])) {
+                array_push($country_city_array[$country], array(
+                    "city_state"=>$value["city_state"], 
+                    "city_days"=>$value["city_state"]. ", ". $value["days"]));
+            } else {
+                $country_city_array[$country] = [array(
+                    "city_state"=>$value["city_state"], 
+                    "city_days"=>$value["city_state"]. ", ". $value["days"])];
+            }
+
             //time data from dates
             $this->db->select("date, from_time, to_time");
 //            $this->db->where('status', 'active');
@@ -439,37 +452,11 @@ class Api extends REST_Controller {
                 'dates' => $appointment_date_time
             );
         }
-
-
-
-
-        foreach ($appointment_country as $key => $value) {
-            $country = $value["country"];
-            $appointment_final_data[$country] = array();
-            $this->db->select("city_state, days");
-//            $this->db->where('status', 'active');
-            $this->db->where('country', $country);
-            $this->db->group_by("city_state");
-            $query = $this->db->get('appointment_entry');
-            $appointment_city_state = $query->result_array();
-            foreach ($appointment_city_state as $cskey => $csvalue) {
-                $city_state_date = $csvalue["city_state"] . ", " . $csvalue["days"];
-
-                $this->db->select("date, from_time, to_time");
-//            $this->db->where('status', 'active');
-                $this->db->where('city_state', $csvalue["city_state"]);
-                $query = $this->db->get('appointment_entry');
-                $appointment_date_time = $query->result_array();
-
-                $city_dates = array(
-                    "city" => $csvalue["city_state"],
-                    "city_days" => $city_state_date,
-                    "dates" => $appointment_date_time
-                );
-                array_push($appointment_final_data[$country], $city_dates);
-            }
-        }
-        $this->response($appointment_city_data);
+        $appointment_final_data["country_data"] = $appointment_country;
+        $appointment_final_data['city_hotel_data'] = $appointment_city_data;
+        $appointment_final_data["country_city"] = $country_city_array;
+   
+        $this->response($appointment_final_data);
     }
 
 }
