@@ -5,7 +5,7 @@ $this->load->view('layout/header');
 <section class="section_offset relative wrapper" style="height: 500px">
     <div class="video_wrap">
         <video autoplay="" muted="" loop="">
-            <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
+            <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mov" type="video/mp4">
 
         </video>
     </div>
@@ -36,7 +36,15 @@ $this->load->view('layout/header');
         <article id="tab-1" data-appear-animation="fadeInUp" data-appear-animation-delay="450">
             <div class="row">
                 <div class="col-lg-5 col-md-5 col-sm-5 m_xs_bottom_20">
-                    <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" class="r_corners" alt=""  style="width: 400px;">
+                    <div class="m_bottom_20 r_corners wrapper simple_slideshow relative">
+                        <ul class="slides">
+                            <li><img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt=""></li>
+                                                       <li><img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt=""></li>
+
+                            <li><img src="images/portfolio_img_38.jpg" alt=""></li>
+                            <li><img src="images/portfolio_img_39.jpg" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-lg-7 col-md-7 t_align_l fw_light">
                     <p class="m_bottom_15">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipis. </p>

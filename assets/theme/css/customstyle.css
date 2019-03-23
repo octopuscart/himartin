@@ -674,6 +674,8 @@ form li label {
 
 .image_bg_2_client{background:url("../images/clientsbackground.jpg") no-repeat;}
 
+.image_bg_4{background:url("../images/backgroundappointment.jpg") no-repeat;background-position: 0px;}
+
 .dropdown_2_container {
     z-index: 12;
     margin-top: 10px;

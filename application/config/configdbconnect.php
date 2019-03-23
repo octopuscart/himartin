@@ -5,7 +5,7 @@ try {
     $password = "India$2017";
     $conn = new PDO('mysql:host=localhost;dbname=j2k5e6r5_martin', $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
-    $stmt = $conn->prepare('SELECT * FROM configuration_site');
+     $stmt = $conn->prepare('SELECT * FROM configuration_site');
     $stmt->execute();
     while($row = $stmt->fetch()) {
         $globleConnectDB = $row;
@@ -15,6 +15,12 @@ try {
     $stmt->execute();
     while($row = $stmt->fetch()) {
         $globleConnectReport = $row;
+    }
+    
+    $stmt = $conn->prepare('SELECT * FROM configuration_cartcheckout');
+    $stmt->execute();
+    while($row = $stmt->fetch()) {
+        $globleConnectCartCheckout = $row;
     }
     
     

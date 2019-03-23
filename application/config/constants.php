@@ -18,6 +18,7 @@ switch ($baselink) {
         $baselinkmain = $configuration['site_url'];
 }
 
+
 define('imageserver', $baselinkmain . "assets_main/productimages/");
 define('imageserverslider', $baselinkmain . "assets_main/sliderimages/");
 define('imageservermain', $baselinkmain . "assets_main/");
@@ -25,8 +26,6 @@ define('globle_currency_type',  $configuration['currency']);
 define('globle_currency',  $configuration['currency']);
 define('site_mail_logo', $configuration['site_logo']);
 define('custome_image_server', $configuration['product_images_url']);
-
-define('site_name', $configuration['site_name']);
 
 
 //Email Settings//
@@ -41,7 +40,20 @@ define('paypal_api_signature', $configuration['paypal_api_signature']);
 define('paypal_api_currency_code', $configuration['paypal_api_currency_code']);
 
 
+//reporting configuration
+define('EMAIL_HEADER', $globleConnectReport['email_header']);
+define('EMAIL_FOOTER', $globleConnectReport['email_footer']);
+define('REPORT_MODE', $globleConnectReport['report_mode']);
 
+//payment mode
+define('PAYMENT_MODE_PAYPAL', $globleConnectCartCheckout['payment_paypal']);
+define('PAYMENT_MODE_BANK', $globleConnectCartCheckout['payment_bank']);
+define('PAYMENT_MODE_CHEQUE', $globleConnectCartCheckout['payment_cheque']);
+define('PAYMENT_MODE_COD', $globleConnectCartCheckout['payment_cod']);
+define('DEFAULT_PAYMENT_MODE', $globleConnectCartCheckout['default_payment_mode']);
+define('ORDER_PREFIX', $globleConnectCartCheckout['order_prefix']);
+define('PRODUCT_PATH_PRE', $globleConnectCartCheckout['product_path_pre']);
+define('PRODUCT_PATH_POST', $globleConnectCartCheckout['product_path_post']);
 
 
 /*

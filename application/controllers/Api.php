@@ -411,6 +411,7 @@ class Api extends REST_Controller {
         $this->db->select("country");
 //        $this->db->where('status', 'active');
         $this->db->group_by("country");
+         $this->db->order_by("start_date asc");
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
         $appointment_final_data = array();
@@ -424,7 +425,9 @@ class Api extends REST_Controller {
         $this->db->select("city_state, days, hotel, address,country");
 //            $this->db->where('status', 'active');
         $this->db->group_by("city_state");
+         $this->db->order_by("start_date asc");
         $query = $this->db->get('appointment_entry');
+        
         $appointment_city_dates = $query->result_array();
         foreach ($appointment_city_dates as $key => $value) {
 
@@ -443,6 +446,7 @@ class Api extends REST_Controller {
             $this->db->select("date, from_time, to_time");
 //            $this->db->where('status', 'active');
             $this->db->where('city_state', $value["city_state"]);
+            $this->db->order_by("start_date asc");
             $query = $this->db->get('appointment_entry');
             $appointment_date_time = $query->result_array();
             $appointment_city_data[$value['city_state']] = array(
