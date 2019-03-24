@@ -90,7 +90,7 @@ class Shop extends CI_Controller {
 
             //redirect('contact-us');
         }
-        $this->load->view('pages/contactus', $data);
+        $this->load->view('Pages/contactus', $data);
     }
 
     public function aboutus() {
