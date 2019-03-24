@@ -4,10 +4,15 @@ $this->load->view('layout/header');
 
 <section class="section_offset relative wrapper" style="height: 500px">
     <div class="video_wrap">
-        <video autoplay="" muted="" loop="">
+        <video autoplay="" muted=false loop="">
             <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
 
         </video>
+        <audio
+        autoplay=""
+        src="<?php echo base_url(); ?>assets/theme/video/martinaudio.mp3">
+           
+    </audio>
     </div>
     <div class="container">
         <div class="col-md-6"></div>
@@ -38,7 +43,7 @@ $this->load->view('layout/header');
                 <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_20">
 
                     <!--carousel-->
-                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_">
                         <!--item-->
                         <div>
                             <div>
@@ -62,7 +67,7 @@ $this->load->view('layout/header');
 
                         <div>
                             <div class="iframe_video_wrap">
-                                <iframe src="https://www.youtube.com/embed/uU6hyrFo-QQ?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
+                                <iframe src="https://www.youtube.com/embed/A9670diiw4o?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
                             </div>
                         </div>
 
@@ -72,10 +77,10 @@ $this->load->view('layout/header');
                         <div class="d_table_cell half_column clients_pags_container v_align_m"></div>
                         <!--navigations-->
                         <div class="d_table_cell half_column t_align_r v_align_m">
-                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav_prev">
+                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav1_prev">
                                 <i class="icon-left-open-big"></i>
                             </button>
-                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav_next">
+                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav1_next">
                                 <i class="icon-right-open-big"></i>
                             </button>
                         </div>
