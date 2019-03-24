@@ -425,6 +425,7 @@ class Api extends REST_Controller {
         $this->db->select("city_state, days, hotel, address,country");
 //            $this->db->where('status', 'active');
         $this->db->group_by("city_state");
+        $this->db->group_by("days");
          $this->db->order_by("start_date asc");
         $query = $this->db->get('appointment_entry');
         
