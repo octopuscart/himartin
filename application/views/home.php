@@ -9,10 +9,10 @@ $this->load->view('layout/header');
 
         </video>
         <audio
-        autoplay=""
-        src="<?php echo base_url(); ?>assets/theme/video/martinaudio.mp3">
-           
-    </audio>
+            autoplay=""
+            src="<?php echo base_url(); ?>assets/theme/video/martinaudio.mp3">
+
+        </audio>
     </div>
     <div class="container">
         <div class="col-md-6"></div>
@@ -47,26 +47,31 @@ $this->load->view('layout/header');
                         <!--item-->
                         <div>
                             <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft2.jpg" alt="">
 
                             </div>
                         </div>
                         <!--item-->
                         <div>
                             <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft1.jpg" alt="">
 
                             </div>
                         </div>
                         <!--item-->
                         <div>
                             <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft4.jpg" alt="">
                             </div>
                         </div>
 
                         <div>
-                            <div class="iframe_video_wrap">
+                            <div class="iframe_video_wrap" style='margin-top: 50px;'>
                                 <iframe src="https://www.youtube.com/embed/A9670diiw4o?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
                             </div>
                         </div>
@@ -90,12 +95,12 @@ $this->load->view('layout/header');
                 </div>
                 <div class="col-lg-6 col-md-6 t_align_l fw_light">
 
-                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
-                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_30 m_top_20">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
 
-                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
 
-                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
 
                 </div>
         </article>
@@ -116,7 +121,7 @@ $this->load->view('layout/header');
             <!--testimonials-->
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
                 <h3 class="color_dark t_align_c m_bottom_15 fw_light">Testimonials</h3>
-                <p class="m_bottom_35 t_align_c color_grey_light_2">Our Valuable Customer's  Testimonials</p>
+                <p class="m_bottom_35 t_align_c color_black">Our Valuable Customer's  Testimonials</p>
                 <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
 
 
@@ -185,25 +190,28 @@ $this->load->view('layout/header');
                                 </ul>
                                 </p>
                             </div>
+                            <div class="d_table w_full clients_nav" style="    margin-top: -28px;
+                                 margin-left: -20px;">
+                                <!--paginations container-->
+                                <div class="d_table_cell half_column clients_pags_container v_align_m"></div>
+                                <!--navigations-->
+                                <div class="d_table_cell half_column t_align_r v_align_m">
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav_prev">
+                                        <i class="icon-left-open-big"></i>
+                                    </button>
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav_next">
+                                        <i class="icon-right-open-big"></i>
+                                    </button>
+                                </div>
+                            </div>
 
                         </div>
+                        <!--clients carousel nav-->
+
                     </div>
 
                 </div>
-                <!--clients carousel nav-->
-                <div class="d_table w_full clients_nav">
-                    <!--paginations container-->
-                    <div class="d_table_cell half_column clients_pags_container v_align_m"></div>
-                    <!--navigations-->
-                    <div class="d_table_cell half_column t_align_r v_align_m">
-                        <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav_prev">
-                            <i class="icon-left-open-big"></i>
-                        </button>
-                        <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav_next">
-                            <i class="icon-right-open-big"></i>
-                        </button>
-                    </div>
-                </div>
+
             </section>
 
 
@@ -217,7 +225,7 @@ $this->load->view('layout/header');
 <section class="section_offset relative wrapper">
 
     <div class="container">
-        <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Our Luxurious Fabrics Brand</h3>
+        <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Our Luxurious Fabric Brands</h3>
         <div class="relative" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
             <div class="t_xs_align_c">
                 <div class="owl-carousel clients brands with_video t_align_c" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
