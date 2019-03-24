@@ -193,7 +193,7 @@
     </section>
     <!--bottom part-->
     <section class="footer_bottom_part t_align_c color_light bg_dark fw_light">
-        <p>©  <?php echo date('Y') ?> <?php echo site_name; ?>
+        <p>©  <?php echo date('Y') ?> <?php echo email_sender_name; ?>
             . All Rights Reserved.</p>
     </section>
 </footer>

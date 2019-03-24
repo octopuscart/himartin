@@ -189,15 +189,12 @@
 
     <div id='loading' class="" style="width:100%;height: 100% ">
         <div id='progress-bar'>
-            <center>
-            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" style='    margin-top: 200px;
+            <center style='    margin-top: 200px;
     position: fixed;
     height: 100px;
     margin-left: -86px;'>
-             <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style='    margin-top: 300px;
-    position: fixed;
-    height: 25px;
-    margin-left: -130px;'>
+            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" >
+             <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style='    margin-top: 300px;'>
             </center>
         </div> 
         <div id='loader'>
