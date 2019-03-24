@@ -87,7 +87,7 @@
                 </tr>
                 <tr>
                     <th style="background: lightgray;text-align: right;width:200px;">Email:</th>
-                    <td><?php echo $web_enquiry['email']; ?>></td>
+                    <td><?php echo $web_enquiry['email']; ?></td>
                 </tr>
                  <tr>
                     <th style="background: lightgray;text-align: right;width:200px;">Contact No.:</th>
