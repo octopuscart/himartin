@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['contact-us'] = 'Shop/contactus';
 $route['booking'] = 'Shop/appointment';
+$route['subscribe'] = 'Shop/subscribe';

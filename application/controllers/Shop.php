@@ -32,15 +32,14 @@ class Shop extends CI_Controller {
 
     public function contactus() {
         $data['checksent'] = 0;
-        
-        
+
+
         if (isset($_POST['sendmessage'])) {
-            if($this->input->post('anti_spam')==8){
-            
-        }
-        else{
-            redirect('contact-us?error=cw');
-        }
+            if ($this->input->post('anti_spam') == 8) {
+                
+            } else {
+                redirect('contact-us?error=cw');
+            }
             $web_enquiry = array(
                 'last_name' => "",
                 'first_name' => $this->input->post('full_name'),
@@ -98,6 +97,54 @@ class Shop extends CI_Controller {
         $this->load->view('Pages/aboutus');
     }
 
+    public function subscribe() {
+        if (isset($_POST['submit'])) {
+            $appointment = array(
+                "country" => $this->input->post('country'),
+                'email' => $this->input->post('email'),
+            );
+            // print_r($appointment);
+            $this->db->insert('appointment_list', $appointment);
+          
+            $emailsender = email_sender;
+            $sendername = email_sender_name;
+            $email_bcc = email_bcc;
+         
+            if ($this->input->post('email')) {
+                $this->email->set_newline("\r\n");
+                $this->email->from(email_bcc, $sendername);
+                $this->email->to($this->input->post('email'));
+                $this->email->bcc(email_bcc);
+                $subjectt ="Thank You For Subscribing";
+                $orderlog = array(
+                    'log_type' => 'Thank You For Subscribing',
+                    'log_datetime' => date('Y-m-d H:i:s'),
+                    'user_id' => 'Subscribing User',
+                    'log_detail' => $sendernameeq . "  " . $subjectt
+                );
+                $this->db->insert('system_log', $orderlog);
+                $subject = $subjectt;
+                $this->email->subject($subject);
+                $appointment['appointment'] = $appointment;
+                $htmlsmessage = $this->load->view('Email/subscribing', $appointment, true);
+                if (REPORT_MODE == 1) {
+                    $this->email->message($htmlsmessage);
+                    $this->email->print_debugger();
+                     $send = $this->email->send();
+                    if ($send) {
+                        redirect(site_url("/"));
+                    } else {
+                        $error = $this->email->print_debugger(array('headers'));
+                        redirect(site_url("/"));
+                    }
+                } else {
+                    echo $htmlsmessage;
+                }
+            }
+        }
+         $this->load->view('Pages/subscribe');
+    }
+
     public function appointment() {
 
         $data = [];
@@ -147,22 +194,18 @@ class Shop extends CI_Controller {
                 if (REPORT_MODE == 1) {
                     $this->email->message($htmlsmessage);
                     $this->email->print_debugger();
-                   // $send = $this->email->send();
+                    // $send = $this->email->send();
                     $data['sentemail'] = "1";
-                        $data['message'] = "Hello " . $sendernameeq . "<br/> Your appointment has been booked. <br/>Thanks";
-
-
-//                    if ($send) {
-//                        
-//                    } else {
-//                        $error = $this->email->print_debugger(array('headers'));
-//                        
-//                    }
+                    $data['message'] = "Hello " . $sendernameeq . "<br/> Your appointment has been booked. <br/>Thanks";
+                    if ($send) {
+                        
+                    } else {
+                        $error = $this->email->print_debugger(array('headers'));
+                    }
                 } else {
                     echo $htmlsmessage;
                 }
             }
-           
         }
         $this->load->view('Pages/appointment', $data);
     }
