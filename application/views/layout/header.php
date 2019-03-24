@@ -61,7 +61,7 @@
         <script src="<?php echo base_url(); ?>assets/theme/angular/angular.min.js"></script>
 
 
-        
+
 
 
 
@@ -80,21 +80,18 @@
             "title" => "Women's",
             "submenu" => "No",
             "link" => site_url("/")),
-        
         array(
             "title" => "Make A Booking",
             "submenu" => "no",
             "link" => site_url("booking"),
-            "style"=>"background: #dd280f;
+            "style" => "background: #dd280f;
     color: white;"
-            
         ),
         array(
             "title" => "Blog",
             "submenu" => "no",
             "link" => '#',
         ),
-       
         array(
             "title" => "Contact Us",
             "submenu" => "no",
@@ -114,19 +111,122 @@
             ]),
     ];
     ?>
+
+    <style type="text/css">
+        #loading {
+            position: fixed;
+            z-index: 50000;
+            height: 500px;
+
+            color: #fff;
+            text-indent: -9999px;
+            top: 0px;
+
+        }
+        .v2 #loading { display: none; }
+
+
+        #loader {
+
+            /*background:transparent url("") no-repeat center 25%;*/
+            height:100%;
+            display: white;
+            /*opacity: 0.3;*/
+            /*background: #000;*/
+        }
+
+
+    </style>
+
+    <script>
+
+        (function ($) {
+
+            $("html").removeClass("v2");
+            $("body").ready(function () {
+            })
+
+            $("#header").ready(function () {
+               // $("#progress-bar").stop().animate({top: "25%", opacity: 0.8}, 1000)
+            });
+            $("#footer").ready(function () {
+               // $("#progress-bar").stop().animate({top: "75%", opacity: 0.5}, 1000)
+            });
+
+
+            $(window).load(function () {
+
+                $("#progress-bar").stop().animate({opacity: 0}, 500, function () {
+                    $("#loading").fadeOut("fast", function () {
+                        $(this).remove();
+                        $("#price_loader").remove();
+                       
+
+                    });
+                });
+
+            });
+        })(jQuery);
+
+        $(function () {
+
+        })
+    </script>
+
+    <style>
+        main .shell { padding: 25px 0 90px 43px; width: 917px;}
+        #progress-bar{   
+            width:100%;
+            height:100%; 
+            opacity: 1;
+            background:#fff;  
+            float: right;
+            //opacity: 0.2;
+            position: fixed;
+        }
+    </style>
+
+
+    <div id='loading' class="" style="width:100%;height: 100% ">
+        <div id='progress-bar'>
+            <center>
+            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" style='    margin-top: 200px;
+    position: fixed;
+    height: 100px;
+    margin-left: -86px;'>
+             <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style='    margin-top: 300px;
+    position: fixed;
+    height: 25px;
+    margin-left: -130px;'>
+            </center>
+        </div> 
+        <div id='loader'>
+            <div class='loaderstyle'>
+            </div>
+        </div>
+
+    </div>   
     <body ng-app="App">
         <div ng-controller="ShopController">
             <script>
-                var App = angular.module('App', []).config(function ($interpolateProvider, $httpProvider) {
-                //$interpolateProvider.startSymbol('{$');
-                //$interpolateProvider.endSymbol('$}');
-                $httpProvider.defaults.headers.common = {};
-                        $httpProvider.defaults.headers.post = {};
-                });
-                        var baseurl = "<?php echo base_url(); ?>index.php/";
-                        var imageurlg = "<?php echo imageserver; ?>";
-                        var globlecurrency = "<?php echo globle_currency; ?>";
-                        var avaiblecredits = 0;</script>
+                        var App = angular.module('App', []).config(function ($interpolateProvider, $httpProvider) {
+                        //$interpolateProvider.startSymbol('{$');
+                        //$interpolateProvider.endSymbol('$}');
+                        $httpProvider.defaults.headers.common = {};
+                                $httpProvider.defaults.headers.post = {};
+                        });
+                                var baseurl = "<?php echo base_url(); ?>index.php/";
+                                var imageurlg = "<?php echo imageserver; ?>";
+                                var globlecurrency = "<?php echo globle_currency; ?>";
+                                var avaiblecredits = 0;
+                                $(window).on('load', function () {
+                        // Page Preloader
+                        $('#preloader').fadeOut('slow', function () {
+                        $(this).remove();
+                        });
+                        })
+
+            </script>
             <!--header-->
 
 
@@ -161,7 +261,6 @@
                         <?php
                         foreach ($menuitems as $key => $value) {
                             $submenu = $value['submenu'] == 'yes' ? 'has_sub_menu' : '';
-                      
                             ?>
                             <li class="<?php echo $submenu; ?>  m_bottom_10">
                                 <a href="<?php echo $value['link']; ?>" class="d_block relative fs_large color_light_2 color_blue_hover" ><?php echo $value['title']; ?></a>
@@ -256,10 +355,10 @@
                                                 <?php
                                                 foreach ($menuitems as $key => $value) {
                                                     $submenu = $value['submenu'] == 'yes' ? 'has_sub_menu' : '';
-                                                    $style = isset($value['style'])?$value['style']:'';
+                                                    $style = isset($value['style']) ? $value['style'] : '';
                                                     ?>
                                                     <li class=" container2d relative f_xs_none m_xs_bottom_5">
-                                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo $value['link']; ?>" style="<?php echo $style;?>"><?php echo $value['title']; ?>
+                                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo $value['link']; ?>" style="<?php echo $style; ?>"><?php echo $value['title']; ?>
                                                             <?php if ($submenu) { ?>
                                                                 <i class="icon-angle-down d_inline_m"></i>
                                                             <?php } ?>
@@ -285,115 +384,114 @@
                                             </ul>
                                         </nav>
                                         <!--searchform button-->
-<!--                                        <div class="f_right header_mobile_left clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
-                                            shopping cart
-                                            <div class="relative f_right dropdown_2_container shoppingcart">
-                                                <span class="cart_top_upper animated bounceIn">{{globleCartData.total_quantity}}</span>
-                                                <button class="icon_wrap_size_2 color_blue2  circle tr_all">
-                                                    <i class="icon-basket color_blue2 _2 tr_inherit"></i>
-                                                </button>
-                                                <div class="dropdown_2 bg_light shadow_1 tr_all p_top_0" ng-if="globleCartData.total_quantity">
-                                                    <div class="sc_header bg_light_2 fs_small color_grey">
-                                                        Recently added item(s)
-                                                    </div>
-                                                    <ul class="added_items_list" >
-                                                        <li class="clearfix lh_large m_bottom_20 relative"  ng-repeat="product in globleCartData.products">
-                                                            <a href="#" class="d_block f_left m_right_10"><img src="{{product.file_name}}" alt="" style="height: 60px;width: 60px;"></a>
-                                                            <div class="f_left item_description lh_ex_small">
-                                                                <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">{{product.title}} - {{product.item_name}}</a>
-                                                                <p class="color_dark  fs_small">{{product.price|currency:" "}} X {{product.quantity}} </p>
-                                                            </div>
-                                                            <div class="f_right fs_small lh_medium d_xs_none">
-                                                                <span class="color_dark">{{product.total_price|currency:" "}}</span>
-                                                            </div>
-                                                            <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all" ng-click="removeCart(product.product_id)"></i>
-                                                        </li>
-
-                                                    </ul>
-                                                    <div class="total_price bg_light_2 t_align_r fs_medium m_bottom_15">
-                                                        <ul>
-                                                            <li class="color_dark"><span class="fw_ex_bold">Total:</span> <span class="fw_ex_bold d_inline_b m_left_15 price t_align_l color_pink">{{globleCartData.total_price|currency:"<?php echo globle_currency; ?> "}}</span></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="clearfix border_none p_top_0 sc_footer">
-                                                        <a href="<?php echo site_url("Cart/checkoutInit"); ?>" class="button_type_1 d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-check-1 d_inline_b m_right_5"></i> Checkout</a>
-                                                        <a href="<?php echo site_url("Cart/details"); ?>" class="button_type_1 d_block color_pink f_left r_corners color_pink_hover tr_all fs_medium"><i class="icon-basket d_inline_b m_right_5"></i> View Cart</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            login
-                                            <div class="relative f_right m_right_10 dropdown_2_container login">
-                                                <button class="icon_wrap_size_2 color_blue2  circle tr_all">
-                                                    <i class="icon-lock color_blue2 _2 tr_inherit"></i>
-                                                </button>
-                                                <div class="dropdown_2 bg_light shadow_1 tr_all">
-
-                                                    <?php
+                                        <!--                                        <div class="f_right header_mobile_left clearfix f_xs_none d_xs_inline_b t_xs_align_l m_xs_bottom_15">
+                                                                                    shopping cart
+                                                                                    <div class="relative f_right dropdown_2_container shoppingcart">
+                                                                                        <span class="cart_top_upper animated bounceIn">{{globleCartData.total_quantity}}</span>
+                                                                                        <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                                                            <i class="icon-basket color_blue2 _2 tr_inherit"></i>
+                                                                                        </button>
+                                                                                        <div class="dropdown_2 bg_light shadow_1 tr_all p_top_0" ng-if="globleCartData.total_quantity">
+                                                                                            <div class="sc_header bg_light_2 fs_small color_grey">
+                                                                                                Recently added item(s)
+                                                                                            </div>
+                                                                                            <ul class="added_items_list" >
+                                                                                                <li class="clearfix lh_large m_bottom_20 relative"  ng-repeat="product in globleCartData.products">
+                                                                                                    <a href="#" class="d_block f_left m_right_10"><img src="{{product.file_name}}" alt="" style="height: 60px;width: 60px;"></a>
+                                                                                                    <div class="f_left item_description lh_ex_small">
+                                                                                                        <a href="#" class="color_dark fs_medium d_inline_b m_bottom_3">{{product.title}} - {{product.item_name}}</a>
+                                                                                                        <p class="color_dark  fs_small">{{product.price|currency:" "}} X {{product.quantity}} </p>
+                                                                                                    </div>
+                                                                                                    <div class="f_right fs_small lh_medium d_xs_none">
+                                                                                                        <span class="color_dark">{{product.total_price|currency:" "}}</span>
+                                                                                                    </div>
+                                                                                                    <i class="icon-cancel-circled-1 color_dark _2 fs_large color_dark_hover tr_all" ng-click="removeCart(product.product_id)"></i>
+                                                                                                </li>
+                                        
+                                                                                            </ul>
+                                                                                            <div class="total_price bg_light_2 t_align_r fs_medium m_bottom_15">
+                                                                                                <ul>
+                                                                                                    <li class="color_dark"><span class="fw_ex_bold">Total:</span> <span class="fw_ex_bold d_inline_b m_left_15 price t_align_l color_pink">{{globleCartData.total_price|currency:"<?php echo globle_currency; ?> "}}</span></li>
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                            <div class="clearfix border_none p_top_0 sc_footer">
+                                                                                                <a href="<?php echo site_url("Cart/checkoutInit"); ?>" class="button_type_1 d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-check-1 d_inline_b m_right_5"></i> Checkout</a>
+                                                                                                <a href="<?php echo site_url("Cart/details"); ?>" class="button_type_1 d_block color_pink f_left r_corners color_pink_hover tr_all fs_medium"><i class="icon-basket d_inline_b m_right_5"></i> View Cart</a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    login
+                                                                                    <div class="relative f_right m_right_10 dropdown_2_container login">
+                                                                                        <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                                                            <i class="icon-lock color_blue2 _2 tr_inherit"></i>
+                                                                                        </button>
+                                                                                        <div class="dropdown_2 bg_light shadow_1 tr_all">
+                                        
+                                        <?php
+                                        $session_data = $this->session->userdata('logged_in');
+                                        if (isset($session_data['login_id'])) {
+                                            ?>
+                                                                                                            <h5 class="fw_light color_dark m_bottom_23">
+                                                                                                                <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                                                                                    <i class="icon-user color_blue2 _2 tr_inherit"></i>
+                                                                                                                </button>
+                                            <?php
+                                            echo $session_data['first_name'];
+                                            ?><br/>
+                                                                                                                <small style="margin-left: 45px">( <?php
+                                            echo $session_data['username'];
+                                            ?>)</small>
                                                     
-                                                    $session_data = $this->session->userdata('logged_in');
-                                                    if (isset($session_data['login_id'])) {
-                                                        ?>
-                                                        <h5 class="fw_light color_dark m_bottom_23">
-                                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
-                                                                <i class="icon-user color_blue2 _2 tr_inherit"></i>
-                                                            </button>
-                                                            <?php
-                                                            echo $session_data['first_name'];
-                                                            ?><br/>
-                                                            <small style="margin-left: 45px">( <?php
-                                                                echo $session_data['username'];
-                                                                ?>)</small>
-
-                                                        </h5>
-                                                        <div class="clearfix border_none p_top_0 sc_footer">
-                                                            <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
-                                                            <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
-                                                        </div>
-
-
-
-                                                        <?php
-                                                    } else {
-                                                        ?>
-                                                        <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
-                                                        <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
-                                                            <ul>
-                                                                <li class="m_bottom_10 relative">
-                                                                    <i class="icon-user login_icon fs_medium color_dark _2"></i>
-                                                                    <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
-                                                                </li>
-                                                                <li class="m_bottom_10 relative">
-                                                                    <i class="icon-lock login_icon fs_medium color_dark _2"></i>
-                                                                    <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
-                                                                </li>
-
-                                                                <li class="row">
-                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                                                        <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
-                                                                    </div>
-                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
-                                                                        <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </form>
-                                                        <div class="bg_light_2 im_half_container sc_footer">
-                                                            <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
-                                                            <div class="half_column t_align_r d_inline_m">
-                                                                <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
-                                                            </div>
-                                                        </div>
-                                                        <?php
-                                                    }
-                                                    ?>
-
-
-
-
-                                                </div>
-                                            </div>
-
-                                        </div>-->
+                                                                                                            </h5>
+                                                                                                            <div class="clearfix border_none p_top_0 sc_footer">
+                                                                                                                <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
+                                                                                                                <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
+                                                                                                            </div>
+                                                    
+                                                    
+                                                    
+                                            <?php
+                                        } else {
+                                            ?>
+                                                                                                            <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
+                                                                                                            <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
+                                                                                                                <ul>
+                                                                                                                    <li class="m_bottom_10 relative">
+                                                                                                                        <i class="icon-user login_icon fs_medium color_dark _2"></i>
+                                                                                                                        <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
+                                                                                                                    </li>
+                                                                                                                    <li class="m_bottom_10 relative">
+                                                                                                                        <i class="icon-lock login_icon fs_medium color_dark _2"></i>
+                                                                                                                        <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
+                                                                                                                    </li>
+                                                    
+                                                                                                                    <li class="row">
+                                                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                                                                                                                            <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
+                                                                                                                            <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
+                                                                                                                        </div>
+                                                                                                                    </li>
+                                                                                                                </ul>
+                                                                                                            </form>
+                                                                                                            <div class="bg_light_2 im_half_container sc_footer">
+                                                                                                                <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
+                                                                                                                <div class="half_column t_align_r d_inline_m">
+                                                                                                                    <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                            <?php
+                                        }
+                                        ?>
+                                        
+                                        
+                                        
+                                        
+                                                                                        </div>
+                                                                                    </div>
+                                        
+                                                                                </div>-->
                                     </div>
                                 </div>
                             </div>
