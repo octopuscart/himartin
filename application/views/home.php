@@ -362,6 +362,75 @@ $this->load->view('layout/header');
 
 
 
+<!--benifits-->
+<section class="section_offset" style='background: #e8f0f6;'>
+    <div class="container t_align_c">
+
+
+        <article >
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_20">
+
+                    <img src="<?php echo base_url(); ?>assets/images/referal.png" alt="">
+
+
+
+                </div>
+                <div class="col-lg-6 col-md-6 t_align_l fw_light">
+                    <h3 class="color_dark fw_light heading_1" data-appear-animation="bounceInLeft">Referral Program </h3>
+                    <p class='m_bottom_20 '>Earn Rewards By Recommending Us To Your Friends</p>
+                    <form method="post" action="#">
+                        <ul class="fw_light">
+                            <li class="m_bottom_10 m_xs_bottom_15">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom_select">
+                                            <input type="text" name="friend_name" placeholder="Friend’s Name" class="r_corners bg_light w_full"   value="" required="">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom_select">
+                                            <input type="email" name="friend_email" placeholder="Friend’s Email " class="r_corners bg_light w_full"   value="" required="">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li class="m_bottom_10 m_xs_bottom_15">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom_select">
+                                            <input type="email" name="email" placeholder="Your Email" class="r_corners bg_light w_full"   value="" required="">
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom_select">
+                                            <input type="text" name="country_city" placeholder="Country/City" class="r_corners bg_light w_full"  value="" required="">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                        </ul>
+                        <button name="submit" type="submit" class="button_type_3 color_dark r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
+                    </form>
+
+                </div>
+        </article>
+
+
+    </div>
+</section>
+<!--end of benifits-->
+
+
 
 <?php
 $this->load->view('layout/footer');

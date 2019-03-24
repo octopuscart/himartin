@@ -61,20 +61,7 @@
         <script src="<?php echo base_url(); ?>assets/theme/angular/angular.min.js"></script>
 
 
-        <script>
-            $('html').addClass('d_none');
-            $(document).ready(function () {
-                $('html').show();
-                $("body").queryLoader2({
-                    backgroundColor: '#fff',
-                    barColor: '#35eef6',
-                    barHeight: 4,
-                    percentage: true,
-                    deepSearch: true,
-                    minimumTime: 1000
-                });
-            });
-        </script>
+        
 
 
 

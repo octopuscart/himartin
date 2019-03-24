@@ -173,7 +173,7 @@ $this->load->view('layout/header');
                             <input id="capcha" type="text" name="anti_spam" class="r_corners fw_light d_inline_m w_auto">
                         </li>
                         <li class="m_bottom_10">
-                            <button name='sendmessage' value='sendmessage' class="button_type_5 color_blue transparent r_corners fs_medium tr_all m_right_10 m_sm_bottom_10">Submit</button>
+                            <button name='sendmessage' value='sendmessage' class="button_type_5 color_dark  r_corners fs_medium tr_all m_right_10 m_sm_bottom_10">Submit</button>
                         </li>
                     </ul>
                 </form>

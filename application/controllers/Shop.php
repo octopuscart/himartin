@@ -27,6 +27,55 @@ class Shop extends CI_Controller {
         $query = $this->db->get('sliders');
         $data['sliders'] = $query->result();
 
+        if (isset($_POST['submit'])) {
+            $referral = array(
+                "country_city" => $this->input->post('country_city'),
+                'email' => $this->input->post('email'),
+                'friend_email' => $this->input->post('friend_email'),
+                'friend_name' => $this->input->post('friend_name'),
+            );
+            // print_r($appointment);
+            //$this->db->insert('referral', $referral);
+
+            $emailsender = email_sender;
+            $sendername = email_sender_name;
+            $email_bcc = email_bcc;
+            $sendernameeq = $this->input->post('friend_email');
+            if ($this->input->post('email')) {
+                $this->email->set_newline("\r\n");
+                $this->email->from(email_bcc, $sendername);
+                $this->email->to($this->input->post('friend_email'));
+                $this->email->cc($this->input->post('email'));
+                $this->email->bcc(email_bcc);
+                $subjectt = "Welcome to " . site_name;
+                $orderlog = array(
+                    'log_type' => 'Referred ',
+                    'log_datetime' => date('Y-m-d H:i:s'),
+                    'user_id' => 'Referred',
+                    'log_detail' => $sendernameeq . "  " . $subjectt
+                );
+                $this->db->insert('system_log', $orderlog);
+                $subject = $subjectt;
+                $this->email->subject($subject);
+                $appointment['appointment'] = $referral;
+                $htmlsmessage = $this->load->view('Email/referral', $appointment, true);
+                if (REPORT_MODE == 1) {
+                    $this->email->message($htmlsmessage);
+                    $this->email->print_debugger();
+                    $send = $this->email->send();
+                    if ($send) {
+                        redirect(site_url("/"));
+                    } else {
+                        $error = $this->email->print_debugger(array('headers'));
+                        redirect(site_url("/"));
+                    }
+                } else {
+                    echo $htmlsmessage;
+                }
+            }
+        }
+
+
         $this->load->view('home', $data);
     }
 
@@ -105,17 +154,17 @@ class Shop extends CI_Controller {
             );
             // print_r($appointment);
             $this->db->insert('appointment_list', $appointment);
-          
+
             $emailsender = email_sender;
             $sendername = email_sender_name;
             $email_bcc = email_bcc;
-         
+
             if ($this->input->post('email')) {
                 $this->email->set_newline("\r\n");
                 $this->email->from(email_bcc, $sendername);
                 $this->email->to($this->input->post('email'));
                 $this->email->bcc(email_bcc);
-                $subjectt ="Thank you for your subscription";
+                $subjectt = "Thank you for your subscription";
                 $orderlog = array(
                     'log_type' => 'Thank You For Subscribing',
                     'log_datetime' => date('Y-m-d H:i:s'),
@@ -130,7 +179,7 @@ class Shop extends CI_Controller {
                 if (REPORT_MODE == 1) {
                     $this->email->message($htmlsmessage);
                     $this->email->print_debugger();
-                     $send = $this->email->send();
+                    $send = $this->email->send();
                     if ($send) {
                         redirect(site_url("/"));
                     } else {
@@ -142,7 +191,7 @@ class Shop extends CI_Controller {
                 }
             }
         }
-         $this->load->view('Pages/subscribe');
+        $this->load->view('Pages/subscribe');
     }
 
     public function appointment() {
@@ -194,7 +243,7 @@ class Shop extends CI_Controller {
                 if (REPORT_MODE == 1) {
                     $this->email->message($htmlsmessage);
                     $this->email->print_debugger();
-                     $send = $this->email->send();
+                    $send = $this->email->send();
                     $data['sentemail'] = "1";
                     $data['message'] = "Hello " . $sendernameeq . "<br/> Your appointment has been booked. <br/>Thanks";
                     if ($send) {
