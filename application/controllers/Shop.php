@@ -31,8 +31,67 @@ class Shop extends CI_Controller {
     }
 
     public function contactus() {
-        $data['checksent'] = '';
-        $this->load->view('Pages/contactus', $data);
+        $data['checksent'] = 0;
+        
+        
+        if (isset($_POST['sendmessage'])) {
+            if($this->input->post('anti_spam')==8){
+            
+        }
+        else{
+            redirect('contact-us?error=cw');
+        }
+            $web_enquiry = array(
+                'last_name' => "",
+                'first_name' => $this->input->post('full_name'),
+                'email' => $this->input->post('email'),
+                'contact' => $this->input->post('contact'),
+                'subject' => $this->input->post('subject'),
+                'message' => $this->input->post('message'),
+                'datetime' => date("Y-m-d H:i:s a"),
+            );
+
+            $this->db->insert('web_enquiry', $web_enquiry);
+
+            $emailsender = email_sender;
+            $sendername = email_sender_name;
+            $email_bcc = email_bcc;
+            $sendernameeq = $this->input->post('full_name');
+            if ($this->input->post('email')) {
+                $this->email->set_newline("\r\n");
+                $this->email->from(email_bcc, $sendername);
+                $this->email->to($this->input->post('email'));
+                $this->email->bcc(email_bcc);
+                $subjectt = $this->input->post('subject');
+                $orderlog = array(
+                    'log_type' => 'Enquiry',
+                    'log_datetime' => date('Y-m-d H:i:s'),
+                    'user_id' => 'ENQ',
+                    'log_detail' => "Enquiry from website - " . $this->input->post('subject')
+                );
+                $this->db->insert('system_log', $orderlog);
+
+                $subject = "Enquiry from website - " . $this->input->post('subject');
+                $this->email->subject($subject);
+
+                $web_enquiry['web_enquiry'] = $web_enquiry;
+
+                $htmlsmessage = $this->load->view('Email/web_enquiry', $web_enquiry, true);
+                $this->email->message($htmlsmessage);
+
+                $this->email->print_debugger();
+                $send = $this->email->send();
+                if ($send) {
+                    $data['checksent'] = 1;
+                } else {
+                    $data['checksent'] = 2;
+                    $error = $this->email->print_debugger(array('headers'));
+                }
+            }
+
+            //redirect('contact-us');
+        }
+        $this->load->view('pages/contactus', $data);
     }
 
     public function aboutus() {
@@ -42,7 +101,7 @@ class Shop extends CI_Controller {
     public function appointment() {
 
         $data = [];
-    
+        $data['sentemail'] = "0";
         if (isset($_POST['submit'])) {
             $appointment = array(
                 "country" => $this->input->post('country'),
@@ -60,10 +119,10 @@ class Shop extends CI_Controller {
                 'datetime' => date("Y-m-d H:i:s a"),
                 'appointment_type' => "Global",
             );
-           // print_r($appointment);
+            // print_r($appointment);
             $this->db->insert('appointment_list', $appointment);
             $appointment['city_days'] = $this->input->post('city_days');
-             $appointment['remark'] = $this->input->post('remark');
+            $appointment['remark'] = $this->input->post('remark');
             $emailsender = email_sender;
             $sendername = email_sender_name;
             $email_bcc = email_bcc;
@@ -84,22 +143,26 @@ class Shop extends CI_Controller {
                 $subject = $subjectt;
                 $this->email->subject($subject);
                 $appointment['appointment'] = $appointment;
-                echo $htmlsmessage = $this->load->view('Email/appointment', $appointment, true);
-//                if (REPORT_MODE == 1) {
-//                    $this->email->message($htmlsmessage);
-//                    $this->email->print_debugger();
-//                    $send = $this->email->send();
+                $htmlsmessage = $this->load->view('Email/appointment', $appointment, true);
+                if (REPORT_MODE == 1) {
+                    $this->email->message($htmlsmessage);
+                    $this->email->print_debugger();
+                   // $send = $this->email->send();
+                    $data['sentemail'] = "1";
+                        $data['message'] = "Hello " . $sendernameeq . "<br/> Your appointment has been booked. <br/>Thanks";
+
+
 //                    if ($send) {
-//                        echo json_encode("send");
+//                        
 //                    } else {
 //                        $error = $this->email->print_debugger(array('headers'));
-//                        echo json_encode($error);
+//                        
 //                    }
-//                } else {
-//                    echo $htmlsmessage;
-//                }
+                } else {
+                    echo $htmlsmessage;
+                }
             }
-            redirect('Shop/appointment');
+           
         }
         $this->load->view('Pages/appointment', $data);
     }

@@ -155,7 +155,7 @@
                     <!--logo-->
                     <div class="d_table_cell half_column v_align_m" style="background: white">
                         <a href="/">
-                            <img src="<?php echo base_url(); ?>assets/images/logo22.png" alt="">
+                            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
                         </a>
                     </div>
                     <!--close sidemenu button-->

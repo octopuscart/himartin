@@ -90,7 +90,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                     <div class="col-md-6 hotelmap">
                                     </div>
                                 </div>
-                                
+
                                 <li class="m_bottom_10 m_xs_bottom_15">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -124,7 +124,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                     <textarea name="remark" placeholder="Remark" class="r_corners w_full"  style="height: 85px;"  ng-model="appointmentSelected.remark" value="{{appointmentSelected.remark}}"  required=""></textarea>
                                 </li>
                             </ul>
-                            <button name="submit" type="submit" class="button_type_3 color_blue r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
+                            <button name="submit" type="submit" class="button_type_3 color_dark r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -219,7 +219,6 @@ if (isset($prefixshopappointment[$cdateshort])) {
             'city_hotel': [],
             'hotel': '',
             'addresss': '',
-            
             'timeslot': [
                 "08:00 AM", "08:30 AM",
                 "09:00 AM", "09:30 AM",
@@ -246,10 +245,10 @@ if (isset($prefixshopappointment[$cdateshort])) {
             'time': '',
             'timeslot': [],
             'addresss': '',
-            'full_name':'',
-            'email':'',
-            'contact_no':'',
-            'remark':'',
+            'full_name': '',
+            'email': '',
+            'contact_no': '',
+            'remark': '',
         };
         $http.get(url).then(function (rdata) {
             var appointmentdata = rdata.data;
@@ -272,8 +271,30 @@ if (isset($prefixshopappointment[$cdateshort])) {
 
     })
 
+<?php
+if ($sentemail == "1") {
+    ?>
+        swal({
+            title: 'Appointment Booked',
+            type: 'success',
+            html: "<?php echo $message; ?>",
+            timer: 5000,
+        }).then(
+                function () {
+                    window.location = "<?php echo site_url("booking"); ?>";
+                },
+                function (dismiss) {
+                    window.location = "<?php echo site_url("booking"); ?>";
+                }
+        )
+    <?php
+}
+?>
+
 
 </script>
+
+
 
 <?php
 $this->load->view('layout/footer');
