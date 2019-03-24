@@ -104,11 +104,11 @@
                     <td><?php echo $appointment['city_state']; ?> (<?php echo $appointment['city_days']; ?>)</td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Name</th>
                     <td><?php echo $appointment['hotel']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Address</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Address</th>
                     <td><?php echo $appointment['address']; ?></td>
                 </tr>
                 <tr>
