@@ -403,7 +403,7 @@ $this->load->view('layout/header');
                                 <div class="row">
                                     
                                      <div class="col-md-6">
-                                        <div class="custom_select">
+                                        <div class="custom_select"> 
                                             <input type="text" name="name" placeholder="Your Name" class="r_corners bg_light w_full"  value="" required="">
 
                                         </div>

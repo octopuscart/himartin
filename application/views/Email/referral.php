@@ -108,9 +108,6 @@
                     <td><?php echo $appointment['friend_email']; ?></td>
                 </tr>
 
-
-
-
             </table>
             <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
