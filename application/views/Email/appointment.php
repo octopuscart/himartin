@@ -67,7 +67,7 @@
                 <tr>
                     <td >
                         <center><img src="<?php echo site_mail_logo; ?>" style="margin: 10px;
-                                     height: 50px;
+                                     height: 80px;
                                      width: auto;"/><br/>
                             <h4 style="color: black;    margin-top: 0px;"> Your Appointment Has Been Booked <br>
                                     <small>
@@ -84,50 +84,58 @@
             <table class="carttable"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Name:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Name</th>
                     <td><?php echo $appointment['first_name']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Email:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Email</th>
                     <td><?php echo $appointment['email']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Contact No.:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Contact No.</th>
                     <td><?php echo $appointment['contact_no']; ?></td>
                 </tr>
+                 <tr>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Country</th>
+                    <td><?php echo $appointment['country']; ?></td>
+                </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">City:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">State/City</th>
                     <td><?php echo $appointment['city_state']; ?> (<?php echo $appointment['city_days']; ?>)</td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Hotel:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel</th>
                     <td><?php echo $appointment['hotel']; ?></td>
                 </tr>
-                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Address:</th>
+                <tr>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Address</th>
                     <td><?php echo $appointment['address']; ?></td>
                 </tr>
-                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Date:</th>
+                <tr>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Date</th>
                     <td><?php echo $appointment['select_date']; ?></td>
                 </tr>
 
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Time:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Time</th>
                     <td><?php echo $appointment['select_time']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Remark:</th>
-                    <td><?php echo $appointment['remark']; ?></td>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Remark</th>
+                    <td style="width: 300px"><?php echo $appointment['remark']; ?></td>
                 </tr>
+
+
+
+            </table>
+            <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
                 <tr>
-                    <td colspan="6" style="font-size: 12px;">
+                    <td colspan="6" style="font-size: 12px;padding-top: 50px;">
 
-                         <?php echo EMAIL_FOOTER; ?>
+                        <?php echo EMAIL_FOOTER; ?>
                     </td>
                 </tr>
-
             </table>
 
         </div>
