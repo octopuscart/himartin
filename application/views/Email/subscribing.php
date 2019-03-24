@@ -67,9 +67,9 @@
                 <tr>
                     <td >
                         <center><img src="<?php echo site_mail_logo; ?>" style="margin: 10px;
-                                     height: 50px;
+                                     height: 80px;
                                      width: auto;"/><br/>
-                            <h4 style="color: black;    margin-top: 0px;"> Thank You For Subscribing <br>
+                            <h4 style="color: black;    margin-top: 0px;"> Thank you for your subscription <br>
 
                             </h4>
                         </center>
@@ -83,28 +83,31 @@
                 <tr>
                     <td colspan="6" style="font-size: 12px;">
 
-                        Thank you for subscribing to our mailing list. We will send you our newsletter for access to new 
-                        arrivals and exclusive sales.
+                        Thank you for subscribing to our mailing list. Your will receive our newsletter for exclusive offers.
                     </td>
                 </tr>
 
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Email:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Email</th>
                     <td><?php echo $appointment['email']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;">Contact No.:</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Country</th>
                     <td><?php echo $appointment['country']; ?></td>
                 </tr>
 
 
+        
+
+            </table>
+            <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
+
                 <tr>
-                    <td colspan="6" style="font-size: 12px;">
+                    <td colspan="6" style="font-size: 12px;padding-top: 50px;">
 
                         <?php echo EMAIL_FOOTER; ?>
                     </td>
                 </tr>
-
             </table>
 
         </div>
