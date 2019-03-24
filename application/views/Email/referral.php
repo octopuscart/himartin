@@ -113,7 +113,7 @@
 
                 <tr>
                     <td colspan="6" style="font-size: 12px;padding-top: 50px;">
-                        <p>Note: Referrer Will Receive A Free Cotton Shirt As A Gift When Receiver Will Buy A Suit</p>
+                        <p>Note: Referrer Will Receive A Free Cotton Shirt As A Gift When Receiver Will Buy A Suit.</p>
                         <?php echo EMAIL_FOOTER; ?>
                     </td>
                 </tr>
