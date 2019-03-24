@@ -194,7 +194,7 @@ class Shop extends CI_Controller {
                 if (REPORT_MODE == 1) {
                     $this->email->message($htmlsmessage);
                     $this->email->print_debugger();
-                    // $send = $this->email->send();
+                     $send = $this->email->send();
                     $data['sentemail'] = "1";
                     $data['message'] = "Hello " . $sendernameeq . "<br/> Your appointment has been booked. <br/>Thanks";
                     if ($send) {
