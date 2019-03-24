@@ -115,7 +115,7 @@ class Shop extends CI_Controller {
                 $this->email->from(email_bcc, $sendername);
                 $this->email->to($this->input->post('email'));
                 $this->email->bcc(email_bcc);
-                $subjectt ="thank you for your subscription";
+                $subjectt ="Thank you for your subscription";
                 $orderlog = array(
                     'log_type' => 'Thank You For Subscribing',
                     'log_datetime' => date('Y-m-d H:i:s'),
