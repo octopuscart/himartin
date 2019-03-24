@@ -69,9 +69,10 @@
                         <center><img src="<?php echo site_mail_logo; ?>" style="margin: 10px;
                                      height: 80px;
                                      width: auto;"/><br/>
-                            <h4 style="color: black;    margin-top: 0px;"> Welcome to <?php echo site_name;?>
-
+                            <h4 style="color: black;    margin-top: 0px;"> 
+                                Welcome to <?php echo site_name; ?>
                             </h4>
+                            <p>Referral Program</p>
                         </center>
                     </td>
 
@@ -81,39 +82,41 @@
 
             <table class="carttable"  border-color= "#9E9E9E" align="center" border="1" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
                 <tr>
-                    <td colspan="6" style="font-size: 12px;">
-                        Your friend (<?php echo $appointment['email']; ?>) referred us to you.  
+                    <td colspan="6" style="font-size: 12px;text-align: center">
+                        Your friend (<?php echo $appointment['name']; ?>) referred us to you.  
                     </td>
+                </tr>
+
+                <tr>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Referrer's Name</th>
+                    <td><?php echo $appointment['name']; ?></td>
                 </tr>
 
                 <tr>
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Referrer's Email</th>
                     <td><?php echo $appointment['email']; ?></td>
                 </tr>
-                
+
+
+
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Country/City</th>
-                    <td><?php echo $appointment['country_city']; ?></td>
-                </tr>
-                
-                <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Referrer Name</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Receiver's Name</th>
                     <td><?php echo $appointment['friend_name']; ?></td>
                 </tr>
                 <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Referrer Email</th>
+                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Receiver's Email</th>
                     <td><?php echo $appointment['friend_email']; ?></td>
                 </tr>
 
 
-        
+
 
             </table>
             <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
                 <tr>
                     <td colspan="6" style="font-size: 12px;padding-top: 50px;">
-
+                        <p>Note: Referrer Will Receive A Free Cotton Shirt As A Gift When Receiver Will Buy A Suit</p>
                         <?php echo EMAIL_FOOTER; ?>
                     </td>
                 </tr>

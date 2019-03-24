@@ -29,7 +29,7 @@ class Shop extends CI_Controller {
 
         if (isset($_POST['submit'])) {
             $referral = array(
-                "country_city" => $this->input->post('country_city'),
+                "name" => $this->input->post('name'),
                 'email' => $this->input->post('email'),
                 'friend_email' => $this->input->post('friend_email'),
                 'friend_name' => $this->input->post('friend_name'),

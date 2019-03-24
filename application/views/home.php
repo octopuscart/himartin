@@ -401,6 +401,14 @@ $this->load->view('layout/header');
                             </li>
                             <li class="m_bottom_10 m_xs_bottom_15">
                                 <div class="row">
+                                    
+                                     <div class="col-md-6">
+                                        <div class="custom_select">
+                                            <input type="text" name="name" placeholder="Your Name" class="r_corners bg_light w_full"  value="" required="">
+
+                                        </div>
+                                    </div>
+                                    
                                     <div class="col-md-6">
                                         <div class="custom_select">
                                             <input type="email" name="email" placeholder="Your Email" class="r_corners bg_light w_full"   value="" required="">
@@ -408,12 +416,7 @@ $this->load->view('layout/header');
                                         </div>
 
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="custom_select">
-                                            <input type="text" name="country_city" placeholder="Country/City" class="r_corners bg_light w_full"  value="" required="">
-
-                                        </div>
-                                    </div>
+                                   
                                 </div>
 
                             </li>
