@@ -103,9 +103,11 @@ $this->load->view('layout/header');
 
             <!--testimonials-->
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
-                <h3 class="color_light t_align_c m_bottom_15 fw_light">Testimonials</h3>
+                <h3 class="color_dark t_align_c m_bottom_15 fw_light">Testimonials</h3>
                 <p class="m_bottom_35 t_align_c color_grey_light_2">Our Valuable Customer's  Testimonials</p>
                 <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
+
+
                     <!--item-->
                     <div>
                         <!--quote-->
@@ -122,8 +124,16 @@ $this->load->view('layout/header');
                                 </div>
                                 <!--author name-->
                                 <div class="d_inline_m">
-                                    <b class="fs_large d_block color_light">D Giezekamp</b>
-                                    <p class="fs_medium color_grey_light_2">Sydney - 26 July, 2014</p>
+                                    <b class="fs_large d_block color_dark">D Giezekamp</b>
+                                    <p class="fs_medium color_dark">Sydney - 26 July, 2014</p>
+                                    <p class="fs_medium color_dark">
+                                    <ul class="hr_list d_inline_b social_icons">
+                                        <li class="m_right_8"><a href="#" class=" facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class=" twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class=" instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
+
+                                    </ul>
+                                    </p>
                                 </div>
                             </div>
                             <div class="d_table_cell t_align_r v_align_m d_mxs_none">
@@ -136,63 +146,8 @@ $this->load->view('layout/header');
                             </div>
                         </div>
                     </div>
-                    <!--item-->
-                    <div>
-                        <!--quote-->
-                        <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                            <p><i>Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna.Consectetuer adipiscing elit. Mauris fermentum dictum magna.</i></p>
-                        </blockquote>
-                        <div class="d_table w_full">
-                            <div class="d_table_cell">
-                                <!--author photo-->
-                                <div class="d_inline_m circle wrapper m_right_10">
-                                    <img src="images/testimonial_img_2.jpg" alt="">
-                                </div>
-                                <!--author name-->
-                                <div class="d_inline_m">
-                                    <b class="fs_large d_block color_light">Marta Healy</b>
-                                    <p class="fs_medium color_grey_light_2">CEO, Company Name</p>
-                                </div>
-                            </div>
-                            <div class="d_table_cell t_align_r v_align_m d_mxs_none">
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
-                                    <i class="icon-left-open-big"></i>
-                                </button>
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
-                                    <i class="icon-right-open-big"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <!--quote-->
-                        <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                            <p class="m_bottom_15"><i>Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna.</i></p>
-                            <p><i>Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget.</i></p>
-                        </blockquote>
-                        <div class="d_table w_full">
-                            <div class="d_table_cell">
-                                <!--author photo-->
-                                <div class="d_inline_m circle wrapper m_right_10">
-                                    <img src="images/testimonial_img_3.jpg" alt="">
-                                </div>
-                                <!--author name-->
-                                <div class="d_inline_m">
-                                    <b class="fs_large d_block color_light">Alice Smith</b>
-                                    <p class="fs_medium color_grey_light_2">Designer, Company Name</p>
-                                </div>
-                            </div>
-                            <div class="d_table_cell t_align_r v_align_m d_mxs_none">
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
-                                    <i class="icon-left-open-big"></i>
-                                </button>
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
-                                    <i class="icon-right-open-big"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+
+
                 </div>
             </section>
 
@@ -204,28 +159,24 @@ $this->load->view('layout/header');
                     <div>
                         <div class="row">
                             <div class="iframe_video_wrap">
-                                <iframe src="https://www.youtube.com/embed/Du8ld5hrqN0?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
+                                <iframe src="https://www.youtube.com/embed/uU6hyrFo-QQ?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
                             </div>
+                            <div class="d_inline_m" style="margin-left: 20px;">
+                                    <b class="fs_large d_block color_dark">Test user</b>
+                                    <p class="fs_medium color_dark">Sydney - 26 Fab, 2019</p>
+                                    <p class="fs_medium color_dark">
+                                    <ul class="hr_list d_inline_b social_icons">
+                                        <li class="m_right_8"><a href="#" class=" facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class=" twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
+                                        <li class="m_right_8"><a href="#" class=" instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
+
+                                    </ul>
+                                    </p>
+                                </div>
 
                         </div>
                     </div>
-                    <!--item-->
-                    <div>
-                        <div class="row">
-                            <div class="iframe_video_wrap">
-                                <iframe src="https://www.youtube.com/embed/Du8ld5hrqN0?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="row">
-                            <div class="iframe_video_wrap">
-                                <iframe src="https://www.youtube.com/embed/Du8ld5hrqN0?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
                 <!--clients carousel nav-->
                 <div class="d_table w_full clients_nav">
@@ -293,21 +244,21 @@ $this->load->view('layout/header');
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
                                 <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
                                     <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
-                                          <img src="<?php echo base_url(); ?>assets/brand/thomasmason.jpg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/brand/thomasmason.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
                                 <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
                                     <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
-                                          <img src="<?php echo base_url(); ?>assets/brand/zegna.jpg" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/brand/zegna.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
-                 
+
                 </div>
             </div>
         </div>
