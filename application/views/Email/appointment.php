@@ -69,7 +69,7 @@
                         <center><img src="<?php echo base_url(); ?>assets/images/logo.png" style="margin: 10px;
                                      height: 50px;
                                      width: auto;"/><br/>
-                            <h4 style="color: black;    margin-top: 0px;"> Your Appointment Booked <br>
+                            <h4 style="color: black;    margin-top: 0px;"> Your Appointment Has Been Booked <br>
                                     <small>
                                         Appointment Date & Time: <?php echo date_format(date_create($appointment['select_date'] . ' ' . $appointment['select_time']), "l, d F Y"); ?> (<?php echo $appointment['select_time']; ?>)
                                     </small>

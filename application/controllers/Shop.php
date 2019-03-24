@@ -42,7 +42,7 @@ class Shop extends CI_Controller {
     public function appointment() {
 
         $data = [];
-        print_r($_POST);
+    
         if (isset($_POST['submit'])) {
             $appointment = array(
                 "country" => $this->input->post('country'),

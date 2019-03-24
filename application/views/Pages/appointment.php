@@ -112,16 +112,16 @@ if (isset($prefixshopappointment[$cdateshort])) {
 
                                 </li>
                                 <li class="m_bottom_10 m_xs_bottom_15">
-                                    <input type="text" name="full_name" placeholder="Full Name" class="r_corners w_full"  ng-model="appointmentSelected.full_name" value="{{appointmentSelected.full_name}}">
+                                    <input type="text" name="full_name" placeholder="Full Name" class="r_corners w_full"  ng-model="appointmentSelected.full_name" value="{{appointmentSelected.full_name}}" required="">
                                 </li>
                                 <li class="m_bottom_10 m_xs_bottom_15">
-                                    <input type="text" name="email" placeholder="Email" class="r_corners w_full"   ng-model="appointmentSelected.email" value="{{appointmentSelected.email}}">
+                                    <input type="text" name="email" placeholder="Email" class="r_corners w_full"   ng-model="appointmentSelected.email" value="{{appointmentSelected.email}}"  required="">
                                 </li>
                                 <li class="m_bottom_10 m_xs_bottom_15">
-                                    <input type="text" name="contact_no" placeholder="Contact No." class="r_corners w_full"   ng-model="appointmentSelected.contact_no" value="{{appointmentSelected.contact_no}}">
+                                    <input type="text" name="contact_no" placeholder="Contact No." class="r_corners w_full"   ng-model="appointmentSelected.contact_no" value="{{appointmentSelected.contact_no}}"  required="">
                                 </li>
                                 <li class="m_bottom_10 m_xs_bottom_15">
-                                    <textarea name="remark" placeholder="Remark" class="r_corners w_full"  style="height: 85px;"  ng-model="appointmentSelected.remark" value="{{appointmentSelected.remark}}"></textarea>
+                                    <textarea name="remark" placeholder="Remark" class="r_corners w_full"  style="height: 85px;"  ng-model="appointmentSelected.remark" value="{{appointmentSelected.remark}}"  required=""></textarea>
                                 </li>
                             </ul>
                             <button name="submit" type="submit" class="button_type_3 color_blue r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>

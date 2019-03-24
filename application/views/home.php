@@ -5,7 +5,7 @@ $this->load->view('layout/header');
 <section class="section_offset relative wrapper" style="height: 500px">
     <div class="video_wrap">
         <video autoplay="" muted="" loop="">
-            <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mov" type="video/mp4">
+            <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
 
         </video>
     </div>
@@ -24,7 +24,7 @@ $this->load->view('layout/header');
     </div>
 </section>
 
-
+<hr class="divider_type_2">
 
 
 <!--benifits-->
@@ -35,23 +35,57 @@ $this->load->view('layout/header');
 
         <article id="tab-1" data-appear-animation="fadeInUp" data-appear-animation-delay="450">
             <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-5 m_xs_bottom_20">
-                    <div class="m_bottom_20 r_corners wrapper simple_slideshow relative">
-                        <ul class="slides">
-                            <li><img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt=""></li>
-                                                       <li><img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt=""></li>
+                <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_20">
 
-                            <li><img src="images/portfolio_img_38.jpg" alt=""></li>
-                            <li><img src="images/portfolio_img_39.jpg" alt=""></li>
-                        </ul>
+                    <!--carousel-->
+                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                        <!--item-->
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+
+                            </div>
+                        </div>
+                        <!--item-->
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+
+                            </div>
+                        </div>
+                        <!--item-->
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/benifit1.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
+                    <div class="d_table w_full clients_nav">
+                        <!--paginations container-->
+                        <div class="d_table_cell half_column clients_pags_container v_align_m"></div>
+                        <!--navigations-->
+                        <div class="d_table_cell half_column t_align_r v_align_m">
+                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav_prev">
+                                <i class="icon-left-open-big"></i>
+                            </button>
+                            <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav_next">
+                                <i class="icon-right-open-big"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
                 </div>
-                <div class="col-lg-7 col-md-7 t_align_l fw_light">
-                    <p class="m_bottom_15">Donec porta diam eu massa. Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipis. </p>
-                    <p class="m_bottom_15">Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
-                    <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus.</p>
+                <div class="col-lg-6 col-md-6 t_align_l fw_light">
+
+                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+
+                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+
+                    <p class="m_bottom_15">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+
                 </div>
-            </div>
         </article>
 
 
@@ -59,7 +93,7 @@ $this->load->view('layout/header');
 </section>
 <!--end of benifits-->
 
-
+<hr class="divider_type_2">
 <!--clients testimoniel-->
 <section class="section_offset image_bg_2_client">
     <div class="container">
@@ -70,14 +104,15 @@ $this->load->view('layout/header');
             <!--testimonials-->
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
                 <h3 class="color_light t_align_c m_bottom_15 fw_light">Testimonials</h3>
-                <p class="m_bottom_35 t_align_c color_grey_light_2">Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae. </p>
+                <p class="m_bottom_35 t_align_c color_grey_light_2">Our Valuable Customer's  Testimonials</p>
                 <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
                     <!--item-->
                     <div>
                         <!--quote-->
                         <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                            <p class="m_bottom_15"><i>Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna.</i></p>
-                            <p><i>Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna.</i></p>
+                            <p class="m_bottom_15"><i>Once again outstanding!!! </i></p>
+                            <p><i>Shirts looks Awesome and fit beautifully ...They arrived yesterday thank you again!! 
+                                    Feel like a new man!! </i></p>
                         </blockquote>
                         <div class="d_table w_full">
                             <div class="d_table_cell">
@@ -87,8 +122,8 @@ $this->load->view('layout/header');
                                 </div>
                                 <!--author name-->
                                 <div class="d_inline_m">
-                                    <b class="fs_large d_block color_light">John Doe</b>
-                                    <p class="fs_medium color_grey_light_2">Co-founder, Company Name</p>
+                                    <b class="fs_large d_block color_light">D Giezekamp</b>
+                                    <p class="fs_medium color_grey_light_2">Sydney - 26 July, 2014</p>
                                 </div>
                             </div>
                             <div class="d_table_cell t_align_r v_align_m d_mxs_none">
@@ -217,15 +252,9 @@ $this->load->view('layout/header');
 
 <!--relative class is required-->
 <section class="section_offset relative wrapper">
-    <div class="video_wrap">
-        <video autoplay muted loop>
-            <source src="video/1.mp4" type="video/mp4">
-            <source src="video/1.webm" type="video/webm">
-        </video>
-    </div>
+
     <div class="container">
-        <h3 class="color_light fw_light t_align_c m_bottom_12" data-appear-animation="bounceInLeft">Our Clients</h3>
-        <p class="m_bottom_40 color_light t_align_c" data-appear-animation="bounceInLeft" data-appear-animation-delay="150">Donec eget tellus non erat lacinia fermentum.</p>
+        <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Our Luxurious Fabrics Brand</h3>
         <div class="relative" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
             <div class="t_xs_align_c">
                 <div class="owl-carousel clients brands with_video t_align_c" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
@@ -233,143 +262,52 @@ $this->load->view('layout/header');
                     <div>
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_1.jpg" alt="">
+                                <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                        <img src="<?php echo base_url(); ?>assets/brand/vbc.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_2.jpg" alt="">
+                                <div class="clients_item db_xs_centered  border_grey wrapper relative r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                        <img src="<?php echo base_url(); ?>assets/brand/hollandsherry.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_3.jpg" alt="">
+                                <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                        <img src="<?php echo base_url(); ?>assets/brand/loropiana.jpg" alt="">
+
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_4.jpg" alt="">
+                                <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                        <img src="<?php echo base_url(); ?>assets/brand/reda.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_5.jpg" alt="">
+                                <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                          <img src="<?php echo base_url(); ?>assets/brand/thomasmason.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_6.jpg" alt="">
+                                <div class="clients_item db_xs_centered border_grey wrapper relative r_corners d_xs_block">
+                                    <a href="#" class="d_block translucent1 tr_all wrapper r_corners">
+                                          <img src="<?php echo base_url(); ?>assets/brand/zegna.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
-                    <!--item-->
-                    <div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_1.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_2.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_4.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_5.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_6.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_1.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_2.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 m_bottom_20">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_4.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_5.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4">
-                                <div class="clients_item db_xs_centered  wrapper relative r_corners d_xs_block">
-                                    <a href="#" class="d_block translucent tr_all wrapper r_corners">
-                                        <img src="images/client_logo_6.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
         </div>
@@ -384,7 +322,72 @@ $this->load->view('layout/header');
 </section>
 
 
+<section class="section_offset image_bg_1">
+    <div class="container">
+        <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">What We Do</h3>
+        <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">Four Simple Steps To A 
 
+            Custom Dress </p>
+        <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_black fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
+            <!--first four services-->
+            <div class="row m_bottom_30">
+                <!--service-->
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Create Own Style</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-tools tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Choose any fabric and create own style.</p>
+
+                    </figure>
+                </div>
+                <!--service-->
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Get Size</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-tape tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Let Size and calculate your measurement.</p>
+
+                    </figure>
+                </div>
+                <!--service-->
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Cut to Create</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-crop tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Our experienced shanghainese tailor cut and make your new dress.</p>
+
+                    </figure>
+                </div>
+                <!--service-->
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Delivery </a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-truck tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Delivery with guaranteed best fit.</p>
+
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
 

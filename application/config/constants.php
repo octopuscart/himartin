@@ -26,6 +26,7 @@ define('globle_currency_type',  $configuration['currency']);
 define('globle_currency',  $configuration['currency']);
 define('site_mail_logo', $configuration['site_logo']);
 define('custome_image_server', $configuration['product_images_url']);
+define('site_name', $configuration['site_name']);
 
 
 //Email Settings//
