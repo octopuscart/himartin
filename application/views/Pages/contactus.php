@@ -2,38 +2,38 @@
 $this->load->view('layout/header');
 ?>
 <div class="google-map-area">
-                                <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA319S-ZyrzBQNhbYmjGedtOfl8wm6tY0Y&v=3.exp'></script><div style='overflow:hidden;height:338px;width:100%;'>
-                                    <div id='gmap_canvas' style='height:338px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA319S-ZyrzBQNhbYmjGedtOfl8wm6tY0Y&v=3.exp'></script><div style='overflow:hidden;height:338px;width:100%;'>
+        <div id='gmap_canvas' style='height:338px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small>
 
-                                        </small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-                                </div><script type='text/javascript'>
-                                    function init_map() {
-                                        //22.2968045,114.1687551  22.2969039,114.1623853
-                                        var myOptions = {zoom: 13, center: new google.maps.LatLng(22.3002741,114.1779154),
-                                            mapTypeId: google.maps.MapTypeId.ROADMAP};
-                                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-                                        marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(22.3002741,114.1779154)});
-
-
-
-
-                                        infowindow = new google.maps.InfoWindow({content: '<strong>Hong Kong Bespoke Tailors</strong><br>\
-                                        Room No. 603, 6/F, Tower A, <br/>New Mandarin Plaza,<br/> 14 Science Museum Road, T.S.T, Hong Kong<br>'});
-
-                                        google.maps.event.addListener(marker, 'click', function () {
-                                            infowindow.open(map, marker);
-                                        });
-                                        infowindow.open(map, marker);
+            </small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </div><script type='text/javascript'>
+        function init_map() {
+            //22.2968045,114.1687551  22.2969039,114.1623853
+            var myOptions = {zoom: 13, center: new google.maps.LatLng(22.3002741, 114.1779154),
+                mapTypeId: google.maps.MapTypeId.ROADMAP};
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(22.3002741, 114.1779154)});
 
 
 
-                            
 
-                                    }
-                                    google.maps.event.addDomListener(window, 'load', init_map);</script>
+            infowindow = new google.maps.InfoWindow({content: '<strong>Hong Kong Bespoke Tailors</strong><br>\
+            Room No. 603, 6/F, Tower A, <br/>New Mandarin Plaza,<br/> 14 Science Museum Road, T.S.T, Hong Kong<br>'});
 
-                            </div>
-                 
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+
+
+
+
+
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+</div>
+
 
 
 
@@ -54,6 +54,19 @@ $this->load->view('layout/header');
                             +(852) 2367 2676<br/> 
 
                         </li>
+
+                        <li class="m_bottom_8">
+
+                       
+                                <i class="fa fa-whatsapp "></i>
+                          
+
+
+                             +(852) 9816 3280<br/> 
+
+                        </li>
+
+
 
 
 
@@ -214,27 +227,27 @@ $this->load->view('layout/header');
     </div>
 </section>
 <?php
-                if (isset($_GET['error'])) {
-                    ?>
+if (isset($_GET['error'])) {
+    ?>
 
-                    <script>
-                        swal({
-                            title: 'Error',
-                            type: 'error',
-                            html: "Invalid Entry",
-                            timer: 5000,
-                        }).then(
-                                function () {
-                                    window.location = "<?php echo site_url("contact-us"); ?>";
-                                },
-                                function (dismiss) {
-                                    window.location = "<?php echo site_url("contact-us"); ?>";
-                                }
-                        )
-                    </script>
-                    <?php
+    <script>
+        swal({
+            title: 'Error',
+            type: 'error',
+            html: "Invalid Entry",
+            timer: 5000,
+        }).then(
+                function () {
+                    window.location = "<?php echo site_url("contact-us"); ?>";
+                },
+                function (dismiss) {
+                    window.location = "<?php echo site_url("contact-us"); ?>";
                 }
-                ?>
+        )
+    </script>
+    <?php
+}
+?>
 
 
 <?php
