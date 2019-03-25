@@ -36,10 +36,16 @@
                                     </div>
                                     +(852) 2367 2676
                                 </li>
+                                 <i class="fa fa-whatsapp " style="    font-size: 23px;color:white;
+                               margin-right: 12px;"></i>
 
 
 
-                                <li class="m_bottom_8">
+                            +(852) 9816 3280
+
+
+
+                                <li class="m_bottom_8 m_top_5">
                                     <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                         <i class="icon-mail-alt"></i>
                                     </div>
@@ -63,7 +69,7 @@
                                     <div class="icon_wrap_size_1 color_light  circle f_left">
                                         <i class="icon-location"></i>
                                     </div>
-                                    Room No. 603, 6/F, Tower A, New Mandarin Plaza, <br/>14 Science Museum Road,<br> T.S.T, Hong Kong
+                                    Room No. 603, 6/F, Tower A, <br/>New Mandarin Plaza, <br/>14 Science Museum Road,<br> T.S.T, Hong Kong
                                 </li>
 <!--                                <li>
                                     <a href="https://goo.gl/maps" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>

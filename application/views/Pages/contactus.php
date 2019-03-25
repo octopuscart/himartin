@@ -57,12 +57,13 @@ $this->load->view('layout/header');
 
                         <li class="m_bottom_8">
 
-                       
-                                <i class="fa fa-whatsapp "></i>
-                          
+
+                            <i class="fa fa-whatsapp " style="    font-size: 23px;color:black;
+                               margin-right: 12px;"></i>
 
 
-                             +(852) 9816 3280<br/> 
+
+                            +(852) 9816 3280<br/> 
 
                         </li>
 
