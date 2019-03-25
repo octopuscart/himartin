@@ -17,7 +17,7 @@ class Shop extends CI_Controller {
             
         }
         else{
-            redirect(site_url);
+//            redirect(site_url);
         }
         $product_home_slider_bottom = $this->Product_model->product_home_slider_bottom();
         $categories = $this->Product_model->productListCategories(0);
