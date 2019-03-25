@@ -122,7 +122,7 @@
                 </tr>
                 <tr>
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Remark</th>
-                    <td style="width: 300px"><?php echo $appointment['remark']; ?></td>
+                    <td style="width: 250px"><?php echo $appointment['remark']; ?></td>
                 </tr>
 
 
