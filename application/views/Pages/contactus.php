@@ -1,7 +1,39 @@
 <?php
 $this->load->view('layout/header');
 ?>
-<iframe class="w_full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14765.645968110992!2d114.1782486!3d22.3002722!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75457dacc3420b3d!2sHimark+Martin+Tailors+-+Hong+Kong!5e0!3m2!1sen!2sin!4v1553258430396" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+<div class="google-map-area">
+                                <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA319S-ZyrzBQNhbYmjGedtOfl8wm6tY0Y&v=3.exp'></script><div style='overflow:hidden;height:338px;width:100%;'>
+                                    <div id='gmap_canvas' style='height:338px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small>
+
+                                        </small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+                                </div><script type='text/javascript'>
+                                    function init_map() {
+                                        //22.2968045,114.1687551  22.2969039,114.1623853
+                                        var myOptions = {zoom: 13, center: new google.maps.LatLng(22.3002741,114.1779154),
+                                            mapTypeId: google.maps.MapTypeId.ROADMAP};
+                                        map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                                        marker = new google.maps.Marker({map: map, position: new google.maps.LatLng(22.3002741,114.1779154)});
+
+
+
+
+                                        infowindow = new google.maps.InfoWindow({content: '<strong>Hong Kong Bespoke Tailors</strong><br>\
+                                        Room No. 603, 6/F, Tower A, <br/>New Mandarin Plaza,<br/> 14 Science Museum Road, T.S.T, Hong Kong<br>'});
+
+                                        google.maps.event.addListener(marker, 'click', function () {
+                                            infowindow.open(map, marker);
+                                        });
+                                        infowindow.open(map, marker);
+
+
+
+                            
+
+                                    }
+                                    google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+                            </div>
+                 
 
 
 
@@ -42,7 +74,7 @@ $this->load->view('layout/header');
                             <div class="f_left icon_wrap_size_1 color_dark  circle">
                                 <i class="icon-location"></i>
                             </div>
-                            Room No. 603, 6/F, Tower A, New Mandarin Plaza, </br>
+                            Room No. 603, <br/>6/F, Tower A, <br/>New Mandarin Plaza, </br>
                             14 Science Museum Road, T.S.T, Hong Kong
 
                         </li>

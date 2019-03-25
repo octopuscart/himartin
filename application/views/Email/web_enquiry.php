@@ -70,7 +70,7 @@
                         <center><img src="<?php echo site_mail_logo; ?>" style="margin: 10px;
                                      height: 80px;
                                      width: auto;"/><br/>
-                            <h4 style="color: black;"> <?php echo $web_enquiry['subject']; ?> </h4>
+                            <h4 style="color: black;"> Contact Form </h4>
                         </center>
                     </td>
 
