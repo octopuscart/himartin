@@ -1,5 +1,6 @@
 <?php
-date_default_timezone_set('Asia/Hong_Kong'); 
+
+date_default_timezone_set('Asia/Hong_Kong');
 defined('BASEPATH') OR exit('No direct script access allowed');
 require("configdbconnect.php");
 $configuration = $globleConnectDB;
@@ -18,12 +19,12 @@ switch ($baselink) {
         $baselinkmain = $configuration['site_url'];
 }
 
-
+define('site_url', $configuration['site_url']);
 define('imageserver', $baselinkmain . "assets_main/productimages/");
 define('imageserverslider', $baselinkmain . "assets_main/sliderimages/");
 define('imageservermain', $baselinkmain . "assets_main/");
-define('globle_currency_type',  $configuration['currency']);
-define('globle_currency',  $configuration['currency']);
+define('globle_currency_type', $configuration['currency']);
+define('globle_currency', $configuration['currency']);
 define('site_mail_logo', $configuration['site_logo']);
 define('custome_image_server', $configuration['product_images_url']);
 define('site_name', $configuration['site_name']);

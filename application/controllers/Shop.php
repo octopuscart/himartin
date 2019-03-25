@@ -12,6 +12,13 @@ class Shop extends CI_Controller {
     }
 
     public function index() {
+        $baselink = 'http://' . $_SERVER['SERVER_NAME'];
+        if($baselink==site_url){
+            
+        }
+        else{
+            redirect(site_url);
+        }
         $product_home_slider_bottom = $this->Product_model->product_home_slider_bottom();
         $categories = $this->Product_model->productListCategories(0);
         $data["categories"] = $categories;
