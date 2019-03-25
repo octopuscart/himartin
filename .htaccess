@@ -24,9 +24,10 @@
     RewriteRule ^(.*)$ index.php?/$1 [L]
 
 
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.hongkongbespoketailors\.com$ [NC]
-RewriteRule ^(.*)$ https://www.hongkongbespoketailors.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} !^$
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 
 </IfModule>
