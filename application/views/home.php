@@ -35,7 +35,7 @@ $this->load->view('layout/header');
 <!--benifits-->
 <section class="section_offset">
     <div class="container t_align_c">
-        <h3 class="color_dark fw_light m_bottom_35 heading_1" data-appear-animation="bounceInLeft">Extraordinary Advance Benefits</h3>
+        <h3 class="color_dark fw_light m_bottom_35 heading_1" data-appear-animation="bounceInLeft">Top of the best custom made suits and shirt tailors </h3>
 
 
         <article id="tab-1" data-appear-animation="fadeInUp" data-appear-animation-delay="450">
