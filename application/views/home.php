@@ -43,7 +43,7 @@ $this->load->view('layout/header');
                 <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_20">
 
                     <!--carousel-->
-                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_">
+                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_" >
                         <!--item-->
                         <div>
                             <div>
@@ -95,13 +95,28 @@ $this->load->view('layout/header');
                 </div>
                 <div class="col-lg-6 col-md-6 t_align_l fw_light">
 
-                    <p class="m_bottom_30 m_top_20">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
-                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_5" style="    margin-top: -10px;">
+                        Welcome to Hong Kong Bespoke Tailors, “the one and only”, pioneers of custom tailoring industry with over 50 years experience. Tailoring is what we do better than anyone else in this industry. Our attention to details and workmanship separates us from our competitors. We believe in building personal relationship and stand by our product.                    </p>
+                    <p class="m_bottom_5">
+                        From our humble beginnings with a small store in TST, Kowloon, Hong Kong, we have now moved worldwide with overseas locations and our regular trips to major cities across the globe. Our areas of service include Australia, Belgium, Canada, New Zealand, Germany, Holland, Ireland, Japan, Switzerland, UK and USA.                    </p>
+                    <p class="m_bottom_5">
+                        Our clientele range from Lawyers, Doctors, Bankers, Celebrities and Politicians. We welcome you to our world of elegance where we dress you like royalty.
+                    </p>
 
-                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_5">
+                        Freshen up your wardrobe with our authentic bespoke tailored finest attire to suit your personality, profession and lifestyle.
+                    </p>
 
-                    <p class="m_bottom_30">Hong Kong Bespoke Tailors is a full service custom tailoring team and provides complete wardrobe solutions according to your profession, business, casual & social needs.  </p>
+                    <p class="m_bottom_5">
+                        We expertise in Men and Women’s Custom Made Suits, Shirts, Pants, Sport Jackets, Blazers, Overcoats, Trench coats, and Tuxedos, in fabrics from world known mills.
+                    </p>
 
+                    <p class="m_bottom_5">
+                        Don’t compromise for something that is off even by a bit, come to us, because we guarantee fit.
+                    </p>
+                    <p class="m_bottom_5">
+                        Book an Appointment Now!
+                    </p>
                 </div>
         </article>
 
@@ -401,14 +416,14 @@ $this->load->view('layout/header');
                             </li>
                             <li class="m_bottom_10 m_xs_bottom_15">
                                 <div class="row">
-                                    
-                                     <div class="col-md-6">
+
+                                    <div class="col-md-6">
                                         <div class="custom_select"> 
                                             <input type="text" name="name" placeholder="Your Name" class="r_corners bg_light w_full"  value="" required="">
 
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-6">
                                         <div class="custom_select">
                                             <input type="email" name="email" placeholder="Your Email" class="r_corners bg_light w_full"   value="" required="">
@@ -416,7 +431,7 @@ $this->load->view('layout/header');
                                         </div>
 
                                     </div>
-                                   
+
                                 </div>
 
                             </li>

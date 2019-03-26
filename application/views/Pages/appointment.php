@@ -46,10 +46,21 @@ if (isset($prefixshopappointment[$cdateshort])) {
                         </h3>
                         <div class="t_align_l fw_light">
                             <ul class="vr_list_type_3 counter color_dark fw_light">
-                                <li class="m_bottom_12 counter_inc">Dummy text for test.</li>
-                                <li class="m_bottom_12 counter_inc">Dummy text for test.</li>
-                                <li class="m_bottom_12 counter_inc">Dummy text for test.</li>
-                            </ul> </div>
+                                <li class="m_bottom_12 counter_inc">Depending on your decisiveness, the one on one session with our fitter will take anywhere from 30 - 45 minutes. 
+
+
+                                </li>
+                                <li class="m_bottom_12 counter_inc">The process starts with selection of fabrics from our world class collection. We carry all colors and patterns available for <b>Custom Suits</b>, Shirts, Sport Jackets, TopCoats/WinterCoats/TrenchCoats and Tuxedos for both Men and Women. 
+                                    You will have more than 3000 swatches to choose from.</li>
+                                <li class="m_bottom_12 counter_inc">Your professional stylist will help you throughout the process, from selection of the right colors and fabrics, and selection of the style that’s perfect for your personality, body shape, age, profession, lifestyle and budget.</li>
+
+                                <li class="m_bottom_12 counter_inc">We take the measurements, and couple of digital images, which helps us, cut the pattern to make your <b>custom clothing</b>.
+
+                                </li>
+                                <li class="m_bottom_12 counter_inc">After the meeting, leave the work in the good hands of your professional tailors team. With measurement profile and style preference, depending on our schedule, we take 3-6 weeks crafting your luxurious handmade garment unmistakably yours.</li>
+                                <li class="m_bottom_12 counter_inc">If you have gone through the fitting process, your measurements and pattern is always kept on file. Re-ordering is hassle free, whether you visit us or place an order online.</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-lg-6 col-md-6 t_align_l fw_light appointment">
                         <form method="post" action="#">
@@ -95,7 +106,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="custom_select">
-                                                <select class="r_corners d_inline_m w_sm_full"  ng-model="appointmentSelected.date" ng-change="timeSlotByDate()">
+                                                <select class="r_corners d_inline_m w_sm_full"  ng-model="appointmentSelected.date" ng-change="timeSlotByDate()" style="    margin-bottom: 5px;">
                                                     <option value="{{cdate.date}}" ng-repeat="cdate in appointmentData.city_hotel[appointmentSelected.city_state].dates">{{cdate.date}}</option>                                        
                                                 </select>
                                             </div>
