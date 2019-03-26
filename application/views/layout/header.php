@@ -81,7 +81,7 @@
             "submenu" => "No",
             "link" => site_url("/")),
         array(
-            "title" => "Make A Booking",
+            "title" => "Book A Fitting",
             "submenu" => "no",
             "link" => site_url("booking"),
             "style" => "background: #dd280f;

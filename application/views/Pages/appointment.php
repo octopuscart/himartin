@@ -24,7 +24,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
 </style>
 <section class="page_title translucent_bg_color_scheme t_align_c image_bg_4" style="margin-top: 0px;    padding: 50px 0 50px;">
     <div class="container">
-        <h1 class="color_light fw_light m_bottom_5">Make A Booking</h1>
+        <h1 class="color_light fw_light m_bottom_5">Book A Fitting</h1>
 
     </div>
 </section>
