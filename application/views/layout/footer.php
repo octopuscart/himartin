@@ -183,7 +183,7 @@
                                         <option value="Australia">Australia</option>
                                     </select>
 
-                                    <input type="email" name="email" placeholder="Your email address" class="r_corners bg_light w_full fw_light">
+                                    <input type="email" name="email" placeholder="Your email address" class="r_corners bg_light w_full fw_light color_dark">
                                 </li>
                                 <li>
                                     <button type="submit" name="submit" value="submit" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Subscribe</button>
