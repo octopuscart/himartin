@@ -73,11 +73,7 @@
             "submenu" => "No",
             "link" => site_url("/")),
         array(
-            "title" => "Men's",
-            "submenu" => "No",
-            "link" => site_url("/")),
-        array(
-            "title" => "Women's",
+            "title" => "Style Gallery",
             "submenu" => "No",
             "link" => site_url("/")),
         array(
