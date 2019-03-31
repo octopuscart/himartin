@@ -149,7 +149,7 @@ App.controller('ShopController', function ($scope, $http, $timeout, $interval, $
                 imageUrl: rdata.data.file_name,
                 imageWidth: 100,
                 timer: 1500,
-//                 background: '#fff url(//bit.ly/1Nqn9HU)',
+
                 imageAlt: 'Custom image',
                 showConfirmButton: false,
                 animation: true

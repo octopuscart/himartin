@@ -257,27 +257,7 @@
 
 
 
-                        <p>We assure you of best services at all times.</p>
 
-                        <div style="height: 200px;margin-top: 30px;">Kindest Regards,<br />
-                            <img src="<?php echo site_mail_logo; ?>" style="height: 30px; margin: 5px 0px 10px ;"><br/>
-                                <span style="float: left; font-size: 12px;">
-
-                                    <address>
-
-                                        <b>Address</b><br/>
-
-                                        Shop K4 G/F, Haleson Building,  <br/>
-                                        1 Jubilee street, Central, <br/>
-                                        Hong Kong <br/>
-                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 9380 4625<br/>
-                                        <b style="    float: left;width: 34px;">Email</b>:  sales@haristailor.com <br/>
-                                        <b style="    float: left;width: 34px;">Web</b>: www.haristailor.com
-
-
-                                    </address>
-                                </span>
-                        </div>
 
                         <br/>
                         <span style="    text-align: center;

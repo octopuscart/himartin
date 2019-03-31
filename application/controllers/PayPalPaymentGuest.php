@@ -72,7 +72,6 @@ class PayPalPaymentGuest extends CI_Controller {
                 '&PAYMENTREQUEST_0_AMT=' . urlencode($total_amt) .
                 '&PAYMENTREQUEST_0_CURRENCYCODE=' . urlencode('USD') .
                 '&LOCALECODE=GB' . //PayPal pages to match the language on your website.
-                '&LOGOIMG=http://bespoketailorshk.costcointernational.com/assets/images/logo73.png' . //site logo
                 '&CARTBORDERCOLOR=000000' . //border color of cart
                 '&ALLOWNOTE=1';
 //        $this->load->view('home', $data);

@@ -277,37 +277,7 @@ class Account extends CI_Controller {
         $this->load->view('Account/address', $data);
     }
 
-    //function credits
-    function credits() {
-        if ($this->user_id == 0) {
-            redirect('Account/login');
-        }
-
-        $user_id = $this->user_id;
-
-        $user_credits = $this->User_model->user_credits($this->user_id);
-        $data['user_credits'] = $user_credits;
-
-        $querys = "select * from (
-                   select credit, '' as debit, order_id, remark, c_date, c_time  FROM `user_credit` 
-                   where user_id = $user_id and credit>0
-                    union
-                   select '' as credit, credit as debit, order_id, remark, c_date, c_time  FROM `user_debit`
-                   where user_id = $user_id  and credit>0
-                   ) as credit order by c_date desc";
-
-        $query = $this->db->query($querys);
-        $creditlist = $query->result();
-        $data['creditlist'] = $creditlist;
-
-
-        $this->load->view('Account/credits', $data);
-    }
-
-    function testReg() {
-        $user_id = $this->user_id;
-        $this->User_model->registration_mail($user_id);
-    }
+  
 
 }
 

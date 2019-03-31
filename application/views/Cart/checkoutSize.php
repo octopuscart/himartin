@@ -288,13 +288,7 @@ $this->load->view('layout/header');
 
 
                                                 <div class="contact-us-right">
-                                                       <b>Send to:</b><br/>
-                                                    Shop K4 G/F, Haleson Building,<br/>
-                                                    1 Jubilee street, Central,<br/>
-                                                    Hong Kong<br/>
-                                                    <i class="fa fa-envelope"></i>  haris.tailors@gmail.com<br/>
-                                                    <i class="fa fa-phone"></i> +(852) 9380 4625 
-
+                                                
                                                 </div>
                                                 </p>
                                                 <div class="cart-page-top table-responsive">

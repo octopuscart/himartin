@@ -91,7 +91,7 @@
 
                         <p>Dear <?php echo $customer->first_name; ?> <?php echo $customer->last_name; ?>,</p><br/>
 
-                        <p> Thank you for registering your online www.haristailor.com account from <?php echo $customer->country; ?>. </p>
+                        <p> Thank you for registering your online <?php echo site_name;?> account from <?php echo $customer->country; ?>. </p>
                         <p>You will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more. </p> 
                         <p>Your Login Credentials: </p>
                         <table style="        margin-top: 12px;
@@ -118,7 +118,6 @@
                             </tr>
                         </table>
                         <p>
-                           Located in the heart of Hong Kong’s Central District, Haris Custom Tailor has been tailoring to bankers and other well-dressed city professionals since 1991.
 
 
                         </p>
@@ -129,19 +128,7 @@
                             <img src="<?php echo site_mail_logo; ?>" style="height: 30px;  margin: 5px 0px 10px ;"><br/>
                                 <span style="float: left; font-size: 12px;">
 
-                                    <address>
-
-                                        <b>Address</b><br/>
-
-                                        Shop K4 G/F, Haleson Building,  <br/>
-                                        1 Jubilee street, Central, <br/>
-                                        Hong Kong <br/>
-                                        <b style="    float: left;width: 34px;">Tel#</b>: +(852) 9380 4625<br/>
-                                        <b style="    float: left;width: 34px;">Email</b>:  sales@haristailor.com <br/>
-                                        <b style="    float: left;width: 34px;">Web</b>: www.haristailor.com
-
-
-                                    </address>
+                                 
                                 </span>
                         </div>
 

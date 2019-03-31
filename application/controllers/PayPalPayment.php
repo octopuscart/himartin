@@ -69,7 +69,6 @@ class PayPalPayment extends CI_Controller {
                 '&PAYMENTREQUEST_0_AMT=' . urlencode($total_amt) .
                 '&PAYMENTREQUEST_0_CURRENCYCODE=' . urlencode(paypal_api_currency_code) .
                 '&LOCALECODE=GB' . //PayPal pages to match the language on your website.
-                '&LOGOIMG=http://bespoketailorshk.costcointernational.com/assets/images/logo73.png' . //site logo
                 '&CARTBORDERCOLOR=000000' . //border color of cart
                 '&ALLOWNOTE=1';
         $this->load->library('paypalclass');
@@ -282,33 +281,7 @@ class PayPalPayment extends CI_Controller {
 
 
 
-// echo '<br /><b>Stuff to store in database :</b><br /><pre>';
-                    /*
-                      #### SAVE BUYER INFORMATION IN DATABASE ###
-                      //see (http://www.sanwebe.com/2013/03/basic-php-mysqli-usage) for mysqli usage
 
-                      $buyerName = $httpParsedResponseAr["FIRSTNAME"].' '.$httpParsedResponseAr["LASTNAME"];
-                      $buyerEmail = $httpParsedResponseAr["EMAIL"];
-
-                      //Open a new connection to the MySQL server
-                      $mysqli = new mysqli('host','username','password','database_name');
-
-                      //Output any connection error
-                      if ($mysqli->connect_error) {
-                      die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-                      }
-
-                      $insert_row = $mysqli->query("INSERT INTO BuyerTable
-                      (BuyerName,BuyerEmail,TransactionID,ItemName,ItemNumber, ItemAmount,ItemQTY)
-                      VALUES ('$buyerName','$buyerEmail','$transactionID','$ItemName',$ItemNumber, $ItemTotalPrice,$ItemQTY)");
-
-                      if($insert_row){
-                      print 'Success! ID of last inserted record is : ' .$mysqli->insert_id .'<br />';
-                      }else{
-                      die('Error : ('. $mysqli->errno .') '. $mysqli->error);
-                      }
-
-                     */
 
                     //  echo '<pre>';
                     //    print_r($httpParsedResponseAr);
