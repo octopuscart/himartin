@@ -21,6 +21,7 @@ $this->load->view('layout/header');
          border-radius: 12px;   
          position: absolute;
          right: 16px;    z-index: 200000;
+         padding: 10px;
          top: 10px;">
         <h3 class="color_light fw_light m_bottom_15 t_align_c appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" style="font-size: 60px;">Time To Suit Up!</h3>
         <p class="m_bottom_35 t_align_c color_light appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" data-appear-animation-delay="200" style="animation-delay: 200ms;    font-size: 26px;

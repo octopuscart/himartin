@@ -90,12 +90,12 @@
         array(
             "title" => "How It Works",
             "submenu" => "no",
-            "link" => site_url('contact-us'),
+            "link" => site_url('/'),
         ),
         array(
             "title" => "Contact Us",
             "submenu" => "yes",
-            "link" => '#',
+            "link" => site_url('contact-us'),
             "submenuitems" => [
                 array(
                     "title" => "FAQ's",
