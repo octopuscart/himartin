@@ -69,40 +69,36 @@
     <?php
     $menuitems = [
         array(
-            "title" => "Home",
+            "title" => "Hong Kong Bespoke Tailors",
             "submenu" => "No",
             "link" => site_url("/")),
         array(
-            "title" => "Style Gallery",
+            "title" => "Look Book",
             "submenu" => "No",
             "link" => site_url("/")),
         array(
             "title" => "Book A Fitting",
             "submenu" => "no",
             "link" => site_url("booking"),
-            "style" => "background: #dd280f;
-    color: white;"
+            "style" => "background: #dd280f;color: white;"
         ),
         array(
-            "title" => "Blog",
+            "title" => "Styling Tips",
             "submenu" => "no",
             "link" => '#',
         ),
         array(
-            "title" => "Contact Us",
+            "title" => "How It Works",
             "submenu" => "no",
             "link" => site_url('contact-us'),
         ),
         array(
-            "title" => "Support",
+            "title" => "Contact Us",
             "submenu" => "yes",
             "link" => '#',
             "submenuitems" => [
                 array(
                     "title" => "FAQ's",
-                    "link" => '#',),
-                array(
-                    "title" => "Terms of Service",
                     "link" => '#',),
             ]),
     ];
@@ -143,10 +139,10 @@
             })
 
             $("#header").ready(function () {
-               // $("#progress-bar").stop().animate({top: "25%", opacity: 0.8}, 1000)
+                // $("#progress-bar").stop().animate({top: "25%", opacity: 0.8}, 1000)
             });
             $("#footer").ready(function () {
-               // $("#progress-bar").stop().animate({top: "75%", opacity: 0.5}, 1000)
+                // $("#progress-bar").stop().animate({top: "75%", opacity: 0.5}, 1000)
             });
 
 
@@ -156,7 +152,7 @@
                     $("#loading").fadeOut("fast", function () {
                         $(this).remove();
                         $("#price_loader").remove();
-                       
+
 
                     });
                 });
@@ -186,18 +182,18 @@
     <div id='loading' class="" style="width:100%;height: 100% ">
         <div id='progress-bar'>
             <center style=''>
-            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" style="margin-top: 51px;
-    position: fixed;
-    top: 125px;
-    left: 50%;
-    height: 100px;
-    margin-left: -120px;" >
-             <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style="margin-top: 150px;
-    position: fixed;
-    top: 125px;
-    left: 50%;
-    height: 30px;
-    margin-left: -145px;">
+                <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" style="margin-top: 51px;
+                     position: fixed;
+                     top: 125px;
+                     left: 50%;
+                     height: 100px;
+                     margin-left: -120px;" >
+                <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style="margin-top: 150px;
+                     position: fixed;
+                     top: 125px;
+                     left: 50%;
+                     height: 30px;
+                     margin-left: -145px;">
             </center>
         </div> 
         <div id='loader'>
@@ -263,7 +259,7 @@
                             $submenu = $value['submenu'] == 'yes' ? 'has_sub_menu' : '';
                             ?>
                             <li class="<?php echo $submenu; ?>  m_bottom_10">
-                                <a href="<?php echo $value['link']; ?>" class="d_block relative fs_large color_light_2 color_blue_hover" ><?php echo $value['title']; ?></a>
+                                <a href="<?php echo $value['link']; ?>" class="d_block relative fs_small color_light_2 color_blue_hover" ><?php echo $value['title']; ?></a>
                                 <!--sub menu(second level)-->
                                 <?php
                                 if ($submenu) {
@@ -358,7 +354,7 @@
                                                     $style = isset($value['style']) ? $value['style'] : '';
                                                     ?>
                                                     <li class=" container2d relative f_xs_none m_xs_bottom_5">
-                                                        <a class="color_dark fs_large relative r_xs_corners" href="<?php echo $value['link']; ?>" style="<?php echo $style; ?>"><?php echo $value['title']; ?>
+                                                        <a class="color_dark fs_medium relative r_xs_corners" href="<?php echo $value['link']; ?>" style="<?php echo $style; ?>;font-size: 1em;"><?php echo $value['title']; ?>
                                                             <?php if ($submenu) { ?>
                                                                 <i class="icon-angle-down d_inline_m"></i>
                                                             <?php } ?>
@@ -370,7 +366,7 @@
                                                                 foreach ($value['submenuitems'] as $key => $value2) {
                                                                     ?>
                                                                     <li class="container2d relative ">
-                                                                        <a href="<?php echo $value2['link']; ?>" class="menu-link d_block color_dark relative main-menu-link"> <?php echo $value2['title']; ?> </a>
+                                                                        <a href="<?php echo $value2['link']; ?>" class="menu-link d_block color_dark relative main-menu-link" style="font-size: 1em;"> <?php echo $value2['title']; ?> </a>
                                                                     </li>
                                                                     <?php
                                                                 }
@@ -431,56 +427,56 @@
                                         $session_data = $this->session->userdata('logged_in');
                                         if (isset($session_data['login_id'])) {
                                             ?>
-                                                                                                            <h5 class="fw_light color_dark m_bottom_23">
-                                                                                                                <button class="icon_wrap_size_2 color_blue2  circle tr_all">
-                                                                                                                    <i class="icon-user color_blue2 _2 tr_inherit"></i>
-                                                                                                                </button>
+                                                                                                                        <h5 class="fw_light color_dark m_bottom_23">
+                                                                                                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                                                                                                <i class="icon-user color_blue2 _2 tr_inherit"></i>
+                                                                                                                            </button>
                                             <?php
                                             echo $session_data['first_name'];
                                             ?><br/>
-                                                                                                                <small style="margin-left: 45px">( <?php
+                                                                                                                            <small style="margin-left: 45px">( <?php
                                             echo $session_data['username'];
                                             ?>)</small>
-                                                    
-                                                                                                            </h5>
-                                                                                                            <div class="clearfix border_none p_top_0 sc_footer">
-                                                                                                                <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
-                                                                                                                <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
-                                                                                                            </div>
-                                                    
-                                                    
-                                                    
+                                                                
+                                                                                                                        </h5>
+                                                                                                                        <div class="clearfix border_none p_top_0 sc_footer">
+                                                                                                                            <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
+                                                                                                                            <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
+                                                                                                                        </div>
+                                                                
+                                                                
+                                                                
                                             <?php
                                         } else {
                                             ?>
-                                                                                                            <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
-                                                                                                            <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
-                                                                                                                <ul>
-                                                                                                                    <li class="m_bottom_10 relative">
-                                                                                                                        <i class="icon-user login_icon fs_medium color_dark _2"></i>
-                                                                                                                        <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
-                                                                                                                    </li>
-                                                                                                                    <li class="m_bottom_10 relative">
-                                                                                                                        <i class="icon-lock login_icon fs_medium color_dark _2"></i>
-                                                                                                                        <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
-                                                                                                                    </li>
-                                                    
-                                                                                                                    <li class="row">
-                                                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                                                                                                            <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                                                                        <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
+                                                                                                                        <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
+                                                                                                                            <ul>
+                                                                                                                                <li class="m_bottom_10 relative">
+                                                                                                                                    <i class="icon-user login_icon fs_medium color_dark _2"></i>
+                                                                                                                                    <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
+                                                                                                                                </li>
+                                                                                                                                <li class="m_bottom_10 relative">
+                                                                                                                                    <i class="icon-lock login_icon fs_medium color_dark _2"></i>
+                                                                                                                                    <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
+                                                                                                                                </li>
+                                                                
+                                                                                                                                <li class="row">
+                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                                                                                                                                        <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
+                                                                                                                                        <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
+                                                                                                                                    </div>
+                                                                                                                                </li>
+                                                                                                                            </ul>
+                                                                                                                        </form>
+                                                                                                                        <div class="bg_light_2 im_half_container sc_footer">
+                                                                                                                            <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
+                                                                                                                            <div class="half_column t_align_r d_inline_m">
+                                                                                                                                <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
+                                                                                                                            </div>
                                                                                                                         </div>
-                                                                                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
-                                                                                                                            <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
-                                                                                                                        </div>
-                                                                                                                    </li>
-                                                                                                                </ul>
-                                                                                                            </form>
-                                                                                                            <div class="bg_light_2 im_half_container sc_footer">
-                                                                                                                <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
-                                                                                                                <div class="half_column t_align_r d_inline_m">
-                                                                                                                    <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
-                                                                                                                </div>
-                                                                                                            </div>
                                             <?php
                                         }
                                         ?>

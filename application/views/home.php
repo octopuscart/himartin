@@ -2,31 +2,57 @@
 $this->load->view('layout/header');
 ?>
 
+
+
 <section class="section_offset relative wrapper" style="height: 500px">
-    <div class="video_wrap">
-        <video autoplay="" muted=false loop="">
-            <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
+    <!--    <div class="video_wrap">
+            <video autoplay="" muted=false loop="">
+                <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
+    
+            </video>
+            <audio
+                autoplay=""
+                src="<?php echo base_url(); ?>assets/theme/video/martinaudio.mp3">
+    
+            </audio>
+        </div>-->
+    <div class="pull-right"  style="margin-top:50px;
+         background: #00000096;
+         border-radius: 12px;   
+         position: absolute;
+         right: 16px;    z-index: 200000;
+         top: 10px;">
+        <h3 class="color_light fw_light m_bottom_15 t_align_c appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" style="font-size: 60px;">Time To Suit Up!</h3>
+        <p class="m_bottom_35 t_align_c color_light appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" data-appear-animation-delay="200" style="animation-delay: 200ms;    font-size: 26px;
+           line-height: 38px;
+           font-weight: 300;">
+            <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" style="height: 300px;border-radius: 12px;">
+        </p>
 
-        </video>
-        <audio
-            autoplay=""
-            src="<?php echo base_url(); ?>assets/theme/video/martinaudio.mp3">
-
-        </audio>
     </div>
-    <div class="container">
-        <div class="col-md-6"></div>
-        <div class="col-md-6"  style="margin-top:50px;background: #00000096;border-radius: 12px;">
-            <h3 class="color_light fw_light m_bottom_15 t_align_c appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" style="font-size: 60px;">Time To Suit Up!</h3>
-            <p class="m_bottom_35 t_align_c color_light appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" data-appear-animation-delay="200" style="animation-delay: 200ms;    font-size: 26px;
-               line-height: 38px;
-               font-weight: 300;">
-                <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" style="height: 300px;border-radius: 12px;">
-            </p>
+    <div class="r_slider">
 
-        </div>
+        <ul>
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+
+            </li>
+
+
+            <li data-transition="fade" data-slotamount="10">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider2.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+
+
+
+            </li>
+        </ul>
+
 
     </div>
+
+
+
 </section>
 
 <hr class="divider_type_2">
