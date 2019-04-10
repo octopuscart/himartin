@@ -36,6 +36,10 @@ switch ($baselink) {
     case "http://192.168.1.2":
         $baselinkmain = $baselink .  $configuration['localpath'];
         break;
+    
+    case "http://192.168.1.3":
+        $baselinkmain = $baselink .  $configuration['localpath'];
+        break;
     default:
         $baselinkmain =  $configuration['site_url'];
 }

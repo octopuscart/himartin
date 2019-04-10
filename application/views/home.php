@@ -4,7 +4,7 @@ $this->load->view('layout/header');
 
 
 
-<section class="section_offset relative wrapper" style="height: 500px">
+<section class="section_offset relative wrapper slider_height section_offset_10" >
     <!--    <div class="video_wrap">
             <video autoplay="" muted=false loop="">
                 <source src="<?php echo base_url(); ?>assets/theme/video/martinvideo.mp4" type="video/mp4">
@@ -16,18 +16,10 @@ $this->load->view('layout/header');
     
             </audio>
         </div>-->
-    <div class="pull-right"  style="margin-top:50px;
-         background: #00000096;
-         border-radius: 12px;   
-         position: absolute;
-         right: 16px;    z-index: 200000;
-         padding: 10px;
-         top: 10px;">
-        <h3 class="color_light fw_light m_bottom_15 t_align_c appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" style="font-size: 60px;">Time To Suit Up!</h3>
-        <p class="m_bottom_35 t_align_c color_light appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" data-appear-animation-delay="200" style="animation-delay: 200ms;    font-size: 26px;
-           line-height: 38px;
-           font-weight: 300;">
-            <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" style="height: 300px;border-radius: 12px;">
+    <div class="pull-right adbox" >
+        <h3 class="color_light fw_light m_bottom_15 t_align_c appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" >Time To Suit Up!</h3>
+        <p class="m_bottom_35 t_align_c color_light appear-animation bounceInUp appear-animation-visible" data-appear-animation="bounceInUp" data-appear-animation-delay="200" >
+            <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" >
         </p>
 
     </div>
@@ -35,13 +27,13 @@ $this->load->view('layout/header');
 
         <ul>
 
-            <li data-transition="fade" data-slotamount="10">
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
 
 
-            <li data-transition="fade" data-slotamount="10">
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider2.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
 

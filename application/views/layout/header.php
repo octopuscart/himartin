@@ -69,7 +69,7 @@
     <?php
     $menuitems = [
         array(
-            "title" => "Hong Kong Bespoke Tailors",
+            "title" => "Home",
             "submenu" => "No",
             "link" => site_url("/")),
         array(
@@ -94,13 +94,14 @@
         ),
         array(
             "title" => "Contact Us",
-            "submenu" => "yes",
+            "submenu" => "no",
             "link" => site_url('contact-us'),
-            "submenuitems" => [
-                array(
-                    "title" => "FAQ's",
-                    "link" => '#',),
-            ]),
+        ),
+        array(
+            "title" => "FAQ's",
+            "submenu" => "no",
+            "link" => site_url('/'),
+        ),
     ];
     ?>
 
@@ -134,32 +135,26 @@
 
         (function ($) {
 
-            $("html").removeClass("v2");
-            $("body").ready(function () {
-            })
+        $("html").removeClass("v2");
+        $("body").ready(function () {
+        })
 
-            $("#header").ready(function () {
-                // $("#progress-bar").stop().animate({top: "25%", opacity: 0.8}, 1000)
-            });
-            $("#footer").ready(function () {
-                // $("#progress-bar").stop().animate({top: "75%", opacity: 0.5}, 1000)
-            });
+                $("#header").ready(function () {
+        // $("#progress-bar").stop().animate({top: "25%", opacity: 0.8}, 1000)
+        });
+        $("#footer").ready(function () {
+        // $("#progress-bar").stop().animate({top: "75%", opacity: 0.5}, 1000)
+        });
+        $(window).load(function () {
 
-
-            $(window).load(function () {
-
-                $("#progress-bar").stop().animate({opacity: 0}, 500, function () {
-                    $("#loading").fadeOut("fast", function () {
-                        $(this).remove();
-                        $("#price_loader").remove();
-
-
-                    });
-                });
-
-            });
+        $("#progress-bar").stop().animate({opacity: 0}, 500, function () {
+        $("#loading").fadeOut("fast", function () {
+        $(this).remove();
+        $("#price_loader").remove();
+        });
+        });
+        });
         })(jQuery);
-
         $(function () {
 
         })
@@ -173,7 +168,6 @@
             opacity: 1;
             background:#fff;  
             float: right;
-            //opacity: 0.2;
             position: fixed;
         }
     </style>
@@ -209,13 +203,13 @@
                         //$interpolateProvider.startSymbol('{$');
                         //$interpolateProvider.endSymbol('$}');
                         $httpProvider.defaults.headers.common = {};
-                                $httpProvider.defaults.headers.post = {};
+                        $httpProvider.defaults.headers.post = {};
                         });
-                                var baseurl = "<?php echo base_url(); ?>index.php/";
-                                var imageurlg = "<?php echo imageserver; ?>";
-                                var globlecurrency = "<?php echo globle_currency; ?>";
-                                var avaiblecredits = 0;
-                                $(window).on('load', function () {
+                        var baseurl = "<?php echo base_url(); ?>index.php/";
+                        var imageurlg = "<?php echo imageserver; ?>";
+                        var globlecurrency = "<?php echo globle_currency; ?>";
+                        var avaiblecredits = 0;
+                        $(window).on('load', function () {
                         // Page Preloader
                         $('#preloader').fadeOut('slow', function () {
                         $(this).remove();
@@ -236,11 +230,7 @@
             <div id="side_menu" class='bg_gradiant'>
                 <header class="m_bottom_30 d_table w_full" >
                     <!--logo-->
-                    <div class="d_table_cell half_column v_align_m" style="background: white">
-                        <a href="/">
-                            <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="">
-                        </a>
-                    </div>
+                   
                     <!--close sidemenu button-->
                     <div class="d_table_cell half_column v_align_m t_align_r">
                         <button class="icon_wrap_size_2 circle color_light _2 d_inline_m" id="close_side_menu">
@@ -332,21 +322,21 @@
                         <div class="container">
                             <div class="d_table w_full d_xs_block">
                                 <!--logo-->
-                                <div class="col-lg-2 col-md-2 col-sm-2 d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
-                                    <a href="<?php echo site_url(); ?>" class="d_inline_m m_xs_top_20 m_xs_bottom_20">
+                                <div class="col-lg-2 col-md-2 col-sm-2  mobile_left d_table_cell d_xs_block f_none v_align_m logo t_xs_align_c">
+                                    <a href="<?php echo site_url(); ?>" class="d_inline_m m_xs_top_20 m_xs_bottom_20 mobilelogo">
                                         <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" >
                                     </a>
                                 </div>
 
 
 
-                                <div class="col-lg-10 col-md-10 col-sm-10 t_align_r d_table_cell d_xs_block f_none">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12  t_align_r d_table_cell d_xs_block f_none">
                                     <div class="relative clearfix t_align_r">
-                                        <button id="menu_button" class="r_corners tr_all color_blue db_centered m_bottom_20 d_none d_xs_block">
+                                        <button id="menu_button" class="r_corners tr_all color_dark db_centered m_bottom_20 d_none d_xs_block">
                                             <i class="icon-menu"></i>
                                         </button>
                                         <!--main navigation-->
-                                        <nav role="navigation" class="d_inline_m d_xs_none m_xs_right_0 m_right_15 m_sm_right_5 t_align_l m_xs_bottom_15 ">
+                                        <nav role="navigation" class=" mobilemenu d_inline_m d_xs_none m_xs_right_0 m_right_15 m_sm_right_5 t_align_l m_xs_bottom_15 ">
                                             <ul class="hr_list main_menu type_2 fw_medium">
                                                 <?php
                                                 foreach ($menuitems as $key => $value) {
@@ -427,56 +417,56 @@
                                         $session_data = $this->session->userdata('logged_in');
                                         if (isset($session_data['login_id'])) {
                                             ?>
-                                                                                                                        <h5 class="fw_light color_dark m_bottom_23">
-                                                                                                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
-                                                                                                                                <i class="icon-user color_blue2 _2 tr_inherit"></i>
-                                                                                                                            </button>
+                                                                                                                                        <h5 class="fw_light color_dark m_bottom_23">
+                                                                                                                                            <button class="icon_wrap_size_2 color_blue2  circle tr_all">
+                                                                                                                                                <i class="icon-user color_blue2 _2 tr_inherit"></i>
+                                                                                                                                            </button>
                                             <?php
                                             echo $session_data['first_name'];
                                             ?><br/>
-                                                                                                                            <small style="margin-left: 45px">( <?php
+                                                                                                                                            <small style="margin-left: 45px">( <?php
                                             echo $session_data['username'];
                                             ?>)</small>
-                                                                
-                                                                                                                        </h5>
-                                                                                                                        <div class="clearfix border_none p_top_0 sc_footer">
-                                                                                                                            <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
-                                                                                                                            <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
-                                                                                                                        </div>
-                                                                
-                                                                
-                                                                
+                                                                                
+                                                                                                                                        </h5>
+                                                                                                                                        <div class="clearfix border_none p_top_0 sc_footer">
+                                                                                                                                            <a href="<?php echo site_url("Account/logout"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_right r_corners tr_all fs_medium m_left_5 hide_from_mobile"><i class="icon-logout d_inline_b m_right_5"></i> Logout</a>
+                                                                                                                                            <a href="<?php echo site_url("Account/profile"); ?>" class="button_type_1 d_block d_block color_pink  color_pink_hover f_left r_corners  tr_all fs_medium "><i class="icon-list-alt d_inline_b m_right_5"></i> View Profile</a>
+                                                                                                                                        </div>
+                                                                                
+                                                                                
+                                                                                
                                             <?php
                                         } else {
                                             ?>
-                                                                                                                        <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
-                                                                                                                        <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
-                                                                                                                            <ul>
-                                                                                                                                <li class="m_bottom_10 relative">
-                                                                                                                                    <i class="icon-user login_icon fs_medium color_dark _2"></i>
-                                                                                                                                    <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
-                                                                                                                                </li>
-                                                                                                                                <li class="m_bottom_10 relative">
-                                                                                                                                    <i class="icon-lock login_icon fs_medium color_dark _2"></i>
-                                                                                                                                    <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
-                                                                                                                                </li>
-                                                                
-                                                                                                                                <li class="row">
-                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
-                                                                                                                                        <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
-                                                                                                                                    </div>
-                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
-                                                                                                                                        <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
-                                                                                                                                    </div>
-                                                                                                                                </li>
-                                                                                                                            </ul>
-                                                                                                                        </form>
-                                                                                                                        <div class="bg_light_2 im_half_container sc_footer">
-                                                                                                                            <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
-                                                                                                                            <div class="half_column t_align_r d_inline_m">
-                                                                                                                                <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
-                                                                                                                            </div>
-                                                                                                                        </div>
+                                                                                                                                        <h5 class="fw_light color_dark m_bottom_23"><i class='icon-user'></i> Login</h5>
+                                                                                                                                        <form class="login_form m_bottom_20" action="<?php echo site_url("Account/login") ?>" method="post">
+                                                                                                                                            <ul>
+                                                                                                                                                <li class="m_bottom_10 relative">
+                                                                                                                                                    <i class="icon-user login_icon fs_medium color_dark _2"></i>
+                                                                                                                                                    <input type="text" placeholder="Email"  name="email" class="r_corners color_grey w_full fw_light">
+                                                                                                                                                </li>
+                                                                                                                                                <li class="m_bottom_10 relative">
+                                                                                                                                                    <i class="icon-lock login_icon fs_medium color_dark _2"></i>
+                                                                                                                                                    <input type="password" placeholder="Password"  name="password" class="r_corners color_grey w_full fw_light">
+                                                                                                                                                </li>
+                                                                                
+                                                                                                                                                <li class="row">
+                                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
+                                                                                                                                                        <button class="button_type_5 tr_all bg_gradiant color_light pull-left transparent fs_medium r_corners" name="signIn" type="submit" value="signIn">Login</button>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 t_align_r lh_medium">
+                                                                                                                                                        <a href="#" class="color_scheme color_purple_hover fs_small">Forgot your password?</a><br>
+                                                                                                                                                    </div>
+                                                                                                                                                </li>
+                                                                                                                                            </ul>
+                                                                                                                                        </form>
+                                                                                                                                        <div class="bg_light_2 im_half_container sc_footer">
+                                                                                                                                            <h5 class="fw_light color_dark d_inline_m half_column">New Customer?</h5>
+                                                                                                                                            <div class="half_column t_align_r d_inline_m">
+                                                                                                                                                <a href="<?php echo site_url("Account/login"); ?>" class="button_type_5 t_xs_align_c d_inline_b tr_all r_corners color_light bg_gradiant transparent fs_medium">Create an Account</a>
+                                                                                                                                            </div>
+                                                                                                                                        </div>
                                             <?php
                                         }
                                         ?>
