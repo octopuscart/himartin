@@ -13,10 +13,9 @@ class Shop extends CI_Controller {
 
     public function index() {
         $baselink = 'http://' . $_SERVER['SERVER_NAME'];
-        if($baselink==site_url){
+        if ($baselink == site_url) {
             
-        }
-        else{
+        } else {
 //            redirect(site_url);
         }
         $product_home_slider_bottom = $this->Product_model->product_home_slider_bottom();
@@ -264,6 +263,24 @@ class Shop extends CI_Controller {
             }
         }
         $this->load->view('Pages/appointment', $data);
+    }
+
+    public function lookbook() {
+         $data['active_block'] = 'mens';
+        $this->load->view('Pages/lookbook', $data);
+    }
+    
+    public function lookbook_style($styleid){
+    
+        $data['active_block'] =$styleid;
+        if($styleid='men'){
+            
+        }
+        else{
+             $data['active_block'] = 'womens';
+        }
+   
+         $this->load->view('Pages/lookbook_style', $data);
     }
 
 }

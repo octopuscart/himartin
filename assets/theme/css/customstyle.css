@@ -473,8 +473,8 @@ thead td.cart-form-heading {
         padding: 10px 0px 10px;
     }
     .header_bottom_part {
-     padding-bottom: 0px; 
-}
+        padding-bottom: 0px; 
+    }
     .slider_height{
         height: 350px;
     }
@@ -785,4 +785,28 @@ li a .relative:hover{
     padding: 5px 15px;
     font-style: italic;
     width: 100%;
+}
+
+.lookbook .nav-tabs {
+    border-bottom: 1px solid #000;
+}
+
+.lookbook .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-bottom-color: transparent;
+}
+
+.lookbook .lookheaderimage img{
+    height: 320px;
+    min-height: 200px
+}
+
+@media only screen and (max-width: 767px){
+    .lookbook .lookheaderimage img{
+        height: 80px;
+        min-height: 80px
+    }
 }

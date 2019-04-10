@@ -75,7 +75,7 @@
         array(
             "title" => "Look Book",
             "submenu" => "No",
-            "link" => site_url("/")),
+            "link" => site_url("lookbook")),
         array(
             "title" => "Book A Fitting",
             "submenu" => "no",
