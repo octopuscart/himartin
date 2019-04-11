@@ -2,12 +2,7 @@
 $this->load->view('layout/header');
 
 $clients = [
-    array(
-         "style_no" => "901",
-        "title" => "Title Of Image",
-        "short_description" => "Short Description Of Image",
-        "image" => "$active_block/1.jpg",
-    ),
+    
     array(
         "style_no" => "902",
         "title" => "Title Of Image",
@@ -80,7 +75,7 @@ $this->load->view('Pages/lookbook_header');
 ?>
 
 
-
+<hr/>
 
 <div class="section_offset">
     <div class="container">
@@ -98,18 +93,18 @@ $this->load->view('Pages/lookbook_header');
                         <ul class="grid">
                             <li class="grid-sizer"></li><!-- for Masonry column width -->
 
-                            <?php foreach ($clients as $key => $value) {
+                            <?php foreach ($style_array as $key => $value) {
                                 ?>
-                                <li>
-                                    <div class="panel panel-default" style="border:none;margin: 0px">
+                                <li style="    padding: 10px;">
+                                    <div class="panel panel-default" style="border:none;margin: 0px;">
                                         <div class="panel-body" style="    padding: 5px;">
-                                            <div class="thumbnail" style="border:none; padding: 0px;   margin-bottom: 0px;">
+                                            <div class="thumbnail lookbook_thumb" >
                                                 <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['image']; ?>" alt="img01" style=""/>
-                                                <p style='text-align: center'>
+                                                <p class="lookbook_subtitle">
                                                  Style#: <?php echo $value['style_no']; ?>
                                                 </p>
-                                                <h3><?php echo $value['title']; ?></h3>
-                                                <p>
+                                                <h3 class="lookbook_title"><?php echo $value['title']; ?></h3>
+                                                <p class="lookbook_subtitle">
                                                     <?php echo $value['short_description']; ?>
                                                 </p>
                                             </div>
@@ -127,21 +122,25 @@ $this->load->view('Pages/lookbook_header');
                     <section class="slideshow" >
                         <ul>
 
-                            <?php foreach ($clients as $key => $value) {
+                             <?php foreach ($style_array as $key => $value) {
                                 ?>
                                 <li>
                                     <div class="panel panel-default" style="background: none;border:none;">
                                         <div class="panel-body" style="background: white;">
-                                            <div class="thumbnail" style="background: none;border:none">
-                                                <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['image']; ?>" alt="img01"  style="    height: 500px;
+                                            <div class="thumbnail " style="background: none;border:none">
+                                                <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['image']; ?>" alt="img01"  style="    height:450px;
                                                      "/>
-                                                <p style='text-align: center'>
+                                                <p class="lookbook_subtitle">
                                                  Style#: <?php echo $value['style_no']; ?>
                                                 </p>
-                                                <h3 style='text-align: center'><?php echo $value['title']; ?></h3>
-                                                <p style='text-align: center'>
+                                                <h3 class="lookbook_title"><?php echo $value['title']; ?></h3>
+                                                <p class="lookbook_subtitle">
                                                     <?php echo $value['short_description']; ?>
                                                 </p>
+                                                <br/>
+                                                <center>
+                                                <button class="btn btn-default color_black btn-sm ">Add To Enquiry</button>
+                                                </center>
                                             </div>
                                         </div>
                                     </div>

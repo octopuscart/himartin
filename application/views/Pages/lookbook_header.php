@@ -1,13 +1,80 @@
+<?php
+$mensArray = [
+    array(
+        'title' => 'Suits',
+        'images' => 'm_suits.jpg',
+        'url' => 'MensCustomSuits'
+    ),
+    array(
+        'title' => 'Shirts',
+        'images' => 'm_shirts.jpg',
+        'url' => 'MensCustomShirts'
+    ),
+    array(
+        'title' => 'Sports Jacket',
+        'images' => 'm_jackets.jpg',
+        'url' => 'MensCustomJackets'
+    ),
+    
+    array(
+        'title' => 'Vests',
+        'images' => 'm_vests.jpg',
+        'url' => 'MensCustomVests'
+    ),
 
+    array(
+        'title' => 'Pants',
+        'images' => 'm_pant.jpg',
+        'url' => 'MensCustomPants'
+    ),
+    array(
+        'title' => 'Tuxedos',
+        'images' => 'm_tuxedo.jpg',
+        'url' => 'MensCustomTuxedo'
+    ),
+    array(
+        'title' => 'Top Coats',
+        'images' => 'm_top_coat.jpg',
+        'url' => 'MensCustomTopCoat'
+    ),
+];
+
+$womensArray = [
+    array(
+        'title' => 'Suits',
+        'images' => 'wm_suits.jpg',
+        'url' => 'WomensCustomSuits'
+    ),
+    array(
+        'title' => 'Shirts',
+        'images' => 'wm_shirts.jpg',
+        'url' => 'WomensCustomShirts'
+    ),
+    array(
+        'title' => 'Dress',
+        'images' => 'wm_dress.jpg',
+        'url' => 'WomensCustomDress'
+    ),
+    array(
+        'title' => 'Pants',
+        'images' => 'wm_pant.jpg',
+        'url' => 'WomensCustomPants'
+    ),
+    array(
+        'title' => 'Top Coats',
+        'images' => 'wm_top_coat.jpg',
+        'url' => 'WomensCustomTopCoat'
+    ),
+        ]
+?>
 <!--content-->
 <section class="section_offset lookbook">
-
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="<?php echo $active_block=='mens'?'active':''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class="<?php echo $active_block == 'mens' ? 'active' : ''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#mens_tab" aria-controls="mens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -15,11 +82,10 @@
                                 <div class="thumbnail lookheaderimage" style="    border: 0;">
                                     <img src="<?php echo base_url(); ?>assets/lookbook/mens5.jpg" alt="" >
                                 </div>
-
                             </figure>
                         </article>
                     </a></li>
-                <li role="presentation" class=" <?php echo $active_block=='womens'?'active':''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class=" <?php echo $active_block == 'womens' ? 'active' : ''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#womens_tab"  aria-controls="womens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -27,39 +93,34 @@
                                 <div class="thumbnail lookheaderimage" style="    border: 0;">
                                     <img src="<?php echo base_url(); ?>assets/lookbook/womens5.jpg" alt="" >
                                 </div>
-
                             </figure>
                         </article>
-                    </a></li>
+                    </a>
+                </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane <?php echo $active_block=='mens'?'active':''; ?>" id="mens_tab">
-
+                <div role="tabpanel" class="tab-pane active" id="mens_tab">
                     <div class="">
                         <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Men's</h3>
                         <div class="relative" data-appear-animation="bounceInLeft" data-appear-animation-delay="800">
                             <div class="t_xs_align_c">
                                 <div class="owl-carousel" data-nav="fp_nav_" data-plugin-options='{"itemsCustom" : [[992,5],[768,3],[100,3]], "singleItem" : false}'>                                        <!--item-->
-
                                     <?php
-                                    for ($i = 0; $i < 10; $i++) {
+                                    foreach ($mensArray as $key => $value) {
                                         ?>
                                         <div class="col-xs-12 m_bottom_20">
                                             <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block">
-                                                <a href="<?php echo site_url("lookbook/mens/customSuits")?>" class="d_block translucent1 tr_all wrapper r_corners">
-                                                    <img src="<?php echo base_url(); ?>assets/lookbook/mens2.png" alt="">
-                                                    <p style="color:black;text-align: center">Suits</p>
+                                                <a href="<?php echo site_url("lookbook/".$value['url']); ?>" class="d_block translucent1 tr_all wrapper r_corners">
+                                                    <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['images'];?>" alt="">
+                                                    <p style="color:black;text-align: center"><?php echo $value['title'];?></p>
                                                 </a>
                                             </div>
                                         </div>
-
                                         <?php
                                     }
                                     ?>
-
-
                                 </div>
                             </div>
                         </div>
@@ -72,7 +133,7 @@
                         </button>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane <?php echo $active_block=='womens'?'active':''; ?>" id="womens_tab">
+                <div role="tabpanel" class="tab-pane " id="womens_tab">
 
                     <div class="">
                         <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Women's</h3>
@@ -80,18 +141,17 @@
                             <div class="t_xs_align_c">
                                 <div class="owl-carousel" data-nav="fp_nav_" data-plugin-options='{"itemsCustom" : [[992,5],[768,3],[100,3]], "singleItem" : false}'>                                        <!--item-->
 
-                                    <?php
-                                    for ($i = 0; $i < 10; $i++) {
+                                     <?php
+                                    foreach ($womensArray as $key => $value) {
                                         ?>
                                         <div class="col-xs-12 m_bottom_20">
                                             <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block">
-                                                <a href="<?php echo site_url("lookbook/womens/customSuits")?>" class="d_block translucent1 tr_all wrapper r_corners">
-                                                    <img src="<?php echo base_url(); ?>assets/lookbook/womens2.png" alt="">
-                                                    <p style="color:black;text-align: center">Suits</p>
+                                                <a href="<?php echo site_url("lookbook/".$value['url']); ?>" class="d_block translucent1 tr_all wrapper r_corners">
+                                                    <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['images'];?>" alt="">
+                                                    <p style="color:black;text-align: center"><?php echo $value['title'];?></p>
                                                 </a>
                                             </div>
                                         </div>
-
                                         <?php
                                     }
                                     ?>

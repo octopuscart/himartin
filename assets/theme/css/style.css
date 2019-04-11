@@ -2011,6 +2011,7 @@ doesnotexist:-o-prefocus, .main_menu li:hover > .sub_menu,.dropdown:hover .sub_m
 [class*="select_button_"]:before{
 	background-position:0 -45px;
 }
+
 .or{
 	padding:10px 8px 9px;
 	font-size:0.625em;

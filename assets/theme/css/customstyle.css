@@ -804,6 +804,23 @@ li a .relative:hover{
     min-height: 200px
 }
 
+.lookbook_title{
+    font-size: 20px;
+    text-align: center;
+    color:black;
+}
+.lookbook_subtitle{
+    text-align: center;
+    color:black;
+}
+
+.lookbook_thumb{
+    border: none;
+    padding: 0px;
+    margin-bottom: 0px;
+    background: #e6dfdf;
+}
+
 @media only screen and (max-width: 767px){
     .lookbook .lookheaderimage img{
         height: 80px;
