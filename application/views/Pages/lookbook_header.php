@@ -74,7 +74,7 @@ $womensArray = [
         <div class="col-md-8">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="<?php echo $active_block == 'mens' ? 'active' : ''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class="active col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#mens_tab" aria-controls="mens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -85,7 +85,7 @@ $womensArray = [
                             </figure>
                         </article>
                     </a></li>
-                <li role="presentation" class=" <?php echo $active_block == 'womens' ? 'active' : ''; ?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#womens_tab"  aria-controls="womens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -103,8 +103,8 @@ $womensArray = [
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="mens_tab">
                     <div class="">
-                        <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Men's</h3>
-                        <div class="relative" data-appear-animation="bounceInLeft" data-appear-animation-delay="800">
+                        <h3 class="color_black fw_light t_align_c m_bottom_30" >Men's</h3>
+                        <div class="relative" >
                             <div class="t_xs_align_c">
                                 <div class="owl-carousel" data-nav="fp_nav_" data-plugin-options='{"itemsCustom" : [[992,5],[768,3],[100,3]], "singleItem" : false}'>                                        <!--item-->
                                     <?php
@@ -136,8 +136,8 @@ $womensArray = [
                 <div role="tabpanel" class="tab-pane " id="womens_tab">
 
                     <div class="">
-                        <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Women's</h3>
-                        <div class="relative" data-appear-animation="bounceInLeft" data-appear-animation-delay="800">
+                        <h3 class="color_black fw_light t_align_c m_bottom_30" >Women's</h3>
+                        <div class="relative" >
                             <div class="t_xs_align_c">
                                 <div class="owl-carousel" data-nav="fp_nav_" data-plugin-options='{"itemsCustom" : [[992,5],[768,3],[100,3]], "singleItem" : false}'>                                        <!--item-->
 

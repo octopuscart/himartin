@@ -403,7 +403,7 @@ class Api extends REST_Controller {
         $this->response($session_cart['products'][$product_id]);
     }
 
-     //get appinment class
+    //get appinment class
     function getAppointment_get() {
         $query = $this->db->get('appointment_entry');
         $appointment_entry = $query->result_array();
@@ -411,7 +411,7 @@ class Api extends REST_Controller {
         $this->db->select("country");
 //        $this->db->where('status', 'active');
         $this->db->group_by("country");
-         $this->db->order_by("country asc");
+        $this->db->order_by("country asc");
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
         $appointment_final_data = array();
@@ -426,21 +426,21 @@ class Api extends REST_Controller {
 //            $this->db->where('status', 'active');
         $this->db->group_by("city_state");
         $this->db->group_by("days");
-         $this->db->order_by("city_state asc");
+        $this->db->order_by("city_state asc");
         $query = $this->db->get('appointment_entry');
-        
+
         $appointment_city_dates = $query->result_array();
         foreach ($appointment_city_dates as $key => $value) {
 
             $country = $value["country"];
             if (isset($country_city_array[$country])) {
                 array_push($country_city_array[$country], array(
-                    "city_state"=>$value["city_state"], 
-                    "city_days"=>$value["city_state"]. ", ". $value["days"]));
+                    "city_state" => $value["city_state"],
+                    "city_days" => $value["city_state"] . ", " . $value["days"]));
             } else {
                 $country_city_array[$country] = [array(
-                    "city_state"=>$value["city_state"], 
-                    "city_days"=>$value["city_state"]. ", ". $value["days"])];
+                "city_state" => $value["city_state"],
+                "city_days" => $value["city_state"] . ", " . $value["days"])];
             }
 
             //time data from dates
@@ -460,8 +460,133 @@ class Api extends REST_Controller {
         $appointment_final_data["country_data"] = $appointment_country;
         $appointment_final_data['city_hotel_data'] = $appointment_city_data;
         $appointment_final_data["country_city"] = $country_city_array;
-   
+
         $this->response($appointment_final_data);
+    }
+
+    public function getStyleGallary_get($styleurl) {
+        $stylearray = array(
+            'MensCustomSuits' => [
+                array(
+                    "style_no" => "901",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/1.jpg",
+                ),
+                array(
+                    "style_no" => "902",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/2.jpg",
+                ),
+                array(
+                    "style_no" => "903",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/3.jpg",
+                ),
+                array(
+                    "style_no" => "904",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/4.jpg",
+                ),
+                array(
+                    "style_no" => "905",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/5.jpg",
+                ),
+                array(
+                    "style_no" => "906",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/6.jpg",
+                ),
+                array(
+                    "style_no" => "907",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/7.jpg",
+                ),
+                array(
+                    "style_no" => "908",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/suits/15.jpg",
+                ),
+            ],
+            "MensCustomShirts" => [
+                array(
+                    "style_no" => "801",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/1.jpg",
+                ),
+                array(
+                    "style_no" => "802",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/2.jpg",
+                ),
+                array(
+                    "style_no" => "803",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/3.jpg",
+                ),
+                array(
+                    "style_no" => "804",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/4.jpg",
+                ),
+                array(
+                    "style_no" => "805",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/5.jpg",
+                ),
+                array(
+                    "style_no" => "806",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/6.jpg",
+                ),
+                array(
+                    "style_no" => "807",
+                    "title" => "2 PLY 100% COTTON",
+                    "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                    "image" => "mens/shirts/7.jpg",
+                ),
+            ]
+        );
+        $this->response($stylearray[$styleurl]);
+    }
+
+    public function setStyleEnquiry_post() {
+        $stylearray = array(
+            'image' => $this->post('image'),
+            'short_description' => $this->post('short_description'),
+            'title' => $this->post('title'),
+            'style_no' => $this->post('style_no'),
+        );
+        $styleSessionData = $this->session->userdata('session_style');
+        if (isset($styleSessionData[$this->post('style_no')])) {
+            
+        } else {
+            $styleSessionData[$this->post('style_no')] = $stylearray;
+        }
+        $this->session->set_userdata('session_style', $styleSessionData);
+        $this->response($styleSessionData);
+    }
+
+    public function removeStyleEnquiry() {
+        $style_no = $this->post('style_no');
+        $styleSessionData = $this->session->userdata('session_style');
+        unset($styleSessionData[$style_no]);
+        $this->session->set_userdata('session_style', $styleSessionData);
+        $this->response($styleSessionData);
     }
 
 }

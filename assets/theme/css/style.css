@@ -2569,6 +2569,10 @@ hr{
 .image_bg_14{background:url("../images/image_bg_11.jpg") no-repeat;}
 .image_bg_15{background:url("../images/image_bg_12.jpg") no-repeat;}
 .image_bg_16{background:url("../images/home_img_18.jpg") no-repeat;}
+.image_bg_17{background:url("../images/faqback.jpg") no-repeat;}
+
+
+
 [class*="image_bg_"]{
 	background-attachment:fixed;
 	background-size:cover;

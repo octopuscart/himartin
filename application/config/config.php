@@ -69,6 +69,9 @@ switch ($baselink) {
     case "http://192.168.1.2":
        $config['index_page'] = strpos($baselink, '192.168') ? 'index.php/' : '';
         break;
+    case "http://192.168.1.3":
+       $config['index_page'] = strpos($baselink, '192.168') ? 'index.php/' : '';
+        break;
     default:
         $config['index_page'] = '';
 }

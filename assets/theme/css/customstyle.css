@@ -827,3 +827,10 @@ li a .relative:hover{
         min-height: 80px
     }
 }
+
+
+.textoverflow{
+    white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

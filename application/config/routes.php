@@ -56,4 +56,5 @@ $route['contact-us'] = 'Shop/contactus';
 $route['booking'] = 'Shop/appointment';
 $route['subscribe'] = 'Shop/subscribe';
 $route['lookbook'] = 'Shop/lookbook';
+$route['faqs'] = 'Shop/faqs';
 $route['lookbook/(:any)'] = 'Shop/lookbook_style/$1';

@@ -100,7 +100,7 @@
         array(
             "title" => "FAQ's",
             "submenu" => "no",
-            "link" => site_url('/'),
+            "link" => site_url('faqs'),
         ),
     ];
     ?>

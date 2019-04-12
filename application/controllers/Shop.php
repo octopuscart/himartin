@@ -151,6 +151,10 @@ class Shop extends CI_Controller {
     public function aboutus() {
         $this->load->view('Pages/aboutus');
     }
+    
+    public function faqs(){
+         $this->load->view('Pages/faqs');
+    }
 
     public function subscribe() {
         if (isset($_POST['submit'])) {
