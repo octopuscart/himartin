@@ -647,6 +647,9 @@ class Api extends REST_Controller {
             'MensCustomTopCoat'=>[],
             'WomensCustomShirts'=>[],
             'WomensCustomDress'=>[],
+            'WomensCustomSuits'=>[],
+            'WomensCustomPants'=>[],
+            'WomensCustomTopCoat'=>[]
         );
 
 
@@ -683,17 +686,60 @@ class Api extends REST_Controller {
             array_push($stylearray['MensCustomTopCoat'], $temp);
         }
         
-        $wshirtimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        $wshirtimagelist = [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
         foreach ($wshirtimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "120$value",
-                "title" => "100% COTTON",
-                "short_description" => "100% COTTON MADE IN ITALY",
+                "title" => "2 PLY 100% COTTON",
+                "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                "image" => "womens/shirts/$value.jpg",
+            );
+            array_push($stylearray['WomensCustomShirts'], $temp);
+        }
+        
+        $wdressimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        foreach ($wdressimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "120$value",
+                "title" => "100% WOOL",
+                "short_description" => "100% WOOL MADE IN ITALY",
                 "image" => "womens/dress/$value.jpg",
             );
             array_push($stylearray['WomensCustomDress'], $temp);
         }
         
+        $wsuitsimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        foreach ($wsuitsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "130$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "womens/suits/$value.jpg",
+            );
+            array_push($stylearray['WomensCustomSuits'], $temp);
+        }
+        
+        $wpantsimagelist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        foreach ($wpantsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "140$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "womens/pants/$value.jpg",
+            );
+            array_push($stylearray['WomensCustomPants'], $temp);
+        }
+        
+        $wtopcoatimagelist = [1, 2, 3, 4, 5, 6, 7, 8,];
+        foreach ($wtopcoatimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "150$value",
+                "title" => "100% CASHMERE",
+                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "image" => "womens/topcoat/$value.jpg",
+            );
+            array_push($stylearray['WomensCustomTopCoat'], $temp);
+        }
         
 
 
