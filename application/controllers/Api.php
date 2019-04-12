@@ -559,8 +559,145 @@ class Api extends REST_Controller {
                     "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
                     "image" => "mens/shirts/7.jpg",
                 ),
-            ]
+            ],
+            'MensCustomJackets' => [
+                array(
+                    "style_no" => "701",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/jackets/1.jpg",
+                ),
+                array(
+                    "style_no" => "702",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/jackets/3.jpg",
+                ),
+                array(
+                    "style_no" => "703",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/jackets/5.jpg",
+                ),
+                array(
+                    "style_no" => "704",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/jackets/4.jpg",
+                ),
+                array(
+                    "style_no" => "705",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/jackets/7.jpg",
+                ),
+            ],
+            'MensCustomVests' => [
+                array(
+                    "style_no" => "1001",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/10.jpg",
+                ),
+                array(
+                    "style_no" => "1002",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/2.jpg",
+                ),
+                array(
+                    "style_no" => "1003",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/3.jpg",
+                ),
+                array(
+                    "style_no" => "1004",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/4.jpg",
+                ),
+                array(
+                    "style_no" => "1005",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/5.jpg",
+                ),
+                array(
+                    "style_no" => "1007",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/7.jpg",
+                ),
+                array(
+                    "style_no" => "1008",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/8.jpg",
+                ),
+                array(
+                    "style_no" => "1009",
+                    "title" => "SUPER 130'S",
+                    "short_description" => "SUPER 130'S MADE IN ITALY",
+                    "image" => "mens/vests/9.jpg",
+                ),
+            ],
+            'MensCustomPants' => [],
+            'MensCustomTuxedo'=>[],
+            'MensCustomTopCoat'=>[],
+            'WomensCustomShirts'=>[],
+            'WomensCustomDress'=>[],
         );
+
+
+        $pantimagelist = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        foreach ($pantimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "200$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/pant/$value.jpg",
+            );
+            array_push($stylearray['MensCustomPants'], $temp);
+        }
+        
+        $tuxedoimagelist = [1, 2, 3, 4, 5, 6, 7, 8,9];
+        foreach ($tuxedoimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "50$value",
+                "title" => "TUXEDO",
+                "short_description" => "TUXEDO - MADE IN ITALY",
+                "image" => "mens/tuxedo/$value.jpg",
+            );
+            array_push($stylearray['MensCustomTuxedo'], $temp);
+        }
+        
+        $topcoatimagelist = [1, 2, 3, 4, 5, 6, 7, 8,9];
+        foreach ($topcoatimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "300$value",
+                "title" => "100% CASHMERE",
+                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "image" => "mens/topcoat/$value.jpg",
+            );
+            array_push($stylearray['MensCustomTopCoat'], $temp);
+        }
+        
+        $wshirtimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        foreach ($wshirtimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "120$value",
+                "title" => "100% COTTON",
+                "short_description" => "100% COTTON MADE IN ITALY",
+                "image" => "womens/dress/$value.jpg",
+            );
+            array_push($stylearray['WomensCustomDress'], $temp);
+        }
+        
+        
+
+
+
         $this->response($stylearray[$styleurl]);
     }
 

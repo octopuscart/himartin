@@ -75,7 +75,7 @@
         array(
             "title" => "Look Book",
             "submenu" => "No",
-            "link" => site_url("lookbook")),
+            "link" => site_url("lookbook/MensCustomSuits")),
         array(
             "title" => "Book A Fitting",
             "submenu" => "no",
@@ -90,7 +90,7 @@
         array(
             "title" => "How It Works",
             "submenu" => "no",
-            "link" => site_url('/'),
+            "link" => site_url("booking"),
         ),
         array(
             "title" => "Contact Us",
