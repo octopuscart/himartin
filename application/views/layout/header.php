@@ -73,6 +73,10 @@
             "submenu" => "No",
             "link" => site_url("/")),
         array(
+            "title" => "Shop Now",
+            "submenu" => "No",
+            "link" => site_url("/")),
+        array(
             "title" => "Look Book",
             "submenu" => "No",
             "link" => site_url("lookbook/MensCustomSuits")),

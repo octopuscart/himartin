@@ -275,9 +275,25 @@ class Shop extends CI_Controller {
     }
 
     public function lookbook_style($styleid) {
+        
+        
+        $stylearray = array(
+            'MensCustomSuits' => array("gender"=>"Mens"),
+            "MensCustomShirts" => array("gender"=>"Mens"),
+            'MensCustomJackets' => array("gender"=>"Mens"),
+            'MensCustomVests' => array("gender"=>"Mens"),
+            'MensCustomPants' => array("gender"=>"Mens"),
+            'MensCustomTuxedo'=>array("gender"=>"Mens"),
+            'MensCustomTopCoat'=>array("gender"=>"Mens"),
+            'WomensCustomShirts'=>array("gender"=>"Womens"),
+            'WomensCustomDress'=>array("gender"=>"Womens"),
+            'WomensCustomSuits'=>array("gender"=>"Womens"),
+            'WomensCustomPants'=>array("gender"=>"Womens"),
+            'WomensCustomTopCoat'=>array("gender"=>"Womens"),
+        );
 
         $data['active_block'] = $styleid;
-
+        $data['active_gender'] = $stylearray[$styleid];
         $this->load->view('Pages/lookbook_style', $data);
     }
 

@@ -65,7 +65,8 @@ $womensArray = [
         'images' => 'wm_top_coat.jpg',
         'url' => 'WomensCustomTopCoat'
     ),
-        ]
+        ];
+
 ?>
 <!--content-->
 <section class="section_offset lookbook">
@@ -74,7 +75,7 @@ $womensArray = [
         <div class="col-md-8">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class="<?php echo  $active_gender['gender']=='Mens' ?'active':'';?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#mens_tab" aria-controls="mens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -85,7 +86,7 @@ $womensArray = [
                             </figure>
                         </article>
                     </a></li>
-                <li role="presentation" class="col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
+                <li role="presentation" class="<?php echo  $active_gender['gender']=='Womens' ?'active':'';?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
                     <a href="#womens_tab"  aria-controls="womens_tab" role="tab" data-toggle="tab">
                         <article>
                             <!--post content-->
@@ -101,7 +102,7 @@ $womensArray = [
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="mens_tab">
+                <div role="tabpanel" class="tab-pane <?php echo  $active_gender['gender']=='Mens' ?'active':'';?>" id="mens_tab">
                     <div class="">
                         <h3 class="color_black fw_light t_align_c m_bottom_30" >Men's</h3>
                         <div class="relative" >
@@ -110,8 +111,8 @@ $womensArray = [
                                     <?php
                                     foreach ($mensArray as $key => $value) {
                                         ?>
-                                        <div class="col-xs-12 m_bottom_20">
-                                            <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block">
+                                        <div class="col-xs-12 m_bottom_20 "  >
+                                            <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block style_block <?php echo $value['url']==$active_block?'active':''; ?> ">
                                                 <a href="<?php echo site_url("lookbook/".$value['url']); ?>" class="d_block translucent1 tr_all wrapper r_corners">
                                                     <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['images'];?>" alt="">
                                                     <p style="color:black;text-align: center"><?php echo $value['title'];?></p>
@@ -133,7 +134,7 @@ $womensArray = [
                         </button>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane " id="womens_tab">
+                <div role="tabpanel" class="tab-pane <?php echo  $active_gender['gender']=='Womens' ?'active':'';?>" id="womens_tab">
 
                     <div class="">
                         <h3 class="color_black fw_light t_align_c m_bottom_30" >Women's</h3>
@@ -144,8 +145,8 @@ $womensArray = [
                                      <?php
                                     foreach ($womensArray as $key => $value) {
                                         ?>
-                                        <div class="col-xs-12 m_bottom_20">
-                                            <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block">
+                                        <div class="col-xs-12 m_bottom_20 ">
+                                            <div class="clients_item db_xs_centered wrapper relative border_grey r_corners d_xs_block style_block <?php echo $value['url']==$active_block?'active':''; ?>" >
                                                 <a href="<?php echo site_url("lookbook/".$value['url']); ?>" class="d_block translucent1 tr_all wrapper r_corners">
                                                     <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['images'];?>" alt="">
                                                     <p style="color:black;text-align: center"><?php echo $value['title'];?></p>

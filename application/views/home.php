@@ -468,6 +468,47 @@ $this->load->view('layout/header');
 <!--end of benifits-->
 
 
+<section class="section_offset relative bg_light_2">
+    <div class="container">
+        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">TRIP IN COUNTRY
+</h3>
+        <!--projects carousel-->
+        <div class="row">
+            <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
+                <!--project-->
+                <?php
+                $countrydata = ['usa', 'canada', 'belgium', 'australia'];
+                foreach ($countrydata as $key => $value) {
+                    ?>
+                    <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
+                        <!--image container-->
+                        <div class="popup_wrap relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block">
+                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value;?>.jpg" alt="">
+<!--                            <div class="popup_buttons tr_all_long">
+                                <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value;?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
+                                    <i class="icon-plus"></i>
+                                </a>
+                            </div>-->
+                        </div>
+                    </figure>
+
+                    <?php
+                }
+                ?>
+
+            </div>
+        </div>
+    </div>
+    <!--carousel nav-->
+    <button class="icon_wrap_size_4 circle color_grey_light tr_all color_blue_hover fp_nav_prev nav_type_2 d_md_none" data-appear-animation="fadeIn">
+        <i class="icon-left-open-big"></i>
+    </button>
+    <button class="icon_wrap_size_4 circle color_grey_light tr_all color_blue_hover fp_nav_next nav_type_2 d_md_none" data-appear-animation="fadeIn">
+        <i class="icon-right-open-big"></i>
+    </button>
+</section>
+
+
 
 <?php
 $this->load->view('layout/footer');

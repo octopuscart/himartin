@@ -834,3 +834,7 @@ li a .relative:hover{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.style_block.active{
+    border: 5px solid #000;
+}
