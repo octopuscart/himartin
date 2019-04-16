@@ -51,7 +51,7 @@ $womensArray = [
         'url' => 'WomensCustomShirts'
     ),
     array(
-        'title' => 'Dress',
+        'title' => 'Dresses',
         'images' => 'wm_dress.jpg',
         'url' => 'WomensCustomDress'
     ),
