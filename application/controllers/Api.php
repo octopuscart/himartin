@@ -613,7 +613,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomShirts'], $temp);
         }
 
-        $wdressimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        $wdressimagelist = [9,10,11,12,13,14,15,1, 2, 3, 4, 5, 6, 7, 8];
         foreach ($wdressimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "120$value",
@@ -624,7 +624,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomDress'], $temp);
         }
 
-        $wsuitsimagelist = [1, 2, 3, 4, 5, 6, 7, 8];
+        $wsuitsimagelist = [11,12,13,16,18,19,23,25,26,29,31,32,34,36,37,1, 2, 3, 4, 5, 6, 7, 8];
         foreach ($wsuitsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "130$value",
@@ -635,7 +635,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomSuits'], $temp);
         }
 
-        $wpantsimagelist = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        $wpantsimagelist = [11,12,13,14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         foreach ($wpantsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "140$value",
