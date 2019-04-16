@@ -28,17 +28,26 @@ $this->load->view('layout/header');
         <ul>
 
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
-                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider3.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
 
 
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider2.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+            </li>
 
-
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider6.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+
+            </li>
+
+
+
         </ul>
 
 
@@ -470,32 +479,35 @@ $this->load->view('layout/header');
 
 <section class="section_offset relative bg_light_2">
     <div class="container">
-        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">TRIP IN COUNTRY
-</h3>
+        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">Trip To Countries</h3>
         <!--projects carousel-->
         <div class="row">
             <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
                 <!--project-->
                 <?php
-                $countrydata = ['usa', 'canada', 'belgium', 'australia'];
+                $countrydata = [
+                    'usa' => array("title" => "U.S.A"),
+                    'canada' => array("title" => "Canada"),
+                    'belgium' => array("title" => "Belgium"),
+                    'australia' => array("title" => "Australia")
+                ];
                 foreach ($countrydata as $key => $value) {
                     ?>
                     <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
                         <!--image container-->
                         <div class="popup_wrap relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block">
-                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value;?>.jpg" alt="">
-<!--                            <div class="popup_buttons tr_all_long">
-                                <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value;?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
-                                    <i class="icon-plus"></i>
-                                </a>
-                            </div>-->
+                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>.jpg" alt="">
+                            <!--                            <div class="popup_buttons tr_all_long">
+                                                            <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
+                                                                <i class="icon-plus"></i>
+                                                            </a>
+                                                        </div>-->
+                            <h3><?php echo $value["title"]; ?></h3>
                         </div>
                     </figure>
-
                     <?php
                 }
                 ?>
-
             </div>
         </div>
     </div>
