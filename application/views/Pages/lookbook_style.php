@@ -61,7 +61,8 @@ $clients = [
 
 <section class="page_title translucent_bg_color_dark image_fixed t_align_c relative wrapper" style="margin-top: 0px;padding: 0px;">
     <div class="container">
-        <h1 class="color_light fw_light m_bottom_5">Look Book</h1>
+        <h1 class="color_light fw_light m_bottom_5" style="    font-size: 22px;
+    line-height: 25px;">Look Book</h1>
         <!--breadcrumbs-->
 
     </div>
