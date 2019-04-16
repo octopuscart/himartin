@@ -624,7 +624,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomDress'], $temp);
         }
 
-        $wsuitsimagelist = [11,12,13,16,18,19,23,25,26,29,31,32,34,36,37,1, 2, 3, 4, 5, 6, 7, 8];
+        $wsuitsimagelist = [12,13,16,18,19,23,25,26,29,31,32,34,36,37,1, 2, 3, 4, 5, 6, 7, 8];
         foreach ($wsuitsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "130$value",
