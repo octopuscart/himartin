@@ -602,7 +602,7 @@ class Api extends REST_Controller {
             array_push($stylearray['MensCustomTopCoat'], $temp);
         }
 
-        $wshirtimagelist = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        $wshirtimagelist = [14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
         foreach ($wshirtimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "120$value",
