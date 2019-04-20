@@ -36,12 +36,12 @@
                                     </div>
                                     +(852) 2367 2676
                                 </li>
-                                 <i class="fa fa-whatsapp " style="    font-size: 23px;color:white;
-                               margin-right: 12px;"></i>
+                                <i class="fa fa-whatsapp " style="    font-size: 23px;color:white;
+                                   margin-right: 12px;"></i>
 
 
 
-                            +(852) 9816 3280
+                                +(852) 9816 3280
 
 
 
@@ -71,9 +71,9 @@
                                     </div>
                                     Room No. 603, 6/F, Tower A, <br/>New Mandarin Plaza, <br/>14 Science Museum Road,<br> T.S.T, Hong Kong
                                 </li>
-<!--                                <li>
-                                    <a href="https://goo.gl/maps" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
-                                </li>-->
+                                <!--                                <li>
+                                                                    <a href="https://goo.gl/maps" target="_blank" class="button_type_2 color_light r_corners tr_all color_light _hover d_inline_m fs_medium t_md_align_c w_break">Open in Google Maps</a>
+                                                                </li>-->
                             </ul>
                         </div>
                     </div>
@@ -159,28 +159,21 @@
                             arrivals and exclusive sales.</p>
                         <form class="" method="post" action='<?php echo site_url("subscribe") ?>'>
                             <ul>
+
                                 <li class="m_bottom_20">
                                     <select name="country"  style="height: 40px;
                                             margin-bottom: 10px;" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" required="required">
                                         <option value="" class="">select country</option>
-                                        <option value="USA">USA</option>
-                                        <option value="UK">UK</option>
-                                        <option value="UAE">UAE</option>
-                                        <option value="Switzerland">Switzerland</option>
-                                        <option value="Spain">Spain</option>
-                                        <option value="Qatar">Qatar</option>
-                                        <option value="Norway">Norway</option>
-                                        <option value="New Zealand">New Zealand</option>
-                                        <option value="Netherlands The">Netherlands The</option>
-                                        <option value="Mexico">Mexico</option>
-                                        <option value="Luxembourg">Luxembourg</option>
-                                        <option value="Japan">Japan</option>
-                                        <option value="Ireland">Ireland</option>
-                                        <option value="Hong Kong">Hong Kong</option>
-                                        <option value="Germany">Germany</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="Belgium">Belgium</option>
-                                        <option value="Australia">Australia</option>
+                                        <?php
+                                        $countryArray = ['USA', 'UK', 'UAE', 'Switzerland', 'Spain', 'Qatar', 'Norway', 'New Zealand', 'Netherlands', 'Mexico',
+                                            'Luxembourg', 'Japan', 'Ireland', 'Hong Kong', 'Germany', 'Canada', 'Belgium', 'Australia'];
+                                      sort($countryArray);
+                                        foreach ($countryArray as $key => $value) {
+                                            ?>
+                                        <option value="<?php echo $value;?>"><?php echo $value;?></option>
+                                            <?php
+                                        }
+                                        ?>
                                     </select>
 
                                     <input type="email" name="email" placeholder="Your email address" class="r_corners bg_light w_full fw_light color_dark">

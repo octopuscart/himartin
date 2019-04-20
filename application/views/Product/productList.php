@@ -141,7 +141,7 @@ $image2 = "";
 
                                     <div class="clearfix fp_buttons">
                                         <div class="half_column w_md_full animate_fctl tr_all f_left with_ie f_md_none m_md_bottom_10">
-                                            <a href="#" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-pencil f_left m_right_10 fs_large"></i><span class="fs_medium">Customize Now</span></span></a>
+                                            <a href="#" ng-click="commingSoon()" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-pencil f_left m_right_10 fs_large"></i><span class="fs_medium">Customize Now</span></span></a>
                                         </div>
                                         <div class="half_column w_md_full animate_fctr tr_all f_left clearfix with_ie f_md_none">
                                             <a href="#" class="button_type_6 relative tooltip_container f_right f_md_none d_md_inline_b d_block color_dark r_corners vc_child tr_all color_blue_hover t_align_c"><i class="icon-basket d_inline_m fs_large"></i><span class="d_block r_corners color_default tooltip fs_small fw_normal tr_all">Add to Cart</span></a>

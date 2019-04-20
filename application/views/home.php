@@ -150,8 +150,10 @@ $this->load->view('layout/header');
                     <p class="m_bottom_5">
                         Don’t compromise for something that is off even by a bit, come to us, because we guarantee fit.
                     </p>
-                    <p class="m_bottom_5">
-                        Book an Appointment Now!
+                    <p class="m_bottom_5 m_top_10">
+                        
+                        <a href="<?php echo site_url("booking");?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-pencil f_left m_right_10 fs_large"></i><span class="fs_medium">Book an Appointment Now!</span></span></a>
+
                     </p>
                 </div>
         </article>
@@ -487,7 +489,7 @@ $this->load->view('layout/header');
 
 <section class="section_offset relative bg_light_2">
     <div class="container">
-        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">Trip To Countries</h3>
+        <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">Our Ongoing Trunk Shows</h3>
         <!--projects carousel-->
         <div class="row">
             <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">

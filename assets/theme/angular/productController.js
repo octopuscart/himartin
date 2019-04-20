@@ -8,6 +8,12 @@ App.controller('ProductController', function ($scope, $http, $timeout, $interval
     $scope.init = 0;
     $scope.checkproduct = 0;
     $scope.pricerange = {'min': 0, 'max': 0};
+    
+    $scope.commingSoon = function(){
+        swal({
+                title: 'Coming Soon...',
+            })
+    }
 
     $scope.getProducts = function (attrs) {
         var argsk = [];
