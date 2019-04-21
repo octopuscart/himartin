@@ -95,7 +95,7 @@
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Contact No.</th>
                     <td><?php echo $appointment['contact_no']; ?></td>
                 </tr>
-                 <tr>
+                <tr>
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Country</th>
                     <td><?php echo $appointment['country']; ?></td>
                 </tr>
@@ -128,6 +128,15 @@
 
 
             </table>
+
+            <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
+                <tr>
+                    <td style="text-align: center">
+                        (Note:Please bring your best fitted suit along with you.)
+                    </td>
+                </tr>
+            </table>
+
             <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
 
                 <tr>

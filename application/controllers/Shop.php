@@ -278,19 +278,30 @@ class Shop extends CI_Controller {
         
         
         $stylearray = array(
-            'MensCustomSuits' => array("gender"=>"Mens"),
-            "MensCustomShirts" => array("gender"=>"Mens"),
-            'MensCustomJackets' => array("gender"=>"Mens"),
-            'MensCustomVests' => array("gender"=>"Mens"),
-            'MensCustomPants' => array("gender"=>"Mens"),
-            'MensCustomTuxedo'=>array("gender"=>"Mens"),
-            'MensCustomTopCoat'=>array("gender"=>"Mens"),
-            'WomensCustomShirts'=>array("gender"=>"Womens"),
-            'WomensCustomDress'=>array("gender"=>"Womens"),
-            'WomensCustomSuits'=>array("gender"=>"Womens"),
-            'WomensCustomPants'=>array("gender"=>"Womens"),
-            'WomensCustomTopCoat'=>array("gender"=>"Womens"),
+            'MensCustomSuits' => array("gender"=>"Mens", "title"=>"Mens Custome Suits"),
+            "MensCustomShirts" => array("gender"=>"Mens", "title"=>"Mens Custome Shirts"),
+            'MensCustomJackets' => array("gender"=>"Mens", "title"=>"Mens Custome Jackets"),
+            'MensCustomVests' => array("gender"=>"Mens", "title"=>"Mens Custome Vests"),
+            'MensCustomPants' => array("gender"=>"Mens", "title"=>"Mens Custome Pants"),
+            'MensCustomTuxedo'=>array("gender"=>"Mens", "title"=>"Mens Custome Tuxedo Suts"),
+            'MensCustomTopCoat'=>array("gender"=>"Mens", "title"=>"Mens Custome Top Coats"),
+            'WomensCustomShirts'=>array("gender"=>"Womens", "title"=>"Womens Custome Suits"),
+            'WomensCustomDress'=>array("gender"=>"Womens", "title"=>"Womens Custome Dress"),
+            'WomensCustomSuits'=>array("gender"=>"Womens", "title"=>"Womens Custome Suits"),
+            'WomensCustomPants'=>array("gender"=>"Womens", "title"=>"Womens Custome Pants"),
+            'WomensCustomTopCoat'=>array("gender"=>"Womens", "title"=>"Womens Custome Top Coats"),
         );
+        $configuration = $this->config->load('seo_config');
+        
+        $seotitle_n = $stylearray[$styleid]['title'];
+        
+        $seotitle_o = $this->config->item("seo_title");
+        
+        $seotitle = str_replace("Custom Made Suits, Shirts, Tuxedos", $seotitle_n, $seotitle_o);
+        
+        $this->config->set_item('seo_title', $seotitle);
+        
+       
 
         $data['active_block'] = $styleid;
         $data['active_gender'] = $stylearray[$styleid];

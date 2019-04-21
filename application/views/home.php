@@ -26,6 +26,15 @@ $this->load->view('layout/header');
     <div class="r_slider">
 
         <ul>
+            
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/d1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+
+            </li>
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/d6.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+
+            </li>
 
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider3.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
