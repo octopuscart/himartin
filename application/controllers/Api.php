@@ -491,56 +491,7 @@ class Api extends REST_Controller {
             'MensCustomSuits' => [],
             "MensCustomShirts" => [],
             'MensCustomJackets' => [],
-            'MensCustomVests' => [
-                array(
-                    "style_no" => "1001",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/10.jpg",
-                ),
-                array(
-                    "style_no" => "1002",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/2.jpg",
-                ),
-                array(
-                    "style_no" => "1003",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/3.jpg",
-                ),
-                array(
-                    "style_no" => "1004",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/4.jpg",
-                ),
-                array(
-                    "style_no" => "1005",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/5.jpg",
-                ),
-                array(
-                    "style_no" => "1007",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/7.jpg",
-                ),
-                array(
-                    "style_no" => "1008",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/8.jpg",
-                ),
-                array(
-                    "style_no" => "1009",
-                    "title" => "SUPER 130'S",
-                    "short_description" => "SUPER 130'S MADE IN ITALY",
-                    "image" => "mens/vests/9.jpg",
-                ),
-            ],
+            'MensCustomVests' => [],
             'MensCustomPants' => [],
             'MensCustomTuxedo' => [],
             'MensCustomTopCoat' => [],
@@ -551,6 +502,19 @@ class Api extends REST_Controller {
             'WomensCustomTopCoat' => []
         );
 
+        
+        $vestimagelist = [1,2,3,4,5,7,8,9];
+        foreach ($vestimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "100$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/vests/$value.jpg",
+            );
+            array_push($stylearray['MensCustomVests'], $temp);
+        }
+        
+        
         $shirtimagelist = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
         foreach ($shirtimagelist as $key => $value) {
             $temp = array(
@@ -574,12 +538,9 @@ class Api extends REST_Controller {
             array_push($stylearray['MensCustomJackets'], $temp);
         }
 
-        $suitsimagelist = [
-            31, 32, 33,
-            34, 35, 36, 37, 38, 39, 40,
-            1, 2, 3, 4, 5, 6, 7, 15,
-            16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
-            27, 28, 29
+        $suitsimagelist = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+            1, 2, 3, 4, 5, 6, 7, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+            24, 25, 26, 27, 28, 29
         ];
         foreach ($suitsimagelist as $key => $value) {
             $temp = array(

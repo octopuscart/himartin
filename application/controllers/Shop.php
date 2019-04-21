@@ -151,9 +151,9 @@ class Shop extends CI_Controller {
     public function aboutus() {
         $this->load->view('Pages/aboutus');
     }
-    
-    public function faqs(){
-         $this->load->view('Pages/faqs');
+
+    public function faqs() {
+        $this->load->view('Pages/faqs');
     }
 
     public function subscribe() {
@@ -275,37 +275,197 @@ class Shop extends CI_Controller {
     }
 
     public function lookbook_style($styleid) {
-        
-        
+
+
         $stylearray = array(
-            'MensCustomSuits' => array("gender"=>"Mens", "title"=>"Mens Custome Suits"),
-            "MensCustomShirts" => array("gender"=>"Mens", "title"=>"Mens Custome Shirts"),
-            'MensCustomJackets' => array("gender"=>"Mens", "title"=>"Mens Custome Jackets"),
-            'MensCustomVests' => array("gender"=>"Mens", "title"=>"Mens Custome Vests"),
-            'MensCustomPants' => array("gender"=>"Mens", "title"=>"Mens Custome Pants"),
-            'MensCustomTuxedo'=>array("gender"=>"Mens", "title"=>"Mens Custome Tuxedo Suts"),
-            'MensCustomTopCoat'=>array("gender"=>"Mens", "title"=>"Mens Custome Top Coats"),
-            'WomensCustomShirts'=>array("gender"=>"Womens", "title"=>"Womens Custome Suits"),
-            'WomensCustomDress'=>array("gender"=>"Womens", "title"=>"Womens Custome Dress"),
-            'WomensCustomSuits'=>array("gender"=>"Womens", "title"=>"Womens Custome Suits"),
-            'WomensCustomPants'=>array("gender"=>"Womens", "title"=>"Womens Custome Pants"),
-            'WomensCustomTopCoat'=>array("gender"=>"Womens", "title"=>"Womens Custome Top Coats"),
+            'MensCustomSuits' => array("gender" => "Mens", "title" => "Mens Custome Suits"),
+            "MensCustomShirts" => array("gender" => "Mens", "title" => "Mens Custome Shirts"),
+            'MensCustomJackets' => array("gender" => "Mens", "title" => "Mens Custome Jackets"),
+            'MensCustomVests' => array("gender" => "Mens", "title" => "Mens Custome Vests"),
+            'MensCustomPants' => array("gender" => "Mens", "title" => "Mens Custome Pants"),
+            'MensCustomTuxedo' => array("gender" => "Mens", "title" => "Mens Custome Tuxedo Suts"),
+            'MensCustomTopCoat' => array("gender" => "Mens", "title" => "Mens Custome Top Coats"),
+            'WomensCustomShirts' => array("gender" => "Womens", "title" => "Womens Custome Suits"),
+            'WomensCustomDress' => array("gender" => "Womens", "title" => "Womens Custome Dress"),
+            'WomensCustomSuits' => array("gender" => "Womens", "title" => "Womens Custome Suits"),
+            'WomensCustomPants' => array("gender" => "Womens", "title" => "Womens Custome Pants"),
+            'WomensCustomTopCoat' => array("gender" => "Womens", "title" => "Womens Custome Top Coats"),
         );
         $configuration = $this->config->load('seo_config');
-        
+
         $seotitle_n = $stylearray[$styleid]['title'];
-        
+
         $seotitle_o = $this->config->item("seo_title");
-        
+
         $seotitle = str_replace("Custom Made Suits, Shirts, Tuxedos", $seotitle_n, $seotitle_o);
-        
+
         $this->config->set_item('seo_title', $seotitle);
-        
-       
+
+
 
         $data['active_block'] = $styleid;
         $data['active_gender'] = $stylearray[$styleid];
         $this->load->view('Pages/lookbook_style', $data);
+    }
+
+    public function stylingTips() {
+        $stylearray = array(
+            'stylebook' => [],
+        );
+
+        $suitsimagelist = [31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+            1, 2, 3, 4, 5, 6, 7, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+            24, 25, 26, 27, 28, 29
+        ];
+        foreach ($suitsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "90$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/suits/$value.jpg",
+                
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+
+
+
+        $shirtimagelist = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
+        foreach ($shirtimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "80$value",
+                "title" => "2 PLY 100% COTTON",
+                "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                "image" => "mens/shirts/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+
+        $jacketsimagelist = [8, 9, 10, 11, 12, 13, 14, 1, 3, 4, 5, 7,];
+        foreach ($jacketsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "90$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/jackets/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $vestimagelist = [2, 3, 4, 5, 7, 8, 9];
+        foreach ($vestimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "100$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/vests/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $pantimagelist = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        foreach ($pantimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "200$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "mens/pant/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $tuxedoimagelist = [10, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        foreach ($tuxedoimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "50$value",
+                "title" => "TUXEDO",
+                "short_description" => "TUXEDO - MADE IN ITALY",
+                "image" => "mens/tuxedo/$value.jpg",
+            );
+            array_push($stylearray['MensCustomTuxedo'], $temp);
+        }
+
+        $topcoatimagelist = [10, 11, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        foreach ($topcoatimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "300$value",
+                "title" => "100% CASHMERE",
+                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "image" => "mens/topcoat/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $wshirtimagelist = [14, 15, 16, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        foreach ($wshirtimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "120$value",
+                "title" => "2 PLY 100% COTTON",
+                "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                "image" => "womens/shirts/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $wdressimagelist = [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8];
+        foreach ($wdressimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "120$value",
+                "title" => "100% WOOL",
+                "short_description" => "100% WOOL MADE IN ITALY",
+                "image" => "womens/dress/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $wsuitsimagelist = [12, 13, 16, 18, 19, 23, 25, 26, 29, 31, 32, 34, 36, 37, 1, 2, 3, 4, 5, 6, 7, 8];
+        foreach ($wsuitsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "130$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "womens/suits/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $wpantsimagelist = [11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        foreach ($wpantsimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "140$value",
+                "title" => "SUPER 130'S",
+                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "image" => "womens/pants/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+
+        $wtopcoatimagelist = [1, 2, 3, 4, 5, 6, 7, 8,];
+        foreach ($wtopcoatimagelist as $key => $value) {
+            $temp = array(
+                "style_no" => "150$value",
+                "title" => "100% CASHMERE",
+                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "image" => "womens/topcoat/$value.jpg",
+            );
+            array_push($stylearray['stylebook'], $temp);
+        }
+        
+        foreach ($stylearray['stylebook'] as $key => $value) {
+            $stylearray['stylebook'][$key]["description"] = " Tailoring is what we do better than anyone else in this industry. Our attention to details and workmanship separates us from our competitors. We believe in building personal relationship and stand by our product.
+
+From our humble beginnings with a small store in TST, Kowloon, Hong Kong, we have now moved worldwide with overseas locations and our regular trips to major cities across the globe. Our areas of service include Australia, Belgium, Canada, New Zealand, Germany, Holland, Ireland, Japan, Switzerland, UK and USA.";
+        }
+        
+        $data['stylebook'] = $stylearray;
+        $this->load->view('Pages/stylebook', $data);
+    }
+    
+    
+    function styleTipsDetails($style_index){
+        
     }
 
 }
