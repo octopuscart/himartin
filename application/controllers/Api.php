@@ -405,8 +405,26 @@ class Api extends REST_Controller {
 
     //get appinment class
     function getAppointment_get() {
+        $this->db->order_by("start_date asc");
         $query = $this->db->get('appointment_entry');
+
         $appointment_entry = $query->result_array();
+
+        $countrydata = array();
+        $citydaydata = array();
+
+        foreach ($appointment_entry as $key => $value) {
+            $cityday = trim($value["city_state"] . ", " . $value["days"]);
+            if (isset($citydaydata[$cityday])) {
+                array_push($citydaydata[$cityday], $value['date']);
+            } else {
+                $citydaydata[$cityday] = [$value['date']];
+            }
+        }
+
+
+
+        $citydata = array();
 
         $this->db->select("country");
 //        $this->db->where('status', 'active');
@@ -421,12 +439,13 @@ class Api extends REST_Controller {
 
 
         //array of cities
+        $currentdata = date("Y-m-d");
         $appointment_city_data = array();
         $this->db->select("city_state, days, hotel, address,country");
-//            $this->db->where('status', 'active');
+        //$this->db->where('date>', "$currentdata"); //Conditon for data greater then current date
         $this->db->group_by("city_state");
         $this->db->group_by("days");
-        $this->db->order_by("city_state asc");
+        $this->db->order_by("date asc");
         $query = $this->db->get('appointment_entry');
 
         $appointment_city_dates = $query->result_array();
@@ -436,11 +455,11 @@ class Api extends REST_Controller {
             if (isset($country_city_array[$country])) {
                 array_push($country_city_array[$country], array(
                     "city_state" => $value["city_state"],
-                    "city_days" => $value["city_state"] . ", " . $value["days"]));
+                    "city_days" => trim($value["city_state"] . ", " . $value["days"])));
             } else {
                 $country_city_array[$country] = [array(
                 "city_state" => $value["city_state"],
-                "city_days" => $value["city_state"] . ", " . $value["days"])];
+                "city_days" => trim($value["city_state"] . ", " . $value["days"]))];
             }
 
             //time data from dates
@@ -450,6 +469,7 @@ class Api extends REST_Controller {
             $this->db->order_by("start_date asc");
             $query = $this->db->get('appointment_entry');
             $appointment_date_time = $query->result_array();
+
             $appointment_city_data[$value['city_state']] = array(
                 'hotel' => $value["hotel"],
                 'address' => $value["address"],
@@ -460,7 +480,9 @@ class Api extends REST_Controller {
         $appointment_final_data["country_data"] = $appointment_country;
         $appointment_final_data['city_hotel_data'] = $appointment_city_data;
         $appointment_final_data["country_city"] = $country_city_array;
+        $appointment_final_data["citydays"] = $citydaydata;
 
+        //print_r($appointment_final_data);
         $this->response($appointment_final_data);
     }
 
@@ -529,7 +551,7 @@ class Api extends REST_Controller {
             'WomensCustomTopCoat' => []
         );
 
-        $shirtimagelist = [8,9,10,11,12,1, 2, 3, 4, 5, 6, 7];
+        $shirtimagelist = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
         foreach ($shirtimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "80$value",
@@ -539,9 +561,9 @@ class Api extends REST_Controller {
             );
             array_push($stylearray['MensCustomShirts'], $temp);
         }
-        
-        
-        $jacketsimagelist = [8,9,10,11,12,13,14, 1, 3, 4, 5, 7, ];
+
+
+        $jacketsimagelist = [8, 9, 10, 11, 12, 13, 14, 1, 3, 4, 5, 7,];
         foreach ($jacketsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "90$value",
@@ -613,7 +635,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomShirts'], $temp);
         }
 
-        $wdressimagelist = [9,10,11,12,13,14,15,1, 2, 3, 4, 5, 6, 7, 8];
+        $wdressimagelist = [9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8];
         foreach ($wdressimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "120$value",
@@ -624,7 +646,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomDress'], $temp);
         }
 
-        $wsuitsimagelist = [12,13,16,18,19,23,25,26,29,31,32,34,36,37,1, 2, 3, 4, 5, 6, 7, 8];
+        $wsuitsimagelist = [12, 13, 16, 18, 19, 23, 25, 26, 29, 31, 32, 34, 36, 37, 1, 2, 3, 4, 5, 6, 7, 8];
         foreach ($wsuitsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "130$value",
@@ -635,7 +657,7 @@ class Api extends REST_Controller {
             array_push($stylearray['WomensCustomSuits'], $temp);
         }
 
-        $wpantsimagelist = [11,12,13,14,1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        $wpantsimagelist = [11, 12, 13, 14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         foreach ($wpantsimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "140$value",

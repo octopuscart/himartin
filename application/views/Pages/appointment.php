@@ -76,8 +76,8 @@ if (isset($prefixshopappointment[$cdateshort])) {
 
                                 <li class="m_bottom_10 m_xs_bottom_15">
                                     <div class="custom_select">
-                                        <select class="r_corners d_inline_m w_sm_full" name="city_state"  ng-model="appointmentSelected.city_state" ng-change="selectDateByCity(appointmentSelected.city_state)">
-                                            <option value="{{city_state.city_state}}" ng-repeat="city_state in appointmentSelected.city_state_list">{{city_state.city_days}}</option>                                        
+                                        <select class="r_corners d_inline_m w_sm_full" name="city_state"  ng-model="appointmentSelected.city_days" ng-change="selectDateByCity(appointmentSelected.city_days)">
+                                            <option value="{{city_state.city_days}}" ng-repeat="city_state in appointmentSelected.city_state_list">{{city_state.city_days}}</option>                                        
                                         </select>
                                     </div>
                                     <input type="hidden" name="country" ng-model="appointmentSelected.country" value="{{appointmentSelected.country}}">
@@ -107,7 +107,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                         <div class="col-md-6">
                                             <div class="custom_select">
                                                 <select class="r_corners d_inline_m w_sm_full"  ng-model="appointmentSelected.date" ng-change="timeSlotByDate()" style="    margin-bottom: 5px;">
-                                                    <option value="{{cdate.date}}" ng-repeat="cdate in appointmentData.city_hotel[appointmentSelected.city_state].dates">{{cdate.date}}</option>                                        
+                                                    <option value="{{cdate}}" ng-repeat="cdate in appointmentData.cityDateData[appointmentSelected.city_days]">{{cdate}}</option>                                        
                                                 </select>
                                             </div>
 
@@ -132,7 +132,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                     <input type="text" name="contact_no" placeholder="Contact No." class="r_corners w_full"   ng-model="appointmentSelected.contact_no" value="{{appointmentSelected.contact_no}}"  required="">
                                 </li>
                                 <li class="m_bottom_10 m_xs_bottom_15">
-                                    <textarea name="remark" placeholder="Remark" class="r_corners w_full"  style="height: 85px;"  ng-model="appointmentSelected.remark" value="{{appointmentSelected.remark}}"  required=""></textarea>
+                                    <textarea name="remark" placeholder="Remark" class="r_corners w_full"  style="height: 85px;"  ng-model="appointmentSelected.remark" value="{{appointmentSelected.remark}}"  ></textarea>
                                 </li>
                             </ul>
                             <button name="submit" type="submit" class="button_type_3 color_dark r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
@@ -201,10 +201,13 @@ if (isset($prefixshopappointment[$cdateshort])) {
         }
 
         $scope.selectDateByCity = function (city_state) {
+            var currentcity = city_state.split(",")[0];
+            $scope.appointmentSelected.city_state = currentcity;
             $timeout(function () {
-                $scope.appointmentSelected.date = $scope.appointmentData.city_hotel[$scope.appointmentSelected.city_state].dates[0].date;
-                $(".hotel_address").html($scope.appointmentData.city_hotel[$scope.appointmentSelected.city_state].address);
-                var hotel_address = ($scope.appointmentData.city_hotel[$scope.appointmentSelected.city_state].hotel) + "+" + $scope.appointmentSelected.city_state
+                
+                $scope.appointmentSelected.date = $scope.appointmentData.cityDateData[city_state][0];
+                $(".hotel_address").html($scope.appointmentData.city_hotel[currentcity].address);
+                var hotel_address = ($scope.appointmentData.city_hotel[currentcity].hotel) + "+" + currentcity;
                 var iframdata = "<iframe  frameborder='0' scrolling='no'  marginheight='0' marginwidth='0'  height='100px' width='100%'  src='https://maps.google.com/?q=" + hotel_address + "&output=embed'></iframe>";
                 $(".hotelmap").html(iframdata);
                 $scope.timeSlotByDate();
@@ -217,7 +220,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
             $timeout(function () {
                 $scope.appointmentSelected.city_state = $scope.appointmentData.city_state[country][0].city_state;
                 $scope.appointmentSelected.city_days = $scope.appointmentData.city_state[country][0].city_days;
-                $scope.selectDateByCity($scope.appointmentSelected.city_state);
+                $scope.selectDateByCity($scope.appointmentSelected.city_days);
 
             }, 100)
         }
@@ -263,6 +266,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
         };
         $http.get(url).then(function (rdata) {
             var appointmentdata = rdata.data;
+            $scope.appointmentData.cityDateData = appointmentdata.citydays;
             $scope.appointmentData.country = appointmentdata.country_data;
             $scope.appointmentData.city_state = appointmentdata.country_city;
             $scope.appointmentData.city_hotel = appointmentdata.city_hotel_data;
