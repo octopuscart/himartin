@@ -312,7 +312,7 @@ class Shop extends CI_Controller {
             'MensCustomPants' => array("gender" => "Mens", "title" => "Mens Custome Pants"),
             'MensCustomTuxedo' => array("gender" => "Mens", "title" => "Mens Custome Tuxedo Suts"),
             'MensCustomTopCoat' => array("gender" => "Mens", "title" => "Mens Custome Top Coats"),
-            'WomensCustomShirts' => array("gender" => "Womens", "title" => "Womens Custome Suits"),
+            'WomensCustomShirts' => array("gender" => "Womens", "title" => "Womens Custome Shirt"),
             'WomensCustomDress' => array("gender" => "Womens", "title" => "Womens Custome Dress"),
             'WomensCustomSuits' => array("gender" => "Womens", "title" => "Womens Custome Suits"),
             'WomensCustomPants' => array("gender" => "Womens", "title" => "Womens Custome Pants"),
