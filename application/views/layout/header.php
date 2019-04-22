@@ -296,7 +296,7 @@
                                         <span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-phone-1"></i></span>+(852) 2367 2676
                                     </li>
                                     <li class="m_right_20 f_xs_none m_xs_right_0 m_xs_bottom_5">
-                                        <a href="mailto:#" class="color_grey_light d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>sales@hongkongbespoketailors.com</a>
+                                        <a href="mailto:enquire@hongkongbespoketailors.com" class="color_grey_light d_inline_b color_black_hover"><span class="circle icon_wrap_size_1 d_inline_m m_right_8"><i class="icon-mail-alt"></i></span>enquire@hongkongbespoketailors.com</a>
                                     </li>
 
                                 </ul>

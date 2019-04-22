@@ -50,7 +50,7 @@
                                         <i class="icon-mail-alt"></i>
                                     </div>
 
-                                    <a href="mailto:sales@hongkongbespoketailors.com" class="color_black color_light _hover">sales@hongkongbespoketailors.com</a><br/>
+                                    <a href="mailto:enquire@hongkongbespoketailors.com" class="color_black color_light _hover">enquire@hongkongbespoketailors.com</a><br/>
                                 </li>
 
                             </ul>
