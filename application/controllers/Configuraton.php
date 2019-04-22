@@ -12,8 +12,8 @@ class Configuration extends CI_Controller {
     }
 
     public function migration() {
-        
-        
+
+
         if ($this->db->table_exists('configuration_cartcheckout')) {
             // table exists
         } else {
@@ -26,7 +26,7 @@ class Configuration extends CI_Controller {
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;');
         }
-        
+
         $style_tips = array(
             array('id' => '1', 'title' => 'Modern Fit Suit', 'description' => 'If you don’t think you can pull off the slim fit suit just yet, but want to nevertheless exude a heightened sartorial sensibility, by all means consider the modern fit suit. It hovers squarely in the realm between slim fit and classic fit, and thereby delivers a tight look with breathing room to spare. If you get the material and the accessories right then you can make this work for just about any occasion.', 'image' => 'mfs.jpg', 'tag' => 'Suits, Modern Suits'),
             array('id' => '2', 'title' => 'Single Breasted Suit', 'description' => 'Among men’s suit types, the single breasted suit is the most ubiquitous. The easiest way to spot one is to look for the inclusion of either one, two or three buttons along the seam, or just observe what about 99% of professional men wear to work to every day. By virtue of the single row of buttons, a single breasted suit usually exudes a narrower and tighter appearance. These suits are most frequently paired with notch lapels.
@@ -56,8 +56,10 @@ An unlined suit jacket is bound to cost more than a suit that is completely line
         );
 
         foreach ($style_tips as $key => $value) {
-           // $this->db->insert('style_tips', $value);
+            // $this->db->insert('style_tips', $value);
         }
+
+        echo "Success";
     }
 
 }
