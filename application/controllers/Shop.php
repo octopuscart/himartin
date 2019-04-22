@@ -316,18 +316,46 @@ class Shop extends CI_Controller {
 
     function styleTipsDetails($style_index, $title) {
         $this->db->where('id', $style_index);
-        $query = $this->db->get('style_tips');  
+        $query = $this->db->get('style_tips');
+
         $styleobj = $query->row();
         $data['styleobj'] = $styleobj;
-        
+
         $seotitle_o = $this->config->item("seo_title");
 
-        $seotitle = "Hong Kong Bespoke Tailors | ".$styleobj->title;
+        $seotitle = "Hong Kong Bespoke Tailors | " . $styleobj->title;
         $seodescription = $styleobj->description;
-        
-        
+
         $this->config->set_item('seo_title', $seotitle);
         $this->config->set_item('seo_desc', $seodescription);
+
+        $this->db->from('style_tips');
+        $this->db->order_by("id", "desc");
+        $this->db->limit(5);
+        $query = $this->db->get();
+        $stylebook = $query->result_array();
+
+        
+        $data['stylebook'] = $stylebook;
+        
+        $this->db->from('style_tips');
+        $this->db->order_by("id", "desc");
+        $query = $this->db->get();
+        $stylebook1 = $query->result_array();
+
+        $tagarray1 = array();
+        foreach ($stylebook1 as $key => $value) {
+            $tags = $value['tag'];
+            $tagarray = explode(", ", $tags);
+            foreach ($tagarray as $key1 => $value1) {
+                $tagarray1[$value1] = [];
+            }
+        }
+
+        $data['tagsarray'] = $tagarray1;
+
+        
+
         $this->load->view('Pages/stylebookdeails', $data);
     }
 
