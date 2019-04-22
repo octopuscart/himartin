@@ -38,11 +38,11 @@ function truncate($str, $len) {
 
                         <!--likes-->
 
-                        <a href="https://api.whatsapp.com/send?text=<?php echo urlencode(site_url('styleTips/' . $styleobj->id . "/hongkongbespoketailors")); ?>" class="d_block d_xs_inline_b m_xs_right_5 blog_side_button vc_child t_align_c color_green bg_color_purple_hover color_light_hover bg_light_3 r_corners m_bottom_5 m_top_5 tr_all">
+                        <a target="_blank" href="https://api.whatsapp.com/send?text=<?php echo urlencode(site_url('styleTips/' . $styleobj->id . "/hongkongbespoketailors")); ?>" class="d_block d_xs_inline_b m_xs_right_5 blog_side_button vc_child t_align_c color_green bg_color_purple_hover color_light_hover bg_light_3 r_corners m_bottom_5 m_top_5 tr_all">
                             <i class="fa fa-whatsapp d_inline_m" style="font-size: 40px;"></i>
                         </a>
                         <!-- AddThis Button BEGIN -->
-                        <a href="http://twitter.com/intent/tweet?text=<?php echo urlencode(site_url('styleTips/' . $styleobj->id . "/hongkongbespoketailors")); ?>" class="d_block d_xs_inline_b m_xs_right_5 blog_side_button vc_child t_align_c color_blue bg_color_purple_hover color_light_hover bg_light_3 r_corners m_bottom_5 m_top_5 tr_all">
+                        <a target="_blank" href="http://twitter.com/intent/tweet?text=<?php echo urlencode(site_url('styleTips/' . $styleobj->id . "/hongkongbespoketailors")); ?>" class="d_block d_xs_inline_b m_xs_right_5 blog_side_button vc_child t_align_c color_blue bg_color_purple_hover color_light_hover bg_light_3 r_corners m_bottom_5 m_top_5 tr_all">
                             <i class="fa fa-twitter d_inline_m" style="font-size: 40px;"></i>
                         </a>
 
