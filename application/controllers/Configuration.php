@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     public function migration() {
 
 
-        if ($this->db->table_exists('configuration_cartcheckout')) {
+        if ($this->db->table_exists('style_tips')) {
             // table exists
         } else {
             $this->db->query('CREATE TABLE IF NOT EXISTS `style_tips` (
@@ -56,7 +56,8 @@ An unlined suit jacket is bound to cost more than a suit that is completely line
         );
 
         foreach ($style_tips as $key => $value) {
-             $this->db->insert('style_tips', $value);
+            print_r($value);
+            $this->db->insert('style_tips', $value);
         }
 
         echo "Success";
