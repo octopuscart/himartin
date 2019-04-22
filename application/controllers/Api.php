@@ -445,6 +445,7 @@ class Api extends REST_Controller {
         //$this->db->where('date>', "$currentdata"); //Conditon for data greater then current date
         $this->db->group_by("city_state");
         $this->db->group_by("days");
+        $this->db->order_by("city_state asc");
         $this->db->order_by("date asc");
         $query = $this->db->get('appointment_entry');
 
@@ -477,6 +478,8 @@ class Api extends REST_Controller {
                 'dates' => $appointment_date_time
             );
         }
+        //print_r($appointment_city_data);
+        
         $appointment_final_data["country_data"] = $appointment_country;
         $appointment_final_data['city_hotel_data'] = $appointment_city_data;
         $appointment_final_data["country_city"] = $country_city_array;
