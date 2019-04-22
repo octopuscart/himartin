@@ -56,7 +56,7 @@ An unlined suit jacket is bound to cost more than a suit that is completely line
         );
 
         foreach ($style_tips as $key => $value) {
-             $this->db->insert('style_tips', $value);
+           //  $this->db->insert('style_tips', $value);
         }
 
         echo "Success";
