@@ -70,9 +70,25 @@
                                      height: 80px;
                                      width: auto;"/><br/>
                             <h4 style="color: black;    margin-top: 0px;"> Your Appointment Has Been Booked <br>
-                                    <small>
-                                        Appointment Date & Time: <?php echo date_format(date_create($appointment['select_date'] . ' ' . $appointment['select_time']), "l, d F Y"); ?> (<?php echo $appointment['select_time']; ?>)
-                                    </small>
+                                    <?php
+                                    if ($appointment['country'] == 'Hong Kong') {
+                                        $appointmentdater = $appointment['select_date'];
+                                        $appointmentdate = explode("T", $appointmentdater)[0];
+                                        $appointmentdate = str_replace('"', "", $appointmentdate);
+                                        $appointment['select_date'] = $appointmentdate;
+                                        ?>
+                                        <small>
+                                            Appointment Date & Time: <?php echo date_format(date_create($appointmentdate . ' ' . $appointment['select_time']), "l, d F Y"); ?> (<?php echo $appointment['select_time']; ?>)
+                                        </small>
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <small>
+                                            Appointment Date & Time: <?php echo date_format(date_create($appointment['select_date'] . ' ' . $appointment['select_time']), "l, d F Y"); ?> (<?php echo $appointment['select_time']; ?>)
+                                        </small>
+                                        <?php
+                                    }
+                                    ?>
                             </h4>
                         </center>
                     </td>
@@ -99,18 +115,35 @@
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Country</th>
                     <td><?php echo $appointment['country']; ?></td>
                 </tr>
-                <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">State/City</th>
-                    <td><?php echo $appointment['city_state']; ?> (<?php echo $appointment['city_days']; ?>)</td>
-                </tr>
-                <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Name</th>
-                    <td><?php echo $appointment['hotel']; ?></td>
-                </tr>
-                <tr>
-                    <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Address</th>
-                    <td><?php echo $appointment['address']; ?></td>
-                </tr>
+
+                <?php
+                if ($appointment['country'] == 'Hong Kong') {
+                    $appointmentdater = $appointment['select_date'];
+                    ?>
+                    
+                    <tr>
+                        <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Location</th>
+                        <td><?php echo $appointment['address']; ?></td>
+                    </tr>
+                    <?php
+                } else {
+                    ?>
+                    <tr>
+                        <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">State/City</th>
+                        <td><?php echo $appointment['city_state']; ?> (<?php echo $appointment['city_days']; ?>)</td>
+                    </tr>
+                    <tr>
+                        <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Name</th>
+                        <td><?php echo $appointment['hotel']; ?></td>
+                    </tr>
+                    <tr>
+                        <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Hotel Address</th>
+                        <td><?php echo $appointment['address']; ?></td>
+                    </tr>
+                    <?php
+                }
+                ?>
+
                 <tr>
                     <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Date</th>
                     <td><?php echo $appointment['select_date']; ?></td>

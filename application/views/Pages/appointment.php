@@ -76,7 +76,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
 
                                 <li class="m_bottom_10 m_xs_bottom_15">
                                     <div class="custom_select">
-                                        <select class="r_corners d_inline_m w_sm_full" name="city_state"  ng-model="appointmentSelected.city_days" ng-change="selectDateByCity(appointmentSelected.city_days)">
+                                        <select class="r_corners d_inline_m w_sm_full" name="city_state"  ng-model="appointmentSelected.city_days" ng-change="selectDateByCity(appointmentSelected.city_days)" ng-if="appointmentSelected.country != 'Hong Kong'">
                                             <option value="{{city_state.city_days}}" ng-repeat="city_state in appointmentSelected.city_state_list">{{city_state.city_days}}</option>                                        
                                         </select>
                                     </div>
@@ -95,7 +95,10 @@ if (isset($prefixshopappointment[$cdateshort])) {
 
                                 <div class="row" style="margin: 10px 0px;">
                                     <div class="col-md-6">
-                                        <b>{{appointmentData.city_hotel[appointmentSelected.city_state].hotel}}</b>
+                                        <b ng-if="appointmentSelected.country != 'Hong Kong'">{{appointmentData.city_hotel[appointmentSelected.city_state].hotel}}</b>
+                                        <b ng-if="appointmentSelected.country == 'Hong Kong'">Hong Kong Bespoke Tailors
+                                        </b>
+
                                         <p class="hotel_address"></p>
                                     </div>
                                     <div class="col-md-6 hotelmap">
@@ -106,9 +109,11 @@ if (isset($prefixshopappointment[$cdateshort])) {
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="custom_select">
-                                                <select class="r_corners d_inline_m w_sm_full"  ng-model="appointmentSelected.date" ng-change="timeSlotByDate()" style="    margin-bottom: 5px;">
+                                                <select class="r_corners d_inline_m w_sm_full"  ng-model="appointmentSelected.date" ng-change="timeSlotByDate()" style="    margin-bottom: 5px;" ng-if="appointmentSelected.country != 'Hong Kong'">
                                                     <option value="{{cdate}}" ng-repeat="cdate in appointmentData.cityDateData[appointmentSelected.city_days]">{{cdate}}</option>                                        
                                                 </select>
+                                                <input type="date"  ng-model="appointmentSelected.date" ng-init="appointmentSelected.date=<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" min="<?php echo date('Y-m-d');?>" ng-if="appointmentSelected.country == 'Hong Kong'" >
+
                                             </div>
 
                                         </div>
@@ -204,7 +209,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
             var currentcity = city_state.split(",")[0];
             $scope.appointmentSelected.city_state = currentcity;
             $timeout(function () {
-                
+
                 $scope.appointmentSelected.date = $scope.appointmentData.cityDateData[city_state][0];
                 $(".hotel_address").html($scope.appointmentData.city_hotel[currentcity].address);
                 var hotel_address = ($scope.appointmentData.city_hotel[currentcity].hotel) + "+" + currentcity;
