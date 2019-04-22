@@ -164,8 +164,8 @@
 
             <table class="carttable"  align="center" cellpadding="0" cellspacing="0" width="700" style="background: #fff;padding:20px">
                 <tr>
-                    <td style="text-align: center">
-                        (Note:Please bring your best fitted suit along with you.)
+                    <td style="text-align: center;color:red;font-weight: bold;">
+                        (Note: Please bring your best fitted suit along with you.)
                     </td>
                 </tr>
             </table>
