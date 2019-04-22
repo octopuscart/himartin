@@ -321,23 +321,26 @@ class Shop extends CI_Controller {
         $styleobj = $query->row();
         $data['styleobj'] = $styleobj;
 
-        $seotitle_o = $this->config->item("seo_title");
+        $configuration = $this->config->load('seo_config');
 
-        $seotitle = "Hong Kong Bespoke Tailors | " . $styleobj->title;
+        //$seotitle_o = $this->config->item("seo_title");
+
+        $seotitle1 = "Hong Kong Bespoke Tailors | " . $styleobj->title;
         $seodescription = $styleobj->description;
 
-        $this->config->set_item('seo_title', $seotitle);
+        $this->config->set_item('seo_title', $seotitle1);
         $this->config->set_item('seo_desc', $seodescription);
 
+        
         $this->db->from('style_tips');
         $this->db->order_by("id", "desc");
         $this->db->limit(5);
         $query = $this->db->get();
         $stylebook = $query->result_array();
 
-        
+
         $data['stylebook'] = $stylebook;
-        
+
         $this->db->from('style_tips');
         $this->db->order_by("id", "desc");
         $query = $this->db->get();
@@ -354,7 +357,7 @@ class Shop extends CI_Controller {
 
         $data['tagsarray'] = $tagarray1;
 
-        
+
 
         $this->load->view('Pages/stylebookdeails', $data);
     }
