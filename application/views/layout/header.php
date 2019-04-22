@@ -89,7 +89,7 @@
         array(
             "title" => "Styling Tips",
             "submenu" => "no",
-            "link" => site_url("Shop/stylingTips"),
+            "link" => site_url("stylingTips"),
         ),
         array(
             "title" => "How It Works",

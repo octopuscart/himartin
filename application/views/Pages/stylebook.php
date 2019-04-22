@@ -25,7 +25,7 @@ function truncate($str, $len) {
 
 
             <?php
-            foreach ($stylebook['stylebook'] as $key => $value) {
+            foreach ($stylebook as $key => $value) {
                 ?>
                 <div class="blog_isotope_item">
                     <!--post-->
@@ -33,7 +33,7 @@ function truncate($str, $len) {
                         <!--post content-->
                         <figure>
                             <a href="#" class="d_block wrapper r_corners m_bottom_20">
-                                <img src="<?php echo base_url(); ?>assets/lookbook/<?php echo $value['image']; ?>" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/styletips/<?php echo $value['image']; ?>" alt="">
                             </a>
                             <figcaption>
                                 <h4 class="fw_light m_bottom_5 fs_middle"><a href="" class="color_dark tr_all">
@@ -42,7 +42,7 @@ function truncate($str, $len) {
 
                                 <p class="fw_light m_bottom_12">
                                     <?php echo truncate($value['description'], 200); ?>                                </p>
-                                <a href="#" class="color_purple d_inline_b color_pink_hover d_block m_right_20 fw_light">
+                                <a href="<?php echo site_url("styleTips/" . $value['id'] . "/" . $value['title']) ?>" class="color_purple d_inline_b color_pink_hover d_block m_right_20 fw_light">
                                     <span class="d_inline_m m_right_5 icon_wrap_size_0 circle color_grey_light tr_all">
                                         <i class="icon-angle-right"></i>
                                     </span>
