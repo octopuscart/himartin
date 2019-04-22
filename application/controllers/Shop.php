@@ -18,6 +18,33 @@ class Shop extends CI_Controller {
         } else {
 //            redirect(site_url);
         }
+
+        $this->db->select("country, date");
+//        $this->db->where('status', 'active');
+        $this->db->group_by("country");
+        $this->db->order_by("DATE(date)<DATE(NOW()) asc");
+        $this->db->order_by("IF(MONTH(date) < MONTH(NOW()), MONTH(date) + 12, MONTH(date)),
+ DAY(date) desc");
+
+        $query = $this->db->get('appointment_entry');
+        $appointment_country = $query->result_array();
+
+        $countrylist = array();
+
+        $countryimage = array(
+            "Belgium" => "belgium.jpg",
+            "Australia" => "australia.jpg",
+            "U.S.A" => "usa.jpg",
+            "Canada" => "canada.jpg",
+            "Hong Kong" => "canada.jpg",
+        );
+        foreach ($appointment_country as $key => $value) {
+            $countrylist[$value['country']] = $countryimage[$value['country']];
+        }
+        unset($countrylist['Hong Kong']);
+
+        $data['countrylist'] = $countrylist;
+
         $product_home_slider_bottom = $this->Product_model->product_home_slider_bottom();
         $categories = $this->Product_model->productListCategories(0);
         $data["categories"] = $categories;
@@ -331,7 +358,7 @@ class Shop extends CI_Controller {
         $this->config->set_item('seo_title', $seotitle1);
         $this->config->set_item('seo_desc', $seodescription);
 
-        
+
         $this->db->from('style_tips');
         $this->db->order_by("id", "desc");
         $this->db->limit(5);

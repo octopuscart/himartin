@@ -504,24 +504,19 @@ $this->load->view('layout/header');
             <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
                 <!--project-->
                 <?php
-                $countrydata = [
-                    'usa' => array("title" => "U.S.A"),
-                    'canada' => array("title" => "Canada"),
-                    'belgium' => array("title" => "Belgium"),
-                    'australia' => array("title" => "Australia")
-                ];
+                $countrydata =$countrylist;
                 foreach ($countrydata as $key => $value) {
                     ?>
                     <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
                         <!--image container-->
                         <div class="relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block" style="    background: #000;">
-                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $key; ?>.jpg" alt="">
+                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>" alt="">
                             <!--                            <div class="popup_buttons tr_all_long">
                                                             <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
                                                                 <i class="icon-plus"></i>
                                                             </a>
                                                         </div>-->
-                            <h3 style="font-size:18px;text-align: center;padding: 10px;color:white;"><?php echo $value["title"]; ?></h3>
+                            <h3 style="font-size:18px;text-align: center;padding: 10px;color:white;"><?php echo $key; ?></h3>
                         </div>
                     </figure>
                     <?php

@@ -120,7 +120,7 @@
                 if ($appointment['country'] == 'Hong Kong') {
                     $appointmentdater = $appointment['select_date'];
                     ?>
-                    
+
                     <tr>
                         <th style="background: lightgray;text-align: right;width:200px;padding-right: 10px;">Location</th>
                         <td><?php echo $appointment['address']; ?></td>
