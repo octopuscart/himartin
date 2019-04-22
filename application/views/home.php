@@ -88,7 +88,7 @@ $this->load->view('layout/header');
                 <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_20">
 
                     <!--carousel-->
-                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_" >
+                    <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_" >
                         <!--item-->
                         <div>
                             <div>
@@ -184,7 +184,7 @@ $this->load->view('layout/header');
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
                 <h3 class="color_dark t_align_c m_bottom_15 fw_light">Testimonials</h3>
                 <p class="m_bottom_35 t_align_c color_black">Our Valuable Customer's  Testimonials</p>
-                <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"autoPlay":false,"autoHeight":true,"transitionStyle": "backSlide"}'>
+                <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":2000,"autoHeight":true,"transitionStyle": "backSlide"}'>
 
 
                     <!--item-->
@@ -233,7 +233,7 @@ $this->load->view('layout/header');
             <!--our clients-->
             <section class="col-lg-6 col-md-6 t_sm_align_c" data-appear-animation="fadeInUp" data-appear-animation-delay="150">
                 <!--carousel-->
-                <div class="owl-carousel m_bottom_15" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":2000,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
                     <!--item-->
                     <div>
                         <div class="row">
@@ -290,7 +290,7 @@ $this->load->view('layout/header');
         <h3 class="color_black fw_light t_align_c m_bottom_30" data-appear-animation="bounceInLeft">Our Luxurious Fabric Brands</h3>
         <div class="relative" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
             <div class="t_xs_align_c">
-                <div class="owl-carousel clients brands with_video t_align_c" data-plugin-options='{"pagination":true,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                <div class="owl-carousel clients brands with_video t_align_c" data-plugin-options='{"transitionStyle" : "backSlide"}' data-nav="c_nav_2">
                     <!--item-->
                     <div>
                         <div class="row">
@@ -501,7 +501,7 @@ $this->load->view('layout/header');
         <h3 class="color_dark fw_light m_bottom_15 t_align_c" data-appear-animation="bounceInLeft">Our Ongoing Trunk Shows</h3>
         <!--projects carousel-->
         <div class="row">
-            <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
+            <div class="owl-carousel" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000, "singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
                 <!--project-->
                 <?php
                 $countrydata =$countrylist;
