@@ -28,6 +28,7 @@ class Shop extends CI_Controller {
 
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
+        
 
         $countrylist = array();
 
@@ -37,6 +38,10 @@ class Shop extends CI_Controller {
             "U.S.A" => "usa.jpg",
             "Canada" => "canada.jpg",
             "Hong Kong" => "canada.jpg",
+            "New Zealand"=>"newzealand.jpg",
+            "Netherlands"=>"netherlands.jpg",
+            "Germany"=>"germany.jpg",
+            "Switzerland"=>"sweetzerland.jpg"
         );
         foreach ($appointment_country as $key => $value) {
             $countrylist[$value['country']] = $countryimage[$value['country']];
