@@ -32,11 +32,12 @@ function truncate($str, $len) {
                     <article class="r_corners border_grey">
                         <!--post content-->
                         <figure>
-                            <a href="#" class="d_block wrapper r_corners m_bottom_20">
+                            <a href="<?php echo site_url("styleTips/" . $value['id'] . "/" . $value['title']) ?>" class="d_block wrapper r_corners m_bottom_20">
                                 <img src="<?php echo base_url(); ?>assets/images/styletips/<?php echo $value['image']; ?>" alt="">
                             </a>
                             <figcaption>
-                                <h4 class="fw_light m_bottom_5 fs_middle"><a href="" class="color_dark tr_all">
+                                <h4 class="fw_light m_bottom_5 fs_middle">
+                                    <a href="<?php echo site_url("styleTips/" . $value['id'] . "/" . $value['title']) ?>" class="color_dark tr_all">
                                         <?php echo truncate($value['title'], 100); ?>
                                     </a></h4>
 

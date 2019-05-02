@@ -62,5 +62,7 @@ $route['faqs'] = 'Shop/faqs';
 $route['lookbook/(:any)'] = 'Shop/lookbook_style/$1';
 $route['Products/CustomSuits'] = 'Product/ProductList/2/0';
 $route['stylingTips'] = 'Shop/stylingTips';
+
+$route['stylingTipsTag'] = 'Shop/stylingTipsTag';
 $route['styleTips/(:any)/(:any)'] = 'Shop/styleTipsDetails/$1/$2';
 

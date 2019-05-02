@@ -76,7 +76,7 @@ $womensArray = [
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="<?php echo  $active_gender['gender']=='Mens' ?'active':'';?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
-                    <a href="#mens_tab" aria-controls="mens_tab" role="tab" data-toggle="tab">
+                    <a href="<?php echo site_url("lookbook/MensCustomSuits"); ?>"  role="tab" data-toggle="tab1">
                         <article>
                             <!--post content-->
                             <figure>
@@ -87,7 +87,7 @@ $womensArray = [
                         </article>
                     </a></li>
                 <li role="presentation" class="<?php echo  $active_gender['gender']=='Womens' ?'active':'';?> col-lg-6 col-md-6 col-sm-6 col-xs-6 m_bottom_50 m_xs_bottom_30">
-                    <a href="#womens_tab"  aria-controls="womens_tab" role="tab" data-toggle="tab">
+                    <a href="<?php echo site_url("lookbook/WomensCustomSuits"); ?>"   role="tab" data-toggle="tab1">
                         <article>
                             <!--post content-->
                             <figure>

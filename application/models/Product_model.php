@@ -422,7 +422,9 @@ where pa.product_id in ($productatrvalue) group by attribute_value_id";
     //category list array
     function productListCategories($category_id) {
         $this->db->where('parent_id', $category_id);
+        $this->db->order_by("display_index");
         $query = $this->db->get('category');
+        
         $category = $query->result_array();
         $container = [];
         foreach ($category as $ckey => $cvalue) {

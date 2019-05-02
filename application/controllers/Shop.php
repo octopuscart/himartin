@@ -28,7 +28,7 @@ class Shop extends CI_Controller {
 
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
-        
+
 
         $countrylist = array();
 
@@ -38,10 +38,10 @@ class Shop extends CI_Controller {
             "U.S.A" => "usa.jpg",
             "Canada" => "canada.jpg",
             "Hong Kong" => "canada.jpg",
-            "New Zealand"=>"newzealand.jpg",
-            "Netherlands"=>"netherlands.jpg",
-            "Germany"=>"germany.jpg",
-            "Switzerland"=>"sweetzerland.jpg"
+            "New Zealand" => "newzealand.jpg",
+            "Netherlands" => "netherlands.jpg",
+            "Germany" => "germany.jpg",
+            "Switzerland" => "sweetzerland.jpg"
         );
         foreach ($appointment_country as $key => $value) {
             $countrylist[$value['country']] = $countryimage[$value['country']];
@@ -343,6 +343,18 @@ class Shop extends CI_Controller {
     public function stylingTips() {
         $query = $this->db->get('style_tips');
         $data['stylebook'] = $query->result_array();
+        $this->load->view('Pages/stylebook', $data);
+    }
+
+    public function stylingTipsTag() {
+        $tag = $this->input->get('tag');
+        $this->db->where("tag like '%$tag%'");
+        $query = $this->db->get('style_tips');
+        
+        $tagblock = $query->result_array();
+       
+        $data['stylebook'] = $tagblock;
+        
         $this->load->view('Pages/stylebook', $data);
     }
 
