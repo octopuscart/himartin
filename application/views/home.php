@@ -241,8 +241,8 @@ $this->load->view('layout/header');
                                 <iframe src="https://www.youtube.com/embed/uU6hyrFo-QQ?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
                             </div>
                             <div class="d_inline_m" style="margin-left: 20px;">
-                                <b class="fs_large d_block color_dark">Test user</b>
-                                <p class="fs_medium color_dark">Sydney - 26 Fab, 2019</p>
+                                <b class="fs_large d_block color_dark">John Smith</b>
+                                <p class="fs_medium color_dark">USA - 26 Fab, 2019</p>
                                 <p class="fs_medium color_dark">
                                 <ul class="hr_list d_inline_b social_icons">
                                     <li class="m_right_8"><a href="#" class=" facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
