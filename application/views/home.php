@@ -115,11 +115,7 @@ $this->load->view('layout/header');
                             </div>
                         </div>
 
-                        <div>
-                            <div class="iframe_video_wrap" style='margin-top: 50px;'>
-                                <iframe src="https://www.youtube.com/embed/A9670diiw4o?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0"></iframe>
-                            </div>
-                        </div>
+                        
 
                     </div>
                     <div class="d_table w_full clients_nav">
@@ -233,7 +229,7 @@ $this->load->view('layout/header');
             <!--our clients-->
             <section class="col-lg-6 col-md-6 t_sm_align_c" data-appear-animation="fadeInUp" data-appear-animation-delay="150">
                 <!--carousel-->
-                <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":2000,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
+                <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":false, "nav":false, "autoplayTimeout":2000,"transitionStyle" : "backSlide"}' data-nav="c_nav_">
                     <!--item-->
                     <div>
                         <div class="row">
@@ -242,7 +238,7 @@ $this->load->view('layout/header');
                             </div>
                             <div class="d_inline_m" style="margin-left: 20px;">
                                 <b class="fs_large d_block color_dark">John Smith</b>
-                                <p class="fs_medium color_dark">USA - 26 Fab, 2019</p>
+                                <p class="fs_medium color_dark"></p>
                                 <p class="fs_medium color_dark">
                                 <ul class="hr_list d_inline_b social_icons">
                                     <li class="m_right_8"><a href="#" class=" facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
@@ -252,20 +248,7 @@ $this->load->view('layout/header');
                                 </ul>
                                 </p>
                             </div>
-                            <div class="d_table w_full clients_nav" style="    margin-top: -28px;
-                                 margin-left: -20px;">
-                                <!--paginations container-->
-                                <div class="d_table_cell half_column clients_pags_container v_align_m"></div>
-                                <!--navigations-->
-                                <div class="d_table_cell half_column t_align_r v_align_m">
-                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all c_nav_prev">
-                                        <i class="icon-left-open-big"></i>
-                                    </button>
-                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all c_nav_next">
-                                        <i class="icon-right-open-big"></i>
-                                    </button>
-                                </div>
-                            </div>
+                            
 
                         </div>
                         <!--clients carousel nav-->
