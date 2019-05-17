@@ -115,29 +115,29 @@
                             <li class="m_right_15 m_bottom_15 tooltip_container">
                                 <!--tooltip-->
                                 <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Facebook</span>
-                                <a href="https://www.facebook.com/Hong-Kong-Bespoke-Tailors-1270171433140371/?modal=admin_todo_tour" class="d_block facebook facebook_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                <a href="https://www.facebook.com/Hong-Kong-Bespoke-Tailors-1270171433140371/?modal=admin_todo_tour" target="_blank" class="d_block facebook facebook_static_color icon_wrap_size_2 circle color_grey_light_2">
                                     <i class="icon-facebook fs_small"></i>
                                 </a>
                             </li>
                             <li class="m_right_15 m_bottom_15 tooltip_container">
                                 <!--tooltip-->
                                 <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Twitter</span>
-                                <a href="#" class="d_block twitter twitter_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                <a href="https://twitter.com/1BespokeTailors" target="_blank" class="d_block twitter twitter_static_color icon_wrap_size_2 circle color_grey_light_2">
                                     <i class="icon-twitter fs_small"></i>
                                 </a>
                             </li>
                             <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
                                 <!--tooltip-->
                                 <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
-                                <a href="https://www.instagram.com/hongkongbespoketailors/" class="d_block instagram instagram_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                <a href="https://www.instagram.com/hongkongbespoketailors/" target="_blank" class="d_block instagram instagram_static_color icon_wrap_size_2 circle color_grey_light_2">
                                     <i class="icon-instagramm fs_small"></i>
                                 </a>
                             </li>
                             <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
                                 <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Youtube</span>
-                                <a href="" class="d_block youtube youtube_static_color icon_wrap_size_2 circle color_grey_light_2">
-                                    <i class="icon-youtube fs_small"></i>
+                                <span class="d_block r_corners color_default tooltip fs_small tr_all">TripAdvisor</span>
+                                <a href="https://en.tripadvisor.com.hk/Profile/hkbespoketailors" target="_blank" class="d_block  youtube_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                    <i class="fa fa-tripadvisor fs_small" style="    margin-top: 7px;"></i>
                                 </a>
                             </li>
 

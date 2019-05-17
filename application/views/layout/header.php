@@ -304,11 +304,10 @@
                             <!--social icons-->
                             <div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c">
                                 <ul class="hr_list d_inline_b social_icons">
-                                    <li class="m_right_8"><a href="#" class="color_grey_light facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
-                                    <li class="m_right_8"><a href="#" class="color_grey_light twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
-                                    <li class="m_right_8"><a href="#" class="color_grey_light instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
-
-                                    <li class="m_right_8"><a href="#" class="color_grey_light youtube circle icon_wrap_size_1 d_block"><i class="icon-youtube-play"></i></a></li>
+                                    <li class="m_right_8"><a href="https://www.facebook.com/Hong-Kong-Bespoke-Tailors-1270171433140371/?modal=admin_todo_tour" target="_blank" class="color_grey_light facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
+                                    <li class="m_right_8"><a href="https://twitter.com/1BespokeTailors" class="color_grey_light twitter circle icon_wrap_size_1 d_block" target="_blank"><i class="icon-twitter-1"></i></a></li>
+                                    <li class="m_right_8"><a href="https://www.instagram.com/hongkongbespoketailors/" class="color_grey_light instagram circle icon_wrap_size_1 d_block" target="_blank"><i class="icon-instagramm"></i></a></li>
+                                    <li class="m_right_8"><a href="https://en.tripadvisor.com.hk/Profile/hkbespoketailors" class="color_grey_light youtube circle icon_wrap_size_1 d_block" target="_blank"><i class="fa fa-tripadvisor" style="margin-top: 4px;"></i></a></li>
                                 </ul>
                             </div>
                         </div>
