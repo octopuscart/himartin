@@ -45,7 +45,7 @@ $this->load->view('layout/header');
 
             
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
-                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider3.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/slider31.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
 
