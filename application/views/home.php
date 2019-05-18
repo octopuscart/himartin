@@ -28,14 +28,22 @@ $this->load->view('layout/header');
         <ul>
             
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
-                <img src="<?php echo base_url(); ?>assets/theme/slider2/d1.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/b11.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
-                <img src="<?php echo base_url(); ?>assets/theme/slider2/d6.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/b10.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
+            
+            <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
+                <img src="<?php echo base_url(); ?>assets/theme/slider2/b12.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
+            </li>
+            
+         
+
+            
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider3.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
@@ -492,6 +500,7 @@ $this->load->view('layout/header');
                     ?>
                     <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
                         <!--image container-->
+                        <a href="<?php echo site_url("booking");?>">
                         <div class="relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block" style="    background: #000;">
                             <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>" alt="">
                             <!--                            <div class="popup_buttons tr_all_long">
@@ -501,6 +510,7 @@ $this->load->view('layout/header');
                                                         </div>-->
                             <h3 style="font-size:18px;text-align: center;padding: 10px;color:white;"><?php echo $key; ?></h3>
                         </div>
+                        </a>
                     </figure>
                     <?php
                 }

@@ -484,13 +484,13 @@ thead td.cart-form-heading {
     }
 
     .adbox h3{
-        font-size: 30px;
+        font-size: 20px;
     }
     .adbox{
-        width: 250px;
+        width: 180px;
     }
     .adbox img{
-        height: 200px;border-radius: 12px;
+        height: auto;border-radius: 12px;
     }
     .adbox p{
         animation-delay: 200ms;
@@ -825,6 +825,11 @@ li a .relative:hover{
     .lookbook .lookheaderimage img{
         height: 80px;
         min-height: 80px
+    }
+}
+@media only screen and (max-width: 767px){
+    .image_bg_4{
+    background-size: cover;
     }
 }
 
