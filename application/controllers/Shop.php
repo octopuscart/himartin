@@ -41,7 +41,8 @@ class Shop extends CI_Controller {
             "New Zealand" => "newzealand.jpg",
             "Netherlands" => "netherlands.jpg",
             "Germany" => "germany.jpg",
-            "Switzerland" => "sweetzerland.jpg"
+            "Switzerland" => "sweetzerland.jpg",
+            "Norway"=>"norway.jpg"
         );
         foreach ($appointment_country as $key => $value) {
             $countrylist[$value['country']] = $countryimage[$value['country']];
