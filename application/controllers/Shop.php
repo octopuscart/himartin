@@ -18,8 +18,8 @@ class Shop extends CI_Controller {
         } else {
 //            redirect(site_url);
         }
-
-        $this->db->select("country, date");
+$this->db->select("country, date");
+        $this->db->select("country, hotel, address, days");
 //        $this->db->where('status', 'active');
         $this->db->group_by("country");
         $this->db->order_by("DATE(date)<DATE(NOW()) asc");
@@ -29,6 +29,19 @@ class Shop extends CI_Controller {
         $query = $this->db->get('appointment_entry');
         $appointment_country = $query->result_array();
 
+
+
+        $cdate = date("Y-m-d");
+        
+        $this->db->select("country, hotel, address, days, city_state");
+        $this->db->where('date>=', $cdate);
+        $this->db->order_by("date asc");
+        $query = $this->db->get('appointment_entry');
+        $appointment_current_country = $query->result_array();
+
+        $appointment_current_country = count($appointment_current_country)>0 ? $appointment_current_country[0] : false;
+
+        $data['appointment_current_country'] = $appointment_current_country;
 
         $countrylist = array();
 
@@ -42,12 +55,14 @@ class Shop extends CI_Controller {
             "Netherlands" => "netherlands.jpg",
             "Germany" => "germany.jpg",
             "Switzerland" => "sweetzerland.jpg",
-            "Norway"=>"norway.jpg"
+            "Norway" => "norway.jpg"
         );
         foreach ($appointment_country as $key => $value) {
             $countrylist[$value['country']] = $countryimage[$value['country']];
         }
         unset($countrylist['Hong Kong']);
+        
+        $data['countryimages'] = $countryimage;
 
         $data['countrylist'] = $countrylist;
 
@@ -351,11 +366,11 @@ class Shop extends CI_Controller {
         $tag = $this->input->get('tag');
         $this->db->where("tag like '%$tag%'");
         $query = $this->db->get('style_tips');
-        
+
         $tagblock = $query->result_array();
-       
+
         $data['stylebook'] = $tagblock;
-        
+
         $this->load->view('Pages/stylebook', $data);
     }
 

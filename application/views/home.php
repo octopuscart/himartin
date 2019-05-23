@@ -26,7 +26,7 @@ $this->load->view('layout/header');
     <div class="r_slider">
 
         <ul>
-            
+
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/b11.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
@@ -35,15 +35,15 @@ $this->load->view('layout/header');
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/b10.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
-            
+
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/b12.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
             </li>
-            
-         
 
-            
+
+
+
             <li data-transition="fade" data-slotamount="10" class="mobilelook_slider">
                 <img src="<?php echo base_url(); ?>assets/theme/slider2/slider31.jpg" alt="" data-bgfit="cover" data-bgposition="center center">
 
@@ -81,6 +81,54 @@ $this->load->view('layout/header');
 
 
 </section>
+
+<?php print_r($appointment_current_country); ?>
+
+<style>
+    .appointment_modal_text{
+        font-size: 30px;
+        /* margin-top: -60px; */
+        /* margin-bottom: 16px; */
+        padding: 20px;
+        position: absolute;
+        bottom: 0px;
+        color: white;
+        background: #00000087;
+    }
+</style>
+<div class="modal fade" id="appointmentmodel" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body" style="padding: 0px;">
+                <img src="assets/images/country/<?php echo $countryimages[$appointment_current_country['country']]; ?>" alt="">
+                <h2 class="fw_light color_black appointment_modal_text" style="font-size: 30px;">Now we are traveling to <b><?php echo $appointment_current_country['country']; ?></b> <br/> <b><?php echo $appointment_current_country['days']; ?></b>.</h2>
+            </div>
+            <div class="modal-footer">
+                <h3 class="fw_light" style="    float: left;
+                    font-weight: 300;
+                    font-size: 30px;
+                    color: black;"> Book A Fitting Now</h3>
+                <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+    $(function () {
+        
+        var appmodalcheck = localStorage.getItem("appmodalcheck");
+        
+        if(appmodalcheck=='open'){}
+        else{
+            localStorage.setItem("appmodalcheck", "open");
+        $('#appointmentmodel').modal('show')
+        }
+        
+    })
+</script>
 
 <hr class="divider_type_2">
 
@@ -123,7 +171,7 @@ $this->load->view('layout/header');
                             </div>
                         </div>
 
-                        
+
 
                     </div>
                     <div class="d_table w_full clients_nav">
@@ -164,8 +212,8 @@ $this->load->view('layout/header');
                         Don’t compromise for something that is off even by a bit, come to us, because we guarantee fit.
                     </p>
                     <p class="m_bottom_5 m_top_10">
-                        
-                        <a href="<?php echo site_url("booking");?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-pencil f_left m_right_10 fs_large"></i><span class="fs_medium">Book an Appointment Now!</span></span></a>
+
+                        <a href="<?php echo site_url("booking"); ?>" class="button_type_6 d_inline_b color_pink transparent r_corners vc_child tr_all add_to_cart_button"><span class="d_inline_m clerarfix"><i class="icon-pencil f_left m_right_10 fs_large"></i><span class="fs_medium">Book an Appointment Now!</span></span></a>
 
                     </p>
                 </div>
@@ -256,7 +304,7 @@ $this->load->view('layout/header');
                                 </ul>
                                 </p>
                             </div>
-                            
+
 
                         </div>
                         <!--clients carousel nav-->
@@ -495,21 +543,21 @@ $this->load->view('layout/header');
             <div class="owl-carousel" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000, "singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
                 <!--project-->
                 <?php
-                $countrydata =$countrylist;
+                $countrydata = $countrylist;
                 foreach ($countrydata as $key => $value) {
                     ?>
                     <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
                         <!--image container-->
-                        <a href="<?php echo site_url("booking");?>">
-                        <div class="relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block" style="    background: #000;">
-                            <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>" alt="">
-                            <!--                            <div class="popup_buttons tr_all_long">
-                                                            <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
-                                                                <i class="icon-plus"></i>
-                                                            </a>
-                                                        </div>-->
-                            <h3 style="font-size:18px;text-align: center;padding: 10px;color:white;"><?php echo $key; ?></h3>
-                        </div>
+                        <a href="<?php echo site_url("booking"); ?>">
+                            <div class="relative r_corners wrapper m_bottom_20 m_xs_bottom_0 d_xs_inline_b d_mxs_block" style="    background: #000;">
+                                <img src="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>" alt="">
+                                <!--                            <div class="popup_buttons tr_all_long">
+                                                                <a href="<?php echo base_url(); ?>assets/images/country/<?php echo $value; ?>.jpg" data-group="featured_projects" data-title="Nam elit agna, endrerit sit" class="jackbox icon_wrap_size_3 color_light n_sc_hover d_block circle f_left">
+                                                                    <i class="icon-plus"></i>
+                                                                </a>
+                                                            </div>-->
+                                <h3 style="font-size:18px;text-align: center;padding: 10px;color:white;"><?php echo $key; ?></h3>
+                            </div>
                         </a>
                     </figure>
                     <?php
