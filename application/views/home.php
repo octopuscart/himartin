@@ -82,7 +82,6 @@ $this->load->view('layout/header');
 
 </section>
 
-<?php print_r($appointment_current_country); ?>
 
 <style>
     .appointment_modal_text{

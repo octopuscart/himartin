@@ -216,22 +216,19 @@
 
 <script>
 
-
-
     $(function () {
-
-        var appmodalcheck = localStorage.getItem("appmodalcheck");
-
-        if (appmodalcheck == 'open') {
+        var session_no_temp = sessionStorage.getItem("session_no");
+        if (session_no_temp) {
 
         } else {
-            localStorage.setItem("appmodalcheck", "open");
             $('#appointmentmodel').modal('show')
+            sessionStorage.setItem("session_no", <?php echo rand(1000000, 9999999); ?>);
         }
-
     })
 
-    $(window).unload(function () {
+
+
+    $(window).onbeforeunload(function () {
         localStorage.removeItem("appmodalcheck");
     })
     var sitebaseurlcontact = "<?php echo "http://192.168.1.2/shanielfashions/index.php/Pages/contactustest"; ?>";
