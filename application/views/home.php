@@ -116,19 +116,7 @@ $this->load->view('layout/header');
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<script>
-    $(function () {
-        
-        var appmodalcheck = localStorage.getItem("appmodalcheck");
-        
-        if(appmodalcheck=='open'){}
-        else{
-            localStorage.setItem("appmodalcheck", "open");
-        $('#appointmentmodel').modal('show')
-        }
-        
-    })
-</script>
+
 
 <hr class="divider_type_2">
 

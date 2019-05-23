@@ -167,10 +167,10 @@
                                         <?php
                                         $countryArray = ['USA', 'UK', 'UAE', 'Switzerland', 'Spain', 'Qatar', 'Norway', 'New Zealand', 'Netherlands', 'Mexico',
                                             'Luxembourg', 'Japan', 'Ireland', 'Hong Kong', 'Germany', 'Canada', 'Belgium', 'Australia'];
-                                      sort($countryArray);
+                                        sort($countryArray);
                                         foreach ($countryArray as $key => $value) {
                                             ?>
-                                        <option value="<?php echo $value;?>"><?php echo $value;?></option>
+                                            <option value="<?php echo $value; ?>"><?php echo $value; ?></option>
                                             <?php
                                         }
                                         ?>
@@ -191,17 +191,17 @@
         </div>
     </section>
     <section class="footer_bottom_part t_align_c color_light bg_dark fw_light text-center container-fluid" style="text-transform: capitalize">
-    <?php $keywords =  KEYWORDS;
-    
-    $keywordslist = explode(",", $keywords);
-    echo $keywordsmod = implode(" | ", $keywordslist);
-    foreach ($keywordslist as $key => $value) {
-       // echo $value;
-    }
-    
-    ?>
+        <?php
+        $keywords = KEYWORDS;
+
+        $keywordslist = explode(",", $keywords);
+        echo $keywordsmod = implode(" | ", $keywordslist);
+        foreach ($keywordslist as $key => $value) {
+            // echo $value;
+        }
+        ?>
     </section>
-    
+
     <!--bottom part-->
     <section class="footer_bottom_part t_align_c color_light bg_dark fw_light">
         <p>©  <?php echo date('Y') ?> <?php echo email_sender_name; ?>
@@ -215,8 +215,24 @@
 </body>
 
 <script>
-    $(window).unload(function(){
-        localStorage.setItem("appmodalcheck", "close");
+
+
+
+    $(function () {
+
+        var appmodalcheck = localStorage.getItem("appmodalcheck");
+
+        if (appmodalcheck == 'open') {
+
+        } else {
+            localStorage.setItem("appmodalcheck", "open");
+            $('#appointmentmodel').modal('show')
+        }
+
+    })
+
+    $(window).unload(function () {
+        localStorage.removeItem("appmodalcheck");
     })
     var sitebaseurlcontact = "<?php echo "http://192.168.1.2/shanielfashions/index.php/Pages/contactustest"; ?>";
 </script>
