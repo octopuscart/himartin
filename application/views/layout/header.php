@@ -180,13 +180,8 @@
     <div id='loading' class="" style="width:100%;height: 100% ">
         <div id='progress-bar'>
             <center style=''>
-                <img src="<?php echo base_url(); ?>assets/images/logo.png" alt="" style="margin-top: 51px;
-                     position: fixed;
-                     top: 125px;
-                     left: 50%;
-                     height: 100px;
-                     margin-left: -120px;" >
-                <img src="<?php echo base_url(); ?>assets/images/loader.gif" alt="" style="margin-top: 150px;
+                
+                <img src="<?php echo base_url(); ?>assets/images/loader2.gif" alt="" style="margin-top: 150px;
                      position: fixed;
                      top: 125px;
                      left: 50%;

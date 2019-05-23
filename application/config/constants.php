@@ -30,10 +30,14 @@ define('custome_image_server', $configuration['product_images_url']);
 define('site_name', $configuration['site_name']);
 
 
+
 //Email Settings//
 define('email_sender', $configuration['email_sender']);
 define('email_sender_name', $configuration['email_sender_name']);
 define('email_bcc', $configuration['email_bcc']);
+
+define("KEYWORDS", $configuration['seo_keywords']);
+
 
 //paypal settings
 define('paypal_api_username', $configuration['paypal_api_username']);

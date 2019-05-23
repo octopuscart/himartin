@@ -190,6 +190,18 @@
             </div>
         </div>
     </section>
+    <section class="footer_bottom_part t_align_c color_light bg_dark fw_light text-center container-fluid" style="text-transform: capitalize">
+    <?php $keywords =  KEYWORDS;
+    
+    $keywordslist = explode(",", $keywords);
+    echo $keywordsmod = implode(" | ", $keywordslist);
+    foreach ($keywordslist as $key => $value) {
+       // echo $value;
+    }
+    
+    ?>
+    </section>
+    
     <!--bottom part-->
     <section class="footer_bottom_part t_align_c color_light bg_dark fw_light">
         <p>©  <?php echo date('Y') ?> <?php echo email_sender_name; ?>
