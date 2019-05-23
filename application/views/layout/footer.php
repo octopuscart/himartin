@@ -231,7 +231,7 @@
     $(window).onbeforeunload(function () {
         localStorage.removeItem("appmodalcheck");
     })
-    var sitebaseurlcontact = "<?php echo "http://192.168.1.2/shanielfashions/index.php/Pages/contactustest"; ?>";
+
 </script>
 
 <!--Libs-->
