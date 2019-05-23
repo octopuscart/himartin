@@ -185,7 +185,7 @@
                      position: fixed;
                      top: 125px;
                      left: 50%;
-                     height: 30px;
+                     height: 150px;
                      margin-left: -145px;">
             </center>
         </div> 
