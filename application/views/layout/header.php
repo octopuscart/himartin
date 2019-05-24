@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="p:domain_verify" content="c7854de1fae1560ae40d7c1ce7c93c30"/>
         <?php
         meta_tags();
         ?>
