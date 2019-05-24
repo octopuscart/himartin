@@ -141,7 +141,13 @@
                                 </a>
                             </li>
 
-
+                            <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
+                                <!--tooltip-->
+                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Pinterest</span>
+                                <a href="https://www.pinterest.com/hongkongbespoketailors/" target="_blank" class="d_block  pinterest_static_color icon_wrap_size_2 circle color_grey_light_2">
+                                    <i class="fa fa-pinterest fs_small" style="    margin-top: 7px;"></i>
+                                </a>
+                            </li>
 
 
 
