@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="p:domain_verify" content="c7854de1fae1560ae40d7c1ce7c93c30"/>
+		<meta name="google-site-verification" content="MitwaJ4Q5rDmk_6LaXYHNV2vh1n14HINb7qxzLTBQ6Y" />
         <?php
         meta_tags();
         ?>
