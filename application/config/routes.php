@@ -66,5 +66,3 @@ $route['stylingTips'] = 'Shop/stylingTips';
 $route['stylingTipsTag'] = 'Shop/stylingTipsTag';
 $route['styleTips/(:any)/(:any)'] = 'Shop/styleTipsDetails/$1/$2';
 
-
-

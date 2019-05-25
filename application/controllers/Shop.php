@@ -10,8 +10,6 @@ class Shop extends CI_Controller {
         $this->load->library('session');
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
     }
-    
-  
 
     public function index() {
         $baselink = 'http://' . $_SERVER['SERVER_NAME'];
