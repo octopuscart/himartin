@@ -2,7 +2,7 @@
 $globleConnectDB = array();
 try {
     $username = "a937118_hongkong";
-    $password = "India$2017";
+    $password = "Hangout@HKBT";
     $conn = new PDO('mysql:host=localhost;dbname=a937118_hongkongbt', $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
      $stmt = $conn->prepare('SELECT * FROM configuration_site');
