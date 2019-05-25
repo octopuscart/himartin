@@ -11,10 +11,7 @@ class Shop extends CI_Controller {
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
     }
     
-    public function robot(){
-        echo "User-Agent: *
-Disallow: ";
-    }
+  
 
     public function index() {
         $baselink = 'http://' . $_SERVER['SERVER_NAME'];
