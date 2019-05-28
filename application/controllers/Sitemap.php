@@ -7,7 +7,7 @@ class Sitemap extends CI_Controller {
         // We load the url helper to be able to use the base_url() function
         $this->load->helper('url');
 
-        $this->load->model('sitemapmodel');
+        $this->load->model('SitemapModel');
 
         // Array of some articles for demonstration purposes
     }
@@ -17,21 +17,21 @@ class Sitemap extends CI_Controller {
      * More information about sitemap indexes: http://www.sitemaps.org/protocol.html#index
      */
     public function index() {
-        $this->sitemapmodel->add(base_url(), NULL, 'monthly', 1);
-        $this->sitemapmodel->add(base_url('contact-us'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('booking'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('shopNow'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('lookbook'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('stylingTips'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('faqs'), NULL, 'monthly', 0.9);
-        $this->sitemapmodel->add(base_url('stylingTipsTag'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url(), NULL, 'monthly', 1);
+        $this->SitemapModel->add(base_url('contact-us'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('booking'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('shopNow'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('lookbook'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('stylingTips'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('faqs'), NULL, 'monthly', 0.9);
+        $this->SitemapModel->add(base_url('stylingTipsTag'), NULL, 'monthly', 0.9);
         $query = $this->db->get('style_tips');
         $articles = $query->result_array();
         foreach ($articles as $article) {
             $location = base_url("styleTips/" . $article['id'] . '/' . $article['title']);
-            $this->sitemapmodel->add($location, date('Y-m-d', time()), "monthly", 0.7);
+            $this->SitemapModel->add($location, date('Y-m-d', time()), "monthly", 0.7);
         }
-        $this->sitemapmodel->output();
+        $this->SitemapModel->output();
     }
 
     /**
@@ -73,9 +73,9 @@ class Sitemap extends CI_Controller {
         $articles = $query->result_array();
         foreach ($articles as $article) {
             $location = base_url("styleTips/" . $article['id'] . '/' . $article['title']);
-            $this->sitemapmodel->add($location, date('Y-m-d', time()), "monthly", 0.7);
+            $this->SitemapModel->add($location, date('Y-m-d', time()), "monthly", 0.7);
         }
-        $this->sitemapmodel->output();
+        $this->SitemapModel->output();
     }
 
 }
