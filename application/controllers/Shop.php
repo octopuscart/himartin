@@ -10,6 +10,10 @@ class Shop extends CI_Controller {
         $this->load->library('session');
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
     }
+    
+    public function error404(){
+        $this->load->view('errors/error_404');
+    }
 
     public function index() {
         $baselink = 'http://' . $_SERVER['SERVER_NAME'];
