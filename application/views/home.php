@@ -87,7 +87,10 @@ $this->load->view('layout/header');
 <div class="modal fade" id="appointmentmodel" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <h3 class="fw_light booking_text" style="    padding: 10px 25px;"> We are currently traveling to</h3>
+            <div class="modal-header" style="background: red;border:none">
+                 <h3 class="fw_light booking_text" style="    padding: 10px 25px;text-align: center;color:white;width: 100%"> We are currently traveling to</h3>
+
+            </div>
             <?php
             if ($applicable_class == 'onecountry') {
                 ?>
@@ -110,7 +113,11 @@ $this->load->view('layout/header');
                         ?>
                         <div class="<?php echo $applicable_class; ?> country_block" style="background: url(assets/images/country/<?php echo $countryimages[$apvalue['country']]; ?>)">
 
-                            <h2 class="fw_light color_black appointment_modal_texttwocontry "><?php echo $apvalue['country']; ?></h2>
+                            <h2 class="fw_light color_black appointment_modal_texttwocontry text-center "><?php echo $apvalue['country']; ?>
+                            <br/>
+                            <small style="    color: white;    line-height: 30px;
+    font-size: 15px;"><?php echo date("l, d F Y");?></small>
+                            </h2>
                         </div>
                         <?php
                     }
@@ -124,8 +131,8 @@ $this->load->view('layout/header');
                         <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
                         <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    
-                        <p class="text-center">Your Country:<?php echo $country;?></p>
+
+                        <p class="text-center">Your Country:<?php echo $country; ?></p>
                     </div>
                 </div>
 
@@ -588,23 +595,23 @@ $this->load->view('layout/header');
 
 <script>
     $(function () {
-      console.log("sdfdsf")
-      $.ajax({
-  url: 'https://api.ipify.org?format=jsonp&callback=DisplayIP',
+        console.log("sdfdsf")
+        $.ajax({
+            url: 'https://api.ipify.org?format=jsonp&callback=DisplayIP',
 
-  success:function(r){
-      console.log(r)
-  }
-});
-
-
-setTimeout(function(){
-    $.get('https://api.ipify.org?format=jsonp&callback=DisplayIP', function (data) {
-            alert(data)
-          
+            success: function (r) {
+                console.log(r)
+            }
         });
-}, 1000)
-        
+
+
+        setTimeout(function () {
+            $.get('https://api.ipify.org?format=jsonp&callback=DisplayIP', function (data) {
+                alert(data)
+
+            });
+        }, 1000)
+
     })
 </script>
 
