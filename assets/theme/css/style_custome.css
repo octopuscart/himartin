@@ -58,11 +58,7 @@ code {
     cursor: pointer;
 }
 
-.collar_style {
 
-    //background-size: 293%!important;
-    //background-position: -101% -14%!important;
-}
 
 .cuff_style{
     background-size: 359%!important;
@@ -265,7 +261,7 @@ code {
 }
 
 .monogramtext_posistion_cuff_left{
-     left: 329px;
+    left: 329px;
     display: block;
     top: 308px;
     transform: rotate(59deg);
@@ -275,7 +271,7 @@ code {
 }
 
 .monogramtext_posistion_left_pocket{
-        left: 273px;
+    left: 273px;
     display: block;
     top: 135px;
     line-height: 10px;
@@ -386,14 +382,14 @@ p.selected-element-title_text_price{
 
 
 .customization_order_block{
-   height: 60px;
-        /*background: #000;*/
-       
-  
-        width: 100%;
-        /* padding: 37px; */
-        margin: 0px;
-        left: 0;
+    height: 60px;
+    /*background: #000;*/
+
+
+    width: 100%;
+    /* padding: 37px; */
+    margin: 0px;
+    left: 0;
 }
 
 
@@ -404,25 +400,25 @@ p.selected-element-title_text_price{
 
 
 .insert_button {
-       padding: 3px 5px;
+    padding: 3px 5px;
     margin-top: 2px;
     margin-top: 2px;
 }
 .total_price_block h5 {
     font-size: 19px;
     color: white;
-        line-height: 60px;
+    line-height: 60px;
     margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
 
     .insert_button {
-    padding: 3px 3px;
-    margin-top: 2px;
-    margin-top: 2px;
-}
-    
+        padding: 3px 3px;
+        margin-top: 2px;
+        margin-top: 2px;
+    }
+
     .customization_order_block {
         height: 54px;
         background: #000;
@@ -432,7 +428,7 @@ p.selected-element-title_text_price{
         /* padding: 37px; */
         margin: 0px;
         left: 0;
-            z-index: 100;
+        z-index: 100;
     }
 
     .cuff_collar_area_elements{
@@ -467,9 +463,9 @@ p.selected-element-title_text_price{
 
     .monogramtext_posistion_cuff_left {
         left: 80%;
-    display: block;
-    top: 239px;
-    transform: rotate(8deg);
+        display: block;
+        top: 239px;
+        transform: rotate(8deg);
     }
 
     .monogramtext_posistion_left_pocket {
@@ -515,7 +511,7 @@ p.selected-element-title_text_price{
     .customization_block{
         /*height: 380px;*/
         height: auto;
-    width: auto;
+        width: auto;
     }
 
     .customization_items_title{
@@ -538,10 +534,7 @@ p.selected-element-title_text_price{
         background-size: 224%!important;
         background-position: -111px -29px!important;
     }
-    .collar_style {
-        // background-size: 293%!important;
-        // background-position: -101% -7%!important;
-    }
+    
     .button_style1{
         margin-left: 2px;
         margin-top: -2px;
@@ -552,11 +545,11 @@ p.selected-element-title_text_price{
     }
     .shirtcontainer{
         /*height: 380px;*/
-            /*margin-top: 80px;*/
+        /*margin-top: 80px;*/
     }
-    
+
     .mobile_bottom_20{
-            margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     header .logo img {
@@ -564,11 +557,11 @@ p.selected-element-title_text_price{
         height: 47px;
         position: relative;
     }
-    
+
     .customization_items::-webkit-scrollbar {
-    width: 4px!important;
-    background-color: #cbc9c9;
-}
+        width: 4px!important;
+        background-color: #cbc9c9;
+    }
 
 }
 
@@ -630,7 +623,7 @@ p.selected-element-title_text_price{
 .customization_items::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  background-color: #cbc9c9;
+    background-color: #cbc9c9;
 }
 
 .customization_items::-webkit-scrollbar
@@ -676,7 +669,7 @@ p.selected-element-title_text_price{
 }
 
 .customization_margin_top_2 {
-        margin-top: 80px;
+    margin-top: 80px;
 }
 
 .color_light{
@@ -689,3 +682,4 @@ p.selected-element-title_text_price{
     padding-bottom: 10px;
     margin-top: 10px;
 }
+

@@ -479,7 +479,7 @@ class Api extends REST_Controller {
             );
         }
         //print_r($appointment_city_data);
-        
+
         $appointment_final_data["country_data"] = $appointment_country;
         $appointment_final_data['city_hotel_data'] = $appointment_city_data;
         $appointment_final_data["country_city"] = $country_city_array;
@@ -505,27 +505,31 @@ class Api extends REST_Controller {
             'WomensCustomTopCoat' => []
         );
 
-        
-        $vestimagelist = [1,2,3,4,5,7,8,9];
+
+        $vestimagelist = [1, 2, 3, 4, 5, 7, 8, 9];
         foreach ($vestimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "100$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "mens/vests/$value.jpg",
+                "category_id" => "MensCustomVests"
             );
+
             array_push($stylearray['MensCustomVests'], $temp);
         }
-        
-        
+
+
         $shirtimagelist = [8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7];
         foreach ($shirtimagelist as $key => $value) {
             $temp = array(
                 "style_no" => "80$value",
                 "title" => "2 PLY 100% COTTON",
-                "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                "description" => "2 PLY 100% COTTON MADE IN ITALY",
                 "image" => "mens/shirts/$value.jpg",
+                "category_id" => "MensCustomShirts"
             );
+
             array_push($stylearray['MensCustomShirts'], $temp);
         }
 
@@ -535,8 +539,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "90$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "mens/jackets/$value.jpg",
+                "category_id" => "MensCustomJackets"
             );
             array_push($stylearray['MensCustomJackets'], $temp);
         }
@@ -549,8 +554,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "90$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "mens/suits/$value.jpg",
+                "category_id" => "MensCustomSuits"
             );
             array_push($stylearray['MensCustomSuits'], $temp);
         }
@@ -560,8 +566,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "200$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "mens/pant/$value.jpg",
+                "category_id" => "MensCustomPants"
             );
             array_push($stylearray['MensCustomPants'], $temp);
         }
@@ -571,8 +578,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "50$value",
                 "title" => "TUXEDO",
-                "short_description" => "TUXEDO - MADE IN ITALY",
+                "description" => "TUXEDO - MADE IN ITALY",
                 "image" => "mens/tuxedo/$value.jpg",
+                "category_id" => "MensCustomTuxedo"
             );
             array_push($stylearray['MensCustomTuxedo'], $temp);
         }
@@ -582,8 +590,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "300$value",
                 "title" => "100% CASHMERE",
-                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "description" => "100% CASHMERE MADE IN ITALY",
                 "image" => "mens/topcoat/$value.jpg",
+                "category_id" => "MensCustomTopCoat"
             );
             array_push($stylearray['MensCustomTopCoat'], $temp);
         }
@@ -593,8 +602,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "120$value",
                 "title" => "2 PLY 100% COTTON",
-                "short_description" => "2 PLY 100% COTTON MADE IN ITALY",
+                "description" => "2 PLY 100% COTTON MADE IN ITALY",
                 "image" => "womens/shirts/$value.jpg",
+                "category_id" => "WomensCustomShirts"
             );
             array_push($stylearray['WomensCustomShirts'], $temp);
         }
@@ -604,8 +614,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "120$value",
                 "title" => "100% WOOL",
-                "short_description" => "100% WOOL MADE IN ITALY",
+                "description" => "100% WOOL MADE IN ITALY",
                 "image" => "womens/dress/$value.jpg",
+                "category_id" => "WomensCustomDress"
             );
             array_push($stylearray['WomensCustomDress'], $temp);
         }
@@ -615,9 +626,11 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "130$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "womens/suits/$value.jpg",
+                "category_id" => "WomensCustomSuits"
             );
+
             array_push($stylearray['WomensCustomSuits'], $temp);
         }
 
@@ -626,8 +639,9 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "140$value",
                 "title" => "SUPER 130'S",
-                "short_description" => "SUPER 130'S MADE IN ITALY",
+                "description" => "SUPER 130'S MADE IN ITALY",
                 "image" => "womens/pants/$value.jpg",
+                "category_id" => "WomensCustomPants"
             );
             array_push($stylearray['WomensCustomPants'], $temp);
         }
@@ -637,16 +651,31 @@ class Api extends REST_Controller {
             $temp = array(
                 "style_no" => "150$value",
                 "title" => "100% CASHMERE",
-                "short_description" => "100% CASHMERE MADE IN ITALY",
+                "description" => "100% CASHMERE MADE IN ITALY",
                 "image" => "womens/topcoat/$value.jpg",
+                "category_id" => "WomensCustomTopCoat"
             );
             array_push($stylearray['WomensCustomTopCoat'], $temp);
         }
 
 
+        $this->db->where('category_id', $styleurl);
+        $this->db->order_by("id");
+        $query = $this->db->get('lookbook');
+        $resultdata = $query->result();
+        $this->response($resultdata);
+    }
 
-
-        $this->response($stylearray[$styleurl]);
+    public function setStyleData_post() {
+        $id = $this->post('id');
+        $stylearray = array(
+            'description' => $this->post('description'),
+            'title' => $this->post('title'),
+        );
+        $this->db->set($stylearray);
+        $this->db->where('id', $id); //set column_name and value in which row need to update
+        $this->db->update('lookbook');
+        
     }
 
     public function setStyleEnquiry_post() {

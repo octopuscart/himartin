@@ -10,8 +10,8 @@ class Shop extends CI_Controller {
         $this->load->library('session');
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
     }
-    
-    public function error404(){
+
+    public function error404() {
         $this->load->view('errors/error_404');
     }
 
@@ -22,7 +22,7 @@ class Shop extends CI_Controller {
         } else {
 //            redirect(site_url);
         }
-$this->db->select("country, date");
+        $this->db->select("country, date");
         $this->db->select("country, hotel, address, days");
 //        $this->db->where('status', 'active');
         $this->db->group_by("country");
@@ -36,14 +36,24 @@ $this->db->select("country, date");
 
 
         $cdate = date("Y-m-d");
-        
+        //test date
+        //$cdate = "2019-04-22"; 
+
         $this->db->select("country, hotel, address, days, city_state");
-        $this->db->where('date>=', $cdate);
+        $this->db->where('date=', $cdate);
         $this->db->order_by("date asc");
+       // $this->db->group_by("country");
+        $this->db->limit(2);
+        
+        
+        
         $query = $this->db->get('appointment_entry');
         $appointment_current_country = $query->result_array();
+        
+        $applicable_class = count($appointment_current_country)==1?'onecountry':'twocoutry';
+        $data['applicable_class'] = $applicable_class;
 
-        $appointment_current_country = count($appointment_current_country)>0 ? $appointment_current_country[0] : false;
+//        $appointment_current_country = count($appointment_current_country) > 0 ? $appointment_current_country[0] : false;
 
         $data['appointment_current_country'] = $appointment_current_country;
 
@@ -65,7 +75,7 @@ $this->db->select("country, date");
             $countrylist[$value['country']] = $countryimage[$value['country']];
         }
         unset($countrylist['Hong Kong']);
-        
+
         $data['countryimages'] = $countryimage;
 
         $data['countrylist'] = $countrylist;
@@ -352,6 +362,14 @@ $this->db->select("country, date");
         $seotitle = str_replace("Custom Made Suits, Shirts, Tuxedos", $seotitle_n, $seotitle_o);
 
         $this->config->set_item('seo_title', $seotitle);
+
+        $checklogin = false;
+
+
+
+        if ($checklogin) {
+            $data['checklogin'] = $checklogin;
+        }
 
 
 

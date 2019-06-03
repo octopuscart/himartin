@@ -83,34 +83,56 @@ $this->load->view('layout/header');
 </section>
 
 
-<style>
-    .appointment_modal_text{
-        font-size: 30px;
-        /* margin-top: -60px; */
-        /* margin-bottom: 16px; */
-        padding: 20px;
-        position: absolute;
-        bottom: 0px;
-        color: white;
-        background: #00000087;
-    }
-</style>
+
 <div class="modal fade" id="appointmentmodel" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+<h3 class="fw_light booking_text" style="    padding: 10px 25px;"> We are currently traveling to</h3>
+            <?php
+            
+            if ($applicable_class == 'onecountry') {
+                ?>
+                <div class="modal-body" style="padding: 0px;">
+                    <img src="assets/images/country/<?php echo $countryimages[$appointment_current_country[0]['country']]; ?>" alt="">
+                    <h2 class="fw_light color_black appointment_modal_text" >Now we are traveling to <b><?php echo $appointment_current_country[0]['country']; ?></b>.</h2>
+                </div>
+                <div class="modal-footer">
+                    <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
+                    <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+                <?php
+            } else {
+                ?>
+                <div style="clear: both"></div>
+                <div class="modal-body" style="padding: 0px;">
+                    <?php
+                    foreach ($appointment_current_country as $apkey => $apvalue) {
+                        ?>
+                        <div class="<?php echo $applicable_class; ?> country_block" style="background: url(assets/images/country/<?php echo $countryimages[$apvalue['country']]; ?>)">
 
-            <div class="modal-body" style="padding: 0px;">
-                <img src="assets/images/country/<?php echo $countryimages[$appointment_current_country['country']]; ?>" alt="">
-                <h2 class="fw_light color_black appointment_modal_text" style="font-size: 30px;">Now we are traveling to <b><?php echo $appointment_current_country['country']; ?></b> <br/> <b><?php echo $appointment_current_country['days']; ?></b>.</h2>
-            </div>
-            <div class="modal-footer">
-                <h3 class="fw_light" style="    float: left;
-                    font-weight: 300;
-                    font-size: 30px;
-                    color: black;"> Book A Fitting Now</h3>
-                <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
+                            <h2 class="fw_light color_black appointment_modal_texttwocontry "><?php echo $apvalue['country']; ?></h2>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+
+
+                <div class="modal-footer">
+                    <div style=" clear: both;
+                         padding-top: 15px;">
+                        <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
+                        <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+                <?php
+            }
+            ?>
+
+
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->

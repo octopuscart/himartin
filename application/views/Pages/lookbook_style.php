@@ -62,7 +62,7 @@ $clients = [
 <section class="page_title translucent_bg_color_dark image_fixed t_align_c relative wrapper" style="margin-top: 0px;padding: 0px;">
     <div class="container">
         <h1 class="color_light fw_light m_bottom_5" style="    font-size: 22px;
-    line-height: 25px;">Look Book</h1>
+            line-height: 25px;">Look Book</h1>
         <!--breadcrumbs-->
 
     </div>
@@ -104,7 +104,7 @@ $this->load->view('Pages/lookbook_header');
                                             </p>
                                             <h3 class="lookbook_title">{{style['title']}}</h3>
                                             <p class="lookbook_subtitle">
-                                                {{style['short_description']}}
+                                                {{style['description']}}
                                             </p>
                                         </div>
                                     </div>
@@ -124,19 +124,44 @@ $this->load->view('Pages/lookbook_header');
                                 <div class="panel panel-default" style="background: none;border:none;">
                                     <div class="panel-body" style="background: white;">
                                         <div class="thumbnail " style="background: none;border:none">
-                                            <img src="<?php echo base_url(); ?>assets/lookbook/{{style['image']}}" alt="img01"  style="    height:450px;
-                                                 "/>
-                                            <p class="lookbook_subtitle">
-                                                Style#: {{style['style_no']}}
-                                            </p>
-                                            <h3 class="lookbook_title">{{style['title']}}</h3>
-                                            <p class="lookbook_subtitle">
-                                                {{style['short_description']}}
-                                            </p>
-                                            <br/>
-                                            <center>
-                                                <button class="btn btn-default color_black btn-sm " data-toggle="modal" data-target="#styleEnquiryModal" ng-click="addToPriceEnquery(style)">Add To Enquiry</button>
-                                            </center>
+                                            <?php
+                                            if ($checklogin) {
+                                                ?>
+                                                <img src="<?php echo base_url(); ?>assets/lookbook/{{style['image']}}" alt="img01"  style="    height:250px;"/>
+                                                <p class="lookbook_subtitle">
+                                                    Style#: {{style['style_no']}}
+                                                </p>
+                                                <h3 class="lookbook_title">
+
+                                                    <input type="text" class="form-control" value="{{style['title']}}" ng-model="style['title']">
+                                                </h3>
+                                                <p class="lookbook_subtitle">
+
+                                                    <input type="text" class="form-control" value="{{style['description']}}" ng-model="style['description']">
+                                                </p>
+                                                <br/>
+                                                <center>
+                                                    <button class="btn btn-default color_black btn-sm "  ng-click="changeStyle(style)">Change</button>
+                                                </center>
+                                                <?php
+                                            } else {
+                                                ?>
+                                                <img src="<?php echo base_url(); ?>assets/lookbook/{{style['image']}}" alt="img01"  style="    height:450px;"/>
+                                                <p class="lookbook_subtitle">
+                                                    Style#: {{style['style_no']}}
+                                                </p>
+                                                <h3 class="lookbook_title">{{style['title']}}</h3>
+                                                <p class="lookbook_subtitle">
+                                                    {{style['description']}}
+                                                </p>
+                                                <br/>
+                                                <center>
+                                                    <button class="btn btn-default color_black btn-sm " data-toggle="modal" data-target="#styleEnquiryModal" ng-click="addToPriceEnquery(style)">Add To Enquiry</button>
+                                                </center>
+
+                                                <?php
+                                            }
+                                            ?>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +211,7 @@ $this->load->view('Pages/lookbook_header');
                                         <p class="textoverflow text-center" style="font-size: 12px">{{style.style_no}}</p>
 
                                         <h3 class="lookbook_title text-center textoverflow" style="font-size: 15px">{{style.title}}</h3>
-                                        <p class="textoverflow text-center" style="font-size: 12px">{{style.short_description}}</p>
+                                        <p class="textoverflow text-center" style="font-size: 12px">{{style.description}}</p>
                                         <p>
                                             <button ng-click="removeStyeElement(style.style_no)" class="btn btn-danger btn-sm" role="button">Remove</button>
                                         </p>
@@ -230,11 +255,27 @@ $this->load->view('Pages/lookbook_header');
         $http.get(url).then(function (rdata) {
             $scope.styleArray.style_list = rdata.data;
             $timeout(function () {
-                new CBPGridGallery(document.getElementById('grid-gallery'));
+                $scope.girdgallary = new CBPGridGallery(document.getElementById('grid-gallery'));
             }, 500)
         }, function () {
 
         })
+
+
+        $scope.changeStyle = function (styleobj) {
+            console.log($scope.girdgallary)
+            $scope.girdgallary._closeSlideshow();
+            var url = baseurl + "Api/setStyleData";
+            var form = new FormData()
+            form.append('id', styleobj.id);
+            form.append('title', styleobj.title);
+            form.append('description', styleobj.description);
+            $http.post(url, form).then(function (rdata) {
+             
+            }, function () {
+
+            })
+        }
 
         $scope.addToPriceEnquery = function (styleobj) {
             var url = baseurl + "Api/setStyleEnquiry";

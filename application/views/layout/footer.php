@@ -223,6 +223,7 @@
 <script>
 
     $(function () {
+        $('#appointmentmodel').modal('show')
         var session_no_temp = sessionStorage.getItem("session_no");
         if (session_no_temp) {
 
@@ -234,9 +235,7 @@
 
 
 
-    $(window).onbeforeunload(function () {
-        localStorage.removeItem("appmodalcheck");
-    })
+  
 
 </script>
 

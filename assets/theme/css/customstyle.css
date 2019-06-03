@@ -829,17 +829,100 @@ li a .relative:hover{
 }
 @media only screen and (max-width: 767px){
     .image_bg_4{
-    background-size: cover;
+        background-size: cover;
     }
 }
 
 
 .textoverflow{
     white-space: nowrap; 
-  overflow: hidden;
-  text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .style_block.active{
     border: 5px solid #000;
+}
+.booking_text{
+    float: left;
+    font-weight: 300;
+    font-size: 30px;
+    color: black;
+}
+
+.appointment_modal_text {
+    font-size: 35px;
+    /* margin-top: -60px; */
+    /* margin-bottom: 16px; */
+    padding: 20px;
+
+    bottom: 0px;
+    color: white;
+    background: #00000087;
+    width: 100%;
+    margin-top: -78px;
+    text-shadow: 3px 2px 2px #000;
+}
+
+.appointment_modal_texttwocontry {
+       font-size: 35px;
+    /* margin-top: -60px; */
+    /* margin-bottom: 16px; */
+    padding: 85px 20px;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    /* margin-top: 70px; */
+    text-shadow: 3px 2px 2px #000;
+}
+
+
+.twocoutry {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 200px;
+    background-position: -266px -119px !important;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .booking_text{
+        float: left;
+        font-weight: 300;
+        font-size: 17px;
+        color: black;
+        line-height: 30px;
+    }
+
+    .appointment_modal_text {
+        font-size: 35px;
+        /* margin-top: -60px; */
+        /* margin-bottom: 16px; */
+        padding: 20px;
+
+        bottom: 0px;
+        color: white;
+        background: #00000087;
+        width: 100%;
+        margin-top: -78px;
+        text-shadow: 3px 2px 2px #000;
+    }
+
+    .twocoutry .appointment_modal_text{
+        margin-top: 70px;
+    }
+    
+    .appointment_modal_texttwocontry {
+       font-size: 35px;
+    /* margin-top: -60px; */
+    /* margin-bottom: 16px; */
+    padding: 85px 20px;
+    bottom: 0px;
+    color: white;
+    width: 100%;
+    /* margin-top: 70px; */
+    text-shadow: 3px 2px 2px #000;
+}
+
 }
