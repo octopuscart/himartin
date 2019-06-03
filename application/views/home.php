@@ -88,7 +88,7 @@ $this->load->view('layout/header');
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header" style="background: red;border:none">
-                 <h3 class="fw_light booking_text" style="    padding: 10px 25px;text-align: center;color:white;width: 100%"> We are currently traveling to</h3>
+                 <h3 class="fw_light booking_text" style="    padding: 10px 25px;text-align: center;color:white;width: 100%"> We are currently travelling to</h3>
 
             </div>
             <?php
@@ -96,7 +96,7 @@ $this->load->view('layout/header');
                 ?>
                 <div class="modal-body" style="padding: 0px;">
                     <img src="assets/images/country/<?php echo $countryimages[$appointment_current_country[0]['country']]; ?>" alt="">
-                    <h2 class="fw_light color_black appointment_modal_text" >Now we are traveling to <b><?php echo $appointment_current_country[0]['country']; ?></b>.</h2>
+                    <h2 class="fw_light color_black appointment_modal_text" >Now we are travelling to <b><?php echo $appointment_current_country[0]['country']; ?></b>.</h2>
                 </div>
                 <div class="modal-footer">
                     <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
