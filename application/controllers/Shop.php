@@ -47,6 +47,8 @@ class Shop extends CI_Controller {
         $locationdata = json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
 
         $countryc = $locationdata->country;
+        
+        $data["country"]  = $countryc;
 
         $this->db->select("country, hotel, address, days, city_state");
         $this->db->where('date=', $cdate);
