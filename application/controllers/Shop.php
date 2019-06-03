@@ -56,15 +56,33 @@ class Shop extends CI_Controller {
         $this->db->order_by("date asc");
 // $this->db->group_by("country");
         $this->db->limit(2);
-
-
-
         $query = $this->db->get('appointment_entry');
+
         $appointment_current_country1 = $query->result_array();
 
         $appointment_current_country = [];
+        $appointment_current_country2 = [];
 
         foreach ($appointment_current_country1 as $key => $value) {
+            $countrydb = $value['country'];
+
+
+            $this->db->select("date");
+            $this->db->where('country=', $countrydb);
+            $this->db->where('date>=', $cdate);
+            $this->db->order_by("date asc");
+            $query = $this->db->get('appointment_entry');
+            $appointment_country_date = $query->result_array();
+
+
+            $d_first = reset($appointment_country_date);
+            $d_last = end($appointment_country_date);
+
+            $value['first_date'] = $d_first['date'];
+            $value['last_date'] = $d_last['date'];
+
+            array_push($appointment_current_country2, $value);
+
             if ($value['country'] == $countryc) {
                 array_push($appointment_current_country, $value);
             } else {
@@ -74,7 +92,7 @@ class Shop extends CI_Controller {
         if (count($appointment_current_country)) {
             $appointment_current_country = $appointment_current_country;
         } else {
-            $appointment_current_country = $appointment_current_country1;
+            $appointment_current_country = $appointment_current_country2;
         }
 
         $applicable_class = count($appointment_current_country) == 1 ? 'onecountry' : 'twocoutry';

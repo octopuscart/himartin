@@ -88,7 +88,7 @@ $this->load->view('layout/header');
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header" style="background: red;border:none">
-                 <h3 class="fw_light booking_text" style="    padding: 10px 25px;text-align: center;color:white;width: 100%"> We are currently travelling to</h3>
+                <h3 class="fw_light booking_text" style="    padding: 10px 25px;text-align: center;color:white;width: 100%"> We are currently travelling to</h3>
 
             </div>
             <?php
@@ -110,13 +110,19 @@ $this->load->view('layout/header');
                 <div class="modal-body" style="padding: 0px;">
                     <?php
                     foreach ($appointment_current_country as $apkey => $apvalue) {
+                      
+                       $fdata = date_format(date_create($apvalue['first_date']), "d F"); 
+                       $ldata = date_format(date_create($apvalue['last_date']), "d F Y");
                         ?>
                         <div class="<?php echo $applicable_class; ?> country_block" style="background: url(assets/images/country/<?php echo $countryimages[$apvalue['country']]; ?>)">
-
                             <h2 class="fw_light color_black appointment_modal_texttwocontry text-center "><?php echo $apvalue['country']; ?>
-                            <br/>
-                            <small style="    color: white;    line-height: 30px;
-    font-size: 15px;"><?php echo date("l, d F Y");?></small>
+                                <br/>
+                                <p style="color: white;font-size: 15px;white-space: pre-line;line-height: 12px;">
+                                    <?php echo date("D, d F Y"); ?><br/>
+                                    (<?php
+                                    echo $fdata." - ".$ldata;
+                                    ?>)
+                                </p>
                             </h2>
                         </div>
                         <?php
@@ -131,7 +137,6 @@ $this->load->view('layout/header');
                         <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
                         <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
                         <p class="text-center">Your Country:<?php echo $country; ?></p>
                     </div>
                 </div>
