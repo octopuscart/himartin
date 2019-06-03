@@ -9,6 +9,7 @@ class Shop extends CI_Controller {
         $this->load->model('Product_model');
         $this->load->library('session');
         $this->user_id = $this->session->userdata('logged_in')['login_id'];
+        $this->session_user = $this->session->userdata('admin_login');
     }
 
     public function error404() {
@@ -36,8 +37,8 @@ class Shop extends CI_Controller {
 
 
         $cdate = date("Y-m-d");
-        //test date
-        //$cdate = "2019-04-22"; 
+//test date
+//$cdate = "2019-04-22"; 
 
 
         $yourip = json_decode(file_get_contents("https://api.ipify.org?format=json&callback=DisplayIP"));
@@ -47,34 +48,32 @@ class Shop extends CI_Controller {
         $locationdata = json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
 
         $countryc = $locationdata->country;
-        
-        $data["country"]  = $countryc;
+
+        $data["country"] = $countryc;
 
         $this->db->select("country, hotel, address, days, city_state");
         $this->db->where('date=', $cdate);
         $this->db->order_by("date asc");
-        // $this->db->group_by("country");
+// $this->db->group_by("country");
         $this->db->limit(2);
 
 
 
         $query = $this->db->get('appointment_entry');
         $appointment_current_country1 = $query->result_array();
-        
+
         $appointment_current_country = [];
-        
+
         foreach ($appointment_current_country1 as $key => $value) {
-            if($value['country'] == $countryc){
+            if ($value['country'] == $countryc) {
                 array_push($appointment_current_country, $value);
-            }
-            else{
+            } else {
                 
             }
         }
-        if(count($appointment_current_country)){
+        if (count($appointment_current_country)) {
             $appointment_current_country = $appointment_current_country;
-        }
-        else{
+        } else {
             $appointment_current_country = $appointment_current_country1;
         }
 
@@ -130,8 +129,8 @@ class Shop extends CI_Controller {
                 'friend_email' => $this->input->post('friend_email'),
                 'friend_name' => $this->input->post('friend_name'),
             );
-            // print_r($appointment);
-            //$this->db->insert('referral', $referral);
+// print_r($appointment);
+//$this->db->insert('referral', $referral);
 
             $emailsender = email_sender;
             $sendername = email_sender_name;
@@ -233,7 +232,7 @@ class Shop extends CI_Controller {
                 }
             }
 
-            //redirect('contact-us');
+//redirect('contact-us');
         }
         $this->load->view('Pages/contactus', $data);
     }
@@ -246,13 +245,35 @@ class Shop extends CI_Controller {
         $this->load->view('Pages/faqs');
     }
 
+    public function locallogin() {
+
+        $data['usertype'] = $this->session_user;
+        if (isset($_POST['submit'])) {
+            $password = $this->input->post('password');
+            if ($password = "Hongout@HKBT") {
+                $this->session->set_userdata('admin_login', array("user_type" => "admin"));
+                redirect("admin");
+            } else {
+                
+            }
+        }
+
+        if (isset($_GET['logout'])) {
+            $this->session->set_userdata('admin_login', array());
+            redirect("admin");
+        }
+
+
+        $this->load->view('Pages/locallogin', $data);
+    }
+
     public function subscribe() {
         if (isset($_POST['submit'])) {
             $appointment = array(
                 "country" => $this->input->post('country'),
                 'email' => $this->input->post('email'),
             );
-            // print_r($appointment);
+// print_r($appointment);
             $this->db->insert('appointment_list', $appointment);
 
             $emailsender = email_sender;
@@ -315,7 +336,7 @@ class Shop extends CI_Controller {
                 'datetime' => date("Y-m-d H:i:s a"),
                 'appointment_type' => "Global",
             );
-            // print_r($appointment);
+// print_r($appointment);
             $this->db->insert('appointment_list', $appointment);
             $appointment['city_days'] = $this->input->post('city_days');
             $appointment['remark'] = $this->input->post('remark');
@@ -391,15 +412,15 @@ class Shop extends CI_Controller {
 
         $this->config->set_item('seo_title', $seotitle);
 
-        $checklogin = false;
 
-
-
-
-
-        if ($checklogin) {
-            $data['checklogin'] = $checklogin;
+        if ($this->session_user) {
+            $checklogin = true;
+        } else {
+            $checklogin = false;
         }
+
+
+        $data['checklogin'] = $checklogin;
 
 
 
@@ -435,7 +456,7 @@ class Shop extends CI_Controller {
 
         $configuration = $this->config->load('seo_config');
 
-        //$seotitle_o = $this->config->item("seo_title");
+//$seotitle_o = $this->config->item("seo_title");
 
         $seotitle1 = "Hong Kong Bespoke Tailors | " . $styleobj->title;
         $seodescription = $styleobj->description;
