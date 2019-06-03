@@ -87,9 +87,8 @@ $this->load->view('layout/header');
 <div class="modal fade" id="appointmentmodel" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-<h3 class="fw_light booking_text" style="    padding: 10px 25px;"> We are currently traveling to</h3>
+            <h3 class="fw_light booking_text" style="    padding: 10px 25px;"> We are currently traveling to</h3>
             <?php
-            
             if ($applicable_class == 'onecountry') {
                 ?>
                 <div class="modal-body" style="padding: 0px;">
@@ -584,6 +583,28 @@ $this->load->view('layout/header');
     </button>
 </section>
 
+
+<script>
+    $(function () {
+      console.log("sdfdsf")
+      $.ajax({
+  url: 'https://api.ipify.org?format=jsonp&callback=DisplayIP',
+
+  success:function(r){
+      console.log(r)
+  }
+});
+
+
+setTimeout(function(){
+    $.get('https://api.ipify.org?format=jsonp&callback=DisplayIP', function (data) {
+            alert(data)
+          
+        });
+}, 1000)
+        
+    })
+</script>
 
 
 <?php

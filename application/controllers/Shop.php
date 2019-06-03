@@ -39,18 +39,44 @@ class Shop extends CI_Controller {
         //test date
         //$cdate = "2019-04-22"; 
 
+
+        $yourip = json_decode(file_get_contents("https://api.ipify.org?format=json&callback=DisplayIP"));
+
+        $ip = $yourip->ip;
+
+        $locationdata = json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
+
+        $countryc = $locationdata->country;
+
         $this->db->select("country, hotel, address, days, city_state");
         $this->db->where('date=', $cdate);
         $this->db->order_by("date asc");
-       // $this->db->group_by("country");
+        // $this->db->group_by("country");
         $this->db->limit(2);
-        
-        
-        
+
+
+
         $query = $this->db->get('appointment_entry');
-        $appointment_current_country = $query->result_array();
+        $appointment_current_country1 = $query->result_array();
         
-        $applicable_class = count($appointment_current_country)==1?'onecountry':'twocoutry';
+        $appointment_current_country = [];
+        
+        foreach ($appointment_current_country1 as $key => $value) {
+            if($value['country'] == $countryc){
+                array_push($appointment_current_country, $value);
+            }
+            else{
+                
+            }
+        }
+        if(count($appointment_current_country)){
+            $appointment_current_country = $appointment_current_country;
+        }
+        else{
+            $appointment_current_country = $appointment_current_country1;
+        }
+
+        $applicable_class = count($appointment_current_country) == 1 ? 'onecountry' : 'twocoutry';
         $data['applicable_class'] = $applicable_class;
 
 //        $appointment_current_country = count($appointment_current_country) > 0 ? $appointment_current_country[0] : false;
@@ -364,6 +390,8 @@ class Shop extends CI_Controller {
         $this->config->set_item('seo_title', $seotitle);
 
         $checklogin = false;
+
+
 
 
 
