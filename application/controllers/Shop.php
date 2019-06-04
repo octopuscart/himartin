@@ -466,6 +466,28 @@ class Shop extends CI_Controller {
     }
 
     function styleTipsDetails($style_index, $title) {
+
+        if ($this->session_user) {
+            $checklogin = true;
+        } else {
+            $checklogin = false;
+        }
+
+        if (isset($_POST['submit'])) {
+            $blogdata = array(
+                "title" => $this->input->post('title'),
+                "description" => $this->input->post('description')
+            );
+            $this->db->set($blogdata);
+            $this->db->where('id', $style_index); //set column_name and value in which row need to update
+            $this->db->update('style_tips');
+            redirect("styleTips/".$style_index."/".$title);
+        }
+
+
+        $data['checklogin'] = $checklogin;
+
+
         $this->db->where('id', $style_index);
         $query = $this->db->get('style_tips');
 

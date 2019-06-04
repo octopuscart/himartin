@@ -57,11 +57,34 @@ function truncate($str, $len) {
                         <img src="<?php echo base_url(); ?>assets/images/styletips/<?php echo $styleobj->image; ?>" alt="" class="r_corners m_bottom_20" >
 
                         <figcaption>
-                            <h3 class="fw_light color_dark"><?php echo $styleobj->title; ?></h3>
 
-                            <p class="fw_light m_bottom_12" style="    white-space: pre-line;">
-                                <?php echo $styleobj->description; ?>
-                            </p>
+                            <?php if ($checklogin) { ?>
+
+                                <form action="#" method="post" style="margin-bottom: 50px">
+
+                                    <h3 class="fw_light color_dark">
+                                        <input type="text" class="form-control" name="title" required="" value="<?php echo $styleobj->title; ?>">
+                                    </h3>
+                                    <p class="fw_light m_bottom_12" style="    white-space: pre-line;">
+                                        <textarea class="form-control" name="description" required="" style="height: 300px"><?php echo $styleobj->description; ?></textarea>
+                                    </p>
+                                    <button class="btn btn-default" name="submit" >Update Post</button>
+
+                                </form>
+                                <?php
+                            } else {
+                                ?>
+
+                                <h3 class="fw_light color_dark"><?php echo $styleobj->title; ?></h3>
+
+                                <p class="fw_light m_bottom_12" style="    white-space: pre-line;">
+                                    <?php echo $styleobj->description; ?>
+                                </p>
+
+
+                                <?php
+                            }
+                            ?>
                             <!--tags-->
                             <i class="icon-tag-1 color_grey_light_2 d_inline_m m_right_5 fs_large tags_icon"></i>
                             <ul class="d_inline_m fw_light">
@@ -116,7 +139,7 @@ function truncate($str, $len) {
                                         $tagarray = explode(", ", $tags);
                                         foreach ($tagarray as $key => $value) {
                                             ?>
-                                        <a href="<?php echo site_url("stylingTipsTag?tag=$value");?>" class="fs_small color_grey">
+                                            <a href="<?php echo site_url("stylingTipsTag?tag=$value"); ?>" class="fs_small color_grey">
                                                 <i><?php echo $value; ?></i>
                                             </a>,
                                             <?php
@@ -135,20 +158,19 @@ function truncate($str, $len) {
                     <h5 class="fw_light color_dark m_bottom_23">Tags</h5>
                     <!--tags list-->
                     <ul class="hr_list tags_list">
-                        <?php foreach ($tagsarray as $key => $value) { 
-                          
+                        <?php foreach ($tagsarray as $key => $value) {
                             ?>
-                            <li class="m_right_5 m_bottom_5"><a href="<?php echo site_url("stylingTipsTag?tag=".$key);?>" class="r_corners button_type_2 d_block color_dark color_pink_hover fs_medium"><?php echo $key;?></a></li>
-                        <?php } ?> 
+                            <li class="m_right_5 m_bottom_5"><a href="<?php echo site_url("stylingTipsTag?tag=" . $key); ?>" class="r_corners button_type_2 d_block color_dark color_pink_hover fs_medium"><?php echo $key; ?></a></li>
+                            <?php } ?> 
                     </ul>
                 </div>
 
 
-<!--                advertising area
-                <div class="advertising_area t_align_c bg_light_2 color_grey m_bottom_45 m_xs_bottom_30">
-                    <span class="tt_uppercase translucent">Advertisment</span>
-                    <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" >                </div>
--->
+                <!--                advertising area
+                                <div class="advertising_area t_align_c bg_light_2 color_grey m_bottom_45 m_xs_bottom_30">
+                                    <span class="tt_uppercase translucent">Advertisment</span>
+                                    <img src="<?php echo base_url(); ?>assets/images/zeganoffer.jpg" >                </div>
+                -->
 
             </aside>
         </div>

@@ -141,7 +141,7 @@ $this->load->view('Pages/lookbook_header');
                                                 </p>
                                                 <br/>
                                                 <center>
-                                                    <button class="btn btn-default color_black btn-sm "  ng-click="changeStyle(style)">Change</button>
+                                                    <button class="btn btn-default color_black btn-sm "  ng-click="changeStyle(style)">Update</button>
                                                 </center>
                                                 <?php
                                             } else {
