@@ -137,7 +137,7 @@ $this->load->view('layout/header');
                         <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
                         <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <p class="text-center">Your Country:<?php echo $country; ?></p>
+                      
                     </div>
                 </div>
 
