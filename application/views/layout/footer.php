@@ -238,7 +238,15 @@
   
 
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142062381-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-142062381-1');
+</script>
 
         <script>//(function(w, d, s, l, i){w[l] = w[l] || []; w[l].push({'gtm.start':
 //
