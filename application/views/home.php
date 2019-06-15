@@ -434,8 +434,7 @@ $this->load->view('layout/header');
                                 <i class="icon-tools tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Choose a fabric and create your own personal style of suit 
-.</p>
+                        <p class="fs_medium m_bottom_10">Choose a fabric and create your own personal style of suit.</p>
 
                     </figure>
                 </div>
