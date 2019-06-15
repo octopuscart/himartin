@@ -442,7 +442,7 @@ $this->load->view('layout/header');
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
-                            <a href="#" class="color_black d_block n_sc_hover">Get Size Up</a>
+                            <a href="#" class="color_black d_block n_sc_hover">Get Sized Up</a>
                             <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
                                 <i class="icon-tape tr_all"></i>
                             </span>
