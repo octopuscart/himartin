@@ -419,9 +419,9 @@ $this->load->view('layout/header');
 <section class="section_offset image_bg_1">
     <div class="container">
         <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">What We Do</h3>
-        <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">Four Simple Steps To A 
-
-            Custom Dress </p>
+        <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">
+            Four Simple Steps To Creating Your Personal Bespoke Suit
+ </p>
         <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_black fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
             <!--first four services-->
             <div class="row m_bottom_30">
@@ -429,12 +429,13 @@ $this->load->view('layout/header');
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
-                            <a href="#" class="color_black d_block n_sc_hover">Create Own Style</a>
+                            <a href="#" class="color_black d_block n_sc_hover">Create your own style of suit</a>
                             <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
                                 <i class="icon-tools tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Choose any fabric and create own style.</p>
+                        <p class="fs_medium m_bottom_10">Choose a fabric and create your own personal style of suit 
+.</p>
 
                     </figure>
                 </div>
@@ -447,7 +448,7 @@ $this->load->view('layout/header');
                                 <i class="icon-tape tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Let Size and calculate your measurement.</p>
+                        <p class="fs_medium m_bottom_10">Let us fit and measure you up.</p>
 
                     </figure>
                 </div>
@@ -460,7 +461,7 @@ $this->load->view('layout/header');
                                 <i class="icon-crop tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Our experienced shanghainese tailor cut and make your new dress.</p>
+                        <p class="fs_medium m_bottom_10">Our experienced craftsman will create your new masterpiece.</p>
 
                     </figure>
                 </div>
@@ -473,7 +474,7 @@ $this->load->view('layout/header');
                                 <i class="icon-truck tr_all"></i>
                             </span>
                         </h6>
-                        <p class="fs_medium m_bottom_10">Delivery with guaranteed best fit.</p>
+                        <p class="fs_medium m_bottom_10">Worldwide delivery with fit guarantee.</p>
 
                     </figure>
                 </div>
