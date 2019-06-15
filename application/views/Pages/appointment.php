@@ -295,7 +295,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
 if ($sentemail == "1") {
     ?>
         swal({
-            title: 'Appointment Booked',
+            title: 'Thank You',
             type: 'success',
             html: "<?php echo $message; ?>",
             timer: 5000,

@@ -76,7 +76,7 @@
             "submenu" => "No",
             "link" => site_url("/")),
         array(
-            "title" => "Shop Now",
+            "title" => "Fabrics",
             "submenu" => "No",
             "link" => site_url("Products/CustomSuits")),
         array(
