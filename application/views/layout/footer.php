@@ -31,17 +31,17 @@
                         <div class="row1">
                             <ul class="fw_light w_break m_xs_bottom_8 color_light">
                                 <li class="m_bottom_8 font_size_14">
+                                    <a href="tel:85298163280" style="color:white">
                                     <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                         <i class="icon-phone-1"></i>
                                     </div>
                                     +(852) 2367 2676
+                                    </a>
                                 </li>
-                                <i class="fa fa-whatsapp " style="    font-size: 23px;color:white;
-                                   margin-right: 12px;"></i>
-
-
-
-                                +(852) 9816 3280
+                                <a href="https://api.whatsapp.com/send?phone=85298163280" style="color:white"> 
+                                    <i class="fa fa-whatsapp " style="    font-size: 23px;color:green; margin-right: 12px;"></i>
+                                    +(852) 9816 3280 
+                                </a>
 
 
 
@@ -235,28 +235,30 @@
 
 
 
-  
+
 
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142062381-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-142062381-1');
+    gtag('config', 'UA-142062381-1');
 </script>
 
-        <script>//(function(w, d, s, l, i){w[l] = w[l] || []; w[l].push({'gtm.start':
+<script>//(function(w, d, s, l, i){w[l] = w[l] || []; w[l].push({'gtm.start':
 //
 //                    new Date().getTime(), event:'gtm.js'}); var f = d.getElementsByTagName(s)[0],
 //                    j = d.createElement(s), dl = l != 'dataLayer'?'&l=' + l:''; j.async = true; j.src =
 //                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 //            })(window, document, 'script', 'dataLayer', 'GTM-W49WDTL');
-                </script>
+</script>
 
-        <!-- End Google Tag Manager -->
+<!-- End Google Tag Manager -->
 
 <!--Libs-->
 

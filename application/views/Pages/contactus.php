@@ -48,23 +48,24 @@ $this->load->view('layout/header');
                 <div class="row">
                     <ul class="col-lg-7 col-md-7 col-sm-7 fw_light w_break m_bottom_45 m_xs_bottom_30">
                         <li class="m_bottom_8">
-                            <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
-                                <i class="icon-phone-1"></i>
-                            </div>
-                            +(852) 2367 2676<br/> 
-
+                            <a href="tel:85298163280"> 
+                               <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
+                                    <i class="icon-phone-1"></i>
+                                </div>
+                                +(852) 2367 2676<br/> 
+                            </a>
                         </li>
 
                         <li class="m_bottom_8">
 
+                            <a href="https://api.whatsapp.com/send?phone=85298163280">
+                                <i class="fa fa-whatsapp " style="    font-size: 23px;color:black;
+                                   margin-right: 12px;"></i>
 
-                            <i class="fa fa-whatsapp " style="    font-size: 23px;color:black;
-                               margin-right: 12px;"></i>
 
 
-
-                            +(852) 9816 3280<br/> 
-
+                                +(852) 9816 3280<br/> 
+                            </a>
                         </li>
 
 
@@ -123,44 +124,44 @@ $this->load->view('layout/header');
 
                 </ul>
                 <h5 class="color_dark m_bottom_20 fw_light">Stay Connected</h5>
-              <ul class="hr_list social_icons">
-                            <!--tooltip_container class is required-->
-                            <li class="m_right_15 m_bottom_15 tooltip_container">
-                                <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Facebook</span>
-                                <a href="https://www.facebook.com/Hong-Kong-Bespoke-Tailors-1270171433140371/?modal=admin_todo_tour" target="_blank" class="d_block facebook facebook_static_color icon_wrap_size_2 circle color_grey_light_2">
-                                    <i class="icon-facebook fs_small"></i>
-                                </a>
-                            </li>
-                            <li class="m_right_15 m_bottom_15 tooltip_container">
-                                <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Twitter</span>
-                                <a href="https://twitter.com/1BespokeTailors" class="d_block twitter twitter_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
-                                    <i class="icon-twitter fs_small"></i>
-                                </a>
-                            </li>
-                            <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
-                                <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
-                                <a href="https://www.instagram.com/hongkongbespoketailors/" class="d_block instagram instagram_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
-                                    <i class="icon-instagramm fs_small"></i>
-                                </a>
-                            </li>
-                            <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
-                                <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">TripAdvisor</span>
-                                <a href="https://en.tripadvisor.com.hk/Profile/hkbespoketailors" class="d_block  youtube_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
-                                    <i class="fa fa-tripadvisor fs_small" style="    margin-top: 7px;"></i>
-                                </a>
-                            </li>
-                            
-                             <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
-                                <!--tooltip-->
-                                <span class="d_block r_corners color_default tooltip fs_small tr_all">Pinterest</span>
-                                <a href="https://www.pinterest.com/hongkongbespoketailors/" class="d_block  pinterest_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
-                                    <i class="fa fa-pinterest fs_small" style="    margin-top: 7px;"></i>
-                                </a>
-                            </li>
+                <ul class="hr_list social_icons">
+                    <!--tooltip_container class is required-->
+                    <li class="m_right_15 m_bottom_15 tooltip_container">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Facebook</span>
+                        <a href="https://www.facebook.com/Hong-Kong-Bespoke-Tailors-1270171433140371/?modal=admin_todo_tour" target="_blank" class="d_block facebook facebook_static_color icon_wrap_size_2 circle color_grey_light_2">
+                            <i class="icon-facebook fs_small"></i>
+                        </a>
+                    </li>
+                    <li class="m_right_15 m_bottom_15 tooltip_container">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Follow Us on Twitter</span>
+                        <a href="https://twitter.com/1BespokeTailors" class="d_block twitter twitter_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
+                            <i class="icon-twitter fs_small"></i>
+                        </a>
+                    </li>
+                    <li class="m_right_15 m_bottom_15 tooltip_container m_sm_right_0 m_xs_right_15">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Instagram</span>
+                        <a href="https://www.instagram.com/hongkongbespoketailors/" class="d_block instagram instagram_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
+                            <i class="icon-instagramm fs_small"></i>
+                        </a>
+                    </li>
+                    <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">TripAdvisor</span>
+                        <a href="https://en.tripadvisor.com.hk/Profile/hkbespoketailors" class="d_block  youtube_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
+                            <i class="fa fa-tripadvisor fs_small" style="    margin-top: 7px;"></i>
+                        </a>
+                    </li>
+
+                    <li class="m_right_15 m_bottom_15 m_sm_right_0 tooltip_container m_xs_right_15">
+                        <!--tooltip-->
+                        <span class="d_block r_corners color_default tooltip fs_small tr_all">Pinterest</span>
+                        <a href="https://www.pinterest.com/hongkongbespoketailors/" class="d_block  pinterest_static_color icon_wrap_size_2 circle color_grey_light_2" target="_blank">
+                            <i class="fa fa-pinterest fs_small" style="    margin-top: 7px;"></i>
+                        </a>
+                    </li>
 
 
 
@@ -170,7 +171,7 @@ $this->load->view('layout/header');
 
 
 
-                        </ul>
+                </ul>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 m_xs_bottom_30">
                 <h3 class="color_dark fw_light m_bottom_15 heading_1 t_align_c">Contact Form</h3>
