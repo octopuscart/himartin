@@ -292,7 +292,7 @@ if (isset($prefixshopappointment[$cdateshort])) {
     })
 
 <?php
-$sentemail = "1";
+
 if ($sentemail == "1") {
     ?>
         swal({
