@@ -27,7 +27,7 @@ $image2 = "";
                 echo $custom_item;
                 ?>
             </ul>
-            <h4>To Get Real Feel Of Fabrics By Touch</h4>
+            <h4>To Get Real Feel Of Fabrics By Touch - Book A Fitting</h4>
 
         </div>
     </section>
