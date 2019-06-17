@@ -292,13 +292,14 @@ if (isset($prefixshopappointment[$cdateshort])) {
     })
 
 <?php
+$sentemail = "1";
 if ($sentemail == "1") {
     ?>
         swal({
             title: 'Thank You',
             type: 'success',
-            html: "<?php echo $message; ?>",
-            timer: 5000,
+            html: "<p style='font-size:15px'>We have received your appointment request.<br/>Mention this code (SSFreeShirt) to your fitter at the meeting and get a free custom made shirt with your purchase.<br/>Kindly note we will contact you shortly to give you details of your appointment. <br/><br/>Note : Please bring along one of your best fitting or favorite suit to your fitting.<p>",
+            timer: 15000,
         }).then(
                 function () {
                     window.location = "<?php echo site_url("booking"); ?>";
