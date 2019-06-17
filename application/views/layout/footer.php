@@ -31,7 +31,7 @@
                         <div class="row1">
                             <ul class="fw_light w_break m_xs_bottom_8 color_light">
                                 <li class="m_bottom_8 font_size_14">
-                                    <a href="tel:85298163280" style="color:white">
+                                    <a href="tel:85223672676" style="color:white">
                                     <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
                                         <i class="icon-phone-1"></i>
                                     </div>

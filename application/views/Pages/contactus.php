@@ -48,7 +48,7 @@ $this->load->view('layout/header');
                 <div class="row">
                     <ul class="col-lg-7 col-md-7 col-sm-7 fw_light w_break m_bottom_45 m_xs_bottom_30">
                         <li class="m_bottom_8">
-                            <a href="tel:85298163280"> 
+                            <a href="tel:85223672676"> 
                                <div class="d_inline_m icon_wrap_size_1 color_dark  circle m_right_10">
                                     <i class="icon-phone-1"></i>
                                 </div>
