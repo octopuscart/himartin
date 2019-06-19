@@ -110,9 +110,9 @@ $this->load->view('layout/header');
                 <div class="modal-body" style="padding: 0px;">
                     <?php
                     foreach ($appointment_current_country as $apkey => $apvalue) {
-                      
-                       $fdata = date_format(date_create($apvalue['first_date']), "d F"); 
-                       $ldata = date_format(date_create($apvalue['last_date']), "d F Y");
+
+                        $fdata = date_format(date_create($apvalue['first_date']), "d F");
+                        $ldata = date_format(date_create($apvalue['last_date']), "d F Y");
                         ?>
                         <div class="<?php echo $applicable_class; ?> country_block" style="background: url(assets/images/country/<?php echo $countryimages[$apvalue['country']]; ?>)">
                             <h2 class="fw_light color_black appointment_modal_texttwocontry text-center "><?php echo $apvalue['country']; ?>
@@ -120,7 +120,7 @@ $this->load->view('layout/header');
                                 <p style="color: white;font-size: 15px;white-space: pre-line;line-height: 12px;">
                                     <?php echo date("D, d F Y"); ?><br/>
                                     (<?php
-                                    echo $fdata." - ".$ldata;
+                                    echo $fdata . " - " . $ldata;
                                     ?>)
                                 </p>
                             </h2>
@@ -137,7 +137,7 @@ $this->load->view('layout/header');
                         <h3 class="fw_light booking_text" style=""> Book A Fitting Now</h3>
                         <a href="<?php echo site_url("booking"); ?>" class="btn btn-danger">Book Now</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      
+
                     </div>
                 </div>
 
@@ -421,7 +421,7 @@ $this->load->view('layout/header');
         <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">What We Do</h3>
         <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">
             Four Simple Steps To Creating Your Personal Bespoke Suit
- </p>
+        </p>
         <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_black fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
             <!--first four services-->
             <div class="row m_bottom_30">
@@ -545,7 +545,31 @@ $this->load->view('layout/header');
                             </li>
 
                         </ul>
-                        <button name="submit" type="submit" class="button_type_3 color_dark r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="row" style="width: 200px;font-size: 17px;line-height: 37px;margin-top: 10px;">
+                                    <div class="col-md-2">
+                                        <?php echo $rand_1 = rand(0, 10); ?>
+                                        <input type="hidden" class="form-control" name="rand_1" value="<?php echo $rand_1; ?>" />
+                                    </div>
+                                    <div class="col-md-2">+</div>
+                                    <div class="col-md-2">
+                                        <?php echo $rand_2 = rand(0, 10); ?>
+                                        <input type="hidden" class="form-control" name="rand_2"  value="<?php echo $rand_2; ?>"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control" name="total"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8" style="    margin-top: 7px;
+                                 padding-left: 20px;">
+                                <button name="submit" type="submit" class="button_type_3 color_dark r_corners tt_uppercase fs_medium tr_all f_left m_right_10 m_md_bottom_10">Submit</button>
+
+                            </div>
+                        </div>
+
                     </form>
 
                 </div>

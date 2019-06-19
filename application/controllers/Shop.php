@@ -155,6 +155,17 @@ class Shop extends CI_Controller {
             $email_bcc = email_bcc;
             $sendernameeq = $this->input->post('friend_email');
             if ($this->input->post('email')) {
+                
+                $rand_1 = $this->input->post('rand_1');
+                $rand_2 = $this->input->post('rand_2');
+                $total = $this->input->post('total');
+                $t_total = intval($rand_1) + intval($rand_2);
+                if ($t_total == intval($total)) {
+                  
+                } else {
+                   redirect(site_url("/"));
+                }
+                
                 $this->email->set_newline("\r\n");
                 $this->email->from(email_bcc, $sendername);
                 $this->email->to($this->input->post('friend_email'));
