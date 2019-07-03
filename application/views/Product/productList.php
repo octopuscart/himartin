@@ -37,8 +37,8 @@ $image2 = "";
     <div class="shop-page-area" >
         <div class="container">
             <div class="row"  ng-if="productResults.products.length">
-                <aside class="col-lg-2 col-md-2 col-sm-2 m_bottom_70 m_xs_bottom_30" style="    padding: 0;">
-                    <!--categories-->
+               <!--                <aside class="col-lg-2 col-md-2 col-sm-2 m_bottom_70 m_xs_bottom_30" style="    padding: 0;">
+                    categories
                     <?php
                     if (count($categories)) {
                         ?>
@@ -50,12 +50,12 @@ $image2 = "";
                                     $subcategories = $value['sub_category'];
                                     ?> 
 
-                                                <!--                                <a href="<?php echo site_url("Product/ProductList/" . $custom_id . "/" . $value['id']); ?>" class="color_dark tr_all d_block">
+                                                                                <a href="<?php echo site_url("Product/ProductList/" . $custom_id . "/" . $value['id']); ?>" class="color_dark tr_all d_block">
                                                         <span class="icon_wrap_size_0 circle d_inline_m m_right_8 color_grey_light_5 tr_inherit">
                                                             <i class="icon-angle-right"></i>
                                                         </span>
                                     <?php echo $value['category_name']; ?>
-                                                    </a>-->
+                                                    </a>
 
                                     <a href="#" class="color_dark tr_all d_block">
                                         <span class="icon_wrap_size_0 circle d_inline_m m_right_8 color_grey_light_5 tr_inherit">
@@ -98,7 +98,7 @@ $image2 = "";
 
                     <div class="product_attr" ng-repeat="(attrk, attrv) in productResults.attributes" ng-if="attrv.length > 1">
                         <div class="m_bottom_45 m_xs_bottom_30">
-                            <!--manufacturers-->
+                            manufacturers
                             <div class="m_bottom_25">
                                 <h5 class="color_dark fw_light m_bottom_10 m_bottom_10">{{attrk}}</h5>
                                 <ul>
@@ -112,11 +112,11 @@ $image2 = "";
                     </div>
 
 
-                </aside>
+                </aside>-->
 
 
 
-                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 m_top_10">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_top_10">
                     <div class="shop_isotope_container t_xs_align_c three_columns m_bottom_15" data-isotope-options='{"itemSelector" : ".shop_isotope_item","layoutMode" : "fitRows","transitionDuration":"0.7s"}'>
                         <!--product-->
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"  ng-repeat="(k, product) in productResults.products" style="padding:10px; ">

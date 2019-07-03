@@ -68,5 +68,5 @@ $route['styleTips/(:any)/(:any)'] = 'Shop/styleTipsDetails/$1/$2';
 $route['sitemap\.xml'] = "Sitemap/index";
 $route['sitemap'] = "Sitemap/general";
 $route['admin'] = "Shop/locallogin";
-
+$route['references'] = "Shop/references";
 

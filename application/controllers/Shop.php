@@ -274,12 +274,16 @@ class Shop extends CI_Controller {
         $this->load->view('Pages/faqs');
     }
 
+    public function references() {
+        $this->load->view('Pages/references');
+    }
+
     public function locallogin() {
 
         $data['usertype'] = $this->session_user;
         if (isset($_POST['submit'])) {
             $password = $this->input->post('password');
-            if ($password = "Hongout@HKBT") {
+            if ($password = "BqU(wx\Qg}37g:A>") {
                 $this->session->set_userdata('admin_login', array("user_type" => "admin"));
                 redirect("admin");
             } else {
@@ -319,7 +323,7 @@ class Shop extends CI_Controller {
                     'log_type' => 'Thank You For Subscribing',
                     'log_datetime' => date('Y-m-d H:i:s'),
                     'user_id' => 'Subscribing User',
-                    'log_detail' => $sendernameeq . "  " . $subjectt
+                    'log_detail' => $emailsender . "  " . $subjectt
                 );
                 $this->db->insert('system_log', $orderlog);
                 $subject = $subjectt;

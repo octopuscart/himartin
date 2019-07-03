@@ -192,6 +192,16 @@ $this->load->view('layout/header');
                                 <img src="<?php echo base_url(); ?>assets/images/benifits/bft4.jpg" alt="">
                             </div>
                         </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft6.jpg" alt="">
+                            </div>
+                        </div>
 
 
 
@@ -254,20 +264,36 @@ $this->load->view('layout/header');
 
 
 
-            <!--testimonials-->
+               <!--testimonials-->
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
                 <h3 class="color_dark t_align_c m_bottom_15 fw_light">Testimonials</h3>
                 <p class="m_bottom_35 t_align_c color_black">Our Valuable Customer's  Testimonials</p>
                 <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":2000,"autoHeight":true,"transitionStyle": "backSlide"}'>
 
+                    
+                    <?php
+                    $testimoni = [
+                        array("name"=>"Brian Stephenson", "country_city"=>"Auckland, New Zealand", "review"=>"The first of the shirts you are making for me arrived yesterday.  In accordance with your instructions I have washed it and ironed it and tried it on.  The fit is perfect.  It's a very cool and comfortable fabric to wear, so I am well pleased with it."),
+                        array("name"=>"D Giezekamp", "country_city"=>"Sydney, Australia", "review"=>"Shirts looks Awesome and fit beautifully... They arrived yesterday thank you again!! Feel like a new man!!"),
+                        array("name"=>"Greg Young", "country_city"=>"Melbourne, Australia", "review"=>"I have had the Suit pressed as well as the shirt. Both the Jacket and the Shirt are perfect, excellent fit."),
+                        array("name"=>"Dr. Gottschalk", "country_city"=>"Houston, USA", "review"=>"Terrific - thank you so much! I look forward to the arrival of my sport coat. The suit was excellent!"),
+                        array("name"=>"Matthew Bates ", "country_city"=>"Melbourne, Australia", "review"=>"My suit and shirt arrived and </br>I am extremely happy with the fit."),
+                        array("name"=>"Trevor Publicover", "country_city"=>"Halifax, Canada", "review"=>"Thanks for the email, yes I have tried the suit and it fits great!  I’m very happy."),
+                        array("name"=>"Sam Hussein", "country_city"=>"London, UK", "review"=>"I got the shirts today and I'm very happy with them. The quality of the fabric is amazing and the fit and finish is top class.<br/> You are now my best supplier and I will buy from you guys for a long time."),
+                    ];
+                    foreach ($testimoni as $key => $value) {
+                        
+                    
+                    ?>
 
+   
                     <!--item-->
                     <div>
                         <!--quote-->
                         <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                            <p class="m_bottom_15"><i>Once again outstanding!!! </i></p>
-                            <p><i>Shirts looks Awesome and fit beautifully ...They arrived yesterday thank you again!! 
-                                    Feel like a new man!! </i></p>
+                            <p class="m_bottom_15">
+                                <i style="    word-break: break-word;"><?php echo $value['review'];?></i>
+                            </p>
                         </blockquote>
                         <div class="d_table w_full">
                             <div class="d_table_cell">
@@ -277,16 +303,8 @@ $this->load->view('layout/header');
                                 </div>
                                 <!--author name-->
                                 <div class="d_inline_m">
-                                    <b class="fs_large d_block color_dark">D Giezekamp</b>
-                                    <p class="fs_medium color_dark">Sydney - 26 July, 2014</p>
-                                    <p class="fs_medium color_dark">
-                                    <ul class="hr_list d_inline_b social_icons">
-                                        <li class="m_right_8"><a href="#" class=" facebook circle icon_wrap_size_1 d_block"><i class="icon-facebook-1"></i></a></li>
-                                        <li class="m_right_8"><a href="#" class=" twitter circle icon_wrap_size_1 d_block"><i class="icon-twitter-1"></i></a></li>
-                                        <li class="m_right_8"><a href="#" class=" instagram circle icon_wrap_size_1 d_block"><i class="icon-instagramm"></i></a></li>
-
-                                    </ul>
-                                    </p>
+                                    <b class="fs_large d_block color_dark">  <?php echo $value['name'];?></b>
+                                    <p class="fs_medium color_dark">  <?php echo $value['country_city'];?></p>
                                 </div>
                             </div>
                             <div class="d_table_cell t_align_r v_align_m d_mxs_none">
@@ -299,6 +317,8 @@ $this->load->view('layout/header');
                             </div>
                         </div>
                     </div>
+
+                    <?php }?>
 
 
                 </div>
