@@ -168,25 +168,15 @@ $this->load->view('layout/header');
                     <!--carousel-->
                     <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_" >
                         <!--item-->
-                        <div>
-                            <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft2.jpg" alt="">
-
-                            </div>
-                        </div>
-                        <!--item-->
-                        <div>
-                            <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft1.jpg" alt="">
-
-                            </div>
-                        </div>
+                     
                         <!--item-->
                         <div>
                             <div>
                                 <img src="<?php echo base_url(); ?>assets/images/benifits/bft3.jpg" alt="">
+
                             </div>
                         </div>
+                        <!--item-->
                         <div>
                             <div>
                                 <img src="<?php echo base_url(); ?>assets/images/benifits/bft4.jpg" alt="">
@@ -198,8 +188,19 @@ $this->load->view('layout/header');
                             </div>
                         </div>
                         <div>
+                            
                             <div>
-                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft6.jpg" alt="">
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft7.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft8.jpg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <img src="<?php echo base_url(); ?>assets/images/benifits/bft9.jpg" alt="">
                             </div>
                         </div>
 
