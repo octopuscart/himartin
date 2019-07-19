@@ -107,9 +107,9 @@
             "link" => site_url("stylingTips"),
         ),
         array(
-            "title" => "How It Works",
+            "title" => "The Process",
             "submenu" => "no",
-            "link" => site_url("booking"),
+            "link" => site_url("the-process"),
         ),
         array(
             "title" => "Contact Us",

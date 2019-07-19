@@ -32,10 +32,10 @@
                             <ul class="fw_light w_break m_xs_bottom_8 color_light">
                                 <li class="m_bottom_8 font_size_14">
                                     <a href="tel:85223672676" style="color:white">
-                                    <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
-                                        <i class="icon-phone-1"></i>
-                                    </div>
-                                    +(852) 2367 2676
+                                        <div class="d_inline_m icon_wrap_size_1 color_light  circle m_right_10">
+                                            <i class="icon-phone-1"></i>
+                                        </div>
+                                        +(852) 2367 2676
                                     </a>
                                 </li>
                                 <a href="https://api.whatsapp.com/send?phone=85298163280" style="color:white"> 
@@ -259,7 +259,7 @@ if(window.location.href.indexOf('/booking')!=-1)
 
 </div>
 </body>
-<script src="https://www.submitstart.com/submitbox/submitbox.js"></script>
+>
 <script>
 
     $(function () {

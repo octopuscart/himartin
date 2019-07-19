@@ -168,7 +168,7 @@ $this->load->view('layout/header');
                     <!--carousel-->
                     <div class="owl-carousel m_bottom_15" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000,"transitionStyle" : "backSlide", "autoplay":true, "autoplay_timeout":1000}' data-nav="c_nav1_" >
                         <!--item-->
-                     
+
                         <!--item-->
                         <div>
                             <div>
@@ -188,7 +188,7 @@ $this->load->view('layout/header');
                             </div>
                         </div>
                         <div>
-                            
+
                             <div>
                                 <img src="<?php echo base_url(); ?>assets/images/benifits/bft7.jpg" alt="">
                             </div>
@@ -265,61 +265,59 @@ $this->load->view('layout/header');
 
 
 
-               <!--testimonials-->
+            <!--testimonials-->
             <section class="col-lg-6 col-md-6 m_bottom_20" data-appear-animation="fadeInUp">
                 <h3 class="color_dark t_align_c m_bottom_15 fw_light">Testimonials</h3>
                 <p class="m_bottom_35 t_align_c color_black">Our Valuable Customer's  Testimonials</p>
                 <div class="owl-carousel" data-nav="t_nav_" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":2000,"autoHeight":true,"transitionStyle": "backSlide"}'>
 
-                    
+
                     <?php
                     $testimoni = [
-                        array("name"=>"Brian Stephenson", "country_city"=>"Auckland, New Zealand", "review"=>"The first of the shirts you are making for me arrived yesterday.  In accordance with your instructions I have washed it and ironed it and tried it on.  The fit is perfect.  It's a very cool and comfortable fabric to wear, so I am well pleased with it."),
-                        array("name"=>"D Giezekamp", "country_city"=>"Sydney, Australia", "review"=>"Shirts looks Awesome and fit beautifully... They arrived yesterday thank you again!! Feel like a new man!!"),
-                        array("name"=>"Greg Young", "country_city"=>"Melbourne, Australia", "review"=>"I have had the Suit pressed as well as the shirt. Both the Jacket and the Shirt are perfect, excellent fit."),
-                        array("name"=>"Dr. Gottschalk", "country_city"=>"Houston, USA", "review"=>"Terrific - thank you so much! I look forward to the arrival of my sport coat. The suit was excellent!"),
-                        array("name"=>"Matthew Bates ", "country_city"=>"Melbourne, Australia", "review"=>"My suit and shirt arrived and </br>I am extremely happy with the fit."),
-                        array("name"=>"Trevor Publicover", "country_city"=>"Halifax, Canada", "review"=>"Thanks for the email, yes I have tried the suit and it fits great!  I’m very happy."),
-                        array("name"=>"Sam Hussein", "country_city"=>"London, UK", "review"=>"I got the shirts today and I'm very happy with them. The quality of the fabric is amazing and the fit and finish is top class.<br/> You are now my best supplier and I will buy from you guys for a long time."),
+                        array("name" => "Brian Stephenson", "country_city" => "Auckland, New Zealand", "review" => "The first of the shirts you are making for me arrived yesterday.  In accordance with your instructions I have washed it and ironed it and tried it on.  The fit is perfect.  It's a very cool and comfortable fabric to wear, so I am well pleased with it."),
+                        array("name" => "D Giezekamp", "country_city" => "Sydney, Australia", "review" => "Shirts looks Awesome and fit beautifully... They arrived yesterday thank you again!! Feel like a new man!!"),
+                        array("name" => "Greg Young", "country_city" => "Melbourne, Australia", "review" => "I have had the Suit pressed as well as the shirt. Both the Jacket and the Shirt are perfect, excellent fit."),
+                        array("name" => "Dr. Gottschalk", "country_city" => "Houston, USA", "review" => "Terrific - thank you so much! I look forward to the arrival of my sport coat. The suit was excellent!"),
+                        array("name" => "Matthew Bates ", "country_city" => "Melbourne, Australia", "review" => "My suit and shirt arrived and </br>I am extremely happy with the fit."),
+                        array("name" => "Trevor Publicover", "country_city" => "Halifax, Canada", "review" => "Thanks for the email, yes I have tried the suit and it fits great!  I’m very happy."),
+                        array("name" => "Sam Hussein", "country_city" => "London, UK", "review" => "I got the shirts today and I'm very happy with them. The quality of the fabric is amazing and the fit and finish is top class.<br/> You are now my best supplier and I will buy from you guys for a long time."),
                     ];
                     foreach ($testimoni as $key => $value) {
-                        
-                    
-                    ?>
+                        ?>
 
-   
-                    <!--item-->
-                    <div>
-                        <!--quote-->
-                        <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
-                            <p class="m_bottom_15">
-                                <i style="    word-break: break-word;"><?php echo $value['review'];?></i>
-                            </p>
-                        </blockquote>
-                        <div class="d_table w_full">
-                            <div class="d_table_cell">
-                                <!--author photo-->
-                                <div class="d_inline_m circle wrapper m_right_10">
-                                    <img src="images/testimonial_img_1.jpg" alt="">
+
+                        <!--item-->
+                        <div>
+                            <!--quote-->
+                            <blockquote class="r_corners relative type_2 fs_large color_dark m_bottom_20">
+                                <p class="m_bottom_15">
+                                    <i style="    word-break: break-word;"><?php echo $value['review']; ?></i>
+                                </p>
+                            </blockquote>
+                            <div class="d_table w_full">
+                                <div class="d_table_cell">
+                                    <!--author photo-->
+                                    <div class="d_inline_m circle wrapper m_right_10">
+                                        <img src="images/testimonial_img_1.jpg" alt="">
+                                    </div>
+                                    <!--author name-->
+                                    <div class="d_inline_m">
+                                        <b class="fs_large d_block color_dark">  <?php echo $value['name']; ?></b>
+                                        <p class="fs_medium color_dark">  <?php echo $value['country_city']; ?></p>
+                                    </div>
                                 </div>
-                                <!--author name-->
-                                <div class="d_inline_m">
-                                    <b class="fs_large d_block color_dark">  <?php echo $value['name'];?></b>
-                                    <p class="fs_medium color_dark">  <?php echo $value['country_city'];?></p>
+                                <div class="d_table_cell t_align_r v_align_m d_mxs_none">
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
+                                        <i class="icon-left-open-big"></i>
+                                    </button>
+                                    <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
+                                        <i class="icon-right-open-big"></i>
+                                    </button>
                                 </div>
-                            </div>
-                            <div class="d_table_cell t_align_r v_align_m d_mxs_none">
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover m_right_5 tr_all t_nav_prev">
-                                    <i class="icon-left-open-big"></i>
-                                </button>
-                                <button class="circle icon_wrap_size_5 color_grey_light d_inline_m color_blue_hover tr_all t_nav_next">
-                                    <i class="icon-right-open-big"></i>
-                                </button>
                             </div>
                         </div>
-                    </div>
 
-                    <?php }?>
+<?php } ?>
 
 
                 </div>
@@ -437,16 +435,16 @@ $this->load->view('layout/header');
 </section>
 
 
-<section class="section_offset image_bg_1">
+<!--<section class="section_offset image_bg_1">
     <div class="container">
         <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">What We Do</h3>
         <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">
             Four Simple Steps To Creating Your Personal Bespoke Suit
         </p>
         <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_black fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
-            <!--first four services-->
+            first four services
             <div class="row m_bottom_30">
-                <!--service-->
+                service
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
@@ -459,7 +457,7 @@ $this->load->view('layout/header');
 
                     </figure>
                 </div>
-                <!--service-->
+                service
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
@@ -472,7 +470,7 @@ $this->load->view('layout/header');
 
                     </figure>
                 </div>
-                <!--service-->
+                service
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
@@ -485,7 +483,7 @@ $this->load->view('layout/header');
 
                     </figure>
                 </div>
-                <!--service-->
+                service
                 <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
                     <figure class="item_services">
                         <h6 class="m_bottom_5 relative">
@@ -502,7 +500,200 @@ $this->load->view('layout/header');
 
         </div>
     </div>
+</section>-->
+
+
+
+
+<section class="section_offset image_bg_1">
+    <div class="container">
+        <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">The Process</h3>
+        <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">
+            Four Simple Steps To Creating Your Personal Bespoke Suit
+        </p>
+        <div class="relative">
+            <div class="row">
+                <div class="owl-carousel" data-plugin-options='{"singleItem":false,"itemsCustom":[[992,4],[768,3],[450,2],[10,1]]}' data-nav="ln_nav_">
+                    <figure class="col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp">
+                        <!--image-->
+                        <div class=" relative r_corners wrapper m_bottom_20 db_xs_centered">
+                            <img src="<?php echo base_url(); ?>assets/images/process/fabrics.jpg" alt="" class="img-circle">
+                            
+                        </div>
+                        <!--description-->
+                        <figcaption>
+                            <h6 class="lh_large m_bottom_3"><a href="#" class="color_dark tr_all">Fabric Selection</a></h6>
+                      
+                            <p class="m_bottom_12">Choose a fabric and create your own personal style of suit.</p>
+                            <div class="clearfix">
+                                <a href="<?php echo site_url("the-process");?>" class="color_purple color_pink_hover f_left d_block m_right_20 fw_light">
+                                    <span class="d_inline_m m_right_5 icon_wrap_size_0 circle color_grey_light tr_all">
+                                        <i class="icon-angle-right"></i>
+                                    </span>
+                                    Read More
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    
+                    
+                    
+                    
+                    <figure class="col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp">
+                        <!--image-->
+                        <div class=" relative r_corners wrapper m_bottom_20 db_xs_centered">
+                            <img src="<?php echo base_url(); ?>assets/images/process/fitting.jpg" alt="" class="img-circle">
+                            
+                        </div>
+                        <!--description-->
+                        <figcaption>
+                            <h6 class="lh_large m_bottom_3"><a href="#" class="color_dark tr_all">The Fitting</a></h6>
+                      
+                            <p class="m_bottom_12">Let us fit and measure you up.</p>
+                            <div class="clearfix">
+                                <a href="<?php echo site_url("the-process");?>" class="color_purple color_pink_hover f_left d_block m_right_20 fw_light">
+                                    <span class="d_inline_m m_right_5 icon_wrap_size_0 circle color_grey_light tr_all">
+                                        <i class="icon-angle-right"></i>
+                                    </span>
+                                    Read More
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    
+                    
+                    
+                    
+                    <figure class="col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp">
+                        <!--image-->
+                        <div class=" relative r_corners wrapper m_bottom_20 db_xs_centered">
+                            <img src="<?php echo base_url(); ?>assets/images/process/tailorprocess.jpg" alt="" class="img-circle">
+                            
+                        </div>
+                        <!--description-->
+                        <figcaption>
+                            <h6 class="lh_large m_bottom_3"><a href="#" class="color_dark tr_all">The Tailoring Process</a></h6>
+                      
+                            <p class="m_bottom_12">Our experienced craftsman will create your new masterpiece.</p>
+                            <div class="clearfix">
+                                <a href="<?php echo site_url("the-process");?>" class="color_purple color_pink_hover f_left d_block m_right_20 fw_light">
+                                    <span class="d_inline_m m_right_5 icon_wrap_size_0 circle color_grey_light tr_all">
+                                        <i class="icon-angle-right"></i>
+                                    </span>
+                                    Read More
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    
+                    
+                    
+                    
+                    <figure class="col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp">
+                        <!--image-->
+                        <div class=" relative r_corners wrapper m_bottom_20 db_xs_centered">
+                            <img src="<?php echo base_url(); ?>assets/images/process/delivery.jpg" alt="" class="img-circle">
+                            
+                        </div>
+                        <!--description-->
+                        <figcaption>
+                            <h6 class="lh_large m_bottom_3"><a href="#" class="color_dark tr_all">The Delivery</a></h6>
+                      
+                            <p class="m_bottom_12">Worldwide delivery with fit guarantee.</p>
+                            <div class="clearfix">
+                                <a href="<?php echo site_url("the-process");?>" class="color_purple color_pink_hover f_left d_block m_right_20 fw_light">
+                                    <span class="d_inline_m m_right_5 icon_wrap_size_0 circle color_grey_light tr_all">
+                                        <i class="icon-angle-right"></i>
+                                    </span>
+                                    Read More
+                                </a>
+                            </div>
+                        </figcaption>
+                    </figure>
+                    
+                  
+                </div>
+            </div>
+            <!--carousel nav-->
+<!--            <button class="icon_wrap_size_4 circle color_grey_light tr_all color_blue_hover ln_nav_prev d_md_none" data-appear-animation="fadeIn">
+                <i class="icon-left-open-big"></i>
+            </button>
+            <button class="icon_wrap_size_4 circle color_grey_light tr_all color_blue_hover ln_nav_next d_md_none" data-appear-animation="fadeIn">
+                <i class="icon-right-open-big"></i>
+            </button>-->
+        </div>
+    </div>
 </section>
+
+
+
+
+<!--<section class="section_offset image_bg_1">
+    <div class="container">
+        <h3 class="color_black fw_light m_bottom_15 t_align_c heading_3 appear-animation bounceInLeft appear-animation-visible" data-appear-animation="bounceInLeft">The Process</h3>
+        <p class="m_bottom_40 t_align_c heading_4 appear-animation bounceInLeft appear-animation-visible color_black" data-appear-animation="bounceInLeft" data-appear-animation-delay="150" style="animation-delay: 150ms;">
+            Four Simple Steps To Creating Your Personal Bespoke Suit
+        </p>
+        <div data-appear-animation="fadeInUp" data-appear-animation-delay="800" class="appear-animation color_black fadeInUp appear-animation-visible" style="animation-delay: 800ms;">
+            first four services
+            <div class="row m_bottom_30">
+                service
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Create your own style of suit</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-tools tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Choose a fabric and create your own personal style of suit.</p>
+
+                    </figure>
+                </div>
+                service
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Get Sized Up</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-tape tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Let us fit and measure you up.</p>
+
+                    </figure>
+                </div>
+                service
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Cut to Create</a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-crop tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Our experienced craftsman will create your new masterpiece.</p>
+
+                    </figure>
+                </div>
+                service
+                <div class="col-lg-3 col-md-3 col-sm-3 m_xs_bottom_30">
+                    <figure class="item_services">
+                        <h6 class="m_bottom_5 relative">
+                            <a href="#" class="color_black d_block n_sc_hover">Delivery </a>
+                            <span class="d_block icon_wrap_size_3 circle color_black wrapper animation_fill">
+                                <i class="icon-truck tr_all"></i>
+                            </span>
+                        </h6>
+                        <p class="fs_medium m_bottom_10">Worldwide delivery with fit guarantee.</p>
+
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>-->
 
 
 
@@ -571,12 +762,12 @@ $this->load->view('layout/header');
                             <div class="col-md-4">
                                 <div class="row" style="width: 200px;font-size: 17px;line-height: 37px;margin-top: 10px;">
                                     <div class="col-md-2">
-                                        <?php echo $rand_1 = rand(0, 10); ?>
+<?php echo $rand_1 = rand(0, 10); ?>
                                         <input type="hidden" class="form-control" name="rand_1" value="<?php echo $rand_1; ?>" />
                                     </div>
                                     <div class="col-md-2">+</div>
                                     <div class="col-md-2">
-                                        <?php echo $rand_2 = rand(0, 10); ?>
+<?php echo $rand_2 = rand(0, 10); ?>
                                         <input type="hidden" class="form-control" name="rand_2"  value="<?php echo $rand_2; ?>"/>
                                     </div>
                                     <div class="col-md-6">
@@ -609,10 +800,10 @@ $this->load->view('layout/header');
         <div class="row">
             <div class="owl-carousel" data-plugin-options='{"loop":true, "autoPlay":true, "autoplayTimeout":1000, "singleItem":false,"itemsCustom" : [[992,3],[768,2],[100,1]]}' data-nav="fp_nav_">
                 <!--project-->
-                <?php
-                $countrydata = $countrylist;
-                foreach ($countrydata as $key => $value) {
-                    ?>
+<?php
+$countrydata = $countrylist;
+foreach ($countrydata as $key => $value) {
+    ?>
                     <figure class="t_xs_align_c col-lg-12 col-md-12 col-sm-12" data-appear-animation="fadeInUp" data-appear-animation-delay="800">
                         <!--image container-->
                         <a href="<?php echo site_url("booking"); ?>">
@@ -627,9 +818,9 @@ $this->load->view('layout/header');
                             </div>
                         </a>
                     </figure>
-                    <?php
-                }
-                ?>
+    <?php
+}
+?>
             </div>
         </div>
     </div>
