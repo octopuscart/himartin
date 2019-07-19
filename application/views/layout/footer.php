@@ -213,6 +213,46 @@
         <p>©  <?php echo date('Y') ?> <?php echo email_sender_name; ?>
             . All Rights Reserved.</p>
     </section>
+    
+<script>
+window.addEventListener('load',function(){
+if(window.location.href.indexOf('/contact-us')!=-1)
+{
+  var x = 0;
+  var myVar = setInterval(function(){
+    if(x == 0){
+      if(jQuery('.classname').is(":visible"))
+      {
+  gtag('event', 'conversion', {'send_to': 'AW-734229235/1xrICMjA56UBEPPljd4C'});
+        
+        clearInterval(myVar);
+        x = 1;
+      }
+    }
+  }, 1000);
+  }
+  });
+</script>
+
+<script>
+window.addEventListener('load',function(){
+if(window.location.href.indexOf('/booking')!=-1)
+{
+  var x = 0;
+  var myVar = setInterval(function(){
+    if(x == 0){
+      if(jQuery('.swal2-success').is(":visible"))
+      {
+ gtag('event', 'conversion', {'send_to': 'AW-734229235/6wvBCIPA56UBEPPljd4C'});
+        
+        clearInterval(myVar);
+        x = 1;
+      }
+    }
+  }, 1000);
+  }
+  });
+</script>    
 </footer>
 <!---footer--->
 
